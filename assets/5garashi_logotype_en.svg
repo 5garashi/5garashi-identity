@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ファイル名 / File: 5garashi_logotype.svg
+  概要 / Description: ロゴタイプ(編集用原本:文字保持。要ヒラギノ角ゴ/Noto Sans JP) / Logotype, editing master (live text)
+  作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
+  作成日 / Created: 2026-07-11  版 / Version: 4.3
+  ライセンス / License: CC BY-ND 4.0
+  Copyright (c) 2026 5garashi.com Design Office
+  SPDX-License-Identifier: CC-BY-ND-4.0
+-->
+
+<svg
+   viewBox="0 0 555 215"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="5garashi_logotype_en.svg"
+   width="555"
+   height="215"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2178571"
+     inkscape:cx="290.26393"
+     inkscape:cy="107.15543"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <rect
+     x="1.5"
+     y="1.5"
+     width="552"
+     height="212"
+     fill="none"
+     stroke="#385723"
+     stroke-width="3"
+     id="rect1" />
+  <rect
+     x="11.5"
+     y="11.5"
+     width="532"
+     height="192"
+     fill="#ffe699"
+     stroke="#385723"
+     stroke-width="7"
+     id="rect2" />
+  <text
+     x="277.5"
+     y="115.5"
+     text-anchor="middle"
+     font-family="'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif"
+     font-weight="800"
+     font-size="66px"
+     fill="#7b4a21"
+     id="text2"><tspan
+   font-family="Georgia, 'Times New Roman', serif"
+   font-style="italic"
+   font-weight="700"
+   font-size="74px"
+   fill="#385723"
+   id="tspan2">5</tspan>garashi.com</text>
+  <text
+     x="285.5"
+     y="169.5"
+     text-anchor="middle"
+     font-family="'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif"
+     font-weight="800"
+     font-size="30px"
+     letter-spacing="9"
+     fill="#7b4a21"
+     id="text3"
+     style="font-weight:normal;font-size:26.6667px;font-family:'Noto Sans JP';letter-spacing:7px;text-anchor:middle;fill:#7b4a21;-inkscape-font-specification:'Noto Sans JP, @wght=700';font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:no-common-ligatures;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 700"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.66666667px;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP, @wght=700';font-variant-ligatures:no-common-ligatures ;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:7px;font-variation-settings:'wght' 700"
+       id="tspan3">Design Office</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29.3333px;font-family:'Noto Sans JP';-inkscape-font-specification:'Noto Sans JP Bold';text-align:center;letter-spacing:9px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000"
+     x="169.97067"
+     y="37.771259"
+     id="text4"><tspan
+       sodipodi:role="line"
+       id="tspan4"
+       x="169.97067"
+       y="37.771259" /></text>
+</svg>
