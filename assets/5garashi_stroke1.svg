@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ファイル名 / File: 5garashi_stroke1.svg
+  概要 / Description: モチーフ最小単位(縦の唐辛子1本=1辛) / Single-chili unit (one heat)
+  作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
+  作成日 / Created: 2026-07-11  版 / Version: 4.3
+  ライセンス / License: CC BY-ND 4.0
+  Copyright (c) 2026 5garashi.com Design Office
+  SPDX-License-Identifier: CC-BY-ND-4.0
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 450">
+  <path fill="#B92613" transform="translate(30,225)" d="M0,-190 C22,-126 22,126 0,190 C-22,126 -22,-126 0,-190 Z"/>
+</svg>

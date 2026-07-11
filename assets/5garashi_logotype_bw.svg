@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ファイル名 / File: 5garashi_logotype_bw.svg
+  概要 / Description: ロゴタイプ(モノクロ・編集用:規定3-6) / Logotype, monochrome editing master (rule 3-6)
+  作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
+  作成日 / Created: 2026-07-11  版 / Version: 4.3
+  ライセンス / License: CC BY-ND 4.0
+  Copyright (c) 2026 5garashi.com Design Office
+  SPDX-License-Identifier: CC-BY-ND-4.0
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220">
+  <rect x="4" y="4" width="552" height="212" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+  <rect x="14" y="14" width="532" height="192" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="7"/>
+  <text x="280" y="118" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP','Yu Gothic',sans-serif" font-weight="800" font-size="66" fill="#1A1A1A"><tspan font-family="Georgia,'Times New Roman',serif" font-style="italic" font-weight="700" font-size="74" fill="#1A1A1A">5</tspan>garashi.com</text>
+  <text x="288" y="172" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP','Yu Gothic',sans-serif" font-weight="800" font-size="30" letter-spacing="9" fill="#1A1A1A">設計事務所</text>
+</svg>
