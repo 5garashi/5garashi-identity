@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+  ファイル名 / File: tools/og_image.html
+  概要 / Description: SNS共有用プレビュー画像(assets/og_image.png, 1200×630)の描画元。公式SVGを配置するだけで文字は組み直さない
+  作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
+  作成日 / Created: 2026-10-08
+  ライセンス / License: CC BY-ND 4.0
+  SPDX-License-Identifier: CC-BY-ND-4.0
+
+  再生成 / Regenerate:
+    chrome --headless --hide-scrollbars --window-size=1200,630 --screenshot=assets/og_image.png tools/og_image.html
+-->
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>og_image</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    background:#F9EFCB;color:#385723;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:44px;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;
+    border-bottom:14px solid #385723;
+  }
+  .lockup{display:flex;align-items:center;gap:124px}
+  .mark{height:200px;width:auto}
+  .logo{width:555px;height:auto}
+  .sub{font-size:30px;font-weight:800;letter-spacing:.24em;color:#7B4A21}
+</style>
+</head>
+<body>
+  <div class="lockup">
+    <img class="mark" src="../assets/5garashi_mark_simple.svg" alt="">
+    <img class="logo" src="../assets/5garashi_logotype_outlined.svg" alt="">
+  </div>
+  <div class="sub">DESIGN OFFICE IDENTITY</div>
+</body>
+</html>

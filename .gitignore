@@ -3,3 +3,9 @@
 
 # ZIPアーカイブ
 *.zip
+
+# 案の段階の資料(公開しない)/ Draft materials, not published
+/backupDoc/
+
+# Pythonのキャッシュ / Python cache
+__pycache__/
