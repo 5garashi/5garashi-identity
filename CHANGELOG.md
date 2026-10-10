@@ -3,6 +3,43 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## v4.9 — 2026-10-11
+
+mdEditor(5garashi/mdEditor)のダークモード実装からの提案を反映。
+Proposal from the mdEditor (5garashi/mdEditor) dark-mode implementation applied.
+
+### 本文 / Content
+- 第4条 4-2:夜の ink を `#EFE6C4` から `#C9C1A5` に変更(RGB値で84%、相対輝度で約68%)。暗い画面でボタンの文字・枠・欄の枠線がまぶしかったため。夜のすべての ink に適用し、本書自体の夜の表示も同じ値にした。
+  Art. 4-2: night ink changed from `#EFE6C4` to `#C9C1A5` (84% in RGB, about 68% in relative luminance) because buttons, borders, and field outlines glared on dark screens. Applied to all night ink, including this document.
+- 第4条:4-3「文書面(編集欄・プレビュー)の色」を新設。長文を読み書きする面には無彩色の機能色を使い、コード表示ブロックと同じくパレットの例外とする。`--document-background`(昼 `#FFFFFF`/夜 `#121314`)、`--document-foreground`(昼 `#1A1A1A`/夜 `#BFBFBF`)、`--document-rule`(昼 `#DFCF9A`/夜 `#2B2B2B`、装飾専用)。
+  Art. 4: new 4-3 "Document surface": neutral functional colors for long-text surfaces, an exception to the palette like the code-block colors.
+- `--document-rule` は装飾専用で文字の基準の対象外とし、見出しは下線なしでも大きさ・太さで見分けられることを条件とした。
+  `--document-rule` is decorative only and exempt, on condition that headings remain identifiable by size and weight without it.
+- 第7条 7-1 補:夜の ink の組を更新(ink × paper 9.09:1 AAA、ink × card 8.08:1 AAA、ink × head と head × ink 6.74:1 AA。20組中11組がAAA)。夜の volt × ink は 1.51:1 で、引き続き重ねない。
+  Art. 7-1 (cont.): night ink pairs updated (20 pairs, 11 AAA); night volt on ink is 1.51:1 and stays prohibited.
+- 第7条 7-1 補2:文書面のコントラスト対照表を新設(昼:本文 17.40:1、エラー文字 9.22:1、エラー左罫 6.27:1。夜:本文 10.12:1、エラー文字 9.50:1、エラー左罫 6.82:1)。
+  Art. 7-1 (cont. 2): new contrast table for the document surface.
+- 第9条 9-4:CSSトークンに `--document-*` の3つを追加し、夜の ink を更新。
+  Art. 9-4: three `--document-*` tokens added; night ink updated.
+- 第4条 4-3 (4):文書面の本文の太さを W4(400)とした(第6条の本文 W6 の例外)。見出しは W7 以上で、下線なしで見分けられること。第6条の本文の行にも参照を追記。
+  Art. 4-3 (4): document-surface body text is W4 (400), an exception to Art. 6; headings W7 or heavier. Cross-reference added to Art. 6.
+- 第4条 4-2 (1):利用者が表示の切り替えで夜を選んだときも夜の配色を使う。切り替えを設ける場合は、環境に従う設定を既定とし、選ばれている表示を文字で示す。
+  Art. 4-2 (1): the night palette also applies when the user chooses it; a switch defaults to following the environment and shows the current choice in words.
+- 第3条 3-7 (5):暗い地(夜の配色の地、OSが描く暗いタイトルバーなど)でも、シンプル版を volt のまま置いてよいとした。ロゴはコントラスト基準の対象外だが、比は 1.94〜2.61:1、P型の色覚のシミュレーションでは 1.39〜1.88:1 まで下がるため、(a) 名称を近くに示す、(b) マークだけでボタンやリンクにしない、(c) 状態や意味を伝えない、(d) 昼の ink の上に置かない、をすべて満たすことを条件とした。4-2 (2) にも参照を追記。
+  Art. 3-7 (5): the simple mark may stay volt on dark grounds (night grounds, dark OS title bars) under four conditions — name shown nearby, never an icon-only control, never carries state or meaning, never on the day ink — because the ratio is 1.94–2.61:1 and 1.39–1.88:1 under protan simulation.
+- 第9条 9-2:ファビコンとアプリアイコンは表示モードによらず volt のシンプル版とすることを明記。
+  Art. 9-2: favicons and app icons stay the volt simple mark in every display mode.
+- 第10条:volt と重ねてはいけない ink が昼の ink `#385723` であることを明記。
+  Art. 10: clarified that the forbidden ink is the day ink `#385723`.
+
+### ツール / Tools
+- `tools/check_contrast.py`:夜の ink を更新し、文書面の組(文字・非テキスト・装飾)を追加。
+  `tools/check_contrast.py`: night ink updated; document-surface pairs added (text, non-text, decorative).
+- `tools/check_contrast.py`:暗い地での volt のマークについて、色覚の多様性のシミュレーション(Machado ほか 2009、P型・D型)による比を参考として出力するようにした。
+  `tools/check_contrast.py`: prints protan/deutan-simulated ratios (Machado et al. 2009) for the volt mark on dark grounds.
+- 単一ファイル版のファイル名を `5garashi_identity_v4_9.html` に変更。
+  Single-file edition renamed to `5garashi_identity_v4_9.html`.
+
 ## v4.8 — 2026-10-11
 
 ダークモードの配色を追加。

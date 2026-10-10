@@ -29,7 +29,7 @@ PALETTE = {
 NIGHT = {
     "paper": "#1A2212",
     "head": "#2B3A20",
-    "ink": "#EFE6C4",
+    "ink": "#C9C1A5",
     "steel": "#D9B98C",
     "volt": "#F07B5F",
     "volt-deep": "#F7A58E",
@@ -39,6 +39,37 @@ NIGHT = {
     "cream": "#1A2212",
     "mark": "#ADADA5",
 }
+
+# 文書面(編集欄・プレビュー)の機能色(第4条 4-3)。パレットの例外
+# Document surface functional colors (Art. 4-3), an exception to the palette
+DOCUMENT_DAY = {
+    "background": "#FFFFFF",
+    "foreground": "#1A1A1A",
+    "rule": "#DFCF9A",
+    "volt-deep": PALETTE["volt-deep"],
+    "volt": PALETTE["volt"],
+}
+DOCUMENT_NIGHT = {
+    "background": "#121314",
+    "foreground": "#BFBFBF",
+    "rule": "#2B2B2B",
+    "volt-deep": "#F7A58E",
+    "volt": "#F07B5F",
+}
+
+# 文書面で使用を認める組み合わせ(第7条 7-1 補2)。volt はエラー表示の左罫(非テキスト3:1以上)
+# Pairs approved on the document surface (Art. 7-1 cont. 2); volt is the error left rule (non-text, 3:1)
+DOCUMENT_APPROVED = [
+    ("foreground", "background", False),
+    ("volt-deep", "background", False),
+]
+DOCUMENT_NON_TEXT = [
+    ("volt", "background"),
+]
+# 装飾専用で基準の対象外(第4条 4-3 (2))/ decorative only, outside the requirements
+DOCUMENT_DECORATIVE = [
+    ("rule", "background"),
+]
 
 # 第7条 7-1 で使用を認める組み合わせ(文字色, 背景色, 太字のみか)
 # Pairs approved in Art. 7-1 (text, background, bold-only)
@@ -100,8 +131,18 @@ NIGHT_FORBIDDEN = [
 # Reference: the day volt (mark color) on night grounds — why the mark is reversed in dark mode (Art. 4-2)
 NIGHT_MARK = [
     (PALETTE["volt"], "paper"),
+    (PALETTE["volt"], "card"),
     (PALETTE["volt"], "head"),
 ]
+# 参考:OSが描く暗いタイトルバー(Windows 11 のダークモード)/ Reference: dark OS title bar (Windows 11)
+OS_DARK_TITLE_BAR = "#1F2024"
+
+# 色覚の多様性のシミュレーション(Machado, Oliveira, Fernandes 2009、重さ 1.0、線形RGB)。第3条 3-7 (5) の根拠
+# Color vision deficiency simulation (Machado et al. 2009, severity 1.0, linear RGB); basis of Art. 3-7 (5)
+CVD = {
+    "protan": [[0.152286, 1.052583, -0.204868], [0.114503, 0.786281, 0.099216], [-0.003882, -0.048116, 1.051998]],
+    "deutan": [[0.367322, 0.860646, -0.227968], [0.280085, 0.672501, 0.047413], [-0.011820, 0.042940, 0.968881]],
+}
 
 
 def _channel(c: int) -> float:
@@ -113,6 +154,24 @@ def luminance(hex_color: str) -> float:
     h = hex_color.lstrip("#")
     r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
     return 0.2126 * _channel(r) + 0.7152 * _channel(g) + 0.0722 * _channel(b)
+
+
+def _linear(hex_color: str) -> list:
+    h = hex_color.lstrip("#")
+    return [_channel(int(h[i:i + 2], 16)) for i in (0, 2, 4)]
+
+
+def ratio_cvd(fg: str, bg: str, kind: str) -> float:
+    m = CVD[kind]
+
+    def lum(hex_color: str) -> float:
+        rgb = _linear(hex_color)
+        sim = [max(0.0, min(1.0, sum(m[i][j] * rgb[j] for j in range(3)))) for i in range(3)]
+        return 0.2126 * sim[0] + 0.7152 * sim[1] + 0.0722 * sim[2]
+
+    a, b = lum(fg), lum(bg)
+    hi, lo = max(a, b), min(a, b)
+    return (hi + 0.05) / (lo + 0.05)
 
 
 def ratio_hex(fg: str, bg: str) -> float:
@@ -156,9 +215,21 @@ def main() -> int:
     print("Forbidden pairs (night)")
     for fg, bg in NIGHT_FORBIDDEN:
         print(f"  {fg:>9} x {bg:<9} {ratio(fg, bg, NIGHT):5.2f}:1")
-    print("Reference: day volt mark on night grounds")
-    for fg_hex, bg in NIGHT_MARK:
-        print(f"  {fg_hex:>9} x {bg:<9} {ratio_hex(fg_hex, NIGHT[bg]):5.2f}:1")
+    for label, doc in (("day", DOCUMENT_DAY), ("night", DOCUMENT_NIGHT)):
+        failed += _report(f"Document surface pairs ({label})", DOCUMENT_APPROVED, doc)
+        for fg, bg in DOCUMENT_NON_TEXT:
+            r = ratio(fg, bg, doc)
+            print(f"  {fg:>9} x {bg:<9} {r:5.2f}:1  non-text{'' if r >= 3 else ' FAIL'}")
+            if r < 3:
+                failed += 1
+        for fg, bg in DOCUMENT_DECORATIVE:
+            print(f"  {fg:>9} x {bg:<9} {ratio(fg, bg, doc):5.2f}:1  decorative (exempt)")
+    print("Reference: day volt mark on dark grounds (normal / protan / deutan)")
+    grounds = [(bg, NIGHT[bg]) for _, bg in NIGHT_MARK] + [("titlebar", OS_DARK_TITLE_BAR)]
+    for name, bg_hex in grounds:
+        fg_hex = PALETTE["volt"]
+        print(f"  {fg_hex:>9} x {name:<9} {ratio_hex(fg_hex, bg_hex):5.2f}:1"
+              f"  {ratio_cvd(fg_hex, bg_hex, 'protan'):5.2f}:1  {ratio_cvd(fg_hex, bg_hex, 'deutan'):5.2f}:1")
     if failed:
         print(f"{failed} approved pair(s) below 4.5:1")
     return 1 if failed else 0

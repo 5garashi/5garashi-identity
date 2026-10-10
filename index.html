@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: index.html(Web版・外部アセット参照。単一ファイル版 5garashi_identity_v4_8.html は tools/build_standalone.py で生成)
+  ファイル名 / File: index.html(Web版・外部アセット参照。単一ファイル版 5garashi_identity_v4_9.html は tools/build_standalone.py で生成)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
   最終更新 / Last updated: 2026-10-11
-  版 / Version: 4.8
+  版 / Version: 4.9
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ・楽譜・音源。特記=第12条を参照)
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -18,8 +18,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5garashi.com設計事務所 — Design Office Identity v4.8</title>
-<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様 第4.8版。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンスを日英二言語で定める。">
+<title>5garashi.com設計事務所 — Design Office Identity v4.9</title>
+<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様 第4.9版。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンスを日英二言語で定める。">
 <meta name="author" content="5garashi.com設計事務所 / 5garashi.com Design Office">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#FFE699" media="(prefers-color-scheme: light)">
@@ -30,7 +30,7 @@
 <link rel="alternate" hreflang="x-default" href="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="5garashi.com設計事務所 / 5garashi.com Design Office">
-<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity v4.8">
+<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity v4.9">
 <meta property="og:description" content="電子回路の設計から、まちのデジタルの困りごとまで支える設計事務所のアイデンティティ運用仕様(日英二言語)。">
 <meta id="ogUrl" property="og:url" content="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:image" content="https://5garashi.github.io/5garashi-identity/assets/og_image.png">
@@ -65,7 +65,7 @@
    Night palette (Art. 4-2): same variable names, different values. Print always uses the day palette */
 @media screen and (prefers-color-scheme: dark){
   :root{
-    --paper:#1A2212; --head:#2B3A20; --ink:#EFE6C4; --steel:#D9B98C;
+    --paper:#1A2212; --head:#2B3A20; --ink:#C9C1A5; --steel:#D9B98C;
     --volt:#F07B5F; --volt-deep:#F7A58E; --card:#222C1A; --line:#4C5C3B; --ok:#9FCC7E; --cream:#1A2212;
     /* マーク・ロゴタイプはダークモード用の反転版(灰色抜き、第3条 3-7)/ mark and logotype use the gray reversal (3-7) */
     --mark:#ADADA5;
@@ -439,7 +439,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第4.8版</span><span class="en" lang="en">IDENTITY GUIDELINE — v4.8</span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第4.9版</span><span class="en" lang="en">IDENTITY GUIDELINE — v4.9</span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -478,20 +478,20 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">第4.8版(2026-10-11)の変更点</span><span class="en" lang="en">What's new in v4.8 (2026-10-11)</span></summary>
+    <summary><span class="ja" lang="ja">第4.9版(2026-10-11)の変更点</span><span class="en" lang="en">What's new in v4.9 (2026-10-11)</span></summary>
     <ul class="ja" lang="ja">
-      <li>第4条に 4-2「夜の配色(ダークモード)」を新設。ink(千歳緑)を深く沈めた地に、paper(鳥の子色)の文字を置く11色を定めた。</li>
-      <li>第3条に 3-7「ダークモード用の反転版(灰色抜き)」を新設。ダークモードでは、シンボルマークとロゴタイプを灰 <span class="mono">#ADADA5</span> で抜いた反転版を使い、白やクリームイエローのまぶしさを抑える。原本SVG(日英のアウトライン版・編集用、マーク)を追加。第3条の見本、色見本、禁止例は昼の配色のまま表示する。</li>
-      <li>第7条 7-1 に夜の配色のコントラスト対照表(20組、すべてAA以上)を追加。夜の配色でも volt と ink は重ねない(2.18:1)。出荷前チェックに (e) ダークモードでの確認を追加。</li>
-      <li>第9条 9-4 のCSSトークンに、夜の配色とマークの色(<span class="mono">--mark</span>)を追加。</li>
-      <li>本書自体をダークモードに対応させた。印刷は常に昼の配色。</li>
+      <li>夜の ink を <span class="mono">#EFE6C4</span> から <span class="mono">#C9C1A5</span> に変更。暗い画面で文字・ボタン・枠線がまぶしかったため(mdEditor の実機での確認による)。本文の基本組は 9.09:1 で、引き続きAAA。</li>
+      <li>第4条に 4-3「文書面(編集欄・プレビュー)の色」を新設。長文を読み書きする面は無彩色の機能色(昼 <span class="mono">#FFFFFF</span> × <span class="mono">#1A1A1A</span>、夜 <span class="mono">#121314</span> × <span class="mono">#BFBFBF</span>)とし、パレットの例外として扱う。</li>
+      <li>第7条:夜の対照表の ink の組を更新し、7-1 補2「文書面のコントラスト対照表」を追加。</li>
+      <li>第9条 9-4:CSSトークンに <span class="mono">--document-*</span> の3つを追加。</li>
+      <li>4-3 に文書面の本文の太さ(W4)、4-2 に利用者による表示の切り替え、9-2 にアプリアイコンは表示モードによらず volt とすることを追記。3-7 に、条件付きで暗い地に volt のマークを置いてよいことを追記。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>New Art. 4-2 "Night palette (dark mode)": eleven colors that set paper-colored text on a ground of deeply sunk ink (Chitose-midori).</li>
-      <li>New Art. 3-7 "Reversed version for dark mode (gray)": in dark mode the mark and logotype are reversed in gray <span class="mono">#ADADA5</span>, avoiding the glare of white or cream yellow. Master SVGs added (JA/EN outlined and editing, plus the mark). Art. 3 specimens, swatches, and don'ts stay in day colors.</li>
-      <li>Art. 7-1 gains a night contrast table (20 pairs, all AA or better). Volt and ink are never layered at night either (2.18:1). Pre-release check adds (e) dark mode.</li>
-      <li>The Art. 9-4 CSS tokens now include the night palette and the mark color (<span class="mono">--mark</span>).</li>
-      <li>This document itself now supports dark mode. Print always uses the day palette.</li>
+      <li>Night ink changed from <span class="mono">#EFE6C4</span> to <span class="mono">#C9C1A5</span>: text, buttons, and borders glared on dark screens (found in real use in mdEditor). The default body pair is 9.09:1, still AAA.</li>
+      <li>New Art. 4-3 "Document surface (editor and preview)": long-text surfaces use neutral functional colors (day <span class="mono">#FFFFFF</span> × <span class="mono">#1A1A1A</span>, night <span class="mono">#121314</span> × <span class="mono">#BFBFBF</span>), treated as an exception to the palette.</li>
+      <li>Art. 7: ink pairs in the night table updated; new 7-1 (cont. 2) contrast table for the document surface.</li>
+      <li>Art. 9-4: three <span class="mono">--document-*</span> tokens added to the CSS.</li>
+      <li>Added: document-surface body weight W4 (4-3), user-selected display mode (4-2), app icons stay volt in every mode (9-2), and conditions for a volt mark on dark grounds (3-7).</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -693,8 +693,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">3-7. ダークモード用の反転版(灰色抜き)</span><span class="en" lang="en">3-7. Reversed version for dark mode (gray)</span></h3>
     <p>
-      <span class="ja" lang="ja">ダークモード(夜の配色、4-2)の画面では、3-6 の白黒版を反転させた版を使う。線と文字を<b>灰 <span class="mono">#ADADA5</span></b>(和名のめやす:銀鼠)にし、地は透明にして夜の地色を見せる。白やクリーム色で抜くと暗い画面ではまぶしいため、明るさを paper の約半分に抑えた灰色とする。シンボルマークも同じ灰色で抜く。</span>
-      <span class="en" lang="en">On dark-mode screens (night palette, 4-2), use the reverse of the 3-6 monochrome version. Lines and lettering are <b>gray <span class="mono">#ADADA5</span></b> (closest traditional color: Ginnezu), and the ground is transparent so the night ground shows through. White or cream knock-outs glare on dark screens, so this gray keeps the brightness to about half that of paper. The symbol mark is reversed in the same gray.</span>
+      <span class="ja" lang="ja">ダークモード(夜の配色、4-2)の画面では、3-6 の白黒版を反転させた版を使う。線と文字を<b>灰 <span class="mono">#ADADA5</span></b>(和名のめやす:銀鼠)にし、地は透明にして夜の地色を見せる。白やクリーム色で抜くと暗い画面ではまぶしいため、明るさを paper の約半分に抑えた灰色とする。シンボルマークも同じ灰色で抜くことを基本とする(条件を満たせば volt のままでもよい:(5))。</span>
+      <span class="en" lang="en">On dark-mode screens (night palette, 4-2), use the reverse of the 3-6 monochrome version. Lines and lettering are <b>gray <span class="mono">#ADADA5</span></b> (closest traditional color: Ginnezu), and the ground is transparent so the night ground shows through. White or cream knock-outs glare on dark screens, so this gray keeps the brightness to about half that of paper. The symbol mark is normally reversed in the same gray (volt may remain under the conditions in (5)).</span>
     </p>
     <div class="rev-plate" style="--mark:#ADADA5;--logo-frame:#ADADA5;--logo-ground:transparent;--logo-text:#ADADA5;--logo-five:#ADADA5">
       <div class="logo-col">
@@ -708,8 +708,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       </div>
     </div>
     <p>
-      <span class="ja" lang="ja"><b>(1)</b> 夜の配色の地(paper <span class="mono">#1A2212</span>・card <span class="mono">#222C1A</span>・head <span class="mono">#2B3A20</span>)の上だけで使う。コントラスト比はそれぞれ 7.26:1、6.44:1、5.38:1(7-1 補)。<b>(2)</b> 昼の画面と印刷には使わない(昼はカラー版、白黒印刷は 3-6)。<b>(3)</b> 灰色以外の色で抜かない。<b>(4)</b> 原本は <span class="mono">assets/</span> の <span class="mono">*_reversed*.svg</span>(第12条 12-3)。</span>
-      <span class="en" lang="en"><b>(1)</b> Use only on night-palette grounds (paper <span class="mono">#1A2212</span>, card <span class="mono">#222C1A</span>, head <span class="mono">#2B3A20</span>): 7.26:1, 6.44:1, and 5.38:1 respectively (7-1 cont.). <b>(2)</b> Never on day screens or in print (day uses the color version; monochrome print uses 3-6). <b>(3)</b> Never reverse in any color other than this gray. <b>(4)</b> Masters are the <span class="mono">*_reversed*.svg</span> files in <span class="mono">assets/</span> (Art. 12-3).</span>
+      <span class="ja" lang="ja"><b>(1)</b> 夜の配色の地(paper <span class="mono">#1A2212</span>・card <span class="mono">#222C1A</span>・head <span class="mono">#2B3A20</span>)の上だけで使う。コントラスト比はそれぞれ 7.26:1、6.44:1、5.38:1(7-1 補)。<b>(2)</b> 昼の画面と印刷には使わない(昼はカラー版、白黒印刷は 3-6)。<b>(3)</b> 灰色以外の色で抜かない。<b>(4)</b> 原本は <span class="mono">assets/</span> の <span class="mono">*_reversed*.svg</span>(第12条 12-3)。<b>(5) 暗い地での volt のマーク:</b>シンプル版は、暗い地(夜の配色の地、OSが描く暗いタイトルバー・タスクバーなど)でも volt <span class="mono">#B92613</span> のまま置いてよい。ロゴはコントラスト基準の対象外だが、暗い地での比は 1.94〜2.61:1、P型の色覚では 1.39〜1.88:1 まで下がり見えにくいため、次の条件をすべて満たすときに限る。(a) 同じ画面の近くに、名称が文字またはロゴタイプで示されている。(b) マークだけでボタンやリンクを表さない(アイコンだけの操作部品にする場合は、非テキストの基準 3:1 が必要なため灰色抜きを使う)。(c) マークで状態や意味を伝えない。(d) 昼の ink <span class="mono">#385723</span> の上には置かない(1.31:1、第10条)。</span>
+      <span class="en" lang="en"><b>(1)</b> Use only on night-palette grounds (paper <span class="mono">#1A2212</span>, card <span class="mono">#222C1A</span>, head <span class="mono">#2B3A20</span>): 7.26:1, 6.44:1, and 5.38:1 respectively (7-1 cont.). <b>(2)</b> Never on day screens or in print (day uses the color version; monochrome print uses 3-6). <b>(3)</b> Never reverse in any color other than this gray. <b>(4)</b> Masters are the <span class="mono">*_reversed*.svg</span> files in <span class="mono">assets/</span> (Art. 12-3). <b>(5) Volt mark on dark grounds:</b> the simple mark may stay volt <span class="mono">#B92613</span> on dark grounds (night-palette grounds, dark OS title bars and taskbars, and so on). Logos are exempt from contrast requirements, but on dark grounds the ratio is 1.94–2.61:1 and falls to 1.39–1.88:1 under protan vision, so all of the following must hold: (a) the name appears nearby on the same screen, in text or as the logotype; (b) the mark alone never forms a button or link (an icon-only control needs 3:1 non-text contrast, so use the gray reversal); (c) the mark never carries a state or meaning; (d) it is never placed on the day ink <span class="mono">#385723</span> (1.31:1, Art. 10).</span>
     </p>
   </div>
 </section>
@@ -772,8 +772,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <div class="meta"><span class="nm">card</span><span class="hex mono">#222C1A</span><span class="use"><span class="ja" lang="ja">カード面</span><span class="en" lang="en">Card surfaces</span></span><span class="wa"><span class="ja" lang="ja">元の色:ink(千歳緑)</span><span class="en" lang="en">From ink (Chitose-midori)</span></span></div></div>
       <div class="sw"><div class="chipc" style="background:#2B3A20"><span class="ratio"><span class="ja" lang="ja">頭</span><span class="en" lang="en">hd</span></span></div>
         <div class="meta"><span class="nm">head</span><span class="hex mono">#2B3A20</span><span class="use"><span class="ja" lang="ja">ヘッダー・表紙の帯</span><span class="en" lang="en">Headers / cover band</span></span><span class="wa"><span class="ja" lang="ja">元の色:ink(千歳緑)</span><span class="en" lang="en">From ink (Chitose-midori)</span></span></div></div>
-      <div class="sw"><div class="chipc" style="background:#EFE6C4"><span class="ratio"><span class="ja" lang="ja">主</span><span class="en" lang="en">main</span></span></div>
-        <div class="meta"><span class="nm">ink</span><span class="hex mono">#EFE6C4</span><span class="use"><span class="ja" lang="ja">本文・枠線・主要ボタン</span><span class="en" lang="en">Body text / frames / buttons</span></span><span class="wa"><span class="ja" lang="ja">元の色:paper(鳥の子色)</span><span class="en" lang="en">From paper (Torinoko)</span></span></div></div>
+      <div class="sw"><div class="chipc" style="background:#C9C1A5"><span class="ratio"><span class="ja" lang="ja">主</span><span class="en" lang="en">main</span></span></div>
+        <div class="meta"><span class="nm">ink</span><span class="hex mono">#C9C1A5</span><span class="use"><span class="ja" lang="ja">本文・枠線・主要ボタン</span><span class="en" lang="en">Body text / frames / buttons</span></span><span class="wa"><span class="ja" lang="ja">元の色:paper(鳥の子色)を暗くした色</span><span class="en" lang="en">Dimmed from paper (Torinoko)</span></span></div></div>
       <div class="sw"><div class="chipc" style="background:#D9B98C"><span class="ratio"><span class="ja" lang="ja">補</span><span class="en" lang="en">sub</span></span></div>
         <div class="meta"><span class="nm">steel</span><span class="hex mono">#D9B98C</span><span class="use"><span class="ja" lang="ja">補助テキスト・注記</span><span class="en" lang="en">Secondary text</span></span><span class="wa"><span class="ja" lang="ja">元の色:steel(栗色)</span><span class="en" lang="en">From steel (Kuri-iro)</span></span></div></div>
       <div class="sw"><div class="chipc" style="background:#F07B5F"><span class="ratio"><span class="ja" lang="ja">辛</span><span class="en" lang="en">hot</span></span></div>
@@ -790,8 +790,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <div class="meta"><span class="nm">mark</span><span class="hex mono">#ADADA5</span><span class="use"><span class="ja" lang="ja">マーク・ロゴタイプの反転(灰色抜き、3-7)</span><span class="en" lang="en">Mark / logotype reversal (gray, 3-7)</span></span><span class="wa"><span class="ja" lang="ja">和名のめやす:銀鼠</span><span class="en" lang="en">Ginnezu (trad.)</span></span></div></div>
     </div>
     <p>
-      <b><span class="ja" lang="ja">(1) 使う場面:</span><span class="en" lang="en">(1) When:</span></b><span class="ja" lang="ja">Web・アプリの画面で、閲覧環境がダーク表示を求めるとき(CSSの <span class="mono">prefers-color-scheme: dark</span>)に使う。印刷物・紙面は常に昼の配色とする。</span><span class="en" lang="en"> on web and app screens when the viewer's environment requests dark display (CSS <span class="mono">prefers-color-scheme: dark</span>). Print and paper always use the day palette.</span><br>
-      <b><span class="ja" lang="ja">(2) シンボルマーク:</span><span class="en" lang="en">(2) Symbol mark:</span></b><span class="ja" lang="ja">3-7 の灰色抜き(<span class="mono">#ADADA5</span>)で表示する。volt <span class="mono">#B92613</span> は夜の地に対して 2.61:1 しかなく、マークの色を明るく変えることは第10条で禁止しているため。paper(<span class="mono">#F9EFCB</span>)で抜くと暗い画面ではまぶしいため、灰色に抑える。夜の volt(<span class="mono">#F07B5F</span>)はアクセントとフォーカス枠専用で、マークには使わない。</span><span class="en" lang="en"> use the gray reversal of 3-7 (<span class="mono">#ADADA5</span>). Volt <span class="mono">#B92613</span> reaches only 2.61:1 on the night ground, and Art. 10 forbids lightening the mark. A paper (<span class="mono">#F9EFCB</span>) reversal glares on dark screens, so the gray is used. The night volt (<span class="mono">#F07B5F</span>) is for accents and focus rings only, never for the mark.</span><br>
+      <b><span class="ja" lang="ja">(1) 使う場面:</span><span class="en" lang="en">(1) When:</span></b><span class="ja" lang="ja">Web・アプリの画面で、閲覧環境がダーク表示を求めるとき(CSSの <span class="mono">prefers-color-scheme: dark</span>)、または利用者が表示の切り替えで夜を選んだときに使う。切り替えを設ける場合は、環境に従う設定を既定とし、いま選ばれている表示を文字で示す(例:「表示: ダーク」)。印刷物・紙面は常に昼の配色とする。</span><span class="en" lang="en"> on web and app screens when the viewer's environment requests dark display (CSS <span class="mono">prefers-color-scheme: dark</span>), or when the user chooses night with a display switch. If a switch is provided, following the environment is the default, and the current choice is shown in words (for example, "Display: Dark"). Print and paper always use the day palette.</span><br>
+      <b><span class="ja" lang="ja">(2) シンボルマーク:</span><span class="en" lang="en">(2) Symbol mark:</span></b><span class="ja" lang="ja">3-7 の灰色抜き(<span class="mono">#ADADA5</span>)で表示する。volt <span class="mono">#B92613</span> は夜の地に対して 2.61:1 しかなく、マークの色を明るく変えることは第10条で禁止しているため。paper(<span class="mono">#F9EFCB</span>)で抜くと暗い画面ではまぶしいため、灰色に抑える。夜の volt(<span class="mono">#F07B5F</span>)はアクセントとフォーカス枠専用で、マークには使わない。条件を満たせば、昼と同じ volt <span class="mono">#B92613</span> のマークを置いてもよい(3-7 (5))。</span><span class="en" lang="en"> use the gray reversal of 3-7 (<span class="mono">#ADADA5</span>). Volt <span class="mono">#B92613</span> reaches only 2.61:1 on the night ground, and Art. 10 forbids lightening the mark. A paper (<span class="mono">#F9EFCB</span>) reversal glares on dark screens, so the gray is used. The night volt (<span class="mono">#F07B5F</span>) is for accents and focus rings only, never for the mark. Under the conditions of 3-7 (5), the day volt <span class="mono">#B92613</span> mark may be used instead.</span><br>
       <b><span class="ja" lang="ja">(3) ロゴタイプ:</span><span class="en" lang="en">(3) Logotype:</span></b><span class="ja" lang="ja">クリームイエローの地は暗い画面ではまぶしいため、3-7 の反転版(灰色の枠と文字、透明の地)を使う。</span><span class="en" lang="en"> the cream-yellow ground glares on dark screens, so use the reversed version of 3-7 (gray frame and type, transparent ground).</span><br>
       <b><span class="ja" lang="ja">(4) 色見本・見本図:</span><span class="en" lang="en">(4) Specimens:</span></b><span class="ja" lang="ja">昼の色そのものを示す図(色見本、マークの見本、禁止例など)は、夜の配色でも昼の配色のまま表示する。</span><span class="en" lang="en"> figures that show the day colors themselves (swatches, mark specimens, don'ts) stay in the day palette even in dark mode.</span><br>
       <b><span class="ja" lang="ja">(5) 組み合わせ:</span><span class="en" lang="en">(5) Pairs:</span></b><span class="ja" lang="ja">文字色と背景色は、7-1 の「夜の配色」の表にある組み合わせだけを使う。</span><span class="en" lang="en"> use only the text/background pairs in the night table of 7-1.</span>
@@ -800,6 +800,25 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       <span class="ja" lang="ja"> 本書自体が夜の配色に対応している。端末やブラウザの設定をダーク表示にすると、上記の規定どおりに切り替わる。</span>
       <span class="en" lang="en"> This document itself supports the night palette. Switch your device or browser to dark display and it changes according to the rules above.</span>
     </div>
+    <h3><span class="ja" lang="ja">4-3. 文書面(編集欄・プレビュー)の色</span><span class="en" lang="en">4-3. Document surface (editor and preview)</span></h3>
+    <p>
+      <span class="ja" lang="ja">エディタの編集欄やプレビューなど、長い文章を読み書きする面には、パレットとは別の<b>無彩色の機能色</b>を使う。長文では、色味のない地と文字のほうが目が疲れにくいためである。コード表示ブロックと同じく本パレットの例外とし、使う場所は文書面に限る(画面の枠・ボタン・ヘッダーは 4-1・4-2 の配色)。</span>
+      <span class="en" lang="en">Surfaces for reading and writing long text — editor panes, previews — use <b>neutral functional colors</b> outside the palette, because uncolored grounds and text are easier on the eyes over long passages. Like the code-block colors, they are an exception to the palette and are limited to the document surface (window chrome, buttons, and headers keep the 4-1 / 4-2 colors).</span>
+    </p>
+    <div class="table-wrap" role="region" tabindex="0" aria-label="文書面の色(横にスクロールできる) / Document surface colors (scrolls horizontally)">
+    <table class="ud">
+      <thead><tr><th><span class="ja" lang="ja">トークン</span><span class="en" lang="en">Token</span></th><th><span class="ja" lang="ja">昼</span><span class="en" lang="en">Day</span></th><th><span class="ja" lang="ja">夜</span><span class="en" lang="en">Night</span></th><th><span class="ja" lang="ja">用途</span><span class="en" lang="en">Use</span></th></tr></thead>
+      <tbody>
+        <tr><td class="mono">--document-background</td><td><span class="pair"><span class="dot" style="background:#FFFFFF"></span><span class="mono">#FFFFFF</span></span></td><td><span class="pair"><span class="dot" style="background:#121314"></span><span class="mono">#121314</span></span></td><td><span class="ja" lang="ja">文書面の地</span><span class="en" lang="en">Document ground</span></td></tr>
+        <tr><td class="mono">--document-foreground</td><td><span class="pair"><span class="dot" style="background:#1A1A1A"></span><span class="mono">#1A1A1A</span></span></td><td><span class="pair"><span class="dot" style="background:#BFBFBF"></span><span class="mono">#BFBFBF</span></span></td><td><span class="ja" lang="ja">本文</span><span class="en" lang="en">Body text</span></td></tr>
+        <tr><td class="mono">--document-rule</td><td><span class="pair"><span class="dot" style="background:#DFCF9A"></span><span class="mono">#DFCF9A</span></span></td><td><span class="pair"><span class="dot" style="background:#2B2B2B"></span><span class="mono">#2B2B2B</span></span></td><td><span class="ja" lang="ja">見出しの下線・区切り線(装飾専用)</span><span class="en" lang="en">Heading underlines and dividers (decorative only)</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      <span class="ja" lang="ja"><b>(1)</b> 文書面の地の上で使う文字色と線の色は、7-1 補2 の表にある組み合わせだけとする。<b>(2)</b> <span class="mono">--document-rule</span> は装飾専用で、文字のコントラスト基準の対象外とする。そのため、見出しは下線がなくても文字の大きさ・太さで見分けられるようにし、意味のある境界線には使わない。<b>(3)</b> 印刷・PDFは常に昼の値とする。<b>(4)</b> 文書面の本文の太さは W4(400)とする(第6条の本文 W6(600)の例外)。長文では細めのほうが字の形がつぶれず読みやすいためである。見出しは本文より大きく、W7(700)以上にして、(2) のとおり下線がなくても見分けられるようにする。</span>
+      <span class="en" lang="en"><b>(1)</b> On the document ground, use only the text and line colors paired in table 7-1 (cont. 2). <b>(2)</b> <span class="mono">--document-rule</span> is decorative only and outside the text-contrast requirements; headings must therefore be identifiable by size and weight without the underline, and the rule is never used for a meaningful boundary. <b>(3)</b> Print and PDF always use the day values. <b>(4)</b> Body text on the document surface is W4 (400), an exception to the W6 (600) body weight of Art. 6, because lighter strokes keep letterforms open and easier to read over long passages. Headings are larger than body text and W7 (700) or heavier, so that, per (2), they are identifiable without the underline.</span>
+    </p>
   </div>
 </section>
 
@@ -866,7 +885,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       </div>
       <div class="type-row">
         <span class="role"><span class="ja" lang="ja">本文</span><span class="en" lang="en">BODY</span></span>
-        <div class="sample" style="font-weight:600;font-size:15px"><span class="ja" lang="ja">同ファミリー W6(600)、行間1.65〜1.75。本文は14px以上、問題文は17pxを標準とする。</span><span class="en" lang="en">Same family, W6 (600), line-height 1.65–1.75. Body 14px minimum; quiz questions default to 17px.</span></div>
+        <div class="sample" style="font-weight:600;font-size:15px"><span class="ja" lang="ja">同ファミリー W6(600)、行間1.65〜1.75。本文は14px以上、問題文は17pxを標準とする。文書面(4-3)の本文は W4(400)。</span><span class="en" lang="en">Same family, W6 (600), line-height 1.65–1.75. Body 14px minimum; quiz questions default to 17px. Document surfaces (4-3) use W4 (400).</span></div>
       </div>
       <div class="type-row">
         <span class="role"><span class="ja" lang="ja">数値・答え</span><span class="en" lang="en">FIGURES</span></span>
@@ -936,20 +955,20 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">7-1 補. 夜の配色(4-2)のコントラスト対照表</span><span class="en" lang="en">7-1 (cont.) Contrast table for the night palette (4-2)</span></h3>
     <p>
-      <span class="ja" lang="ja">夜の配色では、次の組み合わせだけを使う。名称は夜の値を指す(例:ink は <span class="mono">#EFE6C4</span>)。すべてAA以上で、本文の基本組はAAA以上である。昼と異なり、volt は太字でなくても使える。</span>
-      <span class="en" lang="en">In the night palette, use only the pairs below. Names refer to the night values (for example, ink is <span class="mono">#EFE6C4</span>). All reach AA or better; the default body pairs reach AAA. Unlike the day palette, volt may be used at regular weight.</span>
+      <span class="ja" lang="ja">夜の配色では、次の組み合わせだけを使う。名称は夜の値を指す(例:ink は <span class="mono">#C9C1A5</span>)。すべてAA以上で、本文の基本組はAAA以上である。昼と異なり、volt は太字でなくても使える。</span>
+      <span class="en" lang="en">In the night palette, use only the pairs below. Names refer to the night values (for example, ink is <span class="mono">#C9C1A5</span>). All reach AA or better; the default body pairs reach AAA. Unlike the day palette, volt may be used at regular weight.</span>
     </p>
     <div class="table-wrap" role="region" tabindex="0" aria-label="夜の配色のコントラスト対照表(横にスクロールできる) / Night palette contrast table (scrolls horizontally)">
     <table class="ud">
       <caption>
-        <span class="ja" lang="ja">確認日:2026-10-11。計算方法は昼の表と同じ(<span class="mono">tools/check_contrast.py</span>)。夜の配色でも volt と ink は重ねない(2.18:1)。</span>
-        <span class="en" lang="en">Checked 2026-10-11 with the same method as the day table (<span class="mono">tools/check_contrast.py</span>). Volt and ink are never layered in the night palette either (2.18:1).</span>
+        <span class="ja" lang="ja">確認日:2026-10-11。計算方法は昼の表と同じ(<span class="mono">tools/check_contrast.py</span>)。夜の配色でも volt と ink は重ねない(1.51:1)。</span>
+        <span class="en" lang="en">Checked 2026-10-11 with the same method as the day table (<span class="mono">tools/check_contrast.py</span>). Volt and ink are never layered in the night palette either (1.51:1).</span>
       </caption>
       <thead><tr><th><span class="ja" lang="ja">文字色 × 背景色</span><span class="en" lang="en">Text × background</span></th><th><span class="ja" lang="ja">用途</span><span class="en" lang="en">Use</span></th><th><span class="ja" lang="ja">比</span><span class="en" lang="en">Ratio</span></th><th><span class="ja" lang="ja">判定</span><span class="en" lang="en">Grade</span></th></tr></thead>
       <tbody>
-        <tr><td><span class="pair"><span class="dot" style="background:#1A2212;color:#EFE6C4;border-color:#4C5C3B">A</span>ink × paper</span></td><td><span class="ja" lang="ja">本文の基本組</span><span class="en" lang="en">Default body text</span></td><td class="num">13.10:1</td><td><span class="aaa">AAA</span></td></tr>
-        <tr><td><span class="pair"><span class="dot" style="background:#222C1A;color:#EFE6C4;border-color:#4C5C3B">A</span>ink × card</span></td><td><span class="ja" lang="ja">カード上の本文</span><span class="en" lang="en">Body text on cards</span></td><td class="num">11.63:1</td><td><span class="aaa">AAA</span></td></tr>
-        <tr><td><span class="pair"><span class="dot" style="background:#2B3A20;color:#EFE6C4;border-color:#4C5C3B">A</span>ink × head</span></td><td><span class="ja" lang="ja">ヘッダー見出し</span><span class="en" lang="en">Header titles</span></td><td class="num">9.71:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#1A2212;color:#C9C1A5;border-color:#4C5C3B">A</span>ink × paper</span></td><td><span class="ja" lang="ja">本文の基本組</span><span class="en" lang="en">Default body text</span></td><td class="num">9.09:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#222C1A;color:#C9C1A5;border-color:#4C5C3B">A</span>ink × card</span></td><td><span class="ja" lang="ja">カード上の本文</span><span class="en" lang="en">Body text on cards</span></td><td class="num">8.08:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#2B3A20;color:#C9C1A5;border-color:#4C5C3B">A</span>ink × head</span></td><td><span class="ja" lang="ja">ヘッダー見出し</span><span class="en" lang="en">Header titles</span></td><td class="num">6.74:1</td><td><span class="aa">AA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#1A2212;color:#D9B98C;border-color:#4C5C3B">A</span>steel × paper</span></td><td><span class="ja" lang="ja">補助テキスト</span><span class="en" lang="en">Secondary text</span></td><td class="num">8.79:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#222C1A;color:#D9B98C;border-color:#4C5C3B">A</span>steel × card</span></td><td><span class="ja" lang="ja">カード上の注記</span><span class="en" lang="en">Notes on cards</span></td><td class="num">7.81:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#2B3A20;color:#D9B98C;border-color:#4C5C3B">A</span>steel × head</span></td><td><span class="ja" lang="ja">表紙・ヘッダー・フッターの補助テキスト</span><span class="en" lang="en">Secondary text on covers / headers / footers</span></td><td class="num">6.52:1</td><td><span class="aa">AA</span></td></tr>
@@ -960,13 +979,32 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <tr><td><span class="pair"><span class="dot" style="background:#222C1A;color:#F07B5F;border-color:#4C5C3B">A</span>volt × card</span></td><td><span class="ja" lang="ja">カード上のアクセント文字</span><span class="en" lang="en">Accent text on cards</span></td><td class="num">5.34:1</td><td><span class="aa">AA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#1A2212;color:#9FCC7E;border-color:#4C5C3B">A</span>ok × paper</span></td><td><span class="ja" lang="ja">完了表示(記号・ラベルと併用)</span><span class="en" lang="en">Done status (with symbol and label)</span></td><td class="num">8.91:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#222C1A;color:#9FCC7E;border-color:#4C5C3B">A</span>ok × card</span></td><td><span class="ja" lang="ja">カード上の完了表示</span><span class="en" lang="en">Done status on cards</span></td><td class="num">7.91:1</td><td><span class="aaa">AAA</span></td></tr>
-        <tr><td><span class="pair"><span class="dot" style="background:#EFE6C4;color:#2B3A20;border-color:#4C5C3B">A</span>head × ink</span></td><td><span class="ja" lang="ja">主要ボタン</span><span class="en" lang="en">Primary buttons</span></td><td class="num">9.71:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#C9C1A5;color:#2B3A20;border-color:#4C5C3B">A</span>head × ink</span></td><td><span class="ja" lang="ja">主要ボタン</span><span class="en" lang="en">Primary buttons</span></td><td class="num">6.74:1</td><td><span class="aa">AA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#F07B5F;color:#1A2212;border-color:#4C5C3B">A</span>cream × volt</span></td><td><span class="ja" lang="ja">バッジ・番号札</span><span class="en" lang="en">Badges / number tags</span></td><td class="num">6.01:1</td><td><span class="aa">AA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#F7A58E;color:#1A2212;border-color:#4C5C3B">A</span>cream × volt-deep</span></td><td><span class="ja" lang="ja">警告バッジ</span><span class="en" lang="en">Warning badges</span></td><td class="num">8.37:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#9FCC7E;color:#1A2212;border-color:#4C5C3B">A</span>cream × ok</span></td><td><span class="ja" lang="ja">完了バッジ・判定ラベル</span><span class="en" lang="en">Done badges / grade labels</span></td><td class="num">8.91:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#1A2212;color:#ADADA5;border-color:#4C5C3B">A</span>mark × paper</span></td><td><span class="ja" lang="ja">マーク・ロゴタイプの灰色抜き(3-7)</span><span class="en" lang="en">Gray mark / logotype reversal (3-7)</span></td><td class="num">7.26:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#222C1A;color:#ADADA5;border-color:#4C5C3B">A</span>mark × card</span></td><td><span class="ja" lang="ja">カード上の灰色抜き</span><span class="en" lang="en">Gray reversal on cards</span></td><td class="num">6.44:1</td><td><span class="aa">AA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#2B3A20;color:#ADADA5;border-color:#4C5C3B">A</span>mark × head</span></td><td><span class="ja" lang="ja">ヘッダー・表紙の灰色抜き</span><span class="en" lang="en">Gray reversal on headers / covers</span></td><td class="num">5.38:1</td><td><span class="aa">AA</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3><span class="ja" lang="ja">7-1 補2. 文書面(4-3)のコントラスト対照表</span><span class="en" lang="en">7-1 (cont. 2) Contrast table for the document surface (4-3)</span></h3>
+    <div class="table-wrap" role="region" tabindex="0" aria-label="文書面のコントラスト対照表(横にスクロールできる) / Document surface contrast table (scrolls horizontally)">
+    <table class="ud">
+      <caption>
+        <span class="ja" lang="ja">確認日:2026-10-11。計算方法は 7-1 と同じ。装飾専用の <span class="mono">--document-rule</span>(昼 1.55:1、夜 1.31:1)は基準の対象外(4-3 (2))。エラーは色だけで伝えず、記号と文言を併記する(7-2)。</span>
+        <span class="en" lang="en">Checked 2026-10-11 with the same method as 7-1. The decorative <span class="mono">--document-rule</span> (day 1.55:1, night 1.31:1) is outside the requirements (4-3 (2)). Errors are never signaled by color alone; add a symbol and wording (7-2).</span>
+      </caption>
+      <thead><tr><th><span class="ja" lang="ja">文字色・線 × 地</span><span class="en" lang="en">Text or line × ground</span></th><th><span class="ja" lang="ja">用途</span><span class="en" lang="en">Use</span></th><th><span class="ja" lang="ja">比</span><span class="en" lang="en">Ratio</span></th><th><span class="ja" lang="ja">判定</span><span class="en" lang="en">Grade</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="pair"><span class="dot" style="background:#FFFFFF;color:#1A1A1A;border-color:#4C5C3B">A</span><span class="ja" lang="ja">昼:</span><span class="en" lang="en">Day: </span>foreground × background</span></td><td><span class="ja" lang="ja">本文</span><span class="en" lang="en">Body text</span></td><td class="num">17.40:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#FFFFFF;color:#8C1B0D;border-color:#4C5C3B">A</span><span class="ja" lang="ja">昼:</span><span class="en" lang="en">Day: </span>volt-deep × background</span></td><td><span class="ja" lang="ja">エラーメッセージの文字</span><span class="en" lang="en">Error message text</span></td><td class="num">9.22:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#FFFFFF;color:#B92613;border-color:#4C5C3B">A</span><span class="ja" lang="ja">昼:</span><span class="en" lang="en">Day: </span>volt × background</span></td><td><span class="ja" lang="ja">エラー表示の左罫(非テキスト3:1以上)</span><span class="en" lang="en">Error left rule (non-text, 3:1 or better)</span></td><td class="num">6.27:1</td><td><span class="aa">AA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#BFBFBF;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>foreground × background</span></td><td><span class="ja" lang="ja">本文</span><span class="en" lang="en">Body text</span></td><td class="num">10.12:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#F7A58E;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>volt-deep × background</span></td><td><span class="ja" lang="ja">エラーメッセージの文字</span><span class="en" lang="en">Error message text</span></td><td class="num">9.50:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#F07B5F;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>volt × background</span></td><td><span class="ja" lang="ja">エラー表示の左罫(非テキスト3:1以上)</span><span class="en" lang="en">Error left rule (non-text, 3:1 or better)</span></td><td class="num">6.82:1</td><td><span class="aa">AA</span></td></tr>
       </tbody>
     </table>
     </div>
@@ -1167,8 +1205,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">9-2. ファビコン・アプリアイコン</span><span class="en" lang="en">9-2. Favicon / app icon</span></h3>
     <p>
-      <span class="ja" lang="ja">シンプル版SVGをそのままファビコンにする(本書のタブアイコンが実例)。角丸背景を敷く場合は head色とする。</span>
-      <span class="en" lang="en">The simple SVG serves directly as the favicon (this document's tab icon is a live example). If a rounded background is needed, use the head color.</span>
+      <span class="ja" lang="ja">シンプル版SVGをそのままファビコンにする(本書のタブアイコンが実例)。角丸背景を敷く場合は head色とする。ファビコンとアプリアイコンは、表示モードによらず volt のシンプル版とする。OSが描くタイトルバー・タスクバー・タブは表示モードに合わせて描き分けられないことが多く、名称も並んで表示されるため(3-7 (5))。</span>
+      <span class="en" lang="en">The simple SVG serves directly as the favicon (this document's tab icon is a live example). If a rounded background is needed, use the head color. Favicons and app icons stay the volt simple mark in every display mode: OS-drawn title bars, taskbars, and tabs often cannot switch per mode, and the name appears alongside (3-7 (5)).</span>
     </p>
 
     <h3><span class="ja" lang="ja">9-3. ファイルヘッダー(コード署名)</span><span class="en" lang="en">9-3. File header (code signature)</span></h3>
@@ -1191,16 +1229,23 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
   --card:#FFFDF2;   --line:#DFCF9A;  --ok:#3E6B2A;
   --cream:#FFF3D6;
   --mark:<span class="rd">#B92613</span>;   <span class="cm">/* シンボルマークの色 / symbol mark color */</span>
+  <span class="cm">/* 文書面の機能色(4-3)/ document surface (4-3) */</span>
+  --document-background:#FFFFFF;
+  --document-foreground:#1A1A1A;
+  --document-rule:#DFCF9A;
 }
 <span class="cm">/* 夜の配色(4-2)。印刷には適用しない / night palette (4-2), not for print */</span>
 @media screen and (prefers-color-scheme: dark){
   :root{
     --paper:#1A2212;  --head:#2B3A20;
-    --ink:#EFE6C4;    --steel:#D9B98C;
+    --ink:#C9C1A5;    --steel:#D9B98C;
     --volt:#F07B5F;   --volt-deep:#F7A58E;
     --card:#222C1A;   --line:#4C5C3B;  --ok:#9FCC7E;
     --cream:#1A2212;
     --mark:#ADADA5;   <span class="cm">/* 灰色抜き(3-7)/ gray reversal (3-7) */</span>
+    --document-background:#121314;
+    --document-foreground:#BFBFBF;
+    --document-rule:#2B2B2B;
   }
 }
 <span class="cm">/* ユニバーサルデザイン標準装備 / universal design as standard */</span>
@@ -1259,7 +1304,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       </div>
       <div class="dont">
         <span style="display:inline-flex;align-items:center;justify-content:center;background:var(--ink);border-radius:8px;padding:6px 12px" aria-hidden="true"><svg style="height:40px"><use href="#tally5"/></svg></span>
-        <span class="cap"><span class="ja" lang="ja">volt(赤)と ink(緑)を直接重ねない(コントラスト比 1.31:1。暗色地のマークは paper 白抜き:2-2、7-1)</span><span class="en" lang="en">Never layer volt (red) directly on ink (green) — 1.31:1. On dark grounds, reverse the mark to paper (2-2, 7-1)</span></span>
+        <span class="cap"><span class="ja" lang="ja">volt(赤)と昼の ink(緑 #385723)を直接重ねない(コントラスト比 1.31:1。ink 地のマークは paper 白抜き:2-2、7-1)</span><span class="en" lang="en">Never layer volt (red) directly on the day ink (green #385723) — 1.31:1. On ink grounds, reverse the mark to paper (2-2, 7-1)</span></span>
       </div>
     </div>
   </div>
@@ -1389,11 +1434,11 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
     <h3><span class="ja" lang="ja">12-3. 配布パッケージ構成</span><span class="en" lang="en">12-3. Distribution package</span></h3>
     <p>
-      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_v4_8.html</span>)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
-      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_v4_8.html</span>) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
+      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_v4_9.html</span>)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
+      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_v4_9.html</span>) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
     </p>
     <pre class="codeblock">index.html                              <span class="cm"># Web版 / web edition</span>
-5garashi_identity_v4_8.html             <span class="cm"># 単一ファイル版(生成物)/ single-file edition (generated)</span>
+5garashi_identity_v4_9.html             <span class="cm"># 単一ファイル版(生成物)/ single-file edition (generated)</span>
 CHANGELOG.md                            <span class="cm"># 改版履歴 / revision history</span>
 tools/
   build_standalone.py                   <span class="cm"># 単一ファイル版の生成 / builds the single-file edition</span>
@@ -1475,8 +1520,8 @@ assets/
 
 <footer>
   <span style="font-weight:800;color:var(--ink)"><span style="font-family:Georgia,serif;font-style:italic">5</span>garashi.com設計事務所 / 5garashi.com Design Office</span> — <a class="mono" href="https://www.5garashi.com">https://www.5garashi.com</a><br>
-  <span class="ja" lang="ja">Design Office Identity 第4.8版 — 2026.10.11 — © 2026 CC BY-ND 4.0</span>
-  <span class="en" lang="en">Design Office Identity v4.8 — 2026.10.11 — © 2026 CC BY-ND 4.0</span><br>
+  <span class="ja" lang="ja">Design Office Identity 第4.9版 — 2026.10.11 — © 2026 CC BY-ND 4.0</span>
+  <span class="en" lang="en">Design Office Identity v4.9 — 2026.10.11 — © 2026 CC BY-ND 4.0</span><br>
   <span class="ja" lang="ja">回路にも、画面にも、暮らしにも——五本の唐辛子。だれの手にも、ピリッと効く。</span>
   <span class="en" lang="en">Five chilis — on the board, on the screen, in daily life. A kick designed to work in as many hands as possible.</span>
 </footer>
@@ -1495,8 +1540,8 @@ assets/
     btn.textContent = en ? "日本語" : "English";
     btn.setAttribute("aria-label", en ? "日本語に切り替え" : "Switch to English");
     document.title = en
-      ? "5garashi.com Design Office — Identity v4.8"
-      : "5garashi.com設計事務所 — Design Office Identity v4.8";
+      ? "5garashi.com Design Office — Identity v4.9"
+      : "5garashi.com設計事務所 — Design Office Identity v4.9";
     // 正規URLと共有情報を表示言語に合わせる(hreflang の ja / en と一致させる)
     // Keep canonical and Open Graph in step with the language (matches the hreflang ja / en entries)
     var base = "https://5garashi.github.io/5garashi-identity/";
