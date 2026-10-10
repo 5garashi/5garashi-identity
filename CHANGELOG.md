@@ -3,6 +3,31 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## v4.8 — 2026-10-11
+
+ダークモードの配色を追加。
+Dark-mode colors added.
+
+### 本文 / Content
+- 第4条:4-2「夜の配色(ダークモード)」を新設。ink(千歳緑)を深く沈めた地に paper(鳥の子色)の文字を置く11色(paper `#1A2212`、card `#222C1A`、head `#2B3A20`、ink `#EFE6C4`、steel `#D9B98C`、volt `#F07B5F`、volt-deep `#F7A58E`、line `#4C5C3B`、ok `#9FCC7E`、cream `#1A2212`、mark `#ADADA5`)。変数名は昼と同じで値だけを入れ替える。印刷は常に昼の配色。
+  Art. 4: new 4-2 "Night palette (dark mode)" — eleven colors with paper-colored text on deeply sunk ink. Same variable names, different values. Print always uses the day palette.
+- 第3条:3-7「ダークモード用の反転版(灰色抜き)」を新設。ダークモードでは、シンボルマークとロゴタイプを灰 `#ADADA5`(和名のめやす:銀鼠)で抜き、地を透明にした反転版を使う。paper やクリームイエローは暗い画面でまぶしいため、明るさを paper の約半分に抑えた。昼の volt は夜の地に対して 2.61:1 で、マークの色を明るく変えることは第10条で禁止しているため、マークも灰色で抜く。夜の volt はアクセントとフォーカス枠専用。第3条の見本・色見本・マーク見本・禁止例は昼の配色のまま表示する。2-2、3-1、第5条、第10条の例外にも同じ規定を追記。
+  Art. 3: new 3-7 "Reversed version for dark mode (gray)". In dark mode the mark and logotype are reversed in gray `#ADADA5` on a transparent ground; paper and cream yellow glare on dark screens. Specimens stay in day colors. Exceptions added to 2-2, 3-1, Art. 5, and Art. 10.
+- アセット:`5garashi_logotype_reversed.svg`、`5garashi_logotype_reversed_outlined.svg`、`5garashi_logotype_en_reversed.svg`、`5garashi_logotype_en_reversed_outlined.svg`、`5garashi_mark_simple_reversed_gray.svg` を追加(白黒版の色を置き換えて作成)。
+  Assets: five gray reversed SVGs added, derived from the monochrome versions.
+- 第7条 7-1:夜の配色のコントラスト対照表を追加(20組、すべてAA以上、13組がAAA。灰色抜きの3組を含む)。夜の配色でも volt と ink は重ねない(2.18:1)。7-7 の出荷前チェックに (e) ダークモードでの確認を追加。
+  Art. 7-1: night contrast table added (20 pairs, all AA or better, 13 AAA, including three for the gray reversal); volt and ink never layered at night either (2.18:1). 7-7 adds (e) dark-mode check.
+- 第9条 9-4:CSSトークンに夜の配色の `@media (prefers-color-scheme: dark)` ブロックと、マークの色 `--mark` を追加。
+  Art. 9-4: CSS tokens gain the night `@media (prefers-color-scheme: dark)` block and the mark color `--mark`.
+
+### ページ / Page
+- 本書自体をダークモードに対応(`color-scheme`、ダーク用 `theme-color`、`.specimen` による見本図の昼配色の保持)。昼の表示は v4.7 から変わらない。
+  This document now supports dark mode (`color-scheme`, dark `theme-color`, `.specimen` keeps figures in day colors). The day appearance is unchanged from v4.7.
+- `tools/check_contrast.py` に夜の配色と、その許可組・禁止組を追加。
+  `tools/check_contrast.py` now covers the night palette, its approved pairs, and forbidden pair.
+- 単一ファイル版のファイル名を `5garashi_identity_v4_8.html` に変更。
+  Single-file edition renamed to `5garashi_identity_v4_8.html`.
+
 ## v4.7 — 2026-10-08
 
 外部レビュー(複数AIによる分析、2026-10-08)を反映。
@@ -107,4 +132,4 @@ External review (multi-AI analysis, 2026-10-08) applied.
 ---
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
-**最終更新 / Last updated**: 2026-10-08 JST
+**最終更新 / Last updated**: 2026-10-11 JST

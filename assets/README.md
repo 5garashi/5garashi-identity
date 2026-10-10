@@ -1,6 +1,6 @@
-# 5garashi.com設計事務所 公式アセット / Official Assets(v4.7)
+# 5garashi.com設計事務所 公式アセット / Official Assets(v4.8)
 
-Design Office Identity 第4.7版・第12条 12-3 に対応する配布パッケージ。
+Design Office Identity 第4.8版・第12条 12-3 に対応する配布パッケージ。
 
 ## 構成 / Layout
 
@@ -8,6 +8,7 @@ Design Office Identity 第4.7版・第12条 12-3 に対応する配布パッケ�
 |---|---|
 | 5garashi_mark_simple.svg | シンボルマーク(基本)volt #B92613 |
 | 5garashi_mark_simple_reversed.svg | 暗色地用(paper #F9EFCB 白抜き) |
+| 5garashi_mark_simple_reversed_gray.svg | ダークモード用(灰 #ADADA5 抜き、規定3-7) |
 | 5garashi_mark_simple_black.svg | モノクロ文書用(スミ #1A1A1A、規定3-6) |
 | 5garashi_stroke1.svg | モチーフ最小単位(1辛) |
 | 5garashi_mark_original.png | シンボルマーク オリジナル版(木版画調・限定用途。第2条 2-1 B) |
@@ -20,6 +21,10 @@ Design Office Identity 第4.7版・第12条 12-3 に対応する配布パッケ�
 | 5garashi_logotype_en_outlined.svg | ロゴタイプ 英語カラー(アウトライン化) |
 | 5garashi_logotype_en_bw.svg | ロゴタイプ 英語白黒(編集用) |
 | 5garashi_logotype_en_bw_outlined.svg | ロゴタイプ 英語白黒(アウトライン化) |
+| 5garashi_logotype_reversed.svg | ロゴタイプ 日本語 ダークモード用反転・灰色抜き(編集用。規定3-7) |
+| 5garashi_logotype_reversed_outlined.svg | ロゴタイプ 日本語 ダークモード用反転・灰色抜き(アウトライン化) |
+| 5garashi_logotype_en_reversed.svg | ロゴタイプ 英語 ダークモード用反転・灰色抜き(編集用) |
+| 5garashi_logotype_en_reversed_outlined.svg | ロゴタイプ 英語 ダークモード用反転・灰色抜き(アウトライン化) |
 | 5garashi_theme.wav | テーマ曲 制作・保存原本 |
 | 5garashi_theme.mp3 | テーマ曲 配信用 |
 | 5garashi_theme.mid | テーマ曲 編集用楽譜データ(MIDI) |
@@ -35,7 +40,8 @@ The following are working files from producing the English logotype, not officia
 ## 注意 / Notes
 - 第三者への提供には **_outlined 版** を用いる(第2条)。
 - アウトライン版の書体は Noto Sans CJK JP Bold、「5」は DejaVu Serif Bold Italic による近似。Georgia/ヒラギノでの厳密な字形が必要な場合は、当該フォント環境で編集用原本から再アウトライン化する。
-- 色・使用方法は Design Office Identity 第2条・第3条・3-6・第7条に従う。
+- 色・使用方法は Design Office Identity 第2条・第3条・3-6・3-7・第7条に従う。
+- `*_reversed*` 版(灰色抜き)は地が透明で、夜の配色の地(#1A2212・#222C1A・#2B3A20)の上だけで使う。
 
 ## ライセンス / License
 本パッケージのシンボルマーク・ロゴタイプ・楽譜・音源は **CC BY-ND 4.0** で提供される(Identity第12条)。
@@ -45,4 +51,4 @@ Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
 ---
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
-**最終更新 / Last updated**: 2026-10-08 JST
+**最終更新 / Last updated**: 2026-10-11 JST
