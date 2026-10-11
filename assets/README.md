@@ -1,6 +1,6 @@
-# 5garashi.com設計事務所 公式アセット / Official Assets(v4.10)
+# 5garashi.com設計事務所 公式アセット / Official Assets(v4.11)
 
-Design Office Identity 第4.10版・第12条 12-3 に対応する配布パッケージ。
+Design Office Identity 第4.11版・第12条 12-3 に対応する配布パッケージ。
 
 ## 構成 / Layout
 

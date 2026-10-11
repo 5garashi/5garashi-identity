@@ -46,6 +46,9 @@ DOCUMENT_DAY = {
     "background": "#FFFFFF",
     "foreground": "#1A1A1A",
     "rule": "#D0D0D0",
+    "selection": "#C7D0C1",
+    "current-line": "#F0F0F0",
+    "reading": PALETTE["volt"],
     "volt-deep": PALETTE["volt-deep"],
     "volt": PALETTE["volt"],
 }
@@ -53,6 +56,9 @@ DOCUMENT_NIGHT = {
     "background": "#121314",
     "foreground": "#BFBFBF",
     "rule": "#2B2B2B",
+    "selection": "#494740",
+    "current-line": "#202122",
+    "reading": "#F07B5F",
     "volt-deep": "#F7A58E",
     "volt": "#F07B5F",
 }
@@ -62,9 +68,12 @@ DOCUMENT_NIGHT = {
 DOCUMENT_APPROVED = [
     ("foreground", "background", False),
     ("volt-deep", "background", False),
+    ("foreground", "selection", False),
+    ("foreground", "current-line", False),
 ]
 DOCUMENT_NON_TEXT = [
     ("volt", "background"),
+    ("reading", "background"),
 ]
 # 装飾専用で基準の対象外(第4条 4-3 (2))/ decorative only, outside the requirements
 DOCUMENT_DECORATIVE = [

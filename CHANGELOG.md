@@ -3,6 +3,63 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## v4.11 — 2026-10-11
+
+mdEditor(5garashi/mdEditor)のユニバーサルデザイン対応と出荷前チェックからの提案(16項目)を反映。
+Sixteen proposals from mdEditor's universal-design work and pre-release check applied.
+
+### 第3条・第2条・第4条 4-2(マーク)/ Mark
+- 3-7 (5):シンプル版は暗い地でも volt のままでよいとした。守ることは (a) マークだけのボタン・リンクは灰色抜き(非テキスト 3:1)、(b) 状態や意味を伝えない、(c) 昼の ink に置かない、の3つ(以前の「名称を近くに示す」は外した)。
+  3-7 (5): the simple mark may stay volt on dark grounds; three rules remain (gray reversal for mark-only controls, no state or meaning, never on the day ink). The "name nearby" condition is removed.
+- 3-7 補:用途別の対応表(ヘッダー・ロゴタイプ・アイコン・マークだけのボタン・モチーフ・ink 地・白黒)を新設。2-2 と 4-2 (2) を合わせて改めた。
+  New 3-7 (cont.) usage table; 2-2 and 4-2 (2) aligned.
+
+### 第4条 / Art. 4
+- 4-2 (1):選んだ表示を次回の起動でも使う。デスクトップアプリではタイトルバーも合わせる。
+  4-2 (1): the chosen mode is kept; desktop apps match the title bar.
+- 4-3:`--document-selection`(昼 `#C7D0C1`/夜 `#494740`)、`--document-current-line`(`#F0F0F0`/`#202122`)、`--document-reading`(`#B92613`/`#F07B5F`)を追加。(5) 印刷とPDFは余白を含めて白、(6) 選んだ範囲・いまの行の上でも文字の比を保つ、を追記。7-1 補2 に6組を追加(夜の選んだ範囲の文字は 5.06:1 でAA、ほかはAAAまたは非テキスト 3:1 以上)。
+  4-3: three tokens added; white PDF margins; 7-1 (cont. 2) gains six pairs.
+
+### 第6条 / Art. 6
+- 「図(ライブラリが描く図)」の行を追加。英語の行名「FIGURES」を「NUMBERS / ANSWERS」に改めた(数値の規定を図の規定と読み違えないため)。
+  New "Diagrams (library-drawn)" row; the English label "FIGURES" is now "NUMBERS / ANSWERS" to avoid confusion with diagrams.
+- 「ユニバーサル」の注記に、使う人が選んだ書体・文字の大きさ・行間を優先することを追記。
+  The Universal note now gives precedence to the user's chosen typeface, size, and spacing.
+
+### 第7条 / Art. 7
+- 7-3:見出しを「操作の原則」に改め、(2) にショートカットの一覧・ヒントと `aria-keyshortcuts`・OSのキーとぶつけない・`Esc` は固定・変えたキーの保存を、(4)「使う人の選択を優先」を追加。
+  7-3: renamed "Rules of interaction"; shortcut rules added to (2); new (4) "The user's choice comes first".
+- 7-4:文章の読み上げの決まり(読んでいる段落を示す・`Esc` で止まる・言語に合った音声・音声がないときの案内・PCの音声だけを使う)を追加。
+  7-4: read-aloud rules added.
+- 7-5:動きは `transition: none` / `animation: none` で止め、`transition-duration: 0.01ms` は使わないと明記(9-4 の見本はもともと `none`)。
+  7-5: stop motion with `none`; never shorten `transition-duration` (the 9-4 sample already used `none`).
+- 7-6:エラーやお知らせは、何が起きたかと次にすることを書く。
+  7-6: errors and notices say what happened and what to do next.
+- 7-7:(f) コントラストテーマ、(g) 画面読み上げソフト、(h) 文字の大きさの設定200%、(i) 復元を追加。
+  7-7: checks (f)–(i) added.
+- 7-8「コントラストテーマ(強制カラー)」、7-9「作業を失わせない」を新設。
+  New 7-8 "Contrast themes (forced colors)" and 7-9 "Never lose the user's work".
+
+### 第9条・第12条・第13条 / Arts. 9, 12, 13
+- 9-3:(4) JSON と改変せずに同梱する第三者のファイルは対象外、(5) Markdown は HTML コメントに書く。
+  9-3: exemptions and Markdown headers.
+- 9-4:新しいトークンと、`@media (forced-colors: active)` の例を追加。
+  9-4: new tokens and a forced-colors example.
+- 9-5:アクセシビリティの確認記録のひな形を追加。
+  9-5: accessibility check record template.
+- 12-1:`templates/` のひな形を MIT とした。12-6「製品の配布物」(LICENSE・THIRD-PARTY-NOTICES.md・PRIVACY.md)を新設。
+  12-1: templates are MIT; new 12-6 "Product distributions".
+- 第13条「プライバシー」を新設(テレメトリ・広告の通信をしない、PCの中で処理する、保存するデータと場所を公開する、PRIVACY.md)。`templates/PRIVACY.md`(日英)を追加。
+  New Art. 13 "Privacy"; `templates/PRIVACY.md` (JA/EN) added.
+
+### ページ・ツール / Page and tools
+- 本書自体をコントラストテーマに対応(色見本・マーク・ロゴ・表の見本は元の色を保ち、番号札やバッジには枠を付ける)。
+  This document now supports contrast themes.
+- `tools/check_contrast.py`:文書面の新しい組を追加。
+  `tools/check_contrast.py`: new document-surface pairs.
+- 単一ファイル版のファイル名を `5garashi_identity_v4_11.html` に変更。
+  Single-file edition renamed to `5garashi_identity_v4_11.html`.
+
 ## v4.10 — 2026-10-11
 
 ### 本文 / Content

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: 5garashi_identity_v4_10.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
+  ファイル名 / File: 5garashi_identity_v4_11.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
   最終更新 / Last updated: 2026-10-11
-  版 / Version: 4.10
+  版 / Version: 4.11
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ・楽譜・音源。特記=第12条を参照)
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -18,8 +18,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5garashi.com設計事務所 — Design Office Identity v4.10</title>
-<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様 第4.10版。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンスを日英二言語で定める。">
+<title>5garashi.com設計事務所 — Design Office Identity v4.11</title>
+<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様 第4.11版。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンス、プライバシーを日英二言語で定める。">
 <meta name="author" content="5garashi.com設計事務所 / 5garashi.com Design Office">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#FFE699" media="(prefers-color-scheme: light)">
@@ -30,7 +30,7 @@
 <link rel="alternate" hreflang="x-default" href="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="5garashi.com設計事務所 / 5garashi.com Design Office">
-<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity v4.10">
+<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity v4.11">
 <meta property="og:description" content="電子回路の設計から、まちのデジタルの困りごとまで支える設計事務所のアイデンティティ運用仕様(日英二言語)。">
 <meta id="ogUrl" property="og:url" content="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:image" content="https://5garashi.github.io/5garashi-identity/assets/og_image.png">
@@ -369,6 +369,13 @@ footer{
   .art-head{break-after:avoid}
   .cover{min-height:auto}
 }
+/* コントラストテーマ(第7条 7-8)。色が意味を持つ見本だけ元の色を保ち、形は枠で残す
+   Contrast themes (Art. 7-8): keep colors only where the color is the meaning; keep shapes with borders */
+@media (forced-colors: active){
+  .specimen,.on-dark,.rev-plate,.ratio-bar,table.ud .dot,.score .b,.official-logo{forced-color-adjust:none}
+  .chip,.tag,.aa,.aaa,.demo-btn,.demo-badge,.ex .lbl,.dont::before,.sw .chipc .ratio{border:1px solid CanvasText}
+  a:focus-visible,button:focus-visible,audio:focus-visible,summary:focus-visible,.table-wrap:focus-visible{outline-color:Highlight}
+}
 @page{size:A4;margin:14mm}
 </style>
 </head>
@@ -441,7 +448,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第4.10版</span><span class="en" lang="en">IDENTITY GUIDELINE — v4.10</span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第4.11版</span><span class="en" lang="en">IDENTITY GUIDELINE — v4.11</span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -474,24 +481,31 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <li><a href="#a10"><span class="no"><span class="ja" lang="ja">第10条</span><span class="en" lang="en">Art. 10</span></span><span><span class="ja" lang="ja">禁止事項</span><span class="en" lang="en">Don'ts</span></span></a></li>
     <li><a href="#a11"><span class="no"><span class="ja" lang="ja">第11条</span><span class="en" lang="en">Art. 11</span></span><span><span class="ja" lang="ja">サウンドアイデンティティ</span><span class="en" lang="en">Sound Identity</span></span></a></li>
     <li><a href="#a12"><span class="no"><span class="ja" lang="ja">第12条</span><span class="en" lang="en">Art. 12</span></span><span><span class="ja" lang="ja">ライセンス</span><span class="en" lang="en">License</span></span></a></li>
+    <li><a href="#a13"><span class="no"><span class="ja" lang="ja">第13条</span><span class="en" lang="en">Art. 13</span></span><span><span class="ja" lang="ja">プライバシー</span><span class="en" lang="en">Privacy</span></span></a></li>
   </ol>
 </nav>
 
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">第4.10版(2026-10-11)の変更点</span><span class="en" lang="en">What's new in v4.10 (2026-10-11)</span></summary>
+    <summary><span class="ja" lang="ja">第4.11版(2026-10-11)の変更点</span><span class="en" lang="en">What's new in v4.11 (2026-10-11)</span></summary>
     <ul class="ja" lang="ja">
-      <li>第9条 9-3:ファイルヘッダーの項目名を、ファイルの言語に合わせるとした。日本語を含むファイルは日英併記(見本A)、英語だけで書くファイル(英語版)は英語の項目名だけ(見本B)。作成者の欄はどちらも 8-6 の公式表記。</li>
-      <li>9-3 の見本の「作成日 / Date」を、本書や各ファイルの実際の表記に合わせて「作成日 / Created」に統一。見本B(英語版)の作成者は英語表記「5garashi.com Design Office」とし、8-6 に同じ例外を追記。</li>
-      <li>第4条 4-3:文書面の昼の区切り線 <span class="mono">--document-rule</span> を <span class="mono">#DFCF9A</span> から無彩色の <span class="mono">#D0D0D0</span>(白地に 1.54:1、装飾専用)に変更。</li>
-      <li>第6条:英語表示の欧文書体(Segoe UI / San Francisco / Noto Sans)を追加。本書の英語表示にも適用。</li>
+      <li>第7条:7-8「コントラストテーマ(強制カラー)」と 7-9「作業を失わせない」を新設。7-7 の出荷前チェックに (f) コントラストテーマ、(g) 画面読み上げソフト、(h) 文字の大きさの設定200%、(i) 復元を追加。</li>
+      <li>第7条:7-3 に (4)「使う人の選択を優先」とショートカットの決まり、7-4 に文章の読み上げの決まり、7-5 に動きの止め方、7-6 にエラーとお知らせの書き方を追記。</li>
+      <li>第3条:3-7 (5) を「赤のマークは暗い地でもそのままでよい」に改め、3-7 補に用途別の対応表を新設。2-2・4-2 (2) も合わせて改めた。</li>
+      <li>第4条:4-2 (1) に選んだ表示の保存とタイトルバー、4-3 に選んだ範囲・いまの行・読み上げ中の枠の色と、PDFの余白を白にすることを追加。</li>
+      <li>第6条:「図(ライブラリが描く図)」の行を追加。使う人が選んだ書体・文字の大きさ・行間を優先することを追記。</li>
+      <li>第9条:9-3 にヘッダーの対象外と Markdown での書き方、9-4 に新しいトークンとコントラストテーマのCSS、9-5 にアクセシビリティの確認記録のひな形を追加。</li>
+      <li>第12条 12-6「製品の配布物」と、第13条「プライバシー」を新設。<span class="mono">templates/PRIVACY.md</span> を追加。本書自体もコントラストテーマに対応。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>Art. 9-3: file-header labels follow the file's language — bilingual for files containing Japanese (sample A), English only for files written only in English (sample B). The author field always uses the official paired name of 8-6.</li>
-      <li>The 9-3 sample label "Date" is now "Created", matching this document and existing files. Sample B (English edition) uses the English name "5garashi.com Design Office" as author, with the same exception added to 8-6.</li>
-      <li>Art. 4-3: the day document rule <span class="mono">--document-rule</span> changes from <span class="mono">#DFCF9A</span> to neutral <span class="mono">#D0D0D0</span> (1.54:1 on white, decorative only).</li>
-      <li>Art. 6: Latin typeface for English display (Segoe UI / San Francisco / Noto Sans), also applied to this document's English view.</li>
+      <li>Art. 7: new 7-8 "Contrast themes (forced colors)" and 7-9 "Never lose the user's work". The 7-7 check adds (f) contrast themes, (g) screen readers, (h) 200% text size, and (i) recovery.</li>
+      <li>Art. 7: 7-3 gains (4) "The user's choice comes first" and shortcut rules; 7-4 adds read-aloud rules; 7-5 how to stop motion; 7-6 how to write errors and notices.</li>
+      <li>Art. 3: 3-7 (5) now says the red mark may stay as is on dark grounds, with a new usage table (3-7 cont.); 2-2 and 4-2 (2) aligned.</li>
+      <li>Art. 4: 4-2 (1) keeps the chosen mode and matches the title bar; 4-3 adds selection, current-line, and read-aloud frame colors, and white PDF margins.</li>
+      <li>Art. 6: new "Diagrams (library-drawn)" row; the user's chosen typeface, text size, and line spacing take precedence.</li>
+      <li>Art. 9: 9-3 exemptions and Markdown headers; 9-4 new tokens and contrast-theme CSS; 9-5 template for the accessibility check record.</li>
+      <li>New Art. 12-6 "Product distributions" and Art. 13 "Privacy"; <span class="mono">templates/PRIVACY.md</span> added. This document itself now supports contrast themes.</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -580,8 +594,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">2-2. 暗色地での反転(シンプル版のみ)</span><span class="en" lang="en">2-2. Reversal on dark grounds (simple version only)</span></h3>
     <p>
-      <span class="ja" lang="ja">ink(深緑)などの暗色地では、シンプル版に限り <span class="mono">#F9EFCB</span>(paper)への白抜き反転を認める。オリジナル版の反転は不可。ダークモード(4-2)の画面では、白抜きの色を灰 <span class="mono">#ADADA5</span> に抑えた反転版(3-7)を使う。</span>
-      <span class="en" lang="en">On dark grounds such as ink (deep green), the simple version — and only the simple version — may be reversed to <span class="mono">#F9EFCB</span> (paper). The original version is never reversed. On dark-mode screens (4-2), use the reversal in gray <span class="mono">#ADADA5</span> instead (3-7).</span>
+      <span class="ja" lang="ja">ink(深緑)などの暗色地では、シンプル版に限り <span class="mono">#F9EFCB</span>(paper)への白抜き反転を認める。オリジナル版の反転は不可。ダークモード(4-2)の画面では、volt のままでも、白抜きの色を灰 <span class="mono">#ADADA5</span> に抑えた反転版(3-7)でもよい(使い分けは 3-7 (6))。</span>
+      <span class="en" lang="en">On dark grounds such as ink (deep green), the simple version — and only the simple version — may be reversed to <span class="mono">#F9EFCB</span> (paper). The original version is never reversed. On dark-mode screens (4-2), the mark may stay volt or use the gray <span class="mono">#ADADA5</span> reversal (3-7); see the table in 3-7 (6).</span>
     </p>
     <div class="on-dark specimen">
       <svg role="img" aria-label="暗色地での白抜き例 / Reversed mark on dark ground" style="height:80px;--mark:#F9EFCB"><use href="#tally5"/></svg>
@@ -693,8 +707,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">3-7. ダークモード用の反転版(灰色抜き)</span><span class="en" lang="en">3-7. Reversed version for dark mode (gray)</span></h3>
     <p>
-      <span class="ja" lang="ja">ダークモード(夜の配色、4-2)の画面では、3-6 の白黒版を反転させた版を使う。線と文字を<b>灰 <span class="mono">#ADADA5</span></b>(和名のめやす:銀鼠)にし、地は透明にして夜の地色を見せる。白やクリーム色で抜くと暗い画面ではまぶしいため、明るさを paper の約半分に抑えた灰色とする。シンボルマークも同じ灰色で抜くことを基本とする(条件を満たせば volt のままでもよい:(5))。</span>
-      <span class="en" lang="en">On dark-mode screens (night palette, 4-2), use the reverse of the 3-6 monochrome version. Lines and lettering are <b>gray <span class="mono">#ADADA5</span></b> (closest traditional color: Ginnezu), and the ground is transparent so the night ground shows through. White or cream knock-outs glare on dark screens, so this gray keeps the brightness to about half that of paper. The symbol mark is normally reversed in the same gray (volt may remain under the conditions in (5)).</span>
+      <span class="ja" lang="ja">ダークモード(夜の配色、4-2)の画面では、3-6 の白黒版を反転させた版を使う。線と文字を<b>灰 <span class="mono">#ADADA5</span></b>(和名のめやす:銀鼠)にし、地は透明にして夜の地色を見せる。白やクリーム色で抜くと暗い画面ではまぶしいため、明るさを paper の約半分に抑えた灰色とする。シンボルマークは、同じ灰色で抜いても、volt のままでもよい((5)(6))。</span>
+      <span class="en" lang="en">On dark-mode screens (night palette, 4-2), use the reverse of the 3-6 monochrome version. Lines and lettering are <b>gray <span class="mono">#ADADA5</span></b> (closest traditional color: Ginnezu), and the ground is transparent so the night ground shows through. White or cream knock-outs glare on dark screens, so this gray keeps the brightness to about half that of paper. The symbol mark may be reversed in the same gray or stay volt ((5), (6)).</span>
     </p>
     <div class="rev-plate" style="--mark:#ADADA5;--logo-frame:#ADADA5;--logo-ground:transparent;--logo-text:#ADADA5;--logo-five:#ADADA5">
       <div class="logo-col">
@@ -708,9 +722,25 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       </div>
     </div>
     <p>
-      <span class="ja" lang="ja"><b>(1)</b> 夜の配色の地(paper <span class="mono">#1A2212</span>・card <span class="mono">#222C1A</span>・head <span class="mono">#2B3A20</span>)の上だけで使う。コントラスト比はそれぞれ 7.26:1、6.44:1、5.38:1(7-1 補)。<b>(2)</b> 昼の画面と印刷には使わない(昼はカラー版、白黒印刷は 3-6)。<b>(3)</b> 灰色以外の色で抜かない。<b>(4)</b> 原本は <span class="mono">assets/</span> の <span class="mono">*_reversed*.svg</span>(第12条 12-3)。<b>(5) 暗い地での volt のマーク:</b>シンプル版は、暗い地(夜の配色の地、OSが描く暗いタイトルバー・タスクバーなど)でも volt <span class="mono">#B92613</span> のまま置いてよい。ロゴはコントラスト基準の対象外だが、暗い地での比は 1.94〜2.61:1、P型の色覚では 1.39〜1.88:1 まで下がり見えにくいため、次の条件をすべて満たすときに限る。(a) 同じ画面の近くに、名称が文字またはロゴタイプで示されている。(b) マークだけでボタンやリンクを表さない(アイコンだけの操作部品にする場合は、非テキストの基準 3:1 が必要なため灰色抜きを使う)。(c) マークで状態や意味を伝えない。(d) 昼の ink <span class="mono">#385723</span> の上には置かない(1.31:1、第10条)。</span>
-      <span class="en" lang="en"><b>(1)</b> Use only on night-palette grounds (paper <span class="mono">#1A2212</span>, card <span class="mono">#222C1A</span>, head <span class="mono">#2B3A20</span>): 7.26:1, 6.44:1, and 5.38:1 respectively (7-1 cont.). <b>(2)</b> Never on day screens or in print (day uses the color version; monochrome print uses 3-6). <b>(3)</b> Never reverse in any color other than this gray. <b>(4)</b> Masters are the <span class="mono">*_reversed*.svg</span> files in <span class="mono">assets/</span> (Art. 12-3). <b>(5) Volt mark on dark grounds:</b> the simple mark may stay volt <span class="mono">#B92613</span> on dark grounds (night-palette grounds, dark OS title bars and taskbars, and so on). Logos are exempt from contrast requirements, but on dark grounds the ratio is 1.94–2.61:1 and falls to 1.39–1.88:1 under protan vision, so all of the following must hold: (a) the name appears nearby on the same screen, in text or as the logotype; (b) the mark alone never forms a button or link (an icon-only control needs 3:1 non-text contrast, so use the gray reversal); (c) the mark never carries a state or meaning; (d) it is never placed on the day ink <span class="mono">#385723</span> (1.31:1, Art. 10).</span>
+      <span class="ja" lang="ja"><b>(1)</b> 夜の配色の地(paper <span class="mono">#1A2212</span>・card <span class="mono">#222C1A</span>・head <span class="mono">#2B3A20</span>)の上だけで使う。コントラスト比はそれぞれ 7.26:1、6.44:1、5.38:1(7-1 補)。<b>(2)</b> 昼の画面と印刷には使わない(昼はカラー版、白黒印刷は 3-6)。<b>(3)</b> 灰色以外の色で抜かない。<b>(4)</b> 原本は <span class="mono">assets/</span> の <span class="mono">*_reversed*.svg</span>(第12条 12-3)。<b>(5) 暗い地での volt のマーク:</b>シンプル版は、暗い地(夜の配色の地、OSが描く暗いタイトルバー・タスクバーなど)でも volt <span class="mono">#B92613</span> のままでよい。ロゴはコントラスト基準の対象外であり、マークに機能や意味を持たせなければ、見えにくい人がいても情報は失われない(暗い地での比は 1.94〜2.61:1、P型の色覚のシミュレーションでは 1.39〜1.88:1)。ただし、次の3つは守る。(a) マークだけでボタンやリンクを表す場合は、非テキストの基準 3:1 が必要なため灰色抜きを使う。(b) マークで状態や意味を伝えない。(c) 昼の ink <span class="mono">#385723</span> の上には置かない(1.31:1、第10条)。</span>
+      <span class="en" lang="en"><b>(1)</b> Use only on night-palette grounds (paper <span class="mono">#1A2212</span>, card <span class="mono">#222C1A</span>, head <span class="mono">#2B3A20</span>): 7.26:1, 6.44:1, and 5.38:1 respectively (7-1 cont.). <b>(2)</b> Never on day screens or in print (day uses the color version; monochrome print uses 3-6). <b>(3)</b> Never reverse in any color other than this gray. <b>(4)</b> Masters are the <span class="mono">*_reversed*.svg</span> files in <span class="mono">assets/</span> (Art. 12-3). <b>(5) Volt mark on dark grounds:</b> the simple mark may stay volt <span class="mono">#B92613</span> on dark grounds (night-palette grounds, dark OS title bars and taskbars, and so on). Logos are exempt from contrast requirements, and as long as the mark carries no function or meaning, no information is lost for people who see it poorly (1.94–2.61:1 on dark grounds; 1.39–1.88:1 in a protan simulation). Three rules still apply: (a) if the mark alone forms a button or link, use the gray reversal, because 3:1 non-text contrast is required; (b) the mark never carries a state or meaning; (c) it is never placed on the day ink <span class="mono">#385723</span> (1.31:1, Art. 10).</span>
     </p>
+    <h3><span class="ja" lang="ja">3-7 補. 用途別のマーク・ロゴタイプ(昼と夜)</span><span class="en" lang="en">3-7 (cont.) Mark and logotype by use (day and night)</span></h3>
+    <p><span class="ja" lang="ja"><b>(6)</b> 用途ごとの使い分けは次の表による。</span><span class="en" lang="en"><b>(6)</b> Use the table below for each use.</span></p>
+    <div class="table-wrap" role="region" tabindex="0" aria-label="用途別のマーク・ロゴタイプ(横にスクロールできる) / Mark and logotype by use (scrolls horizontally)">
+    <table class="ud">
+      <thead><tr><th><span class="ja" lang="ja">用途</span><span class="en" lang="en">Use</span></th><th><span class="ja" lang="ja">昼</span><span class="en" lang="en">Day</span></th><th><span class="ja" lang="ja">夜(暗い地)</span><span class="en" lang="en">Night (dark ground)</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="ja" lang="ja">ヘッダー・表紙・画面の中のシンプル版マーク</span><span class="en" lang="en">Simple mark in headers, covers, and screens</span></td><td>volt</td><td><span class="ja" lang="ja">volt または灰色抜き(どちらでもよい)</span><span class="en" lang="en">Volt or gray reversal (either)</span></td></tr>
+        <tr><td><span class="ja" lang="ja">ロゴタイプ</span><span class="en" lang="en">Logotype</span></td><td><span class="ja" lang="ja">カラー版(3-1)</span><span class="en" lang="en">Color version (3-1)</span></td><td><span class="ja" lang="ja">灰色抜き(3-7)</span><span class="en" lang="en">Gray reversal (3-7)</span></td></tr>
+        <tr><td><span class="ja" lang="ja">ファビコン・アプリアイコン・タイトルバー・タスクバー</span><span class="en" lang="en">Favicons, app icons, title bars, taskbars</span></td><td>volt</td><td><span class="ja" lang="ja">volt(9-2)</span><span class="en" lang="en">Volt (9-2)</span></td></tr>
+        <tr><td><span class="ja" lang="ja">マークだけのボタン・リンク</span><span class="en" lang="en">Mark-only buttons and links</span></td><td>volt</td><td><span class="ja" lang="ja">灰色抜き(非テキスト 3:1)</span><span class="en" lang="en">Gray reversal (3:1 non-text)</span></td></tr>
+        <tr><td><span class="ja" lang="ja">モチーフ(第5条)</span><span class="en" lang="en">Motifs (Art. 5)</span></td><td>volt / line</td><td><span class="ja" lang="ja">灰色抜き / line</span><span class="en" lang="en">Gray reversal / line</span></td></tr>
+        <tr><td><span class="ja" lang="ja">昼の ink の地(緑の帯など)</span><span class="en" lang="en">Day ink grounds (green bands, etc.)</span></td><td><span class="ja" lang="ja">paper 白抜き(2-2)</span><span class="en" lang="en">Paper reversal (2-2)</span></td><td>—</td></tr>
+        <tr><td><span class="ja" lang="ja">白黒の印刷・FAX</span><span class="en" lang="en">Monochrome print and fax</span></td><td><span class="ja" lang="ja">スミ1色(3-6)</span><span class="en" lang="en">Single black (3-6)</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 </section>
 
@@ -790,8 +820,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <div class="meta"><span class="nm">mark</span><span class="hex mono">#ADADA5</span><span class="use"><span class="ja" lang="ja">マーク・ロゴタイプの反転(灰色抜き、3-7)</span><span class="en" lang="en">Mark / logotype reversal (gray, 3-7)</span></span><span class="wa"><span class="ja" lang="ja">和名のめやす:銀鼠</span><span class="en" lang="en">Ginnezu (trad.)</span></span></div></div>
     </div>
     <p>
-      <b><span class="ja" lang="ja">(1) 使う場面:</span><span class="en" lang="en">(1) When:</span></b><span class="ja" lang="ja">Web・アプリの画面で、閲覧環境がダーク表示を求めるとき(CSSの <span class="mono">prefers-color-scheme: dark</span>)、または利用者が表示の切り替えで夜を選んだときに使う。切り替えを設ける場合は、環境に従う設定を既定とし、いま選ばれている表示を文字で示す(例:「表示: ダーク」)。印刷物・紙面は常に昼の配色とする。</span><span class="en" lang="en"> on web and app screens when the viewer's environment requests dark display (CSS <span class="mono">prefers-color-scheme: dark</span>), or when the user chooses night with a display switch. If a switch is provided, following the environment is the default, and the current choice is shown in words (for example, "Display: Dark"). Print and paper always use the day palette.</span><br>
-      <b><span class="ja" lang="ja">(2) シンボルマーク:</span><span class="en" lang="en">(2) Symbol mark:</span></b><span class="ja" lang="ja">3-7 の灰色抜き(<span class="mono">#ADADA5</span>)で表示する。volt <span class="mono">#B92613</span> は夜の地に対して 2.61:1 しかなく、マークの色を明るく変えることは第10条で禁止しているため。paper(<span class="mono">#F9EFCB</span>)で抜くと暗い画面ではまぶしいため、灰色に抑える。夜の volt(<span class="mono">#F07B5F</span>)はアクセントとフォーカス枠専用で、マークには使わない。条件を満たせば、昼と同じ volt <span class="mono">#B92613</span> のマークを置いてもよい(3-7 (5))。</span><span class="en" lang="en"> use the gray reversal of 3-7 (<span class="mono">#ADADA5</span>). Volt <span class="mono">#B92613</span> reaches only 2.61:1 on the night ground, and Art. 10 forbids lightening the mark. A paper (<span class="mono">#F9EFCB</span>) reversal glares on dark screens, so the gray is used. The night volt (<span class="mono">#F07B5F</span>) is for accents and focus rings only, never for the mark. Under the conditions of 3-7 (5), the day volt <span class="mono">#B92613</span> mark may be used instead.</span><br>
+      <b><span class="ja" lang="ja">(1) 使う場面:</span><span class="en" lang="en">(1) When:</span></b><span class="ja" lang="ja">Web・アプリの画面で、閲覧環境がダーク表示を求めるとき(CSSの <span class="mono">prefers-color-scheme: dark</span>)、または利用者が表示の切り替えで夜を選んだときに使う。切り替えを設ける場合は、環境に従う設定を既定とし、いま選ばれている表示を文字で示す(例:「表示: ダーク」)。選んだ表示(自動・ライト・ダーク)は次回の起動でも使う。デスクトップアプリでは、ウィンドウのタイトルバーも選んだ表示に合わせる。印刷物・紙面は常に昼の配色とする。</span><span class="en" lang="en"> on web and app screens when the viewer's environment requests dark display (CSS <span class="mono">prefers-color-scheme: dark</span>), or when the user chooses night with a display switch. If a switch is provided, following the environment is the default, and the current choice is shown in words (for example, "Display: Dark"). The chosen mode (Auto, Light, Dark) is kept for the next launch. Desktop apps also match the window title bar to the chosen mode. Print and paper always use the day palette.</span><br>
+      <b><span class="ja" lang="ja">(2) シンボルマーク:</span><span class="en" lang="en">(2) Symbol mark:</span></b><span class="ja" lang="ja">シンプル版は volt <span class="mono">#B92613</span> のままでよく、3-7 の灰色抜き(<span class="mono">#ADADA5</span>)を使ってもよい(使い分けは 3-7 (6))。マークの色を明るく変えることは第10条で禁止している。夜の volt(<span class="mono">#F07B5F</span>)はアクセントとフォーカス枠専用で、マークには使わない。</span><span class="en" lang="en"> the simple mark may stay volt <span class="mono">#B92613</span> or use the gray reversal of 3-7 (<span class="mono">#ADADA5</span>); see 3-7 (6). Art. 10 forbids lightening the mark. The night volt (<span class="mono">#F07B5F</span>) is for accents and focus rings only, never for the mark.</span><br>
       <b><span class="ja" lang="ja">(3) ロゴタイプ:</span><span class="en" lang="en">(3) Logotype:</span></b><span class="ja" lang="ja">クリームイエローの地は暗い画面ではまぶしいため、3-7 の反転版(灰色の枠と文字、透明の地)を使う。</span><span class="en" lang="en"> the cream-yellow ground glares on dark screens, so use the reversed version of 3-7 (gray frame and type, transparent ground).</span><br>
       <b><span class="ja" lang="ja">(4) 色見本・見本図:</span><span class="en" lang="en">(4) Specimens:</span></b><span class="ja" lang="ja">昼の色そのものを示す図(色見本、マークの見本、禁止例など)は、夜の配色でも昼の配色のまま表示する。</span><span class="en" lang="en"> figures that show the day colors themselves (swatches, mark specimens, don'ts) stay in the day palette even in dark mode.</span><br>
       <b><span class="ja" lang="ja">(5) 組み合わせ:</span><span class="en" lang="en">(5) Pairs:</span></b><span class="ja" lang="ja">文字色と背景色は、7-1 の「夜の配色」の表にある組み合わせだけを使う。</span><span class="en" lang="en"> use only the text/background pairs in the night table of 7-1.</span>
@@ -812,12 +842,15 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <tr><td class="mono">--document-background</td><td><span class="pair"><span class="dot" style="background:#FFFFFF"></span><span class="mono">#FFFFFF</span></span></td><td><span class="pair"><span class="dot" style="background:#121314"></span><span class="mono">#121314</span></span></td><td><span class="ja" lang="ja">文書面の地</span><span class="en" lang="en">Document ground</span></td></tr>
         <tr><td class="mono">--document-foreground</td><td><span class="pair"><span class="dot" style="background:#1A1A1A"></span><span class="mono">#1A1A1A</span></span></td><td><span class="pair"><span class="dot" style="background:#BFBFBF"></span><span class="mono">#BFBFBF</span></span></td><td><span class="ja" lang="ja">本文</span><span class="en" lang="en">Body text</span></td></tr>
         <tr><td class="mono">--document-rule</td><td><span class="pair"><span class="dot" style="background:#D0D0D0"></span><span class="mono">#D0D0D0</span></span></td><td><span class="pair"><span class="dot" style="background:#2B2B2B"></span><span class="mono">#2B2B2B</span></span></td><td><span class="ja" lang="ja">見出しの下線・区切り線(装飾専用)</span><span class="en" lang="en">Heading underlines and dividers (decorative only)</span></td></tr>
+        <tr><td class="mono">--document-selection</td><td><span class="pair"><span class="dot" style="background:#C7D0C1"></span><span class="mono">#C7D0C1</span></span></td><td><span class="pair"><span class="dot" style="background:#494740"></span><span class="mono">#494740</span></span></td><td><span class="ja" lang="ja">選んだ範囲の地</span><span class="en" lang="en">Selection background</span></td></tr>
+        <tr><td class="mono">--document-current-line</td><td><span class="pair"><span class="dot" style="background:#F0F0F0"></span><span class="mono">#F0F0F0</span></span></td><td><span class="pair"><span class="dot" style="background:#202122"></span><span class="mono">#202122</span></span></td><td><span class="ja" lang="ja">いまの行の強調(選択式の補助、7-3 (4))</span><span class="en" lang="en">Current-line highlight (optional aid, 7-3 (4))</span></td></tr>
+        <tr><td class="mono">--document-reading</td><td><span class="pair"><span class="dot" style="background:#B92613"></span><span class="mono">#B92613</span></span></td><td><span class="pair"><span class="dot" style="background:#F07B5F"></span><span class="mono">#F07B5F</span></span></td><td><span class="ja" lang="ja">読み上げ中の段落の枠(3px、7-4)</span><span class="en" lang="en">Frame around the paragraph being read aloud (3px, 7-4)</span></td></tr>
       </tbody>
     </table>
     </div>
     <p>
-      <span class="ja" lang="ja"><b>(1)</b> 文書面の地の上で使う文字色と線の色は、7-1 補2 の表にある組み合わせだけとする。<b>(2)</b> <span class="mono">--document-rule</span> は装飾専用で、文字のコントラスト基準の対象外とする。そのため、見出しは下線がなくても文字の大きさ・太さで見分けられるようにし、意味のある境界線には使わない。<b>(3)</b> 印刷・PDFは常に昼の値とする。<b>(4)</b> 文書面の本文の太さは W4(400)とする(第6条の本文 W6(600)の例外)。長文では細めのほうが字の形がつぶれず読みやすいためである。見出しは本文より大きく、W7(700)以上にして、(2) のとおり下線がなくても見分けられるようにする。</span>
-      <span class="en" lang="en"><b>(1)</b> On the document ground, use only the text and line colors paired in table 7-1 (cont. 2). <b>(2)</b> <span class="mono">--document-rule</span> is decorative only and outside the text-contrast requirements; headings must therefore be identifiable by size and weight without the underline, and the rule is never used for a meaningful boundary. <b>(3)</b> Print and PDF always use the day values. <b>(4)</b> Body text on the document surface is W4 (400), an exception to the W6 (600) body weight of Art. 6, because lighter strokes keep letterforms open and easier to read over long passages. Headings are larger than body text and W7 (700) or heavier, so that, per (2), they are identifiable without the underline.</span>
+      <span class="ja" lang="ja"><b>(1)</b> 文書面の地の上で使う文字色と線の色は、7-1 補2 の表にある組み合わせだけとする。<b>(2)</b> <span class="mono">--document-rule</span> は装飾専用で、文字のコントラスト基準の対象外とする。そのため、見出しは下線がなくても文字の大きさ・太さで見分けられるようにし、意味のある境界線には使わない。<b>(3)</b> 印刷・PDFは常に昼の値とする。<b>(4)</b> 文書面の本文の太さは W4(400)とする(第6条の本文 W6(600)の例外)。長文では細めのほうが字の形がつぶれず読みやすいためである。見出しは本文より大きく、W7(700)以上にして、(2) のとおり下線がなくても見分けられるようにする。<b>(5)</b> 印刷とPDFは、余白を含めて白(<span class="mono">#FFFFFF</span>)にする。表示部品(WebView2 など)の既定の背景色が余白に出ないよう、ページと印刷の背景色を明示する。<b>(6)</b> 選んだ範囲・いまの行の地の上でも、文字は 7-1 補2 の比を保つ。</span>
+      <span class="en" lang="en"><b>(1)</b> On the document ground, use only the text and line colors paired in table 7-1 (cont. 2). <b>(2)</b> <span class="mono">--document-rule</span> is decorative only and outside the text-contrast requirements; headings must therefore be identifiable by size and weight without the underline, and the rule is never used for a meaningful boundary. <b>(3)</b> Print and PDF always use the day values. <b>(4)</b> Body text on the document surface is W4 (400), an exception to the W6 (600) body weight of Art. 6, because lighter strokes keep letterforms open and easier to read over long passages. Headings are larger than body text and W7 (700) or heavier, so that, per (2), they are identifiable without the underline. <b>(5)</b> Print and PDF are white (<span class="mono">#FFFFFF</span>) including the margins; set the page and print background explicitly so a display component's default background (such as WebView2's) never shows in the margins. <b>(6)</b> Text keeps the 7-1 (cont. 2) ratios on selection and current-line backgrounds too.</span>
     </p>
   </div>
 </section>
@@ -892,8 +925,12 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <div class="sample latin-sample" style="font-weight:600;font-size:15px">Segoe UI / San Francisco / Noto Sans — 600 / 800<br><span style="font-size:12px;color:var(--steel);font-weight:700"><span class="ja" lang="ja">英語表示の本文・見出し・UIは、OSの標準UI書体を使う。CSSでは <span class="mono">"Segoe UI",-apple-system,BlinkMacSystemFont,"Noto Sans"</span> の後に和文書体を続ける(和文の文字は和文書体で表示される)。<span class="mono">system-ui</span> は日本語版のOSで和文UI書体になることがあるため、先頭には置かない。太さは和文と同じ指定とする。ロゴの「5」の Georgia Italic と、数値・コードの等幅書体は変えない。</span><span class="en" lang="en">English body text, headings, and UI use the OS's standard UI typeface. In CSS, list <span class="mono">"Segoe UI",-apple-system,BlinkMacSystemFont,"Noto Sans"</span> followed by the Japanese stack, so Japanese characters still render in a Japanese face. Do not put <span class="mono">system-ui</span> first: on Japanese-locale systems it can resolve to a Japanese UI face. Weights follow the Japanese settings. The logo's Georgia Italic "5" and the monospace for figures and code are unchanged.</span></span></div>
       </div>
       <div class="type-row">
-        <span class="role"><span class="ja" lang="ja">数値・答え</span><span class="en" lang="en">FIGURES</span></span>
+        <span class="role"><span class="ja" lang="ja">数値・答え</span><span class="en" lang="en">NUMBERS / ANSWERS</span></span>
         <div class="sample mono" style="font-weight:800;font-size:26px;color:var(--volt-deep)">10<span class="ja" lang="ja">分</span><span class="en" lang="en">min</span> / 6m / 50kW<br><span style="font-family:inherit;font-size:12px;color:var(--steel);font-weight:600"><span class="ja" lang="ja">ui-monospace系・W8・volt-deep。単位まで含めて1かたまりで表示。</span><span class="en" lang="en">ui-monospace, W8, volt-deep. Value and unit always shown as one block.</span></span></div>
+      </div>
+      <div class="type-row">
+        <span class="role"><span class="ja" lang="ja">図(ライブラリが描く図)</span><span class="en" lang="en">DIAGRAMS (LIBRARY-DRAWN)</span></span>
+        <div class="sample" style="font-weight:600;font-size:13px"><span class="ja" lang="ja">Mermaid などのライブラリが描く図の文字は、表示言語の本文・UIの書体に従う(英語表示は「欧文」の行)。色は夜の配色(4-2)に合わせ、印刷とPDFでは昼の配色にする。コントラストテーマでは 7-8 (3) による。「数値・答え」の行は数値の表示の規定で、図には当てはめない。</span><span class="en" lang="en">Text in diagrams drawn by libraries such as Mermaid follows the body/UI typeface of the display language (English: see the Latin row). Colors follow the night palette (4-2); print and PDF use the day palette. In contrast themes, 7-8 (3) applies. The "Numbers / answers" row governs numeric values, not diagrams.</span></div>
       </div>
       <div class="type-row">
         <span class="role"><span class="ja" lang="ja">注記・ラベル</span><span class="en" lang="en">CAPTIONS</span></span>
@@ -901,8 +938,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       </div>
     </div>
     <div class="note"><b><span class="ja" lang="ja">ユニバーサル:</span><span class="en" lang="en">Universal:</span></b>
-      <span class="ja" lang="ja"> 文字サイズはpx固定でもブラウザ拡大(200%)で崩れないレイアウトにする。斜体の多用・長文の全角英数字は読みにくいため避ける。</span>
-      <span class="en" lang="en"> Layouts must survive 200% browser zoom without breaking. Avoid heavy italics and long runs of full-width Latin characters — both harm readability.</span>
+      <span class="ja" lang="ja"> 文字サイズはpx固定でもブラウザ拡大(200%)で崩れないレイアウトにする。斜体の多用・長文の全角英数字は読みにくいため避ける。使う人が選んだ書体・文字の大きさ・行間は、本条の指定より優先する(7-3 (4))。</span>
+      <span class="en" lang="en"> Layouts must survive 200% browser zoom without breaking. Avoid heavy italics and long runs of full-width Latin characters — both harm readability. A typeface, text size, or line spacing chosen by the user takes precedence over this article (7-3 (4)).</span>
     </div>
   </div>
 </section>
@@ -915,8 +952,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
   </div>
   <div class="art-body">
     <p>
-      <span class="ja" lang="ja">5garashi.comの道具は、特定の感覚や操作方法だけに依存せず、視覚・聴覚・キーボード・ポインターなど複数の方法で情報と機能を利用できることをめざす。基準は対象で分ける——<b>Web UIはWCAG 2.2 レベルAA</b>、電子文書・非WebソフトはWCAG2ICTを参考、紙面・音・ハードウェアは本書独自のチェック項目による。以下の7項目を全制作物の出荷チェックリストとする。</span>
-      <span class="en" lang="en">5garashi.com tools aim never to depend on a single sense or input method: information and functions should be reachable by sight, hearing, keyboard, and pointer alike. Standards are scoped to the target — <b>WCAG 2.2 Level AA for web UIs</b>, WCAG2ICT as guidance for electronic documents and non-web software, and this document's own checklist for print, sound, and hardware. The seven items below are the shipping checklist for all work.</span>
+      <span class="ja" lang="ja">5garashi.comの道具は、特定の感覚や操作方法だけに依存せず、視覚・聴覚・キーボード・ポインターなど複数の方法で情報と機能を利用できることをめざす。基準は対象で分ける——<b>Web UIはWCAG 2.2 レベルAA</b>、電子文書・非WebソフトはWCAG2ICTを参考、紙面・音・ハードウェアは本書独自のチェック項目による。以下の 7-1〜7-9 を全制作物の出荷チェックリストとする。</span>
+      <span class="en" lang="en">5garashi.com tools aim never to depend on a single sense or input method: information and functions should be reachable by sight, hearing, keyboard, and pointer alike. Standards are scoped to the target — <b>WCAG 2.2 Level AA for web UIs</b>, WCAG2ICT as guidance for electronic documents and non-web software, and this document's own checklist for print, sound, and hardware. Sections 7-1 to 7-9 below are the shipping checklist for all work.</span>
     </p>
 
     <h3><span class="ja" lang="ja">7-1. コントラスト対照表(実測値)</span><span class="en" lang="en">7-1. Contrast table (measured)</span></h3>
@@ -1009,6 +1046,12 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#BFBFBF;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>foreground × background</span></td><td><span class="ja" lang="ja">本文</span><span class="en" lang="en">Body text</span></td><td class="num">10.12:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#F7A58E;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>volt-deep × background</span></td><td><span class="ja" lang="ja">エラーメッセージの文字</span><span class="en" lang="en">Error message text</span></td><td class="num">9.50:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#F07B5F;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>volt × background</span></td><td><span class="ja" lang="ja">エラー表示の左罫(非テキスト3:1以上)</span><span class="en" lang="en">Error left rule (non-text, 3:1 or better)</span></td><td class="num">6.82:1</td><td><span class="aa">AA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#C7D0C1;color:#1A1A1A;border-color:#4C5C3B">A</span><span class="ja" lang="ja">昼:</span><span class="en" lang="en">Day: </span>foreground × selection</span></td><td><span class="ja" lang="ja">選んだ範囲の文字</span><span class="en" lang="en">Selected text</span></td><td class="num">10.96:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#F0F0F0;color:#1A1A1A;border-color:#4C5C3B">A</span><span class="ja" lang="ja">昼:</span><span class="en" lang="en">Day: </span>foreground × current-line</span></td><td><span class="ja" lang="ja">いまの行の文字</span><span class="en" lang="en">Current-line text</span></td><td class="num">15.27:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#FFFFFF;color:#B92613;border-color:#4C5C3B">A</span><span class="ja" lang="ja">昼:</span><span class="en" lang="en">Day: </span>reading × background</span></td><td><span class="ja" lang="ja">読み上げ中の枠(非テキスト3:1以上)</span><span class="en" lang="en">Read-aloud frame (non-text, 3:1 or better)</span></td><td class="num">6.27:1</td><td><span class="aa">AA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#494740;color:#BFBFBF;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>foreground × selection</span></td><td><span class="ja" lang="ja">選んだ範囲の文字</span><span class="en" lang="en">Selected text</span></td><td class="num">5.06:1</td><td><span class="aa">AA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#202122;color:#BFBFBF;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>foreground × current-line</span></td><td><span class="ja" lang="ja">いまの行の文字</span><span class="en" lang="en">Current-line text</span></td><td class="num">8.77:1</td><td><span class="aaa">AAA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#F07B5F;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>reading × background</span></td><td><span class="ja" lang="ja">読み上げ中の枠(非テキスト3:1以上)</span><span class="en" lang="en">Read-aloud frame (non-text, 3:1 or better)</span></td><td class="num">6.82:1</td><td><span class="aa">AA</span></td></tr>
       </tbody>
     </table>
     </div>
@@ -1024,40 +1067,53 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       <span style="font-size:12px;color:var(--steel);font-weight:700"><span class="ja" lang="ja">色+記号+ラベルの三重化(既存プレーヤーの「覚えた/ヤバイ」方式を標準とする)</span><span class="en" lang="en">Triple coding — color + symbol + label (the player's "Got it / Tricky" pattern is the standard)</span></span>
     </div>
 
-    <h3><span class="ja" lang="ja">7-3. 操作の3原則</span><span class="en" lang="en">7-3. Three rules of interaction</span></h3>
+    <h3><span class="ja" lang="ja">7-3. 操作の原則</span><span class="en" lang="en">7-3. Rules of interaction</span></h3>
     <p>
       <b><span class="ja" lang="ja">(1) 押しやすく:</span><span class="en" lang="en">(1) Easy to press:</span></b><span class="ja" lang="ja">ボタン・チェックボックスのタップ領域は44×44px以上。</span><span class="en" lang="en"> tap targets for buttons and checkboxes are 44×44px or larger.</span>
-      <b><span class="ja" lang="ja">(2) キーボードだけで:</span><span class="en" lang="en">(2) Keyboard-complete:</span></b><span class="ja" lang="ja">すべての機能をキーボードだけで操作できるようにする。ショートカットを設ける場合は無効化・変更を可能にし、入力欄との競合を避ける。フォーカスは太い赤枠(<span class="mono">:focus-visible</span>)で可視化する。</span><span class="en" lang="en"> every function is operable from the keyboard alone; when shortcuts exist they can be disabled or remapped and never conflict with text fields. Focus is shown with a thick red ring (<span class="mono">:focus-visible</span>).</span>
-      <b><span class="ja" lang="ja">(3) 急かさない:</span><span class="en" lang="en">(3) No rushing:</span></b><span class="ja" lang="ja">時間制限を設けない。読み上げの「間」と速度は使う人が選べるようにする。</span><span class="en" lang="en"> no time limits; speech pauses and speed are always the user's choice.</span>
+      <b><span class="ja" lang="ja">(2) キーボードだけで:</span><span class="en" lang="en">(2) Keyboard-complete:</span></b><span class="ja" lang="ja">すべての機能をキーボードだけで操作できるようにする。ショートカットを設ける場合は無効化・変更を可能にし、入力欄との競合を避ける。あわせて、すべてのショートカットの一覧を開けるようにし(例:<span class="mono">Shift+F1</span>)、各ボタンのヒントと <span class="mono">aria-keyshortcuts</span> に、いま割り当てているキーを出す。OSやブラウザーが使うキー(<span class="mono">Ctrl+C</span>、<span class="mono">Alt+F4</span> など)とはぶつけない。<span class="mono">Esc</span>(閉じる・止める)は変更できない固定の操作とする。変えたキーは次回の起動でも使う。フォーカスは太い赤枠(<span class="mono">:focus-visible</span>)で可視化する。</span><span class="en" lang="en"> every function is operable from the keyboard alone; when shortcuts exist they can be disabled or remapped and never conflict with text fields. Provide a list of all shortcuts (for example, <span class="mono">Shift+F1</span>), and show the currently assigned key in each button's tooltip and in <span class="mono">aria-keyshortcuts</span>. Never take keys used by the OS or browser (<span class="mono">Ctrl+C</span>, <span class="mono">Alt+F4</span>, and so on). <span class="mono">Esc</span> (close, stop) is fixed and cannot be reassigned. Changed keys are kept for the next launch. Focus is shown with a thick red ring (<span class="mono">:focus-visible</span>).</span>
+      <b><span class="ja" lang="ja">(3) 急かさない:</span><span class="en" lang="en">(3) No rushing:</span></b><span class="ja" lang="ja">時間制限を設けない。読み上げの「間」と速度は使う人が選べるようにする。</span><span class="en" lang="en"> no time limits; speech pauses and speed are always the user's choice.</span><br>
+      <b><span class="ja" lang="ja">(4) 使う人の選択を優先:</span><span class="en" lang="en">(4) The user's choice comes first:</span></b><span class="ja" lang="ja">書体(BIZ UDゴシックなどのUD書体)・文字の大きさ・行間・表示倍率などの読みやすさの設定を設ける場合は、使う人が選んだ値を本書の指定(第6条など)より優先する。一般の利用者に要らない補助(いまの行の強調、太いカーソルなど)は選択式とし、初期設定は標準にする。選んだ設定は次回の起動でも使う。</span><span class="en" lang="en"> when readability settings are offered — typeface (including UD faces such as BIZ UDGothic), text size, line spacing, zoom — the user's choice takes precedence over this document (Art. 6 and others). Aids most users do not need (current-line highlight, thick cursor, and so on) are optional and off by default. Chosen settings are kept for the next launch.</span>
     </p>
 
     <h3><span class="ja" lang="ja">7-4. 耳と目の両輪</span><span class="en" lang="en">7-4. Ears and eyes together</span></h3>
     <p>
-      <span class="ja" lang="ja">聞き流しプレーヤーが音声で伝える内容は、必ず画面にも同じ内容を表示する(音だけ・見た目だけの情報を作らない)。画像にはaltを書き、装飾は<span class="mono">aria-hidden</span>で読み上げから外す。</span>
-      <span class="en" lang="en">Whatever the audio player speaks, the screen also shows — never audio-only or visual-only information. Images carry alt text; decoration is removed from the reading order with <span class="mono">aria-hidden</span>.</span>
+      <span class="ja" lang="ja">聞き流しプレーヤーが音声で伝える内容は、必ず画面にも同じ内容を表示する(音だけ・見た目だけの情報を作らない)。画像にはaltを書き、装飾は<span class="mono">aria-hidden</span>で読み上げから外す。文章を読み上げる機能を設ける場合は、次のようにする。(1) 読んでいる段落を画面でも示す(枠で囲むなど。色は 4-3 の <span class="mono">--document-reading</span>)。(2) <span class="mono">Esc</span> で止まる。(3) 文章の言語に合った音声を選ぶ。(4) 使える音声がないときは、その旨と、音声を追加する方法(OSの設定の場所)を表示する。(5) PCに入っている音声だけを使い、文章をインターネット上の音声サービスに送らない(第13条)。</span>
+      <span class="en" lang="en">Whatever the audio player speaks, the screen also shows — never audio-only or visual-only information. Images carry alt text; decoration is removed from the reading order with <span class="mono">aria-hidden</span>. If a product reads text aloud: (1) the paragraph being read is also marked on screen (for example, with a frame in 4-3 <span class="mono">--document-reading</span>); (2) <span class="mono">Esc</span> stops it; (3) the voice matches the language of the text; (4) if no suitable voice is installed, say so and show how to add one (where in the OS settings); (5) only voices installed on the PC are used, and text is never sent to an online speech service (Art. 13).</span>
     </p>
 
     <h3><span class="ja" lang="ja">7-5. 動きへの配慮</span><span class="en" lang="en">7-5. Motion care</span></h3>
     <p>
-      <span class="ja" lang="ja">アニメーションは0.3秒以内の状態変化のみとし、点滅・自動スクロールは使わない。<span class="mono">prefers-reduced-motion</span> が指定された環境では動きを止める(本書自体も対応済み)。</span>
-      <span class="en" lang="en">Animation is limited to state changes of 0.3s or less; no blinking, no auto-scroll. When <span class="mono">prefers-reduced-motion</span> is set, motion stops (this document complies).</span>
+      <span class="ja" lang="ja">アニメーションは0.3秒以内の状態変化のみとし、点滅・自動スクロールは使わない。<span class="mono">prefers-reduced-motion</span> が指定された環境では動きを止める(本書自体も対応済み)。止めるときは <span class="mono">transition: none</span> と <span class="mono">animation: none</span> にする(9-4)。<span class="mono">transition-duration: 0.01ms</span> のようにごく短くする書き方は使わない。すべてのプロパティに短いトランジションが残り、図の大きさの計測などが狂うためである。アニメーションの終了を待つ処理がある場合に限り、<span class="mono">animation-duration: 0.01ms</span> と <span class="mono">animation-iteration-count: 1</span> を使ってよい。</span>
+      <span class="en" lang="en">Animation is limited to state changes of 0.3s or less; no blinking, no auto-scroll. When <span class="mono">prefers-reduced-motion</span> is set, motion stops (this document complies). Stop it with <span class="mono">transition: none</span> and <span class="mono">animation: none</span> (9-4). Do not shorten durations instead (such as <span class="mono">transition-duration: 0.01ms</span>): every property keeps a tiny transition, which breaks measurements such as diagram sizing. Only where code waits for an animation to end may <span class="mono">animation-duration: 0.01ms</span> with <span class="mono">animation-iteration-count: 1</span> be used.</span>
     </p>
 
     <h3><span class="ja" lang="ja">7-6. 文章のわかりやすさ</span><span class="en" lang="en">7-6. Plain writing</span></h3>
     <p>
-      <span class="ja" lang="ja">1文1義・番号つき・単位明記(第8条)。専門用語には初出時に読みか短い説明を添える。</span>
-      <span class="en" lang="en">One meaning per sentence, numbered rules, units always stated (Art. 8). Technical terms get a reading or a short gloss at first use.</span>
+      <span class="ja" lang="ja">1文1義・番号つき・単位明記(第8条)。専門用語には初出時に読みか短い説明を添える。エラーやお知らせは、何が起きたかと、次に何をすればよいかを書く(8-7 の文例 (2))。例:「保存していない文書では、ほかのファイルへのリンクを開けません。先に文書を保存してください。」</span>
+      <span class="en" lang="en">One meaning per sentence, numbered rules, units always stated (Art. 8). Technical terms get a reading or a short gloss at first use. Errors and notices say what happened and what to do next (8-7, example (2)). Example: "Links to other files cannot be opened from an unsaved document. Save the document first."</span>
     </p>
 
     <h3><span class="ja" lang="ja">7-7. 出荷前チェック</span><span class="en" lang="en">7-7. Pre-release check</span></h3>
     <p>
-      <span class="ja" lang="ja">新しい道具を公開する前に、次の点を確認する。(a) 拡大200%で横スクロールが出ない。(b) マウスなしで全操作できる。(c) グレースケール表示でも意味が取れる。(d) 画面幅320px(CSSピクセル)で、情報や機能を欠かさず縦スクロールだけで読める(WCAG 2.2 達成基準 1.4.10 リフロー。表・コード・地図など2方向のスクロールが必要な部分は除く)。(e) ダークモードに対応する場合は、夜の配色(4-2)でも (a)〜(d) を確認する。</span>
-      <span class="en" lang="en">Before release, confirm: (a) no horizontal scroll at 200% zoom; (b) full operation without a mouse; (c) meaning survives in grayscale; (d) at a 320 CSS-pixel viewport, all content and functions remain available with vertical scrolling only (WCAG 2.2 SC 1.4.10 Reflow; tables, code, maps, and other content that needs two-dimensional scrolling are exempt); (e) if the product supports dark mode, repeat (a) to (d) in the night palette (4-2).</span>
+      <span class="ja" lang="ja">新しい道具を公開する前に、次の点を確認する。(a) 拡大200%で横スクロールが出ない。(b) マウスなしで全操作できる。(c) グレースケール表示でも意味が取れる。(d) 画面幅320px(CSSピクセル)で、情報や機能を欠かさず縦スクロールだけで読める(WCAG 2.2 達成基準 1.4.10 リフロー。表・コード・地図など2方向のスクロールが必要な部分は除く)。(e) ダークモードに対応する場合は、夜の配色(4-2)でも (a)〜(d) を確認する。(f) Windows のコントラスト テーマ(強制カラー、7-8)で、ボタンの枠・区切り・フォーカスの印・本文が読める。(g) 画面読み上げソフト(Windows ナレーター、NVDA など)で、すべての操作部品の名前と役割が読める。読み上げソフトをオンにした状態で、長い文書(数百行)の編集・選択・スクロールが止まらない。(h) ブラウザーやOSの文字の大きさの設定だけを200%にしても、文字が欠けたり重なったりしない(WCAG 2.2 達成基準 1.4.4)。製品に文字の大きさの設定がある場合は、その最大値でも確かめる。(i) 自動バックアップと復元の機能がある場合は、異常終了から実際に復元できる(7-9)。</span>
+      <span class="en" lang="en">Before release, confirm: (a) no horizontal scroll at 200% zoom; (b) full operation without a mouse; (c) meaning survives in grayscale; (d) at a 320 CSS-pixel viewport, all content and functions remain available with vertical scrolling only (WCAG 2.2 SC 1.4.10 Reflow; tables, code, maps, and other content that needs two-dimensional scrolling are exempt); (e) if the product supports dark mode, repeat (a) to (d) in the night palette (4-2); (f) in a Windows contrast theme (forced colors, 7-8), button borders, dividers, focus indicators, and body text remain readable; (g) a screen reader (Windows Narrator, NVDA, etc.) reads the name and role of every control, and with it running, editing, selecting, and scrolling a long document (hundreds of lines) never stall; (h) with only the browser or OS text-size setting at 200%, no text is cut off or overlaps (WCAG 2.2 SC 1.4.4); if the product has its own text-size setting, check its maximum too; (i) if the product has automatic backup and recovery, recovery from an abnormal exit actually works (7-9).</span>
     </p>
     <div class="note"><b><span class="ja" lang="ja">確認の記録:</span><span class="en" lang="en">Record the check:</span></b>
-      <span class="ja" lang="ja"> 確認した日付、使ったブラウザやツール、結果(OK/要修正)を、READMEまたは試験報告書に残す。コントラスト比を測った場合は、7-1と同じく確認日と計算方法を書く。</span>
-      <span class="en" lang="en"> Write down the date, the browser or tool used, and the result (OK / needs fixing) in the README or test report. For contrast measurements, record the date and method as in 7-1.</span>
+      <span class="ja" lang="ja"> 確認した日付、使ったブラウザやツール、結果(OK/要修正)を、READMEまたは試験報告書に残す。コントラスト比を測った場合は、7-1と同じく確認日と計算方法を書く。書式は 9-5 のひな形による。</span>
+      <span class="en" lang="en"> Write down the date, the browser or tool used, and the result (OK / needs fixing) in the README or test report. For contrast measurements, record the date and method as in 7-1. Use the template in 9-5.</span>
     </div>
+
+    <h3><span class="ja" lang="ja">7-8. コントラストテーマ(強制カラー)</span><span class="en" lang="en">7-8. Contrast themes (forced colors)</span></h3>
+    <p>
+      <span class="ja" lang="ja">Windows のコントラスト テーマなど、利用者がOSで選んだ配色が画面の色をすべて置き換える環境(CSS の <span class="mono">forced-colors: active</span>)では、次のようにする。夜の配色(4-2)とは別の仕組みで、本書のパレットより優先する。<b>(1)</b> 文字・背景・ボタン・リンク・選んだ範囲は、システムの色(<span class="mono">Canvas</span>、<span class="mono">CanvasText</span>、<span class="mono">ButtonFace</span>、<span class="mono">ButtonText</span>、<span class="mono">LinkText</span>、<span class="mono">Highlight</span>、<span class="mono">HighlightText</span> など)に従い、色を固定しない。<b>(2)</b> ボタン・入力欄・区切りの枠と、フォーカスの印は、システムの色で必ず残す。背景色だけで形を示している部品には枠を足す。<b>(3)</b> 色そのものが意味を持つもの(色見本、マーク・ロゴ、図のSVG)は <span class="mono">forced-color-adjust: none</span> として元の色で表示する。図は白い地の上に置き、色の意味を保つ。<b>(4)</b> 確認は、Windows のコントラスト テーマ、またはブラウザーの強制カラー(Edge・Chrome の <span class="mono">--force-high-contrast</span> など)で行う(7-7 (f))。CSSの例は 9-4。</span>
+      <span class="en" lang="en">Where colors chosen in the OS replace every color on screen — Windows contrast themes and the like (CSS <span class="mono">forced-colors: active</span>) — do the following. This is separate from the night palette (4-2) and takes precedence over this document's palette. <b>(1)</b> Text, backgrounds, buttons, links, and selections follow system colors (<span class="mono">Canvas</span>, <span class="mono">CanvasText</span>, <span class="mono">ButtonFace</span>, <span class="mono">ButtonText</span>, <span class="mono">LinkText</span>, <span class="mono">Highlight</span>, <span class="mono">HighlightText</span>, and so on); never pin colors. <b>(2)</b> Borders of buttons, fields, and dividers, and focus indicators, always remain, drawn in system colors; add a border to any component that shows its shape only by background color. <b>(3)</b> Things whose color is the meaning (swatches, marks and logos, diagram SVGs) use <span class="mono">forced-color-adjust: none</span> and keep their colors; diagrams sit on a white ground so their colors stay meaningful. <b>(4)</b> Check with a Windows contrast theme or a browser's forced-colors mode (for example, <span class="mono">--force-high-contrast</span> in Edge or Chrome) (7-7 (f)). See 9-4 for CSS.</span>
+    </p>
+
+    <h3><span class="ja" lang="ja">7-9. 作業を失わせない</span><span class="en" lang="en">7-9. Never lose the user's work</span></h3>
+    <p>
+      <span class="ja" lang="ja">使う人の作業は失わせず、失敗しても取り戻せるようにする。記憶や注意に頼らずに済むようにする、認知面のアクセシビリティでもある。<b>(1)</b> 保存は、一時ファイルに書いてから置き換えるなど、保存に失敗しても元のファイルを壊さない方法で行う。<b>(2)</b> 保存していない変更は、一定の間隔でPCの中に控え、異常終了の後の起動で復元を提案する。控えの場所は PRIVACY.md に書く(第13条)。<b>(3)</b> 保存していない変更を捨てる操作(閉じる・ほかのファイルを開くなど)の前には確認する。確認の文には、何が失われるかと、選べる操作を書く(7-6)。</span>
+      <span class="en" lang="en">Never let users lose their work, and make failures recoverable — this is also cognitive accessibility, so nothing depends on memory or attention. <b>(1)</b> Save in a way that never damages the original file if saving fails, such as writing a temporary file and then replacing. <b>(2)</b> Copy unsaved changes to the PC at regular intervals and offer recovery on the next launch after an abnormal exit; list the location in PRIVACY.md (Art. 13). <b>(3)</b> Confirm before discarding unsaved changes (closing, opening another file, and so on); the message states what will be lost and the available choices (7-6).</span>
+    </p>
   </div>
 </section>
 
@@ -1215,8 +1271,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">9-3. ファイルヘッダー(コード署名)</span><span class="en" lang="en">9-3. File header (code signature)</span></h3>
     <p>
-      <span class="ja" lang="ja">ソースコードや設定ファイルの先頭に、次の署名を置く。項目名(ラベル)は、そのファイルで使う言語に合わせる。<b>(1)</b> 日本語を含むファイルは、日英併記とする(見本A)。<b>(2)</b> 説明やコメントを英語だけで書くファイル(英語版)は、英語の項目名だけとする(見本B)。<b>(3)</b> 作成者の欄は、見本Aでは 8-6 の公式表記(日英併記)、見本Bでは英語表記「5garashi.com Design Office」とする。日付は <span class="mono">YYYY-MM-DD</span> で書く。</span>
-      <span class="en" lang="en">Put the following signature at the top of source and configuration files. Field labels follow the language of the file. <b>(1)</b> Files that contain Japanese use bilingual labels (sample A). <b>(2)</b> Files whose descriptions and comments are written only in English (English editions) use English labels only (sample B). <b>(3)</b> The author field uses the official paired name of 8-6 in sample A, and the English name "5garashi.com Design Office" in sample B. Dates are written as <span class="mono">YYYY-MM-DD</span>.</span>
+      <span class="ja" lang="ja">ソースコードや設定ファイルの先頭に、次の署名を置く。項目名(ラベル)は、そのファイルで使う言語に合わせる。<b>(1)</b> 日本語を含むファイルは、日英併記とする(見本A)。<b>(2)</b> 説明やコメントを英語だけで書くファイル(英語版)は、英語の項目名だけとする(見本B)。<b>(3)</b> 作成者の欄は、見本Aでは 8-6 の公式表記(日英併記)、見本Bでは英語表記「5garashi.com Design Office」とする。日付は <span class="mono">YYYY-MM-DD</span> で書く。<b>(4)</b> コメントを書けない形式(<span class="mono">package.json</span> などのJSON)と、改変せずに同梱する第三者のファイル(<span class="mono">.min.js</span>、<span class="mono">LICENSE</span> など)は、ヘッダーの対象外とする。<b>(5)</b> Markdown では、ヘッダーを HTML コメント(<span class="mono">&lt;!-- --&gt;</span>)に書く。</span>
+      <span class="en" lang="en">Put the following signature at the top of source and configuration files. Field labels follow the language of the file. <b>(1)</b> Files that contain Japanese use bilingual labels (sample A). <b>(2)</b> Files whose descriptions and comments are written only in English (English editions) use English labels only (sample B). <b>(3)</b> The author field uses the official paired name of 8-6 in sample A, and the English name "5garashi.com Design Office" in sample B. Dates are written as <span class="mono">YYYY-MM-DD</span>. <b>(4)</b> Formats that cannot hold comments (JSON such as <span class="mono">package.json</span>) and third-party files bundled unmodified (<span class="mono">.min.js</span>, <span class="mono">LICENSE</span>, and so on) are exempt. <b>(5)</b> In Markdown, write the header as an HTML comment (<span class="mono">&lt;!-- --&gt;</span>).</span>
     </p>
     <pre class="codeblock"><span class="cm"><span class="ja" lang="ja">見本A:日本語を含むファイル</span><span class="en" lang="en">Sample A: file that contains Japanese</span>
 &lt;!--
@@ -1251,6 +1307,9 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
   --document-background:#FFFFFF;
   --document-foreground:#1A1A1A;
   --document-rule:#D0D0D0;
+  --document-selection:#C7D0C1;
+  --document-current-line:#F0F0F0;
+  --document-reading:#B92613;
 }
 <span class="cm">/* 夜の配色(4-2)。印刷には適用しない / night palette (4-2), not for print */</span>
 @media screen and (prefers-color-scheme: dark){
@@ -1264,6 +1323,9 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     --document-background:#121314;
     --document-foreground:#BFBFBF;
     --document-rule:#2B2B2B;
+    --document-selection:#494740;
+    --document-current-line:#202122;
+    --document-reading:#F07B5F;
   }
 }
 <span class="cm">/* ユニバーサルデザイン標準装備 / universal design as standard */</span>
@@ -1271,6 +1333,13 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *,*::before,*::after{ animation:none !important; transition:none !important; }
+}
+<span class="cm">/* コントラストテーマ(7-8)/ contrast themes (7-8) */</span>
+@media (forced-colors: active){
+  button, input, select, textarea{ border:2px solid ButtonText; }
+  :focus-visible{ outline:3px solid Highlight; }
+  .swatch, .brand-mark, .diagram{ forced-color-adjust:none; }
+  .diagram{ background:#FFFFFF; }
 }</pre>
 
     <h3><span class="ja" lang="ja">9-5. README・報告書の署名</span><span class="en" lang="en">9-5. README and report signature</span></h3>
@@ -1282,6 +1351,29 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
 **最終更新 / Last updated**: YYYY-MM-DD JST</pre>
+    <p>
+      <span class="ja" lang="ja">ソフトウェアの README には、7-7 の出荷前チェックの記録を載せる。書式は次のひな形による(英語版の README では項目名を英語にする)。</span>
+      <span class="en" lang="en">Software READMEs include the record of the 7-7 pre-release check, using the template below (English READMEs use English labels).</span>
+    </p>
+    <pre class="codeblock">## アクセシビリティの確認記録 / Accessibility check record
+
+Identity 第7条 7-7 の出荷前チェックの記録です。
+
+- 確認日: YYYY-MM-DD
+- 使ったツール:
+- 確認した組み合わせ: 表示(ライト・ダーク)× 言語 × 画面の大きさ
+
+| 項目 | 結果 | 内容 |
+| :--- | :--- | :--- |
+| (a) 拡大200%で横スクロールが出ない | OK / 要修正 | |
+| (b) マウスなしで全操作できる | | |
+| (c) グレースケールでも意味が取れる | | |
+| (d) 画面幅320pxで縦スクロールだけで読める | | |
+| (e) 夜の配色で (a)〜(d) | | |
+| (f) コントラストテーマ(強制カラー) | | |
+| (g) 画面読み上げソフト | | |
+| (h) 文字の大きさの設定200% | | |
+| (i) 自動バックアップからの復元 | | |</pre>
   </div>
 </section>
 
@@ -1442,8 +1534,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
     <h3><span class="ja" lang="ja">12-1. 特記(例外)</span><span class="en" lang="en">12-1. Exceptions</span></h3>
     <p>
-      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。</span>
-      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document.</span>
+      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) <span class="mono">templates/</span> のひな形(PRIVACY.md など)も <b>MIT License</b> で提供する。(3) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。</span>
+      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) The templates in <span class="mono">templates/</span> (PRIVACY.md and others) are also provided under the <b>MIT License</b>. (3) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document.</span>
     </p>
     <h3><span class="ja" lang="ja">12-2. 誤認の防止</span><span class="en" lang="en">12-2. No implied endorsement</span></h3>
     <p>
@@ -1452,12 +1544,14 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
     <h3><span class="ja" lang="ja">12-3. 配布パッケージ構成</span><span class="en" lang="en">12-3. Distribution package</span></h3>
     <p>
-      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_v4_10.html</span>)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
-      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_v4_10.html</span>) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
+      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_v4_11.html</span>)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
+      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_v4_11.html</span>) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
     </p>
     <pre class="codeblock">index.html                              <span class="cm"># Web版 / web edition</span>
-5garashi_identity_v4_10.html             <span class="cm"># 単一ファイル版(生成物)/ single-file edition (generated)</span>
+5garashi_identity_v4_11.html             <span class="cm"># 単一ファイル版(生成物)/ single-file edition (generated)</span>
 CHANGELOG.md                            <span class="cm"># 改版履歴 / revision history</span>
+templates/
+  PRIVACY.md                            <span class="cm"># PRIVACY.md のひな形(第13条)/ privacy policy template (Art. 13)</span>
 tools/
   build_standalone.py                   <span class="cm"># 単一ファイル版の生成 / builds the single-file edition</span>
   check_contrast.py                     <span class="cm"># 7-1 のコントラスト比の計算 / contrast ratios for 7-1</span>
@@ -1531,6 +1625,36 @@ assets/
       <span class="ja" lang="ja">次の場合は、事前に公式サイト <a href="https://www.5garashi.com">www.5garashi.com</a> に記載の連絡先へ問い合わせる。(1) 改変した版を使いたい場合(CC BY-ND 4.0 は改変版の共有を許諾していない)。(2) 名称・シンボルマーク・ロゴタイプを、自分の商品やサービスの名前・装飾に使う場合や、共同での発表に使う場合(12-2 により名称とロゴの権利は留保している)。改変せず、出典を示して共有するだけであれば、商用の場面でも問い合わせは要らない。</span>
       <span class="en" lang="en">Contact us beforehand via the details on the official site, <a href="https://www.5garashi.com">www.5garashi.com</a>, in these cases: (1) you want to use a modified version (CC BY-ND 4.0 does not permit sharing adaptations); (2) you want to use the name, symbol mark, or logotype as the name or decoration of your own product or service, or in a joint announcement (rights in the name and logos are reserved under 12-2). Sharing unmodified material with attribution needs no inquiry, even in a commercial context.</span>
     </p>
+
+    <h3><span class="ja" lang="ja">12-6. 製品の配布物</span><span class="en" lang="en">12-6. Product distributions</span></h3>
+    <p>
+      <span class="ja" lang="ja">5garashi.com が配布するソフトウェアには、ライセンスの本文(<span class="mono">LICENSE</span>)に加えて、次を入れる。<b>(1)</b> <span class="mono">THIRD-PARTY-NOTICES.md</span>:同梱したすべての第三者ソフトウェアの名前・版・ライセンスと、その本文。同梱したライブラリの中に含まれるパッケージ(バンドルされた依存関係)まで書く。<b>(2)</b> <span class="mono">PRIVACY.md</span>:第13条による。</span>
+      <span class="en" lang="en">Software distributed by 5garashi.com includes, besides the license text (<span class="mono">LICENSE</span>): <b>(1)</b> <span class="mono">THIRD-PARTY-NOTICES.md</span> — the name, version, license, and license text of every bundled third-party component, including packages bundled inside those libraries (bundled dependencies); <b>(2)</b> <span class="mono">PRIVACY.md</span> — per Art. 13.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ 第13条 ═══════════ -->
+<section id="a13">
+  <div class="art-head">
+    <span class="chip"><span class="ja" lang="ja">第13条</span><span class="en" lang="en">ART. 13</span></span>
+    <div class="titles"><h2><span class="ja" lang="ja">プライバシー</span><span class="en" lang="en">Privacy</span></h2><span class="en-sub"><span class="ja" lang="ja">Privacy</span><span class="en" lang="en">プライバシー</span></span></div>
+  </div>
+  <div class="art-body">
+    <p>
+      <span class="ja" lang="ja">使う人の文書と行動は、その人のものである。5garashi.com の道具は、次を守る。</span>
+      <span class="en" lang="en">People's documents and actions belong to them. 5garashi.com tools keep to the following.</span>
+    </p>
+    <h3><span class="ja" lang="ja">13-1. 原則</span><span class="en" lang="en">13-1. Principles</span></h3>
+    <p>
+      <span class="ja" lang="ja"><b>(1)</b> 利用状況の計測(テレメトリ)や広告のための通信をしない。<b>(2)</b> 文書や入力の処理(表示・保存・PDFの書き出し・読み上げなど)は、使う人のPCの中で行う。外部のサービスに送る機能を設ける場合は、初期設定をオフにし、使う前に送る内容と送り先を示す。<b>(3)</b> 保存するデータ(設定・作業の控え・ログなど)と、その場所を一覧で公開する。<b>(4)</b> 機能に伴って通信が起きる場合(文書の中の外部の画像を表示するときなど)は、その場合と、相手に伝わる情報を書く。</span>
+      <span class="en" lang="en"><b>(1)</b> No connections for usage tracking (telemetry) or advertising. <b>(2)</b> Documents and input are processed on the user's PC (display, saving, PDF export, read-aloud, and so on). Any feature that sends data to an outside service is off by default and states what is sent and where before use. <b>(3)</b> Publish a list of the data stored (settings, work backups, logs, and so on) and where. <b>(4)</b> Where connections happen as a side effect (for example, showing external images in a document), state when and what the other party receives.</span>
+    </p>
+    <h3><span class="ja" lang="ja">13-2. PRIVACY.md</span><span class="en" lang="en">13-2. PRIVACY.md</span></h3>
+    <p>
+      <span class="ja" lang="ja">配布するソフトウェアには、13-1 の内容を書いた <span class="mono">PRIVACY.md</span> を入れる(12-6)。ひな形は本リポジトリの <a href="https://github.com/5garashi/5garashi-identity/blob/main/templates/PRIVACY.md">templates/PRIVACY.md</a>(日英)。製品に合わせて、保存するデータの一覧と、通信が起きる場合を書き換える。</span>
+      <span class="en" lang="en">Distributed software includes a <span class="mono">PRIVACY.md</span> covering 13-1 (12-6). The template is <a href="https://github.com/5garashi/5garashi-identity/blob/main/templates/PRIVACY.md">templates/PRIVACY.md</a> in this repository (JA/EN); adapt the list of stored data and the cases where connections happen to the product.</span>
+    </p>
   </div>
 </section>
 
@@ -1538,8 +1662,8 @@ assets/
 
 <footer>
   <span style="font-weight:800;color:var(--ink)"><span style="font-family:Georgia,serif;font-style:italic">5</span>garashi.com設計事務所 / 5garashi.com Design Office</span> — <a class="mono" href="https://www.5garashi.com">https://www.5garashi.com</a><br>
-  <span class="ja" lang="ja">Design Office Identity 第4.10版 — 2026.10.11 — © 2026 CC BY-ND 4.0</span>
-  <span class="en" lang="en">Design Office Identity v4.10 — 2026.10.11 — © 2026 CC BY-ND 4.0</span><br>
+  <span class="ja" lang="ja">Design Office Identity 第4.11版 — 2026.10.11 — © 2026 CC BY-ND 4.0</span>
+  <span class="en" lang="en">Design Office Identity v4.11 — 2026.10.11 — © 2026 CC BY-ND 4.0</span><br>
   <span class="ja" lang="ja">回路にも、画面にも、暮らしにも——五本の唐辛子。だれの手にも、ピリッと効く。</span>
   <span class="en" lang="en">Five chilis — on the board, on the screen, in daily life. A kick designed to work in as many hands as possible.</span>
 </footer>
@@ -1558,8 +1682,8 @@ assets/
     btn.textContent = en ? "日本語" : "English";
     btn.setAttribute("aria-label", en ? "日本語に切り替え" : "Switch to English");
     document.title = en
-      ? "5garashi.com Design Office — Identity v4.10"
-      : "5garashi.com設計事務所 — Design Office Identity v4.10";
+      ? "5garashi.com Design Office — Identity v4.11"
+      : "5garashi.com設計事務所 — Design Office Identity v4.11";
     // 正規URLと共有情報を表示言語に合わせる(hreflang の ja / en と一致させる)
     // Keep canonical and Open Graph in step with the language (matches the hreflang ja / en entries)
     var base = "https://5garashi.github.io/5garashi-identity/";
