@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: index.html(Web版・外部アセット参照。単一ファイル版 5garashi_identity_v4_9.html は tools/build_standalone.py で生成)
+  ファイル名 / File: index.html(Web版・外部アセット参照。単一ファイル版 5garashi_identity_v4_10.html は tools/build_standalone.py で生成)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
   最終更新 / Last updated: 2026-10-11
-  版 / Version: 4.9
+  版 / Version: 4.10
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ・楽譜・音源。特記=第12条を参照)
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -18,8 +18,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5garashi.com設計事務所 — Design Office Identity v4.9</title>
-<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様 第4.9版。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンスを日英二言語で定める。">
+<title>5garashi.com設計事務所 — Design Office Identity v4.10</title>
+<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様 第4.10版。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンスを日英二言語で定める。">
 <meta name="author" content="5garashi.com設計事務所 / 5garashi.com Design Office">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#FFE699" media="(prefers-color-scheme: light)">
@@ -30,7 +30,7 @@
 <link rel="alternate" hreflang="x-default" href="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="5garashi.com設計事務所 / 5garashi.com Design Office">
-<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity v4.9">
+<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity v4.10">
 <meta property="og:description" content="電子回路の設計から、まちのデジタルの困りごとまで支える設計事務所のアイデンティティ運用仕様(日英二言語)。">
 <meta id="ogUrl" property="og:url" content="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:image" content="https://5garashi.github.io/5garashi-identity/assets/og_image.png">
@@ -87,6 +87,8 @@ img{max-width:100%;height:auto}
 /* ---------- 言語切替 / Language toggle ---------- */
 .en{display:none}
 body.lang-en .en{display:inline}
+/* 英語表示の欧文書体(第6条)。和文の文字は後ろの和文書体で表示される / Latin face for English (Art. 6) */
+body.lang-en,.latin-sample{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Noto Sans","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic","Meiryo",sans-serif}
 body.lang-en .ja{display:none}
 #langBtn{
   position:fixed;top:14px;right:14px;z-index:60;
@@ -439,7 +441,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第4.9版</span><span class="en" lang="en">IDENTITY GUIDELINE — v4.9</span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第4.10版</span><span class="en" lang="en">IDENTITY GUIDELINE — v4.10</span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -478,20 +480,18 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">第4.9版(2026-10-11)の変更点</span><span class="en" lang="en">What's new in v4.9 (2026-10-11)</span></summary>
+    <summary><span class="ja" lang="ja">第4.10版(2026-10-11)の変更点</span><span class="en" lang="en">What's new in v4.10 (2026-10-11)</span></summary>
     <ul class="ja" lang="ja">
-      <li>夜の ink を <span class="mono">#EFE6C4</span> から <span class="mono">#C9C1A5</span> に変更。暗い画面で文字・ボタン・枠線がまぶしかったため(mdEditor の実機での確認による)。本文の基本組は 9.09:1 で、引き続きAAA。</li>
-      <li>第4条に 4-3「文書面(編集欄・プレビュー)の色」を新設。長文を読み書きする面は無彩色の機能色(昼 <span class="mono">#FFFFFF</span> × <span class="mono">#1A1A1A</span>、夜 <span class="mono">#121314</span> × <span class="mono">#BFBFBF</span>)とし、パレットの例外として扱う。</li>
-      <li>第7条:夜の対照表の ink の組を更新し、7-1 補2「文書面のコントラスト対照表」を追加。</li>
-      <li>第9条 9-4:CSSトークンに <span class="mono">--document-*</span> の3つを追加。</li>
-      <li>4-3 に文書面の本文の太さ(W4)、4-2 に利用者による表示の切り替え、9-2 にアプリアイコンは表示モードによらず volt とすることを追記。3-7 に、条件付きで暗い地に volt のマークを置いてよいことを追記。</li>
+      <li>第9条 9-3:ファイルヘッダーの項目名を、ファイルの言語に合わせるとした。日本語を含むファイルは日英併記(見本A)、英語だけで書くファイル(英語版)は英語の項目名だけ(見本B)。作成者の欄はどちらも 8-6 の公式表記。</li>
+      <li>9-3 の見本の「作成日 / Date」を、本書や各ファイルの実際の表記に合わせて「作成日 / Created」に統一。見本B(英語版)の作成者は英語表記「5garashi.com Design Office」とし、8-6 に同じ例外を追記。</li>
+      <li>第4条 4-3:文書面の昼の区切り線 <span class="mono">--document-rule</span> を <span class="mono">#DFCF9A</span> から無彩色の <span class="mono">#D0D0D0</span>(白地に 1.54:1、装飾専用)に変更。</li>
+      <li>第6条:英語表示の欧文書体(Segoe UI / San Francisco / Noto Sans)を追加。本書の英語表示にも適用。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>Night ink changed from <span class="mono">#EFE6C4</span> to <span class="mono">#C9C1A5</span>: text, buttons, and borders glared on dark screens (found in real use in mdEditor). The default body pair is 9.09:1, still AAA.</li>
-      <li>New Art. 4-3 "Document surface (editor and preview)": long-text surfaces use neutral functional colors (day <span class="mono">#FFFFFF</span> × <span class="mono">#1A1A1A</span>, night <span class="mono">#121314</span> × <span class="mono">#BFBFBF</span>), treated as an exception to the palette.</li>
-      <li>Art. 7: ink pairs in the night table updated; new 7-1 (cont. 2) contrast table for the document surface.</li>
-      <li>Art. 9-4: three <span class="mono">--document-*</span> tokens added to the CSS.</li>
-      <li>Added: document-surface body weight W4 (4-3), user-selected display mode (4-2), app icons stay volt in every mode (9-2), and conditions for a volt mark on dark grounds (3-7).</li>
+      <li>Art. 9-3: file-header labels follow the file's language — bilingual for files containing Japanese (sample A), English only for files written only in English (sample B). The author field always uses the official paired name of 8-6.</li>
+      <li>The 9-3 sample label "Date" is now "Created", matching this document and existing files. Sample B (English edition) uses the English name "5garashi.com Design Office" as author, with the same exception added to 8-6.</li>
+      <li>Art. 4-3: the day document rule <span class="mono">--document-rule</span> changes from <span class="mono">#DFCF9A</span> to neutral <span class="mono">#D0D0D0</span> (1.54:1 on white, decorative only).</li>
+      <li>Art. 6: Latin typeface for English display (Segoe UI / San Francisco / Noto Sans), also applied to this document's English view.</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -811,7 +811,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       <tbody>
         <tr><td class="mono">--document-background</td><td><span class="pair"><span class="dot" style="background:#FFFFFF"></span><span class="mono">#FFFFFF</span></span></td><td><span class="pair"><span class="dot" style="background:#121314"></span><span class="mono">#121314</span></span></td><td><span class="ja" lang="ja">文書面の地</span><span class="en" lang="en">Document ground</span></td></tr>
         <tr><td class="mono">--document-foreground</td><td><span class="pair"><span class="dot" style="background:#1A1A1A"></span><span class="mono">#1A1A1A</span></span></td><td><span class="pair"><span class="dot" style="background:#BFBFBF"></span><span class="mono">#BFBFBF</span></span></td><td><span class="ja" lang="ja">本文</span><span class="en" lang="en">Body text</span></td></tr>
-        <tr><td class="mono">--document-rule</td><td><span class="pair"><span class="dot" style="background:#DFCF9A"></span><span class="mono">#DFCF9A</span></span></td><td><span class="pair"><span class="dot" style="background:#2B2B2B"></span><span class="mono">#2B2B2B</span></span></td><td><span class="ja" lang="ja">見出しの下線・区切り線(装飾専用)</span><span class="en" lang="en">Heading underlines and dividers (decorative only)</span></td></tr>
+        <tr><td class="mono">--document-rule</td><td><span class="pair"><span class="dot" style="background:#D0D0D0"></span><span class="mono">#D0D0D0</span></span></td><td><span class="pair"><span class="dot" style="background:#2B2B2B"></span><span class="mono">#2B2B2B</span></span></td><td><span class="ja" lang="ja">見出しの下線・区切り線(装飾専用)</span><span class="en" lang="en">Heading underlines and dividers (decorative only)</span></td></tr>
       </tbody>
     </table>
     </div>
@@ -886,6 +886,10 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       <div class="type-row">
         <span class="role"><span class="ja" lang="ja">本文</span><span class="en" lang="en">BODY</span></span>
         <div class="sample" style="font-weight:600;font-size:15px"><span class="ja" lang="ja">同ファミリー W6(600)、行間1.65〜1.75。本文は14px以上、問題文は17pxを標準とする。文書面(4-3)の本文は W4(400)。</span><span class="en" lang="en">Same family, W6 (600), line-height 1.65–1.75. Body 14px minimum; quiz questions default to 17px. Document surfaces (4-3) use W4 (400).</span></div>
+      </div>
+      <div class="type-row">
+        <span class="role"><span class="ja" lang="ja">欧文(英語表示)</span><span class="en" lang="en">LATIN (ENGLISH UI)</span></span>
+        <div class="sample latin-sample" style="font-weight:600;font-size:15px">Segoe UI / San Francisco / Noto Sans — 600 / 800<br><span style="font-size:12px;color:var(--steel);font-weight:700"><span class="ja" lang="ja">英語表示の本文・見出し・UIは、OSの標準UI書体を使う。CSSでは <span class="mono">"Segoe UI",-apple-system,BlinkMacSystemFont,"Noto Sans"</span> の後に和文書体を続ける(和文の文字は和文書体で表示される)。<span class="mono">system-ui</span> は日本語版のOSで和文UI書体になることがあるため、先頭には置かない。太さは和文と同じ指定とする。ロゴの「5」の Georgia Italic と、数値・コードの等幅書体は変えない。</span><span class="en" lang="en">English body text, headings, and UI use the OS's standard UI typeface. In CSS, list <span class="mono">"Segoe UI",-apple-system,BlinkMacSystemFont,"Noto Sans"</span> followed by the Japanese stack, so Japanese characters still render in a Japanese face. Do not put <span class="mono">system-ui</span> first: on Japanese-locale systems it can resolve to a Japanese UI face. Weights follow the Japanese settings. The logo's Georgia Italic "5" and the monospace for figures and code are unchanged.</span></span></div>
       </div>
       <div class="type-row">
         <span class="role"><span class="ja" lang="ja">数値・答え</span><span class="en" lang="en">FIGURES</span></span>
@@ -994,8 +998,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <div class="table-wrap" role="region" tabindex="0" aria-label="文書面のコントラスト対照表(横にスクロールできる) / Document surface contrast table (scrolls horizontally)">
     <table class="ud">
       <caption>
-        <span class="ja" lang="ja">確認日:2026-10-11。計算方法は 7-1 と同じ。装飾専用の <span class="mono">--document-rule</span>(昼 1.55:1、夜 1.31:1)は基準の対象外(4-3 (2))。エラーは色だけで伝えず、記号と文言を併記する(7-2)。</span>
-        <span class="en" lang="en">Checked 2026-10-11 with the same method as 7-1. The decorative <span class="mono">--document-rule</span> (day 1.55:1, night 1.31:1) is outside the requirements (4-3 (2)). Errors are never signaled by color alone; add a symbol and wording (7-2).</span>
+        <span class="ja" lang="ja">確認日:2026-10-11。計算方法は 7-1 と同じ。装飾専用の <span class="mono">--document-rule</span>(昼 1.54:1、夜 1.31:1)は基準の対象外(4-3 (2))。エラーは色だけで伝えず、記号と文言を併記する(7-2)。</span>
+        <span class="en" lang="en">Checked 2026-10-11 with the same method as 7-1. The decorative <span class="mono">--document-rule</span> (day 1.54:1, night 1.31:1) is outside the requirements (4-3 (2)). Errors are never signaled by color alone; add a symbol and wording (7-2).</span>
       </caption>
       <thead><tr><th><span class="ja" lang="ja">文字色・線 × 地</span><span class="en" lang="en">Text or line × ground</span></th><th><span class="ja" lang="ja">用途</span><span class="en" lang="en">Use</span></th><th><span class="ja" lang="ja">比</span><span class="en" lang="en">Ratio</span></th><th><span class="ja" lang="ja">判定</span><span class="en" lang="en">Grade</span></th></tr></thead>
       <tbody>
@@ -1119,8 +1123,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <h3><span class="ja" lang="ja">8-6. 二言語表記</span><span class="en" lang="en">8-6. Bilingual naming</span></h3>
     <div class="note">
       <b><span class="ja" lang="ja">公式表記:</span><span class="en" lang="en">Official form:</span></b>
-      <span class="ja" lang="ja"> 「5garashi.com設計事務所 / 5garashi.com Design Office」。ファイルヘッダー・ライセンス表記では常にこの併記形を使う。日英の文章は逐語訳に固執せず、結論、責任主体、条件、禁止事項が同じになるようにする。公式サイトは <span class="mono">https://www.5garashi.com</span>。</span>
-      <span class="en" lang="en"> "5garashi.com設計事務所 / 5garashi.com Design Office". File headers and license notices always use this paired form. Japanese and English need not be word-for-word, but they must preserve the same conclusion, responsible party, conditions, and prohibitions. Official site: <span class="mono">https://www.5garashi.com</span>.</span>
+      <span class="ja" lang="ja"> 「5garashi.com設計事務所 / 5garashi.com Design Office」。ファイルヘッダー・ライセンス表記では常にこの併記形を使う。ただし、英語だけで書くファイルのヘッダーでは英語表記「5garashi.com Design Office」とする(9-3 見本B)。日英の文章は逐語訳に固執せず、結論、責任主体、条件、禁止事項が同じになるようにする。公式サイトは <span class="mono">https://www.5garashi.com</span>。</span>
+      <span class="en" lang="en"> "5garashi.com設計事務所 / 5garashi.com Design Office". File headers and license notices always use this paired form, except that headers of files written only in English use the English name "5garashi.com Design Office" (9-3, sample B). Japanese and English need not be word-for-word, but they must preserve the same conclusion, responsible party, conditions, and prohibitions. Official site: <span class="mono">https://www.5garashi.com</span>.</span>
     </div>
 
     <h3><span class="ja" lang="ja">8-7. 文例(良い例・悪い例)</span><span class="en" lang="en">8-7. Examples (do / don't)</span></h3>
@@ -1210,12 +1214,26 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
 
     <h3><span class="ja" lang="ja">9-3. ファイルヘッダー(コード署名)</span><span class="en" lang="en">9-3. File header (code signature)</span></h3>
-    <pre class="codeblock"><span class="cm">&lt;!--
+    <p>
+      <span class="ja" lang="ja">ソースコードや設定ファイルの先頭に、次の署名を置く。項目名(ラベル)は、そのファイルで使う言語に合わせる。<b>(1)</b> 日本語を含むファイルは、日英併記とする(見本A)。<b>(2)</b> 説明やコメントを英語だけで書くファイル(英語版)は、英語の項目名だけとする(見本B)。<b>(3)</b> 作成者の欄は、見本Aでは 8-6 の公式表記(日英併記)、見本Bでは英語表記「5garashi.com Design Office」とする。日付は <span class="mono">YYYY-MM-DD</span> で書く。</span>
+      <span class="en" lang="en">Put the following signature at the top of source and configuration files. Field labels follow the language of the file. <b>(1)</b> Files that contain Japanese use bilingual labels (sample A). <b>(2)</b> Files whose descriptions and comments are written only in English (English editions) use English labels only (sample B). <b>(3)</b> The author field uses the official paired name of 8-6 in sample A, and the English name "5garashi.com Design Office" in sample B. Dates are written as <span class="mono">YYYY-MM-DD</span>.</span>
+    </p>
+    <pre class="codeblock"><span class="cm"><span class="ja" lang="ja">見本A:日本語を含むファイル</span><span class="en" lang="en">Sample A: file that contains Japanese</span>
+&lt;!--
   ファイル名 / File: example_tool_v1.html
-  概要 / Description: <span class="ja" lang="ja">ツールの一行説明</span><span class="en" lang="en">One-line description of the tool</span>
+  概要 / Description: ツールの一行説明
   作成者 / Author: <span class="rd">5garashi.com設計事務所 / 5garashi.com Design Office</span>
-  作成日 / Date: YYYY-MM-DD
+  作成日 / Created: YYYY-MM-DD
   ライセンス / License: MIT
+  SPDX-License-Identifier: MIT
+--&gt;</span></pre>
+    <pre class="codeblock"><span class="cm"><span class="ja" lang="ja">見本B:英語だけで書くファイル(英語版)</span><span class="en" lang="en">Sample B: file written only in English (English edition)</span>
+&lt;!--
+  File: example_tool_v1.html
+  Description: One-line description of the tool
+  Author: <span class="rd">5garashi.com Design Office</span>
+  Created: YYYY-MM-DD
+  License: MIT
   SPDX-License-Identifier: MIT
 --&gt;</span></pre>
 
@@ -1232,7 +1250,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
   <span class="cm">/* 文書面の機能色(4-3)/ document surface (4-3) */</span>
   --document-background:#FFFFFF;
   --document-foreground:#1A1A1A;
-  --document-rule:#DFCF9A;
+  --document-rule:#D0D0D0;
 }
 <span class="cm">/* 夜の配色(4-2)。印刷には適用しない / night palette (4-2), not for print */</span>
 @media screen and (prefers-color-scheme: dark){
@@ -1424,8 +1442,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
     <h3><span class="ja" lang="ja">12-1. 特記(例外)</span><span class="en" lang="en">12-1. Exceptions</span></h3>
     <p>
-      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダー例・署名テンプレート)は<b>MIT License</b>で提供する。(2) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。</span>
-      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header example, signature template) are provided under the <b>MIT License</b>. (2) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document.</span>
+      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。</span>
+      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document.</span>
     </p>
     <h3><span class="ja" lang="ja">12-2. 誤認の防止</span><span class="en" lang="en">12-2. No implied endorsement</span></h3>
     <p>
@@ -1434,11 +1452,11 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
     <h3><span class="ja" lang="ja">12-3. 配布パッケージ構成</span><span class="en" lang="en">12-3. Distribution package</span></h3>
     <p>
-      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_v4_9.html</span>)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
-      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_v4_9.html</span>) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
+      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_v4_10.html</span>)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
+      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_v4_10.html</span>) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
     </p>
     <pre class="codeblock">index.html                              <span class="cm"># Web版 / web edition</span>
-5garashi_identity_v4_9.html             <span class="cm"># 単一ファイル版(生成物)/ single-file edition (generated)</span>
+5garashi_identity_v4_10.html             <span class="cm"># 単一ファイル版(生成物)/ single-file edition (generated)</span>
 CHANGELOG.md                            <span class="cm"># 改版履歴 / revision history</span>
 tools/
   build_standalone.py                   <span class="cm"># 単一ファイル版の生成 / builds the single-file edition</span>
@@ -1520,8 +1538,8 @@ assets/
 
 <footer>
   <span style="font-weight:800;color:var(--ink)"><span style="font-family:Georgia,serif;font-style:italic">5</span>garashi.com設計事務所 / 5garashi.com Design Office</span> — <a class="mono" href="https://www.5garashi.com">https://www.5garashi.com</a><br>
-  <span class="ja" lang="ja">Design Office Identity 第4.9版 — 2026.10.11 — © 2026 CC BY-ND 4.0</span>
-  <span class="en" lang="en">Design Office Identity v4.9 — 2026.10.11 — © 2026 CC BY-ND 4.0</span><br>
+  <span class="ja" lang="ja">Design Office Identity 第4.10版 — 2026.10.11 — © 2026 CC BY-ND 4.0</span>
+  <span class="en" lang="en">Design Office Identity v4.10 — 2026.10.11 — © 2026 CC BY-ND 4.0</span><br>
   <span class="ja" lang="ja">回路にも、画面にも、暮らしにも——五本の唐辛子。だれの手にも、ピリッと効く。</span>
   <span class="en" lang="en">Five chilis — on the board, on the screen, in daily life. A kick designed to work in as many hands as possible.</span>
 </footer>
@@ -1540,8 +1558,8 @@ assets/
     btn.textContent = en ? "日本語" : "English";
     btn.setAttribute("aria-label", en ? "日本語に切り替え" : "Switch to English");
     document.title = en
-      ? "5garashi.com Design Office — Identity v4.9"
-      : "5garashi.com設計事務所 — Design Office Identity v4.9";
+      ? "5garashi.com Design Office — Identity v4.10"
+      : "5garashi.com設計事務所 — Design Office Identity v4.10";
     // 正規URLと共有情報を表示言語に合わせる(hreflang の ja / en と一致させる)
     // Keep canonical and Open Graph in step with the language (matches the hreflang ja / en entries)
     var base = "https://5garashi.github.io/5garashi-identity/";

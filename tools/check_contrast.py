@@ -45,7 +45,7 @@ NIGHT = {
 DOCUMENT_DAY = {
     "background": "#FFFFFF",
     "foreground": "#1A1A1A",
-    "rule": "#DFCF9A",
+    "rule": "#D0D0D0",
     "volt-deep": PALETTE["volt-deep"],
     "volt": PALETTE["volt"],
 }

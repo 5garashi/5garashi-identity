@@ -3,6 +3,24 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## v4.10 — 2026-10-11
+
+### 本文 / Content
+- 第9条 9-3:ファイルヘッダーの項目名をファイルの言語に合わせるとした。日本語を含むファイルは日英併記(見本A)、説明やコメントを英語だけで書くファイル(英語版)は英語の項目名だけ(見本B:`File:`、`Description:`、`Author:`、`Created:`、`License:`)。作成者の欄はどちらも 8-6 の公式表記(日英併記)とする。
+  Art. 9-3: file-header labels follow the file's language — bilingual for files containing Japanese (sample A), English only for files written only in English (sample B). The author field always uses the official paired name of 8-6.
+- 9-3 の見本の「作成日 / Date」を「作成日 / Created」に統一(本書・各ファイル・mdEditor の実際の表記に合わせた)。第12条 12-1 の参照も「見本A・B」に更新。
+  The 9-3 sample label "Date" is now "Created", matching actual files; Art. 12-1 now refers to samples A and B.
+- 9-3 見本B(英語版)の作成者を英語表記「5garashi.com Design Office」とした。8-6 の「ファイルヘッダーでは常に併記形」にも、英語だけで書くファイルの例外を追記。
+  Sample B (English edition) uses the English name "5garashi.com Design Office" as author; the matching exception is added to 8-6.
+- 第4条 4-3:文書面の昼の区切り線 `--document-rule` を `#DFCF9A` から `#D0D0D0` に変更。文書面は無彩色の機能色とする方針(4-3)に合わせた。白地に対して 1.54:1 で、装飾専用のため基準の対象外(変更前は 1.55:1)。7-1 補2 と 9-4 も更新。
+  Art. 4-3: the day document rule changes from `#DFCF9A` to neutral `#D0D0D0` (1.54:1 on white, decorative only), matching the neutral document surface; 7-1 (cont. 2) and 9-4 updated.
+- 第6条:英語表示の欧文書体を追加。OSの標準UI書体(`"Segoe UI", -apple-system, BlinkMacSystemFont, "Noto Sans"`)の後に和文書体を続ける。`system-ui` は日本語版のOSで和文UI書体になることがあるため先頭に置かない。ロゴの「5」と等幅書体は変えない。本書の英語表示にも適用。
+  Art. 6: Latin typeface for English display — the OS UI face followed by the Japanese stack; `system-ui` is not placed first because it can resolve to a Japanese face. Applied to this document's English view.
+
+### ページ / Page
+- 単一ファイル版のファイル名を `5garashi_identity_v4_10.html` に変更。
+  Single-file edition renamed to `5garashi_identity_v4_10.html`.
+
 ## v4.9 — 2026-10-11
 
 mdEditor(5garashi/mdEditor)のダークモード実装からの提案を反映。
