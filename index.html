@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: index.html(Web版・外部アセット参照。単一ファイル版 5garashi_identity_v4_11.html は tools/build_standalone.py で生成)
+  ファイル名 / File: index.html(Web版・外部アセット参照。単一ファイル版 5garashi_identity_vX_Y_Z.html(X_Y_Z は本版の番号)は tools/build_standalone.py で生成)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  最終更新 / Last updated: 2026-10-11
-  版 / Version: 4.11
+  最終更新 / Last updated: 2026-10-12
+  版 / Version: 4.12.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ・楽譜・音源。特記=第12条を参照)
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -18,8 +18,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5garashi.com設計事務所 — Design Office Identity v4.11</title>
-<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様 第4.11版。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンス、プライバシーを日英二言語で定める。">
+<title>5garashi.com設計事務所 — Design Office Identity</title>
+<meta name="description" content="5garashi.com設計事務所(ゴガラシドットコム)のアイデンティティ運用仕様。シンボルマーク、ロゴタイプ、配色、タイポグラフィ、ユニバーサルデザイン、言葉づかい、サウンド、ライセンス、プライバシーを日英二言語で定める。">
 <meta name="author" content="5garashi.com設計事務所 / 5garashi.com Design Office">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#FFE699" media="(prefers-color-scheme: light)">
@@ -30,7 +30,7 @@
 <link rel="alternate" hreflang="x-default" href="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="5garashi.com設計事務所 / 5garashi.com Design Office">
-<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity v4.11">
+<meta property="og:title" content="5garashi.com設計事務所 — Design Office Identity">
 <meta property="og:description" content="電子回路の設計から、まちのデジタルの困りごとまで支える設計事務所のアイデンティティ運用仕様(日英二言語)。">
 <meta id="ogUrl" property="og:url" content="https://5garashi.github.io/5garashi-identity/">
 <meta property="og:image" content="https://5garashi.github.io/5garashi-identity/assets/og_image.png">
@@ -448,7 +448,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第4.11版</span><span class="en" lang="en">IDENTITY GUIDELINE — v4.11</span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.12.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.12.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -463,7 +463,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <span class="ja" lang="ja">「5(ご)+がらし」=唐辛子。回路から画面、そして暮らしの支えまで——「設計のプロフェッショナル × デジタル便利屋」。本書は、ロゴ・色・モチーフ・音・和の意匠・アクセシビリティ・言葉づかいを通じて、5garashi.comのすべての創作物が醸成するオフィスアイデンティティを定める。</span>
     <span class="en" lang="en">"5 (go) + garashi" = togarashi, the chili pepper. From circuits to screens to a helping hand in daily life — "design professionals × digital handymen". Through logo, color, motif, sound, Japanese aesthetics, accessibility, and voice, this document defines the office identity that every 5garashi.com creation cultivates.</span>
   </p>
-  <div class="date">2026.10.11 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
+  <div class="date">2026.10.12 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
 </header>
 
 <!-- ═══════════ 目次 / Contents ═══════════ -->
@@ -488,24 +488,16 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">第4.11版(2026-10-11)の変更点</span><span class="en" lang="en">What's new in v4.11 (2026-10-11)</span></summary>
+    <summary><span class="ja" lang="ja">本版(2026-10-12)の変更点</span><span class="en" lang="en">What's new in this version (2026-10-12)</span></summary>
     <ul class="ja" lang="ja">
-      <li>第7条:7-8「コントラストテーマ(強制カラー)」と 7-9「作業を失わせない」を新設。7-7 の出荷前チェックに (f) コントラストテーマ、(g) 画面読み上げソフト、(h) 文字の大きさの設定200%、(i) 復元を追加。</li>
-      <li>第7条:7-3 に (4)「使う人の選択を優先」とショートカットの決まり、7-4 に文章の読み上げの決まり、7-5 に動きの止め方、7-6 にエラーとお知らせの書き方を追記。</li>
-      <li>第3条:3-7 (5) を「赤のマークは暗い地でもそのままでよい」に改め、3-7 補に用途別の対応表を新設。2-2・4-2 (2) も合わせて改めた。</li>
-      <li>第4条:4-2 (1) に選んだ表示の保存とタイトルバー、4-3 に選んだ範囲・いまの行・読み上げ中の枠の色と、PDFの余白を白にすることを追加。</li>
-      <li>第6条:「図(ライブラリが描く図)」の行を追加。使う人が選んだ書体・文字の大きさ・行間を優先することを追記。</li>
-      <li>第9条:9-3 にヘッダーの対象外と Markdown での書き方、9-4 に新しいトークンとコントラストテーマのCSS、9-5 にアクセシビリティの確認記録のひな形を追加。</li>
-      <li>第12条 12-6「製品の配布物」と、第13条「プライバシー」を新設。<span class="mono">templates/PRIVACY.md</span> を追加。本書自体もコントラストテーマに対応。</li>
+      <li>第12条 12-7 を「版の管理(ソフトウェア・文書)」に広げた。版の番号はフォルダーの一番上の <span class="mono">VERSION</span>(3つの数字)で決め、アプリは読み取り、文書と静的な HTML は作成・改版のときに書き込む。文書に書く版は、その文書を最後に改版したときの版。版を上げる目安、CHANGELOG の見出し(v なし)、タグと Release の決まりを定めた。</li>
+      <li>本書も <span class="mono">VERSION</span> で管理を始め、本版をその最初の版とした。本文に書く版の番号は表紙だけにし、タイトル・フッターなどからは除いた。<span class="mono">tools/check_version.py</span> と、タグと Release を作るワークフローを追加。</li>
+      <li>9-3 (6) を版の行の決まりに改め、9-3 (4) で <span class="mono">VERSION</span> をヘッダーの対象外に加えた。8-5 から 12-7 を参照。12-6 の配布物に CHANGELOG.md、9-5 に README の版の行を追加。GitHub Actions のひな形を追加。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>Art. 7: new 7-8 "Contrast themes (forced colors)" and 7-9 "Never lose the user's work". The 7-7 check adds (f) contrast themes, (g) screen readers, (h) 200% text size, and (i) recovery.</li>
-      <li>Art. 7: 7-3 gains (4) "The user's choice comes first" and shortcut rules; 7-4 adds read-aloud rules; 7-5 how to stop motion; 7-6 how to write errors and notices.</li>
-      <li>Art. 3: 3-7 (5) now says the red mark may stay as is on dark grounds, with a new usage table (3-7 cont.); 2-2 and 4-2 (2) aligned.</li>
-      <li>Art. 4: 4-2 (1) keeps the chosen mode and matches the title bar; 4-3 adds selection, current-line, and read-aloud frame colors, and white PDF margins.</li>
-      <li>Art. 6: new "Diagrams (library-drawn)" row; the user's chosen typeface, text size, and line spacing take precedence.</li>
-      <li>Art. 9: 9-3 exemptions and Markdown headers; 9-4 new tokens and contrast-theme CSS; 9-5 template for the accessibility check record.</li>
-      <li>New Art. 12-6 "Product distributions" and Art. 13 "Privacy"; <span class="mono">templates/PRIVACY.md</span> added. This document itself now supports contrast themes.</li>
+      <li>Art. 12-7 widened to "Versioning (software and documents)": a three-number <span class="mono">VERSION</span> at the top of the folder sets the version; apps read it, documents and static HTML have it written in when created or revised, and a document's version is that of its last revision. Guidelines for raising it, CHANGELOG headings without "v", and tag/Release rules added.</li>
+      <li>This document is now versioned by <span class="mono">VERSION</span>, starting with this version. The number appears in the body only on the cover (removed from the title, footer, and so on). <span class="mono">tools/check_version.py</span> and a tag/Release workflow added.</li>
+      <li>9-3 (6) is now the version-line rule and 9-3 (4) exempts <span class="mono">VERSION</span>; 8-5 points to 12-7; 12-6 adds CHANGELOG.md and 9-5 the README version line; GitHub Actions templates added.</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -1167,8 +1159,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">8-5. ファイル名・タイトル・説明文</span><span class="en" lang="en">8-5. Filenames, titles, and descriptions</span></h3>
     <p>
-      <span class="ja" lang="ja">ファイル名、文書タイトル、説明文では、原則として<b>「完全版」「最終版」「最終整理」</b>を使わない。文書は更新されるため、完成を自己宣言する表現は、履歴と比較対象を曖昧にする。代わりに、<b>版番号、更新日、対象範囲、用途、反映内容</b>を客観的に示す。</span>
-      <span class="en" lang="en">As a rule, do not use labels equivalent to <b>"complete edition", "final version", or "final consolidation"</b> in filenames, document titles, or descriptions. Documents continue to evolve, and self-declared completion makes history and comparison ambiguous. Use objective identifiers instead: <b>version number, update date, scope, purpose, and incorporated changes.</b></span>
+      <span class="ja" lang="ja">ファイル名、文書タイトル、説明文では、原則として<b>「完全版」「最終版」「最終整理」</b>を使わない。文書は更新されるため、完成を自己宣言する表現は、履歴と比較対象を曖昧にする。代わりに、<b>版番号、更新日、対象範囲、用途、反映内容</b>を客観的に示す。版の番号の付け方と置き場所は 12-7 による。</span>
+      <span class="en" lang="en">As a rule, do not use labels equivalent to <b>"complete edition", "final version", or "final consolidation"</b> in filenames, document titles, or descriptions. Documents continue to evolve, and self-declared completion makes history and comparison ambiguous. Use objective identifiers instead: <b>version number, update date, scope, purpose, and incorporated changes.</b> How version numbers are assigned and where they live is set by 12-7.</span>
     </p>
     <div class="note">
       <b><span class="ja" lang="ja">命名例:</span><span class="en" lang="en">Naming examples:</span></b><br>
@@ -1271,8 +1263,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">9-3. ファイルヘッダー(コード署名)</span><span class="en" lang="en">9-3. File header (code signature)</span></h3>
     <p>
-      <span class="ja" lang="ja">ソースコードや設定ファイルの先頭に、次の署名を置く。項目名(ラベル)は、そのファイルで使う言語に合わせる。<b>(1)</b> 日本語を含むファイルは、日英併記とする(見本A)。<b>(2)</b> 説明やコメントを英語だけで書くファイル(英語版)は、英語の項目名だけとする(見本B)。<b>(3)</b> 作成者の欄は、見本Aでは 8-6 の公式表記(日英併記)、見本Bでは英語表記「5garashi.com Design Office」とする。日付は <span class="mono">YYYY-MM-DD</span> で書く。<b>(4)</b> コメントを書けない形式(<span class="mono">package.json</span> などのJSON)と、改変せずに同梱する第三者のファイル(<span class="mono">.min.js</span>、<span class="mono">LICENSE</span> など)は、ヘッダーの対象外とする。<b>(5)</b> Markdown では、ヘッダーを HTML コメント(<span class="mono">&lt;!-- --&gt;</span>)に書く。</span>
-      <span class="en" lang="en">Put the following signature at the top of source and configuration files. Field labels follow the language of the file. <b>(1)</b> Files that contain Japanese use bilingual labels (sample A). <b>(2)</b> Files whose descriptions and comments are written only in English (English editions) use English labels only (sample B). <b>(3)</b> The author field uses the official paired name of 8-6 in sample A, and the English name "5garashi.com Design Office" in sample B. Dates are written as <span class="mono">YYYY-MM-DD</span>. <b>(4)</b> Formats that cannot hold comments (JSON such as <span class="mono">package.json</span>) and third-party files bundled unmodified (<span class="mono">.min.js</span>, <span class="mono">LICENSE</span>, and so on) are exempt. <b>(5)</b> In Markdown, write the header as an HTML comment (<span class="mono">&lt;!-- --&gt;</span>).</span>
+      <span class="ja" lang="ja">ソースコードや設定ファイルの先頭に、次の署名を置く。項目名(ラベル)は、そのファイルで使う言語に合わせる。<b>(1)</b> 日本語を含むファイルは、日英併記とする(見本A)。<b>(2)</b> 説明やコメントを英語だけで書くファイル(英語版)は、英語の項目名だけとする(見本B)。<b>(3)</b> 作成者の欄は、見本Aでは 8-6 の公式表記(日英併記)、見本Bでは英語表記「5garashi.com Design Office」とする。日付は <span class="mono">YYYY-MM-DD</span> で書く。<b>(4)</b> コメントを書けない形式(<span class="mono">package.json</span> などのJSON)と、改変せずに同梱する第三者のファイル(<span class="mono">.min.js</span>、<span class="mono">LICENSE</span> など)と、版の番号だけを書く <span class="mono">VERSION</span>(12-7)は、ヘッダーの対象外とする。<b>(5)</b> Markdown では、ヘッダーを HTML コメント(<span class="mono">&lt;!-- --&gt;</span>)に書く。<b>(6)</b> 版の行:文書・静的な HTML・1つのファイルのツールは、ヘッダーに「版 / Version」(英語版は「Version」)の行を足す。<span class="mono">VERSION</span> で管理するフォルダーの文書では、作成・改版のときに <span class="mono">VERSION</span> の値を書き込み、その文書を最後に改版したときの版を表す(12-7 (3)(4))。1つのファイルのツールでは、この行が版の正となる(12-7 (12))。アプリのソースコードなど、<span class="mono">VERSION</span> から読み取る仕組みがあるものは、各ファイルのヘッダーに版を書かない。</span>
+      <span class="en" lang="en">Put the following signature at the top of source and configuration files. Field labels follow the language of the file. <b>(1)</b> Files that contain Japanese use bilingual labels (sample A). <b>(2)</b> Files whose descriptions and comments are written only in English (English editions) use English labels only (sample B). <b>(3)</b> The author field uses the official paired name of 8-6 in sample A, and the English name "5garashi.com Design Office" in sample B. Dates are written as <span class="mono">YYYY-MM-DD</span>. <b>(4)</b> Formats that cannot hold comments (JSON such as <span class="mono">package.json</span>) and third-party files bundled unmodified (<span class="mono">.min.js</span>, <span class="mono">LICENSE</span>, and so on), and the one-line <span class="mono">VERSION</span> file (12-7) are exempt. <b>(5)</b> In Markdown, write the header as an HTML comment (<span class="mono">&lt;!-- --&gt;</span>). <b>(6)</b> Version line: documents, static HTML, and single-file tools add a "版 / Version" line (English editions: "Version") to the header. In a folder versioned by <span class="mono">VERSION</span>, documents get the <span class="mono">VERSION</span> value written in when created or revised, so the line shows the version of their last revision (12-7 (3), (4)). For single-file tools, this line is the authoritative version (12-7 (12)). Files whose project reads <span class="mono">VERSION</span> (such as app source code) do not repeat the version in their headers.</span>
     </p>
     <pre class="codeblock"><span class="cm"><span class="ja" lang="ja">見本A:日本語を含むファイル</span><span class="en" lang="en">Sample A: file that contains Japanese</span>
 &lt;!--
@@ -1352,8 +1344,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
 **最終更新 / Last updated**: YYYY-MM-DD JST</pre>
     <p>
-      <span class="ja" lang="ja">ソフトウェアの README には、7-7 の出荷前チェックの記録を載せる。書式は次のひな形による(英語版の README では項目名を英語にする)。</span>
-      <span class="en" lang="en">Software READMEs include the record of the 7-7 pre-release check, using the template below (English READMEs use English labels).</span>
+      <span class="ja" lang="ja">ソフトウェアの README の冒頭には、版の行と CHANGELOG.md へのリンクを置く(12-7 (8))。また、7-7 の出荷前チェックの記録を載せる。書式は次のひな形による(英語版の README では項目名を英語にする)。</span>
+      <span class="en" lang="en">Software READMEs start with a version line and a link to CHANGELOG.md (12-7 (8)), and include the record of the 7-7 pre-release check, using the template below (English READMEs use English labels).</span>
     </p>
     <pre class="codeblock">## アクセシビリティの確認記録 / Accessibility check record
 
@@ -1534,8 +1526,8 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
     </p>
     <h3><span class="ja" lang="ja">12-1. 特記(例外)</span><span class="en" lang="en">12-1. Exceptions</span></h3>
     <p>
-      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) <span class="mono">templates/</span> のひな形(PRIVACY.md など)も <b>MIT License</b> で提供する。(3) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。</span>
-      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) The templates in <span class="mono">templates/</span> (PRIVACY.md and others) are also provided under the <b>MIT License</b>. (3) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document.</span>
+      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) <span class="mono">templates/</span> のひな形(PRIVACY.md、GitHub Actions のワークフローなど)も <b>MIT License</b> で提供する。(3) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。</span>
+      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) The templates in <span class="mono">templates/</span> (PRIVACY.md, GitHub Actions workflows, and others) are also provided under the <b>MIT License</b>. (3) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document.</span>
     </p>
     <h3><span class="ja" lang="ja">12-2. 誤認の防止</span><span class="en" lang="en">12-2. No implied endorsement</span></h3>
     <p>
@@ -1544,16 +1536,20 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
     </p>
     <h3><span class="ja" lang="ja">12-3. 配布パッケージ構成</span><span class="en" lang="en">12-3. Distribution package</span></h3>
     <p>
-      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_v4_11.html</span>)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
-      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_v4_11.html</span>) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
+      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_vX_Y_Z.html</span>。X_Y_Z は本版の番号)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
+      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_vX_Y_Z.html</span>, where X_Y_Z is this version's number) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
     </p>
     <pre class="codeblock">index.html                              <span class="cm"># Web版 / web edition</span>
-5garashi_identity_v4_11.html             <span class="cm"># 単一ファイル版(生成物)/ single-file edition (generated)</span>
+5garashi_identity_vX_Y_Z.html            <span class="cm"># 単一ファイル版(生成物。番号は VERSION)/ single-file edition (generated)</span>
+VERSION                                 <span class="cm"># 版の番号(12-7)/ version number</span>
 CHANGELOG.md                            <span class="cm"># 改版履歴 / revision history</span>
 templates/
   PRIVACY.md                            <span class="cm"># PRIVACY.md のひな形(第13条)/ privacy policy template (Art. 13)</span>
+  .github/workflows/version-check.yml   <span class="cm"># 版の確認(12-7 (7))/ version check on pull requests</span>
+  .github/workflows/release.yml         <span class="cm"># タグと Release の作成 / tag and Release on main</span>
 tools/
   build_standalone.py                   <span class="cm"># 単一ファイル版の生成 / builds the single-file edition</span>
+  check_version.py                      <span class="cm"># 版の確認と書き込み(12-7 (6))/ checks and stamps versions</span>
   check_contrast.py                     <span class="cm"># 7-1 のコントラスト比の計算 / contrast ratios for 7-1</span>
   og_image.html                         <span class="cm"># og_image.png の描画元 / source of og_image.png</span>
 assets/
@@ -1628,8 +1624,42 @@ assets/
 
     <h3><span class="ja" lang="ja">12-6. 製品の配布物</span><span class="en" lang="en">12-6. Product distributions</span></h3>
     <p>
-      <span class="ja" lang="ja">5garashi.com が配布するソフトウェアには、ライセンスの本文(<span class="mono">LICENSE</span>)に加えて、次を入れる。<b>(1)</b> <span class="mono">THIRD-PARTY-NOTICES.md</span>:同梱したすべての第三者ソフトウェアの名前・版・ライセンスと、その本文。同梱したライブラリの中に含まれるパッケージ(バンドルされた依存関係)まで書く。<b>(2)</b> <span class="mono">PRIVACY.md</span>:第13条による。</span>
-      <span class="en" lang="en">Software distributed by 5garashi.com includes, besides the license text (<span class="mono">LICENSE</span>): <b>(1)</b> <span class="mono">THIRD-PARTY-NOTICES.md</span> — the name, version, license, and license text of every bundled third-party component, including packages bundled inside those libraries (bundled dependencies); <b>(2)</b> <span class="mono">PRIVACY.md</span> — per Art. 13.</span>
+      <span class="ja" lang="ja">5garashi.com が配布するソフトウェアには、ライセンスの本文(<span class="mono">LICENSE</span>)に加えて、次を入れる。<b>(1)</b> <span class="mono">THIRD-PARTY-NOTICES.md</span>:同梱したすべての第三者ソフトウェアの名前・版・ライセンスと、その本文。同梱したライブラリの中に含まれるパッケージ(バンドルされた依存関係)まで書く。<b>(2)</b> <span class="mono">PRIVACY.md</span>:第13条による。<b>(3)</b> <span class="mono">CHANGELOG.md</span>:版ごとの変更(12-7 (9))。</span>
+      <span class="en" lang="en">Software distributed by 5garashi.com includes, besides the license text (<span class="mono">LICENSE</span>): <b>(1)</b> <span class="mono">THIRD-PARTY-NOTICES.md</span> — the name, version, license, and license text of every bundled third-party component, including packages bundled inside those libraries (bundled dependencies); <b>(2)</b> <span class="mono">PRIVACY.md</span> — per Art. 13; <b>(3)</b> <span class="mono">CHANGELOG.md</span> — changes in each version (12-7 (9)).</span>
+    </p>
+
+    <h3><span class="ja" lang="ja">12-7. 版の管理(ソフトウェア・文書)</span><span class="en" lang="en">12-7. Versioning (software and documents)</span></h3>
+    <p>
+      <span class="ja" lang="ja">5garashi.com が作るソフトウェアと文書の版は、使う言語によらず次のように管理する(8-5 の当てはめ)。<b>対象</b>は、1つのアプリ、または1組の文書を入れたフォルダー(ふつうは Git のリポジトリ1つ)で、一番上に <span class="mono">VERSION</span> を置くもの。同じフォルダーにある複数の文書は、同じ <span class="mono">VERSION</span> を共有する。<b>対象外</b>は、単独のフォルダーで管理していないアプリ・文書、試作や作業用のスクリプト、この決まりより前の旧版と現行版(次に改版するときから当てはめる)。</span>
+      <span class="en" lang="en">Software and documents made by 5garashi.com are versioned as follows, whatever the language (Art. 8-5 applied). <b>In scope:</b> a folder holding one app or one set of documents (usually one Git repository) with a <span class="mono">VERSION</span> file at its top; documents in the same folder share one <span class="mono">VERSION</span>. <b>Out of scope:</b> apps and documents not kept in their own folder, prototypes and working scripts, and old and current versions made before this rule (it applies from their next revision).</span>
+    </p>
+    <p>
+      <span class="ja" lang="ja"><b>(1) VERSION:</b>版の番号は、フォルダーの一番上の <span class="mono">VERSION</span> ファイルだけで決める。中身は <span class="mono">1.0.3</span> のような3つの数字の1行とする(大きな変更.追加・変更.細かな直し。セマンティック バージョニング)。<br>
+      <b>(2) 上げるかどうか:</b>人またはAIが判断する。目安は次のとおり。規定・数値・表示など、内容が変わる変更は必ず上げる。誤字や体裁だけの直しは、上げなくてよい。上げる位置は、互換性がなくなる大きな変更なら1つ目、規定や機能の追加・変更なら2つ目、細かな直しなら3つ目の数字とする(下の位は0に戻す)。<br>
+      <b>(3) 読み取りと書き込み:</b>読み取る仕組みを作れるもの(アプリの設定・ビルド・配布物。<span class="mono">.csproj</span>、<span class="mono">package.json</span>、<span class="mono">pyproject.toml</span> など)は、<span class="mono">VERSION</span> から読み取り、手で書き写さない。読み取るときは前後の空白と改行を除く(Windows では改行が CRLF になることがあるため)。4つの数字が要る配布先(Microsoft Store の MSIX など)では、末尾に <span class="mono">.0</span> を付ける。読み取れないもの(文書・静的な HTML)は、作成・改版のときに <span class="mono">VERSION</span> の値を書き込む。<br>
+      <b>(4) 文書に書く版の意味:</b>文書に書く版は、その文書を最後に作成・改版したときの <span class="mono">VERSION</span> とする。改版しない文書には、そのときの版が残る(<span class="mono">VERSION</span> より古くてよい)。<br>
+      <b>(5) 書く場所は少なく:</b>文書の版は、9-3 のヘッダーの「版 / Version」を正とする。本文で版の番号を示すのは表紙など1か所にとどめ、ほかは「本版」と書く。HTML の本文に番号を書くときは、<span class="mono">data-version</span> 属性を付けた要素に入れる。ファイル名に版を入れる場合(8-5)は、生成の手順で <span class="mono">VERSION</span> から付ける。<br>
+      <b>(6) 確かめ方:</b>改版したファイルの版が <span class="mono">VERSION</span> と一致すること、本文の <span class="mono">data-version</span> がヘッダーの版と一致することを、<span class="mono">tools/check_version.py</span> で確かめる(<span class="mono">--stamp</span> を付けると書き込む)。本リポジトリのものを、そのまま写して使ってよい(MIT)。<br>
+      <b>(7) 画面での確認:</b>アプリは、使う人が版を確かめられるようにする(「このアプリについて」の画面、<span class="mono">--version</span> など)。<br>
+      <b>(8) README:</b>ソフトウェアの README の冒頭に、版の行と <span class="mono">CHANGELOG.md</span> へのリンクを置く(例:「バージョン / Version: 1.0.3」。英語版の README は「Version: 1.0.3」)。<br>
+      <b>(9) CHANGELOG.md:</b>版ごとの変更を書き、新しい版を一番上に置く。見出しは「<span class="mono">## 1.0.3 — YYYY-MM-DD</span>」とし、番号に v は付けない(この決まりより前の「<span class="mono">## v4.11 — …</span>」の形はそのまま残し、ワークフローは両方の形を読む)。言語は 9-3 と同じくファイルの言語に合わせる(日本語を含むなら日英併記)。<br>
+      <b>(10) 版の上げ方:</b><span class="mono">VERSION</span>・<span class="mono">CHANGELOG.md</span>・(ソフトウェアでは)README の版の行を、同じ変更(プルリクエストまたはコミット)で変える。<br>
+      <b>(11) タグと Release:</b>main で <span class="mono">VERSION</span> が変わったら、そのコミットに <span class="mono">vX.Y.Z</span> のタグを付け、GitHub の Release を作る(本文は CHANGELOG の該当の節)。GitHub で管理するフォルダーでは GitHub Actions で自動化する。プルリクエストを使うリポジトリでは、(1)(8)(9) がそろっていることと、既にあるタグを使い回していないことも確かめる。ひな形は <a href="https://github.com/5garashi/5garashi-identity/tree/main/templates/.github/workflows">templates/.github/workflows/</a>。<br>
+      <b>(12) 1つのファイルのツール:</b>HTML やスクリプト1つでできたツールで、単独のフォルダーで管理しないものは、9-3 (6) のヘッダーの「版 / Version」を正とする。<br>
+      <b>(13) タグと公開日:</b>タグはその版のソースを示す。ストアなどでの公開日とは一致しないことがある(審査や手動の公開があるため)。</span>
+      <span class="en" lang="en"><b>(1) VERSION:</b> the version is set only by a <span class="mono">VERSION</span> file at the top of the folder: one line of three numbers such as <span class="mono">1.0.3</span> (major.minor.patch; semantic versioning).<br>
+      <b>(2) Whether to raise it:</b> a person or an AI decides, using these guidelines. Any change of content — rules, values, what is displayed — always raises it. Typo and formatting fixes need not. Raise the first number for incompatible changes, the second for added or changed rules or features, the third for small fixes (lower numbers reset to 0).<br>
+      <b>(3) Reading and writing:</b> anything that can read the number (app settings, builds, distributions — <span class="mono">.csproj</span>, <span class="mono">package.json</span>, <span class="mono">pyproject.toml</span>, and so on) reads it from <span class="mono">VERSION</span>; never copy it by hand. Strip surrounding whitespace and line breaks (line endings can become CRLF on Windows). Where four numbers are required (such as Microsoft Store MSIX), append <span class="mono">.0</span>. Anything that cannot read it (documents, static HTML) has the <span class="mono">VERSION</span> value written in when it is created or revised.<br>
+      <b>(4) Meaning of a document's version:</b> the version written in a document is the <span class="mono">VERSION</span> at its last creation or revision. Documents that are not revised keep that version, which may be older than <span class="mono">VERSION</span>.<br>
+      <b>(5) Write it in few places:</b> a document's version is the "版 / Version" line of its 9-3 header. In the body, show the number in one place at most (such as the cover) and call it "this version" elsewhere. In HTML, put a number shown in the body in an element with a <span class="mono">data-version</span> attribute. Version numbers in file names (8-5) are added from <span class="mono">VERSION</span> by the build step.<br>
+      <b>(6) Checking:</b> <span class="mono">tools/check_version.py</span> confirms that revised files carry the <span class="mono">VERSION</span> value and that <span class="mono">data-version</span> elements match the header (<span class="mono">--stamp</span> writes them). Copy the one in this repository as is (MIT).<br>
+      <b>(7) On screen:</b> apps let users check the version (an About screen, <span class="mono">--version</span>, and so on).<br>
+      <b>(8) README:</b> software READMEs start with a version line and a link to <span class="mono">CHANGELOG.md</span> (for example, "バージョン / Version: 1.0.3"; English READMEs: "Version: 1.0.3").<br>
+      <b>(9) CHANGELOG.md:</b> lists the changes in each version, newest first, under headings "<span class="mono">## 1.0.3 — YYYY-MM-DD</span>" with no "v" before the number (older "<span class="mono">## v4.11 — …</span>" headings stay as they are, and the workflows read both forms). Language follows the file, as in 9-3 (bilingual if it contains Japanese).<br>
+      <b>(10) Raising the version:</b> change <span class="mono">VERSION</span>, <span class="mono">CHANGELOG.md</span>, and (for software) the README version line in the same change (pull request or commit).<br>
+      <b>(11) Tags and Releases:</b> when <span class="mono">VERSION</span> changes on main, tag that commit <span class="mono">vX.Y.Z</span> and create a GitHub Release (notes: the matching CHANGELOG section). Folders on GitHub automate this with GitHub Actions. Repositories that use pull requests also check that (1), (8), and (9) agree and that no existing tag is reused. Templates: <a href="https://github.com/5garashi/5garashi-identity/tree/main/templates/.github/workflows">templates/.github/workflows/</a>.<br>
+      <b>(12) Single-file tools:</b> tools made of one HTML file or script and not kept in their own folder take their version from the "版 / Version" header line of 9-3 (6).<br>
+      <b>(13) Tags and release dates:</b> a tag marks the source of that version and may not match the date it appears in a store (reviews and manual publishing intervene).</span>
     </p>
   </div>
 </section>
@@ -1662,8 +1692,8 @@ assets/
 
 <footer>
   <span style="font-weight:800;color:var(--ink)"><span style="font-family:Georgia,serif;font-style:italic">5</span>garashi.com設計事務所 / 5garashi.com Design Office</span> — <a class="mono" href="https://www.5garashi.com">https://www.5garashi.com</a><br>
-  <span class="ja" lang="ja">Design Office Identity 第4.11版 — 2026.10.11 — © 2026 CC BY-ND 4.0</span>
-  <span class="en" lang="en">Design Office Identity v4.11 — 2026.10.11 — © 2026 CC BY-ND 4.0</span><br>
+  <span class="ja" lang="ja">Design Office Identity — 2026.10.12 — © 2026 CC BY-ND 4.0</span>
+  <span class="en" lang="en">Design Office Identity — 2026.10.12 — © 2026 CC BY-ND 4.0</span><br>
   <span class="ja" lang="ja">回路にも、画面にも、暮らしにも——五本の唐辛子。だれの手にも、ピリッと効く。</span>
   <span class="en" lang="en">Five chilis — on the board, on the screen, in daily life. A kick designed to work in as many hands as possible.</span>
 </footer>
@@ -1682,8 +1712,8 @@ assets/
     btn.textContent = en ? "日本語" : "English";
     btn.setAttribute("aria-label", en ? "日本語に切り替え" : "Switch to English");
     document.title = en
-      ? "5garashi.com Design Office — Identity v4.11"
-      : "5garashi.com設計事務所 — Design Office Identity v4.11";
+      ? "5garashi.com Design Office — Identity"
+      : "5garashi.com設計事務所 — Design Office Identity";
     // 正規URLと共有情報を表示言語に合わせる(hreflang の ja / en と一致させる)
     // Keep canonical and Open Graph in step with the language (matches the hreflang ja / en entries)
     var base = "https://5garashi.github.io/5garashi-identity/";

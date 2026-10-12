@@ -1,6 +1,15 @@
-# 5garashi.com設計事務所 公式アセット / Official Assets(v4.11)
+<!--
+  ファイル名 / File: assets/README.md
+  概要 / Description: 公式アセット(シンボルマーク・ロゴタイプ・音源)の一覧と使い方 / Official assets and how to use them
+  作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
+  作成日 / Created: 2026-07-11
+  版 / Version: 4.12.0
+  ライセンス / License: CC BY-ND 4.0
+  SPDX-License-Identifier: CC-BY-ND-4.0
+-->
+# 5garashi.com設計事務所 公式アセット / Official Assets
 
-Design Office Identity 第4.11版・第12条 12-3 に対応する配布パッケージ。
+Design Office Identity 第12条 12-3 に対応する配布パッケージ。版は上のヘッダーと、リポジトリの `VERSION` による(12-7)。
 
 ## 構成 / Layout
 
@@ -51,4 +60,4 @@ Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
 ---
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
-**最終更新 / Last updated**: 2026-10-11 JST
+**最終更新 / Last updated**: 2026-10-12 JST

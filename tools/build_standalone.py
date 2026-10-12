@@ -1,8 +1,9 @@
 """
 ファイル名 / File: tools/build_standalone.py
-概要 / Description: Web版 index.html から、画像と音源を内蔵した単一ファイル版 5garashi_identity_vX_Y.html を生成する(第12条 12-3)
+概要 / Description: Web版 index.html から、画像と音源を内蔵した単一ファイル版 5garashi_identity_vX_Y_Z.html を生成する。番号は VERSION から付ける(第12条 12-3・12-7 (5))
 作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
 作成日 / Created: 2026-10-08
+最終更新 / Last updated: 2026-10-12
 ライセンス / License: MIT
 SPDX-License-Identifier: MIT
 
@@ -27,11 +28,11 @@ EMBED = [
 def main() -> int:
     src = (ROOT / "index.html").read_text(encoding="utf-8")
 
-    m = re.search(r"版 / Version: (\d+)\.(\d+)", src)
-    if not m:
-        print("index.html のヘッダーに「版 / Version: X.Y」が見つかりません", file=sys.stderr)
+    version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+    if not re.fullmatch(r"\d+\.\d+\.\d+", version):
+        print(f"VERSION は 1.0.3 のような3つの数字にしてください(got '{version}')", file=sys.stderr)
         return 1
-    out_name = f"5garashi_identity_v{m.group(1)}_{m.group(2)}.html"
+    out_name = f"5garashi_identity_v{version.replace('.', '_')}.html"
 
     for rel, mime in EMBED:
         ref = f'src="{rel}"'

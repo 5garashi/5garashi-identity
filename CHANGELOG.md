@@ -3,6 +3,45 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.12.0 — 2026-10-12
+
+本書も `VERSION` ファイルで版を管理する最初の版。見出しの番号はこの版から v を付けない(12-7 (9))。
+The first version of this document managed by a `VERSION` file. Headings drop the "v" from this version on (12-7 (9)).
+
+### 本文 / Content
+- 第12条 12-7「版の管理(ソフトウェア・文書)」を新設(mdEditor で運用を始めた版の管理をもとに、文書にも広げた)。
+  New Art. 12-7 "Versioning (software and documents)", based on the versioning adopted in mdEditor and widened to documents.
+  - 対象は、1つのアプリまたは1組の文書を入れたフォルダー(ふつうは Git のリポジトリ1つ)で、一番上に `VERSION`(3つの数字)を置くもの。単独のフォルダーで管理していないもの、試作や作業用のスクリプト、この決まりより前の旧版・現行版は対象外。
+    Scope: a folder holding one app or one set of documents with a three-number `VERSION` at its top; loose files, prototypes, and versions made before this rule are out of scope.
+  - 版を上げるかは人または AI が判断する。内容(規定・数値・表示)が変わる変更は必ず上げ、誤字・体裁だけの直しは上げなくてよい。大きな変更は1つ目、追加・変更は2つ目、細かな直しは3つ目の数字。
+    A person or an AI decides; content changes always raise it, typo and formatting fixes need not; major/minor/patch by the size of the change.
+  - アプリなど読み取れるものは `VERSION` から読み取り、文書と静的な HTML は作成・改版のときに書き込む。文書に書く版は、その文書を最後に改版したときの版。
+    Apps read `VERSION`; documents and static HTML have it written in when created or revised, and show the version of their last revision.
+  - 版の番号を書く場所は少なくし、本文では表紙など1か所に限って、ほかは「本版」と書く。HTML の本文の番号は `data-version` を付けた要素に入れる。`tools/check_version.py` で確かめる。
+    Write the number in few places: one place in the body at most, "this version" elsewhere; HTML numbers go in `data-version` elements; `tools/check_version.py` checks them.
+  - README の版の行(ソフトウェア)、CHANGELOG の見出し(`## 1.0.3 — YYYY-MM-DD`、v なし。以前の v ありの見出しもワークフローは読む)、main で `VERSION` が変わったときのタグ `vX.Y.Z` と GitHub の Release、1つのファイルのツール、タグと公開日の関係を定めた。
+    README version line, CHANGELOG headings, tags and Releases on `VERSION` changes, single-file tools, and tags versus release dates defined.
+- 9-3 (4):`VERSION` をヘッダーの対象外に追加。9-3 (6):版の行の決まり(文書は最後に改版したときの `VERSION`、1つのファイルのツールはこの行が正、`VERSION` を読み取るソースコードには書かない)。
+  9-3 (4) exempts `VERSION`; 9-3 (6) is the version-line rule.
+- 8-5 から 12-7 を参照。9-5:ソフトウェアの README の冒頭に版の行。12-6:配布物に CHANGELOG.md を追加。
+  8-5 points to 12-7; 9-5 README version line; 12-6 adds CHANGELOG.md.
+
+### 本書への当てはめ / Applied to this document
+- `VERSION` を追加し、本版を 4.12.0 とした。本文に書く版の番号は表紙だけにし(`data-version`)、タイトル・OGP・ページ概要・フッター・本版の変更点・JavaScript のタイトルからは除いた。ヘッダーの「版 / Version」は 4.12.0。
+  `VERSION` added (4.12.0). The number now appears in the body only on the cover; removed from the title, OGP, description, footer, and script titles.
+- 単一ファイル版のファイル名は `VERSION` から付ける(`5garashi_identity_v4_12_0.html`)。`tools/build_standalone.py` を変更。
+  The single-file edition's name comes from `VERSION`; `tools/build_standalone.py` updated.
+- `tools/check_version.py` を追加(変えたファイルの版と `VERSION` の一致、`data-version` とヘッダーの一致、`--stamp` での書き込み)。
+  `tools/check_version.py` added.
+- `.github/workflows/release.yml` を追加。main で `VERSION` が変わったら、タグ `v4.12.0` と Release を作る。
+  `.github/workflows/release.yml` added: tags and releases when `VERSION` changes on main.
+- `assets/README.md` に 9-3 のヘッダーを付け、題名から版を除いた。
+  `assets/README.md` gets a 9-3 header; the version is removed from its title.
+
+### ひな形 / Templates
+- `templates/.github/workflows/version-check.yml` と `release.yml` を追加(mdEditor の実装をもとに、Release の題名をリポジトリ名から作り、CHANGELOG の見出しは v のある形・ない形の両方を読む)。12-1 (2)・12-3 も更新。
+  Workflow templates added, based on mdEditor's; the Release title comes from the repository name, and both heading forms are read.
+
 ## v4.11 — 2026-10-11
 
 mdEditor(5garashi/mdEditor)のユニバーサルデザイン対応と出荷前チェックからの提案(16項目)を反映。
@@ -244,4 +283,4 @@ External review (multi-AI analysis, 2026-10-08) applied.
 ---
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
-**最終更新 / Last updated**: 2026-10-11 JST
+**最終更新 / Last updated**: 2026-10-12 JST
