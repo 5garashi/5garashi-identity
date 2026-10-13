@@ -3,7 +3,7 @@
 概要 / Description: Web版 index.html から、画像と音源を内蔵した単一ファイル版 5garashi_identity_vX_Y_Z.html を生成する。番号は VERSION から付ける(第12条 12-3・12-7 (5))
 作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
 作成日 / Created: 2026-10-08
-最終更新 / Last updated: 2026-10-12
+最終更新 / Last updated: 2026-10-14
 ライセンス / License: MIT
 SPDX-License-Identifier: MIT
 
@@ -22,6 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 EMBED = [
     ("assets/5garashi_mark_original.png", "image/png"),
     ("assets/5garashi_theme.mp3", "audio/mpeg"),
+    ("assets/5garashi_light_steps.mp3", "audio/mpeg"),
 ]
 
 

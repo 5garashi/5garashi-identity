@@ -3,7 +3,7 @@
   概要 / Description: 公式アセット(シンボルマーク・ロゴタイプ・音源)の一覧と使い方 / Official assets and how to use them
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  版 / Version: 4.12.0
+  版 / Version: 4.13.0
   ライセンス / License: CC BY-ND 4.0
   SPDX-License-Identifier: CC-BY-ND-4.0
 -->
@@ -34,9 +34,13 @@ Design Office Identity 第12条 12-3 に対応する配布パッケージ。版�
 | 5garashi_logotype_reversed_outlined.svg | ロゴタイプ 日本語 ダークモード用反転・灰色抜き(アウトライン化) |
 | 5garashi_logotype_en_reversed.svg | ロゴタイプ 英語 ダークモード用反転・灰色抜き(編集用) |
 | 5garashi_logotype_en_reversed_outlined.svg | ロゴタイプ 英語 ダークモード用反転・灰色抜き(アウトライン化) |
-| 5garashi_theme.wav | テーマ曲 制作・保存原本 |
-| 5garashi_theme.mp3 | テーマ曲 配信用 |
-| 5garashi_theme.mid | テーマ曲 編集用楽譜データ(MIDI) |
+| 5garashi_theme.wav | 五辛子のテーマ 制作・保存原本(CC BY 4.0) |
+| 5garashi_theme.mp3 | 五辛子のテーマ 配信用(約 −15 LUFS、CC BY 4.0) |
+| 5garashi_theme.mid | 五辛子のテーマ 編集用楽譜データ(MIDI、CC BY 4.0) |
+| 5garashi_light_steps.wav | Light Steps 制作・保存原本(音の正本、CC BY 4.0) |
+| 5garashi_light_steps.mp3 | Light Steps 配信用(WAV 原本を +4.05 dB だけ調整し約 −15 LUFS、CC BY 4.0) |
+| 5garashi_light_steps.mid | Light Steps 編集用楽譜データ(MIDI、CC BY 4.0) |
+| 5garashi_light_steps_score.json | Light Steps 楽譜データ(音符・タイミング・音色の役割、CC BY 4.0) |
 | og_image.png | SNS共有用プレビュー画像(1200×630)。`tools/og_image.html` から生成 |
 
 次のファイルは英語ロゴタイプ制作時の作業用データで、公式アセットではない。
@@ -53,11 +57,11 @@ The following are working files from producing the English logotype, not officia
 - `*_reversed*` 版(灰色抜き)は地が透明で、夜の配色の地(#1A2212・#222C1A・#2B3A20)の上だけで使う。
 
 ## ライセンス / License
-本パッケージのシンボルマーク・ロゴタイプ・楽譜・音源は **CC BY-ND 4.0** で提供される(Identity第12条)。
+本パッケージのシンボルマーク・ロゴタイプは **CC BY-ND 4.0**、音楽(五辛子のテーマと Light Steps の音源・MIDI・楽譜データ)は **CC BY 4.0** で提供される(Identity 第12条 12-1 (4))。音楽はクレジットを付ければ動画・編曲・商用に使える。Light Steps は5garashi.com設計事務所の依頼に基づき Codex が作曲・音源生成した。AI が生成した作品の権利の扱いについては 12-1 (5) を参照。
 5garashi.comの名称・ロゴを公式の提供物・承認・提携と誤認させる使用は不可。使ってよいこと・してはいけないことの早見表は第12条 12-4 を参照。
 Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
 
 ---
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
-**最終更新 / Last updated**: 2026-10-12 JST
+**最終更新 / Last updated**: 2026-10-14 JST

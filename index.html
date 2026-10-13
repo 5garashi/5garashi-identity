@@ -4,9 +4,9 @@
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  最終更新 / Last updated: 2026-10-12
-  版 / Version: 4.12.0
-  ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ・楽譜・音源。特記=第12条を参照)
+  最終更新 / Last updated: 2026-10-14
+  版 / Version: 4.13.0
+  ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
 -->
@@ -341,6 +341,10 @@ pre.codeblock .rd{color:#F0A090}
 .spec-cell .v{font-weight:800;font-size:15px}
 .spec-cell .d{font-size:12px;color:var(--steel);font-weight:600;line-height:1.6}
 
+.ls-group{display:flex;flex-direction:column;align-items:center;gap:6px}
+.ls-group .cells{display:flex;gap:10px;align-items:flex-end}
+.ls-group .grp{align-self:stretch;text-align:center;font-size:12px;font-weight:800;color:var(--steel);border-top:2px solid var(--line);padding-top:2px}
+.sound-box .dl{font-size:13px;font-weight:600;color:var(--steel);text-align:center}
 .dont-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:12px}
 .dont{
   border:1.5px solid var(--line);border-radius:12px;padding:18px 14px 14px;background:var(--paper);
@@ -448,7 +452,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.12.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.12.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.13.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.13.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -463,7 +467,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <span class="ja" lang="ja">「5(ご)+がらし」=唐辛子。回路から画面、そして暮らしの支えまで——「設計のプロフェッショナル × デジタル便利屋」。本書は、ロゴ・色・モチーフ・音・和の意匠・アクセシビリティ・言葉づかいを通じて、5garashi.comのすべての創作物が醸成するオフィスアイデンティティを定める。</span>
     <span class="en" lang="en">"5 (go) + garashi" = togarashi, the chili pepper. From circuits to screens to a helping hand in daily life — "design professionals × digital handymen". Through logo, color, motif, sound, Japanese aesthetics, accessibility, and voice, this document defines the office identity that every 5garashi.com creation cultivates.</span>
   </p>
-  <div class="date">2026.10.12 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
+  <div class="date">2026.10.14 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
 </header>
 
 <!-- ═══════════ 目次 / Contents ═══════════ -->
@@ -488,16 +492,16 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">本版(2026-10-12)の変更点</span><span class="en" lang="en">What's new in this version (2026-10-12)</span></summary>
+    <summary><span class="ja" lang="ja">本版(2026-10-14)の変更点</span><span class="en" lang="en">What's new in this version (2026-10-14)</span></summary>
     <ul class="ja" lang="ja">
-      <li>第12条 12-7 を「版の管理(ソフトウェア・文書)」に広げた。版の番号はフォルダーの一番上の <span class="mono">VERSION</span>(3つの数字)で決め、アプリは読み取り、文書と静的な HTML は作成・改版のときに書き込む。文書に書く版は、その文書を最後に改版したときの版。版を上げる目安、CHANGELOG の見出し(v なし)、タグと Release の決まりを定めた。</li>
-      <li>本書も <span class="mono">VERSION</span> で管理を始め、本版をその最初の版とした。本文に書く版の番号は表紙だけにし、タイトル・フッターなどからは除いた。<span class="mono">tools/check_version.py</span> と、タグと Release を作るワークフローを追加。</li>
-      <li>9-3 (6) を版の行の決まりに改め、9-3 (4) で <span class="mono">VERSION</span> をヘッダーの対象外に加えた。8-5 から 12-7 を参照。12-6 の配布物に CHANGELOG.md、9-5 に README の版の行を追加。GitHub Actions のひな形を追加。</li>
+      <li>第11条に2曲目の「Light Steps — 軽快なステップ」(125 BPM・5拍子・3+2、曲の版 1.0.0)を追加。試聴・ダウンロード・リズムの図・制作経緯を掲載。11-1〜11-4 に分け、11-3 で使い分けを定めた(操作デモ・軽快な製品紹介・短いSNS動画では Light Steps を優先)。</li>
+      <li>音楽(2曲の音源・MIDI・楽譜データ)のライセンスを CC BY 4.0 にした(12-1 (4)(5))。第三者も、クレジットを付ければ動画や編曲に使える。生成コードは MIT のまま。</li>
+      <li>Light Steps の配信用 MP3 を、WAV 原本の音量だけを上げて公式テーマと同じ約 −15 LUFS にそろえた。単一ファイル版にも2曲を内蔵した。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>Art. 12-7 widened to "Versioning (software and documents)": a three-number <span class="mono">VERSION</span> at the top of the folder sets the version; apps read it, documents and static HTML have it written in when created or revised, and a document's version is that of its last revision. Guidelines for raising it, CHANGELOG headings without "v", and tag/Release rules added.</li>
-      <li>This document is now versioned by <span class="mono">VERSION</span>, starting with this version. The number appears in the body only on the cover (removed from the title, footer, and so on). <span class="mono">tools/check_version.py</span> and a tag/Release workflow added.</li>
-      <li>9-3 (6) is now the version-line rule and 9-3 (4) exempts <span class="mono">VERSION</span>; 8-5 points to 12-7; 12-6 adds CHANGELOG.md and 9-5 the README version line; GitHub Actions templates added.</li>
+      <li>Art. 11 adds a second piece, "Light Steps" (125 BPM, 5/4, 3+2; track version 1.0.0), with a player, downloads, rhythm diagram, and provenance. Art. 11 is now 11-1 to 11-4; 11-3 sets which to use (Light Steps preferred for operation demos, brisk product introductions, and short social videos).</li>
+      <li>Music (audio, MIDI, and score data of both pieces) is now CC BY 4.0 (12-1 (4), (5)); third parties may use it in videos and arrangements with credit. Generator code stays MIT.</li>
+      <li>The Light Steps distribution MP3 is gain-matched to the official theme at about −15 LUFS from the WAV master. The single-file edition embeds both pieces.</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -1420,8 +1424,13 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
   </div>
   <div class="art-body">
     <p>
-      <span class="ja" lang="ja">ブランドの音は<b>「五辛子(ごがらし)のテーマ」</b>。デザインと同じ設計思想を音に翻訳する:シンボルマークが「5を数えるタリー」であるように、テーマ曲は<b>5拍子(5/4)×五音音階(ペンタトニック)</b>で組み立てる。各小節の1〜4拍で数え、<b>5拍目に「横切る5本目の唐辛子」= 低音マリンバ(バスマリンバ)のまろやかな木の音</b>がベースのように土台へ沈み込み、次の小節へ<b>ふわりと長い余韻</b>を残す。金属的な倍音は使わない。辛味は舌を刺すのではなく、あとから温かく効いてくる。これは和の<b>五行(木・火・土・金・水)</b>にも倣う選択である——「金」の音を捨て、「木」の音を選ぶ。5拍子・五音音階・五行、「5」を三重に守る。</span>
-      <span class="en" lang="en">The brand's sound is <b>"Theme of the Five Chilis" (Gogarashi no Theme)</b> — the design philosophy translated into music. Just as the symbol mark tallies to five, the theme is built on a <b>5/4 meter and a five-note pentatonic scale</b>. Beats one through four count upward; <b>beat five is the crossing chili — a warm, low bass-marimba tone</b> that settles into the foundation like a bass note, its <b>long, mellow resonance</b> carrying gently into the next measure. No metallic partials are used; the heat does not sting — it warms afterward. The choice also bows to the five elements of East Asian tradition (wood, fire, earth, metal, water): the sound of metal is set aside for the sound of wood. Five beats, five notes, five elements — the rule of five, kept three ways.</span>
+      <span class="ja" lang="ja">ブランドの音は2曲ある。どちらも「5」を5拍子で表す。落ち着いた公式テーマ<b>「五辛子のテーマ」</b>(11-1)と、軽快な製品・操作デモ向けの<b>「Light Steps」</b>(11-2)を、用途によって使い分ける(11-3)。</span>
+      <span class="en" lang="en">The brand has two pieces of music, both expressing "5" in 5/4: the calm official theme <b>"Gogarashi no Theme"</b> (11-1) and the brisk <b>"Light Steps"</b> for products and demos (11-2). Choose by use (11-3).</span>
+    </p>
+    <h3><span class="ja" lang="ja">11-1. 五辛子のテーマ(公式テーマ)</span><span class="en" lang="en">11-1. Gogarashi no Theme (official theme)</span></h3>
+    <p>
+      <span class="ja" lang="ja">公式テーマは<b>「五辛子(ごがらし)のテーマ」</b>。デザインと同じ設計思想を音に翻訳する:シンボルマークが「5を数えるタリー」であるように、テーマ曲は<b>5拍子(5/4)×五音音階(ペンタトニック)</b>で組み立てる。各小節の1〜4拍で数え、<b>5拍目に「横切る5本目の唐辛子」= 低音マリンバ(バスマリンバ)のまろやかな木の音</b>がベースのように土台へ沈み込み、次の小節へ<b>ふわりと長い余韻</b>を残す。金属的な倍音は使わない。辛味は舌を刺すのではなく、あとから温かく効いてくる。これは和の<b>五行(木・火・土・金・水)</b>にも倣う選択である——「金」の音を捨て、「木」の音を選ぶ。5拍子・五音音階・五行、「5」を三重に守る。</span>
+      <span class="en" lang="en">The official theme is <b>"Theme of the Five Chilis" (Gogarashi no Theme)</b> — the design philosophy translated into music. Just as the symbol mark tallies to five, the theme is built on a <b>5/4 meter and a five-note pentatonic scale</b>. Beats one through four count upward; <b>beat five is the crossing chili — a warm, low bass-marimba tone</b> that settles into the foundation like a bass note, its <b>long, mellow resonance</b> carrying gently into the next measure. No metallic partials are used; the heat does not sting — it warms afterward. The choice also bows to the five elements of East Asian tradition (wood, fire, earth, metal, water): the sound of metal is set aside for the sound of wood. Five beats, five notes, five elements — the rule of five, kept three ways.</span>
     </p>
 
     <div class="sound-box">
@@ -1494,22 +1503,89 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
         <span class="ja" lang="ja">主旋律・冒頭の1小節(5/4)。5拍目の赤い音符が低音マリンバ——点線は余韻。</span>
         <span class="en" lang="en">Opening measure of the melody (5/4). The red note on beat 5 is the bass marimba; the dotted line is its resonance.</span>
       </div>
-      <audio controls preload="none" src="assets/5garashi_theme.mp3">
+      <audio controls preload="none" src="assets/5garashi_theme.mp3" aria-label="五辛子のテーマを再生 / Play Gogarashi no Theme">
         <span class="ja" lang="ja">お使いのブラウザは音声再生に対応していません。同梱の 5garashi_theme.mp3 を再生してください。</span>
         <span class="en" lang="en">Your browser does not support audio playback. Please play the bundled 5garashi_theme.mp3.</span>
       </audio>
+      <p class="dl"><span class="ja" lang="ja">ダウンロード(CC BY 4.0):</span><span class="en" lang="en">Download (CC BY 4.0): </span><a href="https://5garashi.github.io/5garashi-identity/assets/5garashi_theme.mp3" download>MP3<span class="ja" lang="ja">(配信用・1.3 MB)</span><span class="en" lang="en"> (distribution, 1.3 MB)</span></a> / <a href="https://5garashi.github.io/5garashi-identity/assets/5garashi_theme.wav" download>WAV<span class="ja" lang="ja">(原本・13.9 MB)</span><span class="en" lang="en"> (master, 13.9 MB)</span></a> / <a href="https://5garashi.github.io/5garashi-identity/assets/5garashi_theme.mid" download>MIDI<span class="ja" lang="ja">(2 KB)</span><span class="en" lang="en"> (2 KB)</span></a></p>
       <div class="sound-spec">
         <div class="spec-cell"><div class="k"><span class="ja" lang="ja">拍子</span><span class="en" lang="en">METER</span></div><div class="v">5/4</div><div class="d"><span class="ja" lang="ja">5本の唐辛子=5拍。5拍目にアクセント。</span><span class="en" lang="en">Five chilis = five beats; the accent lands on beat five.</span></div></div>
         <div class="spec-cell"><div class="k"><span class="ja" lang="ja">音階</span><span class="en" lang="en">SCALE</span></div><div class="v"><span class="ja" lang="ja">Dメジャー・ペンタトニック</span><span class="en" lang="en">D major pentatonic</span></div><div class="d"><span class="ja" lang="ja">五音音階(D・E・F#・A・B)。「5」をここでも守る。</span><span class="en" lang="en">Five notes only (D, E, F#, A, B) — the "5" rule again.</span></div></div>
         <div class="spec-cell"><div class="k"><span class="ja" lang="ja">テンポ</span><span class="en" lang="en">TEMPO</span></div><div class="v">96 BPM</div><div class="d"><span class="ja" lang="ja">歩く速さ。学びに寄り添う「急かさない」テンポ(第7条)。</span><span class="en" lang="en">Walking pace — the unhurried tempo of Art. 7.</span></div></div>
         <div class="spec-cell"><div class="k"><span class="ja" lang="ja">音色の配役</span><span class="en" lang="en">VOICES</span></div><div class="v"><span class="ja" lang="ja">3色=3声</span><span class="en" lang="en">3 colors = 3 voices</span></div><div class="d"><span class="ja" lang="ja">紙=やわらかな持続音(パッド)、緑=低音の土台(ベース)、赤=5拍目の低音マリンバ。金属的な高次倍音を持たない丸い低音(D3・B3・A3)で、その小節の根音に溶けながら約1.3秒の余韻を引く。</span><span class="en" lang="en">Paper = soft sustained pad, green = low bass foundation, red = the beat-five bass marimba: a rounded low tone (D3, B3, A3) with no metallic overtones, melting into each measure's root with a resonance of about 1.3 seconds.</span></div></div>
       </div>
+    </div>
+
+    <h3><span class="ja" lang="ja">11-2. Light Steps — 軽快なステップ(製品・操作デモ向け)</span><span class="en" lang="en">11-2. Light Steps (for products and demos)</span></h3>
+    <p>
+      <span class="ja" lang="ja">ソフトウェアの軽快な操作感をイメージした、125 BPM・5拍子のオリジナル曲。「3+2」のリズムに弾む旋律を重ね、5garashi.com の「5」を音で表す。製品紹介や操作デモに、明るく親しみやすい印象を添えるために作った。重いドラムや長い持続音を使わず、画面の説明を主役にする。公式テーマの音源・MIDIを使った編曲ではない。</span>
+      <span class="en" lang="en">An original 125 BPM track in 5/4, inspired by responsive software interactions. A 3+2 groove and a buoyant melody give musical form to the "5" in 5garashi.com. It was created to bring a bright, approachable feel to product introductions and demonstrations, and leaves the spotlight on what is on screen — no heavy drums or long sustained tones. It is not an arrangement of the official theme's audio or MIDI.</span>
+    </p>
+    <div class="sound-box">
+      <div class="score" role="img" aria-label="Light Steps の1小節:5拍を3拍と2拍に分けて刻み、1・4・5拍目を強くする / One Light Steps measure: five beats grouped 3+2, with strong beats on 1, 4, and 5">
+        <div class="ls-group" aria-hidden="true">
+          <div class="cells">
+            <div class="beatcell"><div class="b spice" style="height:62px"></div>1</div>
+            <div class="beatcell"><div class="b" style="height:24px"></div>2</div>
+            <div class="beatcell"><div class="b" style="height:46px"></div>3</div>
+          </div>
+          <span class="grp">3</span>
+        </div>
+        <div class="ls-group" aria-hidden="true">
+          <div class="cells">
+            <div class="beatcell"><div class="b spice" style="height:60px"></div>4</div>
+            <div class="beatcell"><div class="b spice" style="height:72px"></div>5</div>
+          </div>
+          <span class="grp">2</span>
+        </div>
+      </div>
+      <div style="text-align:center;font-size:12px;font-weight:700;color:var(--steel)">
+        <span class="ja" lang="ja">1小節(5/4)を3拍+2拍に分けて刻む。高く赤い棒が強い拍(1・4・5拍目)。</span>
+        <span class="en" lang="en">Each 5/4 measure is felt as 3 + 2 beats. Tall red bars mark the strong beats (1, 4, and 5).</span>
+      </div>
+      <audio controls preload="none" src="assets/5garashi_light_steps.mp3" aria-label="Light Steps を再生 / Play Light Steps">
+        <span class="ja" lang="ja">お使いのブラウザは音声再生に対応していません。5garashi_light_steps.mp3 を再生してください。</span>
+        <span class="en" lang="en">Your browser does not support audio playback. Please play 5garashi_light_steps.mp3.</span>
+      </audio>
+      <p class="dl"><span class="ja" lang="ja">ダウンロード(CC BY 4.0):</span><span class="en" lang="en">Download (CC BY 4.0): </span><a href="https://5garashi.github.io/5garashi-identity/assets/5garashi_light_steps.mp3" download>MP3<span class="ja" lang="ja">(配信用・1.2 MB)</span><span class="en" lang="en"> (distribution, 1.2 MB)</span></a> / <a href="https://5garashi.github.io/5garashi-identity/assets/5garashi_light_steps.wav" download>WAV<span class="ja" lang="ja">(原本・8.6 MB)</span><span class="en" lang="en"> (master, 8.6 MB)</span></a> / <a href="https://5garashi.github.io/5garashi-identity/assets/5garashi_light_steps.mid" download>MIDI<span class="ja" lang="ja">(4 KB)</span><span class="en" lang="en"> (4 KB)</span></a> / <a href="https://5garashi.github.io/5garashi-identity/assets/5garashi_light_steps_score.json" download><span class="ja" lang="ja">楽譜データ JSON(62 KB)</span><span class="en" lang="en">Score data JSON (62 KB)</span></a></p>
+      <div class="sound-spec">
+        <div class="spec-cell"><div class="k"><span class="ja" lang="ja">拍子</span><span class="en" lang="en">METER</span></div><div class="v">5/4(3+2)</div><div class="d"><span class="ja" lang="ja">3拍+2拍のまとまりで、5拍目にもアクセント。</span><span class="en" lang="en">Grouped 3 + 2, with an accent on beat five as well.</span></div></div>
+        <div class="spec-cell"><div class="k"><span class="ja" lang="ja">テンポ</span><span class="en" lang="en">TEMPO</span></div><div class="v">125 BPM</div><div class="d"><span class="ja" lang="ja">弾む速さ。開く・編集する・確かめる、の小気味よさを表す(実際の処理速度を示すものではない)。</span><span class="en" lang="en">A springy pace for the feel of opening, editing, and checking (not a claim about actual performance).</span></div></div>
+        <div class="spec-cell"><div class="k"><span class="ja" lang="ja">音階・音色</span><span class="en" lang="en">SCALE / VOICES</span></div><div class="v"><span class="ja" lang="ja">Dメジャー・ペンタトニック</span><span class="en" lang="en">D major pentatonic</span></div><div class="d"><span class="ja" lang="ja">合成したプラック・短い鍵盤音・ベース・シェーカー(生楽器の録音ではない)。</span><span class="en" lang="en">Synthesized pluck, short keys, bass, and shaker (no recorded instruments).</span></div></div>
+        <div class="spec-cell"><div class="k"><span class="ja" lang="ja">長さ・曲の版</span><span class="en" lang="en">LENGTH / VERSION</span></div><div class="v"><span class="ja" lang="ja">49秒・1.0.0</span><span class="en" lang="en">49 s · 1.0.0</span></div><div class="d"><span class="ja" lang="ja">20小節(48秒)と終止・余韻。ループ素材ではない。曲の版は本書の版とは別に管理する。</span><span class="en" lang="en">20 measures (48 s) plus an ending; not a seamless loop. The track's version is separate from this document's.</span></div></div>
+      </div>
       <div class="note">
-        <b><span class="ja" lang="ja">運用ルール:</span><span class="en" lang="en">Usage rules:</span></b>
-        <span class="ja" lang="ja"> (1) 起動音・紹介動画・デモのBGMに使う。学習中の自動再生はしない(読み上げの邪魔になるため)。(2) 音には必ず再生を止める手段(一時停止または停止)を添え、音量は使う人が選ぶ。(3) 音だけに意味をもたせない(第7条の音版)。(4) 原本の役割を分ける——<b>制作・保存原本=WAV</b>(5garashi_theme.wav)、<b>配信用=MP3</b>(5garashi_theme.mp3)、<b>編集・再演奏用の楽譜データ=MIDI</b>(5garashi_theme.mid、どのDAW・楽譜ソフトでも開ける)。改変版は本書の改版で公認する。</span>
-        <span class="en" lang="en"> (1) Use for launch sounds, intro videos, and demo BGM — never auto-play during study sessions (it would fight the speech). (2) Sound always ships with a way to halt playback (pause or stop), volume chosen by the user. (3) Sound never carries meaning alone (the audio counterpart of Art. 7). (4) Roles are separated: <b>production/archival master = WAV</b> (5garashi_theme.wav), <b>distribution = MP3</b> (5garashi_theme.mp3), <b>editable score data = MIDI</b> (5garashi_theme.mid, openable in any DAW or notation software). Variants require a revision of this document.</span>
+        <b><span class="ja" lang="ja">制作経緯と原本:</span><span class="en" lang="en">Provenance and masters:</span></b>
+        <span class="ja" lang="ja"> 5garashi.com設計事務所の依頼に基づき、Codex が作曲・音源生成した(2026-10-14)。生成コード <span class="mono">compose_music.py</span> は <a href="https://github.com/5garashi/mdEditor/tree/promotion/site-integration/promotion/integration/tiktok">mdEditor リポジトリ</a>にあり、MIT。音の正本は WAV。配信用 MP3 は、WAV 原本の音量だけを +4.05 dB 上げ、公式テーマと同じ約 −15 LUFS(true peak −2.3 dBTP、クリップなし)にそろえたもので、WAV 原本は変えていない。MIDI の楽器指定は近似で、合成音色・エコー・フェードは再現されない。</span>
+        <span class="en" lang="en"> Composed and generated by Codex, commissioned by 5garashi.com Design Office (2026-10-14). The generator, <span class="mono">compose_music.py</span>, lives in the <a href="https://github.com/5garashi/mdEditor/tree/promotion/site-integration/promotion/integration/tiktok">mdEditor repository</a> under MIT. The WAV is the reference for the sound. The distribution MP3 is the WAV master with only a +4.05 dB gain, matched to the official theme at about −15 LUFS (true peak −2.3 dBTP, no clipping); the WAV master is unchanged. MIDI instrument choices are approximate; synthesized timbres, echo, and fades are not reproduced.</span>
       </div>
     </div>
+
+    <h3><span class="ja" lang="ja">11-3. 使い分け</span><span class="en" lang="en">11-3. Which to use</span></h3>
+    <div class="table-wrap" role="region" tabindex="0" aria-label="曲の使い分け(横にスクロールできる) / Which music to use (scrolls horizontally)">
+    <table class="ud">
+      <thead><tr><th><span class="ja" lang="ja">用途</span><span class="en" lang="en">Use</span></th><th><span class="ja" lang="ja">曲</span><span class="en" lang="en">Music</span></th></tr></thead>
+      <tbody>
+        <tr><td><span class="ja" lang="ja">ソフトウェアの操作デモ</span><span class="en" lang="en">Software operation demos</span></td><td><b><span class="ja" lang="ja">Light Steps を優先</span><span class="en" lang="en">Light Steps preferred</span></b></td></tr>
+        <tr><td><span class="ja" lang="ja">軽快さ・反応のよさを伝えたい製品紹介</span><span class="en" lang="en">Product introductions meant to feel brisk and responsive</span></td><td><b><span class="ja" lang="ja">Light Steps を優先</span><span class="en" lang="en">Light Steps preferred</span></b></td></tr>
+        <tr><td><span class="ja" lang="ja">短いSNS向けプロモーション動画</span><span class="en" lang="en">Short promotional videos for social media</span></td><td><b><span class="ja" lang="ja">Light Steps を優先</span><span class="en" lang="en">Light Steps preferred</span></b></td></tr>
+        <tr><td><span class="ja" lang="ja">事務所全体の紹介・落ち着いた説明</span><span class="en" lang="en">Introducing the office as a whole; calm explanations</span></td><td><span class="ja" lang="ja">五辛子のテーマ、または Light Steps(選べる)</span><span class="en" lang="en">Gogarashi no Theme or Light Steps (either)</span></td></tr>
+        <tr><td><span class="ja" lang="ja">起動音・短いジングル</span><span class="en" lang="en">Launch sounds and short jingles</span></td><td><span class="ja" lang="ja">五辛子のテーマ(5拍目の低音マリンバ)</span><span class="en" lang="en">Gogarashi no Theme (the beat-five bass marimba)</span></td></tr>
+        <tr><td><span class="ja" lang="ja">学習中・読み上げ中</span><span class="en" lang="en">During study or read-aloud</span></td><td><span class="ja" lang="ja">流さない</span><span class="en" lang="en">No music</span></td></tr>
+        <tr><td><span class="ja" lang="ja">上記以外</span><span class="en" lang="en">Anything else</span></td><td><span class="ja" lang="ja">内容に合わせて選ぶ</span><span class="en" lang="en">Choose to fit the content</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      <span class="ja" lang="ja">この表は、全制作物の既定の曲を一律に置き換えるものではない。Light Steps を優先するのは上の3つの用途に限る。</span>
+      <span class="en" lang="en">This table does not replace the default music for all work; Light Steps is preferred only for the three uses above.</span>
+    </p>
+
+    <h3><span class="ja" lang="ja">11-4. 運用ルール(2曲共通)</span><span class="en" lang="en">11-4. Usage rules (both pieces)</span></h3>
+    <p>
+      <span class="ja" lang="ja"><b>(1)</b> 自動再生しない。再生は使う人が始め、一時停止・停止と音量の調整をできるようにする。学習中・読み上げ中には流さない(読み上げの邪魔になるため)。<b>(2)</b> 音だけに意味を持たせない(第7条の音版)。動画では字幕など画面でも内容が分かるようにし、ナレーションと重ねるときは声が聞き取れる音量にする。<b>(3)</b> 原本の役割を分ける——<b>制作・保存原本=WAV</b>、<b>配信用=MP3</b>、<b>編集・再演奏用=MIDI</b>(Light Steps は楽譜データ JSON も)。音の正本は WAV。<b>(4)</b> 配信用 MP3 の音量は約 −15 LUFS にそろえ、true peak を −1 dBTP 以下(クリップなし)にする。原本の音量は変えない。<b>(5)</b> 5garashi.com の公式の曲として扱う版(公式版)は、本書で定める。公式版の追加・差し替えや、長尺版・再演奏版は、曲の版を分けて本書の改版で公認する。第三者による編曲・改変は 12-1 (4) の範囲で自由にできるが、公式版ではない(12-2)。<b>(6)</b> ライセンスとクレジットは 12-1 (4)(5)。</span>
+      <span class="en" lang="en"><b>(1)</b> No autoplay. Users start playback and can pause, stop, and adjust the volume. Never play during study or read-aloud (it would fight the speech). <b>(2)</b> Sound never carries meaning alone (the audio counterpart of Art. 7); videos show their content on screen too (for example, captions), and music under narration stays low enough for the voice to be heard. <b>(3)</b> Roles are separated: <b>production/archival master = WAV</b>, <b>distribution = MP3</b>, <b>editable score data = MIDI</b> (plus a score JSON for Light Steps). The WAV is the reference for the sound. <b>(4)</b> Distribution MP3s are matched to about −15 LUFS with true peak at −1 dBTP or lower (no clipping); masters keep their level. <b>(5)</b> Which versions count as official 5garashi.com music is set by this document; adding or replacing official versions, or extended and re-performed versions, takes a separate track version and a revision of this document. Third-party arrangements and adaptations are free within 12-1 (4) but are not official versions (12-2). <b>(6)</b> License and credit: 12-1 (4), (5).</span>
+    </p>
   </div>
 </section>
 
@@ -1521,23 +1597,23 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
   </div>
   <div class="art-body">
     <p>
-      <span class="ja" lang="ja">本Identityガイドラインの文章、構成、図版、シンボルマーク、ロゴタイプ、楽譜および音源は、特記のない限り、<b>Creative Commons Attribution-NoDerivatives 4.0 International License(CC BY-ND 4.0)</b>の下で提供される。<br>Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office</span>
-      <span class="en" lang="en">Unless otherwise noted, the text, structure, figures, symbol marks, logotypes, score, and audio of this Identity Guideline are provided under the <b>Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)</b>.<br>Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office</span>
+      <span class="ja" lang="ja">本Identityガイドラインの文章、構成、図版、シンボルマーク、ロゴタイプは、特記のない限り、<b>Creative Commons Attribution-NoDerivatives 4.0 International License(CC BY-ND 4.0)</b>の下で提供される。<br>Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office</span>
+      <span class="en" lang="en">Unless otherwise noted, the text, structure, figures, symbol marks, and logotypes of this Identity Guideline are provided under the <b>Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)</b>.<br>Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office</span>
     </p>
     <h3><span class="ja" lang="ja">12-1. 特記(例外)</span><span class="en" lang="en">12-1. Exceptions</span></h3>
     <p>
-      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) <span class="mono">templates/</span> のひな形(PRIVACY.md、GitHub Actions のワークフローなど)も <b>MIT License</b> で提供する。(3) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。</span>
-      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) The templates in <span class="mono">templates/</span> (PRIVACY.md, GitHub Actions workflows, and others) are also provided under the <b>MIT License</b>. (3) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document.</span>
+      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) <span class="mono">templates/</span> のひな形(PRIVACY.md、GitHub Actions のワークフローなど)も <b>MIT License</b> で提供する。(3) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。(4) <b>音楽</b>:第11条の2曲(「五辛子のテーマ」と「Light Steps」)は <b>CC BY 4.0</b> で提供する。対象は、音源(WAV・MP3)、MIDI、楽譜データ(<span class="mono">5garashi_light_steps_score.json</span>)。クレジットを付ければ、動画への同期、抜粋、フェード、ループ、編曲、商用での利用ができる。変更した場合は、その旨を示す。クレジットの例:「Light Steps — 5garashi.com設計事務所(作曲・音源生成:Codex)— CC BY 4.0」「五辛子のテーマ — 5garashi.com設計事務所 — CC BY 4.0」。Light Steps の生成コード(<span class="mono">compose_music.py</span>、mdEditor リポジトリ)は MIT のままとする。(5) AI が生成した作品に著作権などの権利がどこまで及ぶかは、国や地域によって扱いが異なり、定まっていないことがある。本書は、その権利の有無やライセンスの法的な効力を保証するものではなく、利用の条件として CC BY 4.0 を示す。</span>
+      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) The templates in <span class="mono">templates/</span> (PRIVACY.md, GitHub Actions workflows, and others) are also provided under the <b>MIT License</b>. (3) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document. (4) <b>Music:</b> both pieces in Art. 11 ("Gogarashi no Theme" and "Light Steps") are provided under <b>CC BY 4.0</b>, covering the audio (WAV, MP3), MIDI, and score data (<span class="mono">5garashi_light_steps_score.json</span>). With credit, they may be synchronized with video, excerpted, faded, looped, arranged, and used commercially; indicate any changes. Credit examples: "Light Steps — 5garashi.com Design Office (composed and generated by Codex) — CC BY 4.0"; "Gogarashi no Theme — 5garashi.com Design Office — CC BY 4.0". The Light Steps generator (<span class="mono">compose_music.py</span>, mdEditor repository) stays under MIT. (5) How far copyright and related rights extend to AI-generated works differs between countries and regions and may be unsettled. This document does not guarantee whether such rights exist or the legal effect of the license; it states CC BY 4.0 as the terms of use.</span>
     </p>
     <h3><span class="ja" lang="ja">12-2. 誤認の防止</span><span class="en" lang="en">12-2. No implied endorsement</span></h3>
     <p>
-      <span class="ja" lang="ja">CC BY-ND 4.0の許諾範囲内であっても、5garashi.comの名称・シンボルマーク・ロゴタイプを、公式の提供物・承認・提携であると誤認させる形で使用することはできない。名称およびロゴに関する権利は留保する。</span>
-      <span class="en" lang="en">Even within the scope of CC BY-ND 4.0, the 5garashi.com name, symbol mark, and logotype may not be used in ways that imply official origin, endorsement, or affiliation. All rights in the name and logos are reserved.</span>
+      <span class="ja" lang="ja">CC BY-ND 4.0・CC BY 4.0 の許諾範囲内であっても、5garashi.comの名称・シンボルマーク・ロゴタイプを、公式の提供物・承認・提携であると誤認させる形で使用することはできない。第三者が編曲・改変した曲を、5garashi.com の公式版であるかのように示すこともできない。名称およびロゴに関する権利は留保する。</span>
+      <span class="en" lang="en">Even within the scope of CC BY-ND 4.0 or CC BY 4.0, the 5garashi.com name, symbol mark, and logotype may not be used in ways that imply official origin, endorsement, or affiliation, and third-party arrangements or adaptations of the music may not be presented as official 5garashi.com versions. All rights in the name and logos are reserved.</span>
     </p>
     <h3><span class="ja" lang="ja">12-3. 配布パッケージ構成</span><span class="en" lang="en">12-3. Distribution package</span></h3>
     <p>
-      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGとテーマ曲MP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_vX_Y_Z.html</span>。X_Y_Z は本版の番号)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
-      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the theme MP3 from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_vX_Y_Z.html</span>, where X_Y_Z is this version's number) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
+      <span class="ja" lang="ja">本書には2つの版がある。<b>Web版</b>(<span class="mono">index.html</span>)は、オリジナル版PNGと2曲(五辛子のテーマ・Light Steps)のMP3を <span class="mono">assets/</span> から読み込む。<b>単一ファイル版</b>(<span class="mono">5garashi_identity_vX_Y_Z.html</span>。X_Y_Z は本版の番号)は、それらを1ファイルに内蔵した持ち運び用で、<span class="mono">tools/build_standalone.py</span> でWeb版から生成する。内容は同じで、編集はWeb版に対して行う。日英・カラー/白黒のアウトラインロゴ4種類は、どちらの版にもページ内に内蔵している。編集・運用には次のアセットを用いる。</span>
+      <span class="en" lang="en">This document comes in two editions. The <b>web edition</b> (<span class="mono">index.html</span>) loads the original PNG mark and the MP3s of both pieces (Gogarashi no Theme, Light Steps) from <span class="mono">assets/</span>. The <b>single-file edition</b> (<span class="mono">5garashi_identity_vX_Y_Z.html</span>, where X_Y_Z is this version's number) embeds them for offline use and is generated from the web edition by <span class="mono">tools/build_standalone.py</span>. Both carry the same content; edit the web edition only. Both embed the four outlined logotypes (JA/EN × color/monochrome) in the page. For editing and operations, use the assets below.</span>
     </p>
     <pre class="codeblock">index.html                              <span class="cm"># Web版 / web edition</span>
 5garashi_identity_vX_Y_Z.html            <span class="cm"># 単一ファイル版(生成物。番号は VERSION)/ single-file edition (generated)</span>
@@ -1579,6 +1655,11 @@ assets/
   5garashi_theme.wav                    <span class="cm"># 制作・保存原本 / archival master</span>
   5garashi_theme.mp3                    <span class="cm"># 配信用 / distribution</span>
   5garashi_theme.mid                    <span class="cm"># 編集用楽譜データ / editable score</span>
+                                        <span class="cm"># 音楽は CC BY 4.0(12-1 (4))/ music: CC BY 4.0</span>
+  5garashi_light_steps.wav              <span class="cm"># Light Steps 制作・保存原本 / archival master</span>
+  5garashi_light_steps.mp3              <span class="cm"># Light Steps 配信用(約 −15 LUFS)/ distribution</span>
+  5garashi_light_steps.mid              <span class="cm"># Light Steps 編集用楽譜データ / editable score</span>
+  5garashi_light_steps_score.json       <span class="cm"># Light Steps 楽譜データ(音符・音色の役割)/ score data</span>
 
   og_image.png                          <span class="cm"># SNS共有用プレビュー(tools/og_image.html から生成)/ social preview</span></pre>
 
@@ -1594,22 +1675,24 @@ assets/
           <li>出典を示したうえで、本書やマーク・ロゴを改変せずに共有・転載する。</li>
           <li>5garashi.comの仕事や製品を紹介する記事・資料で、ロゴを改変せずに載せる。</li>
           <li>第9条のコード断片(CSSトークンなど)をMITライセンスで自由に使う。</li>
+          <li>第11条の2曲の音源・MIDI・楽譜データを、クレジットを付けて動画への同期・抜粋・編曲・商用に使う(CC BY 4.0、12-1 (4))。</li>
         </ul>
         <ul class="en" lang="en">
           <li>Share or republish this document, marks, and logos unmodified, with attribution.</li>
           <li>Show the unmodified logo in articles or materials that introduce 5garashi.com's work or products.</li>
           <li>Use the Art. 9 code snippets (CSS tokens and so on) freely under the MIT License.</li>
+          <li>Use the audio, MIDI, and score data of both Art. 11 pieces with credit — in videos, excerpts, arrangements, and commercially (CC BY 4.0, 12-1 (4)).</li>
         </ul>
       </div>
       <div class="lic-cell">
         <div class="k" style="color:var(--volt-deep)"><span aria-hidden="true">✕</span> <span class="ja" lang="ja">してはいけないこと</span><span class="en" lang="en">You may not</span></div>
         <ul class="ja" lang="ja">
-          <li>マーク・ロゴ・音源を改変・再着色・切り貼りして配布する。</li>
+          <li>マーク・ロゴを改変・再着色・切り貼りして配布する。</li>
           <li>公式の提供物、承認、提携であると誤解させる形で名称やロゴを使う(12-2)。</li>
           <li>出典(5garashi.com設計事務所、CC BY-ND 4.0)を示さずに共有・配布する。</li>
         </ul>
         <ul class="en" lang="en">
-          <li>Distribute modified, recolored, or recombined versions of the marks, logos, or audio.</li>
+          <li>Distribute modified, recolored, or recombined versions of the marks or logos.</li>
           <li>Use the name or logos in a way that suggests official origin, endorsement, or affiliation (12-2).</li>
           <li>Share or distribute them without attribution (5garashi.com Design Office, CC BY-ND 4.0).</li>
         </ul>
@@ -1618,8 +1701,8 @@ assets/
 
     <h3><span class="ja" lang="ja">12-5. 問い合わせ先</span><span class="en" lang="en">12-5. Contact</span></h3>
     <p>
-      <span class="ja" lang="ja">次の場合は、事前に公式サイト <a href="https://www.5garashi.com">www.5garashi.com</a> に記載の連絡先へ問い合わせる。(1) 改変した版を使いたい場合(CC BY-ND 4.0 は改変版の共有を許諾していない)。(2) 名称・シンボルマーク・ロゴタイプを、自分の商品やサービスの名前・装飾に使う場合や、共同での発表に使う場合(12-2 により名称とロゴの権利は留保している)。改変せず、出典を示して共有するだけであれば、商用の場面でも問い合わせは要らない。</span>
-      <span class="en" lang="en">Contact us beforehand via the details on the official site, <a href="https://www.5garashi.com">www.5garashi.com</a>, in these cases: (1) you want to use a modified version (CC BY-ND 4.0 does not permit sharing adaptations); (2) you want to use the name, symbol mark, or logotype as the name or decoration of your own product or service, or in a joint announcement (rights in the name and logos are reserved under 12-2). Sharing unmodified material with attribution needs no inquiry, even in a commercial context.</span>
+      <span class="ja" lang="ja">次の場合は、事前に公式サイト <a href="https://www.5garashi.com">www.5garashi.com</a> に記載の連絡先へ問い合わせる。(1) マーク・ロゴタイプ・本文などを改変した版を使いたい場合(これらの CC BY-ND 4.0 は改変版の共有を許諾していない。音楽は CC BY 4.0 のため、改変に問い合わせは要らない)。(2) 名称・シンボルマーク・ロゴタイプを、自分の商品やサービスの名前・装飾に使う場合や、共同での発表に使う場合(12-2 により名称とロゴの権利は留保している)。改変せず、出典を示して共有するだけであれば、商用の場面でも問い合わせは要らない。</span>
+      <span class="en" lang="en">Contact us beforehand via the details on the official site, <a href="https://www.5garashi.com">www.5garashi.com</a>, in these cases: (1) you want to use a modified version of the marks, logotypes, or text (their CC BY-ND 4.0 does not permit sharing adaptations; the music is CC BY 4.0, so adapting it needs no inquiry); (2) you want to use the name, symbol mark, or logotype as the name or decoration of your own product or service, or in a joint announcement (rights in the name and logos are reserved under 12-2). Sharing unmodified material with attribution needs no inquiry, even in a commercial context.</span>
     </p>
 
     <h3><span class="ja" lang="ja">12-6. 製品の配布物</span><span class="en" lang="en">12-6. Product distributions</span></h3>
@@ -1692,8 +1775,8 @@ assets/
 
 <footer>
   <span style="font-weight:800;color:var(--ink)"><span style="font-family:Georgia,serif;font-style:italic">5</span>garashi.com設計事務所 / 5garashi.com Design Office</span> — <a class="mono" href="https://www.5garashi.com">https://www.5garashi.com</a><br>
-  <span class="ja" lang="ja">Design Office Identity — 2026.10.12 — © 2026 CC BY-ND 4.0</span>
-  <span class="en" lang="en">Design Office Identity — 2026.10.12 — © 2026 CC BY-ND 4.0</span><br>
+  <span class="ja" lang="ja">Design Office Identity — 2026.10.14 — © 2026 CC BY-ND 4.0</span>
+  <span class="en" lang="en">Design Office Identity — 2026.10.14 — © 2026 CC BY-ND 4.0</span><br>
   <span class="ja" lang="ja">回路にも、画面にも、暮らしにも——五本の唐辛子。だれの手にも、ピリッと効く。</span>
   <span class="en" lang="en">Five chilis — on the board, on the screen, in daily life. A kick designed to work in as many hands as possible.</span>
 </footer>
