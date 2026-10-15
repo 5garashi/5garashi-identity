@@ -3,6 +3,29 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.15.0 — 2026-10-16
+
+「ルールは壁ではなく、手すりである。そして、進化させ続けるものである」(1-3)の考え方を、本書の位置づけとして明文化した。
+The "rules are handrails, not walls" principle (1-3) is now written down as how this document is meant to be used.
+
+### 本文 / Content
+- 第1条 1-4「手すりとしての運用仕様」を新設。本書は守ること自体を目的とする規則集ではなく、製品の性質と時代の流れとともに変わり続ける手引き(ガイドライン)であると明記。
+  New Art. 1-4 "Operating rules as handrails": a guideline that keeps changing, not a rulebook for its own sake.
+  - (1) 製品に合わない規定は、理由をその製品の README や設計書に書いたうえで、合わせて当てはめてよい。
+    Rules that do not fit may be adapted, with the reason recorded.
+  - (2) 使う人や第三者を守る規定(第7条のアクセシビリティの基準、第12条のライセンス、第13条のプライバシー)は、その場の判断で外さず、先に本書を改める。
+    Safeguards for users and third parties (Arts. 7, 12, 13) are revised in this document first, never set aside on the spot.
+  - (3) 担当者(人とAIを含む)は、製品の性質と時代の潮流に合わせて本書を改善してよく、同時に改善する責任を負う。
+    Those responsible, people and AI alike, may improve this document and are responsible for doing so.
+  - (4) 改めるときは 12-7 に従って版を上げ、CHANGELOG に理由を書く。
+    Revisions raise the version per 12-7 and record the reason in the CHANGELOG.
+- 1-3 の手すりの句から 1-4 を参照。
+  1-3 now points to 1-4.
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_15_0.html`。
+  Single-file edition: `5garashi_identity_v4_15_0.html`.
+
 ## 4.14.0 — 2026-10-15
 
 mdEditor(5garashi/mdEditor)が外部のファイル(文書の中の画像・Web ページ)を読み込めるようになったことを受け、読み込みを安全にする条件を全製品の決まりにした。
