@@ -3,6 +3,7 @@
   概要 / Description: プライバシーポリシーのひな形(Identity 第13条)。[ ] の部分を製品に合わせて書き換え、当てはまらない項目は消す / Privacy policy template (Identity Art. 13); replace the [ ] parts for the product and delete items that do not apply
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-11
+  版 / Version: 4.14.0
   ライセンス / License: MIT
   SPDX-License-Identifier: MIT
 -->
@@ -34,7 +35,7 @@
 
 本アプリ自体は、利用状況の計測(テレメトリ)や広告のための通信を行いません。ただし、次の場合には通信が発生します。
 
-- [例:文書に外部の画像が含まれている場合、表示のために、本アプリはその画像のサーバーへ直接接続します。接続先のサーバーには、通常の Web の閲覧と同じように、利用者の IP アドレスなどが伝わります。]
+- [例:文書に外部の画像が含まれている場合、本アプリはその数を知らせ、利用者が「読み込む」を選んだときだけ、その画像のサーバーへ直接接続します(設定で「常に読み込む」「読み込まない」に変えられます)。接続先のサーバーには、通常の Web の閲覧と同じように、利用者の IP アドレスや接続の時刻などが伝わります。文書の内容や Cookie は送りません。https 以外では接続しません。]
 - [例:文書内のリンクを開くと、既定のブラウザーで開きます。その後の通信は、そのアプリの扱いによります。]
 - [例:本アプリが使う第三者の部品(名前)の更新や診断データの送信は、その提供元の設定とプライバシーに関する声明に従います。]
 
@@ -68,7 +69,7 @@ The app stores the following settings on your PC. They are never sent anywhere.
 
 The app itself makes no connections for usage tracking (telemetry) or advertising. Connections do happen in these cases:
 
-- [Example: if a document contains external images, the app connects directly to those servers to show them. As with ordinary web browsing, those servers receive information such as your IP address.]
+- [Example: if a document contains external images, the app tells you how many and connects to those servers only when you choose "Load" (Settings can switch this to "Always load" or "Never load"). As with ordinary web browsing, those servers receive information such as your IP address and the time. The document's content and cookies are never sent, and only https is used.]
 - [Example: links in a document open in your default browser. What happens after that depends on that app.]
 - [Example: third-party components the app uses (name) are updated and may send diagnostic data according to their provider's settings and privacy statement.]
 

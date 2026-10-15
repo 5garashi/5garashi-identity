@@ -3,6 +3,29 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.14.0 — 2026-10-15
+
+mdEditor(5garashi/mdEditor)が外部のファイル(文書の中の画像・Web ページ)を読み込めるようになったことを受け、読み込みを安全にする条件を全製品の決まりにした。
+Conditions for safely loading external files, prompted by mdEditor's new loading of images and web pages, made a rule for all products.
+
+### 本文 / Content
+- 第13条 13-3「外部のファイルの読み込み(画像・Webページ)」を新設。(1) 同意してから読み込む(初期設定は「確認する」。「常に読み込む」「読み込まない」に切り替え可。自分で開いた Web ページはそのページの読み込みに同意したものとする)、(2) https だけ(http への転送で止める)、(3) スクリプト・イベント属性・iframe・埋め込みを実行せず取り除く、(4) 文書の内容を送らない、(5) 大きさと時間の上限(例:10 MB・20秒)、(6) 読み込まなかったファイルは代わりの表示で示す、(7) PRIVACY.md に書く。
+  New Art. 13-3 "Loading external files": consent first, https only, no code execution, no document content sent, limits, placeholders, and disclosure in PRIVACY.md.
+- 提案からの追加:(2) に、PC の中・社内ネットワークのアドレス(localhost、192.168.x.x など)は使う人が自分で開いたとき以外は読み込まないことを加えた(文書に書かれたアドレスから社内の機器に接続されるのを防ぐため)。(4) に、Cookie・認証情報・参照元(Referer)も送らないことを加えた(要求にはアドレス以外の情報も付くため)。(3) に、イベント属性・iframe・埋め込みを明記した。
+  Additions to the proposal: local and internal addresses only when opened deliberately (2); no cookies, credentials, or Referer (4); event attributes, iframes, and embeds named explicitly (3).
+- 13-1 (2):外部のファイルの読み込み(受け取ること)は 13-3 によると追記。
+  13-1 (2): loading is governed by 13-3.
+- 7-7:出荷前チェックに (j) 同意の前・後・「読み込まない」での読み込みの確認を追加。9-5 の記録のひな形に (j) の行を追加。
+  7-7 adds check (j); the 9-5 record template gains a (j) row.
+
+### ひな形 / Templates
+- `templates/PRIVACY.md`:通信が起きる場合の例を、同意してから読み込む形(設定の切り替え、伝わる情報、送らないもの、https だけ)に改め、ヘッダーに版の行を加えた。
+  `templates/PRIVACY.md`: the example now describes consent-based loading; a version line is added to the header.
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_14_0.html`。
+  Single-file edition: `5garashi_identity_v4_14_0.html`.
+
 ## 4.13.0 — 2026-10-14
 
 第11条に2曲目の「Light Steps — 軽快なステップ」を追加し、音楽のライセンスを CC BY 4.0 にした。
