@@ -3,6 +3,25 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.19.0 — 2026-10-17
+
+文章をピラミッド構造(結論→理由・説明→詳細)で書くことを明文化した。
+Writing in a pyramid structure (conclusion, then reasons, then details) is now written down.
+
+### 本文 / Content
+- 第8条 8-2 (1):これまでの「結論または相手に求める行動を先に書く」を、「ピラミッド構造で書く」に広げた。結論(または求める行動)を最初に書き、次にその理由・説明、さらにその詳細の順に書く。文書全体・各節・各段落のどの単位でもこの順を守り、読む人が途中で読むのをやめても結論が伝わるようにする。
+  8-2 (1): "put the conclusion first" becomes "write as a pyramid" at every level.
+- 8-2 (3):操作説明・仕様書・規定文の「規則→理由→例」を、(1) の当てはめとして位置づけた。
+  8-2 (3) is framed as an application of (1).
+
+### チェックリスト / Checklist
+- `docs/MARKDOWN-CHECKLIST.md`(版 4.19.0):1 節の文章の項目に、ピラミッド構造で各単位の頭に結論を置くことを加えた。
+  Checklist 4.19.0: section 1 adds the pyramid structure.
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_19_0.html`。
+  Single-file edition: `5garashi_identity_v4_19_0.html`.
+
 ## 4.18.0 — 2026-10-17
 
 mdEditor 1.0.12 の作業で確かめたいとされた3点(絵文字の範囲、動きと自動再生、文書の中の事務所の色)に答え、定めを加えた。

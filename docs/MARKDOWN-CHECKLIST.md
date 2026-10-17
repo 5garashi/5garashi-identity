@@ -3,7 +3,7 @@
   概要 / Description: Markdown と図(Mermaid)の書き方・確認のチェックリスト。全製品共通の正本(Identity 第8条 8-9) / Markdown and diagram (Mermaid) authoring and review checklist, shared by all products (Identity Art. 8-9)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-17
-  版 / Version: 4.17.0
+  版 / Version: 4.19.0
   ライセンス / License: MIT
   SPDX-License-Identifier: MIT
 -->
@@ -25,9 +25,9 @@ English: Check syntax, visible layout, and factual accuracy separately. A succes
 - [ ] リンク先が実在する。手元の文書は相対パス、公開先は https で書いた。特定の PC の絶対パスを共有するリンクにしなかった。
 - [ ] 画像には代替テキストを書き、図を読めない人にも分かる本文や表を用意した(Identity 7-4)。
 - [ ] ファイルの先頭のヘッダー(9-3。Markdown では HTML コメント)、末尾の署名(9-5)、版と CHANGELOG(12-7)を、今回の改版に合わせた。
-- [ ] 文章は第8条(結論を先に、1文1義、確かさを表す語の使い分け 8-8)に沿っている。
+- [ ] 文章は第8条に沿っている。特に、ピラミッド構造(結論→理由・説明→詳細)で、文書全体・各節・各段落の頭に結論を置いた(8-2 (1))。1文1義にし、確かさを表す語を使い分けた(8-8)。
 
-English: heading levels in order with blank lines around blocks; shallow lists; tables for comparisons and numbered lists for steps; escaped `|` in tables; matched code fences (four or more backticks outside when nesting); working links (relative locally, https when public, never one PC's absolute path); alt text plus a text or table equivalent (7-4); header (9-3), signature (9-5), version and CHANGELOG (12-7) updated; writing follows Art. 8.
+English: heading levels in order with blank lines around blocks; shallow lists; tables for comparisons and numbered lists for steps; escaped `|` in tables; matched code fences (four or more backticks outside when nesting); working links (relative locally, https when public, never one PC's absolute path); alt text plus a text or table equivalent (7-4); header (9-3), signature (9-5), version and CHANGELOG (12-7) updated; writing follows Art. 8, in a pyramid (conclusion, then reasons, then details) at every level (8-2 (1)).
 
 ## 2. 図を書く前に選ぶこと / Choosing a diagram
 
