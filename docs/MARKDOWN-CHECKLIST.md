@@ -3,7 +3,7 @@
   概要 / Description: Markdown と図(Mermaid)の書き方・確認のチェックリスト。全製品共通の正本(Identity 第8条 8-9) / Markdown and diagram (Mermaid) authoring and review checklist, shared by all products (Identity Art. 8-9)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-17
-  版 / Version: 4.16.0
+  版 / Version: 4.17.0
   ライセンス / License: MIT
   SPDX-License-Identifier: MIT
 -->
@@ -31,6 +31,8 @@ English: heading levels in order with blank lines around blocks; shallow lists; 
 
 ## 2. 図を書く前に選ぶこと / Choosing a diagram
 
+README などの Markdown 文書では、関係・流れ・手順・状態を図にすると分かりやすくなる場合、図(チャート)を活用します。記法は、GitHub の表示と mdEditor の両方で描画できる範囲の Mermaid を使います(5 節)。図を増やすこと自体を目的にせず、文章や表のほうが分かりやすい場合はそちらを選びます。
+
 | 伝える内容 | 第一候補(Mermaid) | 読みにくいときの変え方 |
 | --- | --- | --- |
 | 作業の順番・日付ごとの工程 | `flowchart TD` | 工程ごとに図を分け、日付と詳細は表にする |
@@ -39,9 +41,9 @@ English: heading levels in order with blank lines around blocks; shallow lists; 
 | 進み具合・待ち・やり直し | `stateDiagram-v2` | 状態名を短くし、条件の説明は本文へ移す |
 | 短い出来事を日付で並べる | `timeline` | 長い日本語や列の重なりが出たら、縦の `flowchart` か表にする |
 
-- [ ] 図の種類を増やすより、読む人が判断できることを優先した。同じ情報に表のほうが合うときは表にした。
+- [ ] 図にすると分かりやすくなる内容(関係・流れ・手順・状態)かを考えてから図にした。文章や表のほうが分かりやすいときは、そちらにした。
 
-English: pick the diagram type by what must be understood; when a table serves the reader better, use a table.
+English: in READMEs and other Markdown documents, use a chart when relationships, flows, steps, or states become clearer as a picture, written in Mermaid both GitHub and mdEditor can render (section 5). Adding diagrams is never the goal; prefer text or a table when it is clearer.
 
 ## 3. 文字の重なりを防ぐ書き方 / Preventing overlaps
 
@@ -71,18 +73,32 @@ English: short ASCII node IDs with quoted labels; one task or state per node; sh
 
 ## 4. 描画と表示を確かめる / Checking rendering and display
 
-- [ ] 配る製品・環境と同じ描画エンジンと版で描画した。別のサイトや新しい版で描けたことだけで、成功としなかった(製品ごとの版と確かめ方は、その製品のリポジトリに書く)。
+- [ ] 配る製品・環境と同じ描画エンジンと版で描画した。別のサイトや新しい版で描けたことだけで、成功としなかった(製品ごとの版と確かめ方は、その製品のリポジトリに書く。GitHub で読む Markdown は 5 節のとおり両方で確かめる)。
 - [ ] 書体の読み込みが終わってから確かめた。書体・太さ・文字の大きさが変わると、幅の測り方も変わる。
 - [ ] すべての図を、画像か実際のプレビューで見て、文字の重なり・切れ・枠からのはみ出しを確かめた。
 - [ ] ふつうの画面の幅と、狭いプレビューの幅で確かめた。縮めると文字が極端に小さくなる図は分けた。
 - [ ] 昼と夜(Identity 4-2)の両方で、文字と線が読めることを確かめた。色だけで状態を区別しなかった(7-2)。
-- [ ] 図と同じ情報を、本文や表でもたどれることを確かめた(7-4)。
+- [ ] 図だけに情報を持たせず、要点を本文や表にも書いた(7-4)。
 - [ ] PDF や HTML で配るときは、実際に書き出して確かめた。PDF は改ページ、図の途中での切れ、余白、リンクを見た。
 - [ ] 自動の確認と目視の確認を分けて記録した。確かめていない表示の条件や読み上げを「確認済み」にしなかった(7-7、8-8)。
 
 English: render with the same engine and version the product ships; check after fonts load; inspect every diagram for overlaps, clipping, and overflow at normal and narrow widths, in day and night palettes; never rely on color alone; keep a text equivalent; export PDF/HTML when distributing; record automated and visual checks separately and never mark unchecked conditions as checked.
 
-## 5. 内容とリンクを確かめる / Checking content and links
+## 5. GitHub と mdEditor の互換性 / GitHub and mdEditor compatibility
+
+GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の両方で同じように読めることを求めます(Identity 8-9 (5)(7))。mdEditor が対応する記法・同梱する Mermaid の版・検証の結果は、mdEditor のリポジトリで確かめます。
+
+- [ ] 図は Mermaid のコードブロック(` ```mermaid `)で書いた。
+- [ ] GitHub の表示と mdEditor の両方で描画し、文字の収まりと重なりを目で確かめた。一方で描画できたことだけで、互換性を確認済みとしなかった。
+- [ ] GitHub のライト・ダークの両方の表示と、mdEditor の昼・夜の両方で、文字と線が読めることを確かめた。
+- [ ] 一方の Mermaid の新しい版だけが対応する図の種類や書き方を使わなかった(両者の版は同じとは限らない)。
+- [ ] Graphviz(DOT)や PlantUML など、両方で共通して直接描画できない記法を、Markdown の中の図にしなかった。必要なときは画像にして、代替テキストと本文の説明を付けた。
+- [ ] ブラウザーの拡張機能、エディターのプラグイン、特定の環境だけの設定がなくても読める。
+- [ ] 使える場合は、Mermaid の `accTitle`・`accDescr` で図の題と説明を付けた。付けたときは、両方の環境で描画が崩れないことを確かめた。
+
+English: write diagrams as Mermaid code blocks; render and inspect them in both GitHub and mdEditor (success in one is not compatibility), in GitHub's light and dark display and mdEditor's day and night palettes; avoid syntax only one side's newer Mermaid supports; never use notation both cannot draw directly (Graphviz DOT, PlantUML, and so on) — use an image with alt text instead; require no extensions, plugins, or environment-specific settings; add `accTitle`/`accDescr` where supported, after checking both environments. mdEditor's supported syntax, bundled Mermaid version, and results live in the mdEditor repository.
+
+## 6. 内容とリンクを確かめる / Checking content and links
 
 - [ ] ソースの版・配布物(ストアなど)の版・資料の版を混同していない。
 - [ ] 操作の名前・画面の文言が、対象の版と一致している。
@@ -93,13 +109,14 @@ English: render with the same engine and version the product ships; check after 
 
 English: keep source, distribution, and document versions distinct; match operation names to the target version; keep links and pictured versions consistent; distinguish publishing stages; record URLs, dates, and evidence; fix generators too, and never mix in others' uncommitted work.
 
-## 6. 確認記録のひな形 / Check record template
+## 7. 確認記録のひな形 / Check record template
 
 | 項目 | 書くこと |
 | --- | --- |
 | 対象の文書・版 | ファイル名、文書の版、製品(ソース)の版 |
 | 確認日・担当 | 日付と担当(人・AI) |
 | 描画エンジン | 実際に使ったものと、その版 |
+| 表示環境 | GitHub(ライト・ダーク)、mdEditor(版と昼・夜)など、実際に見たもの |
 | 自動の確認 | 図の数、構文、相対リンクなど |
 | 目視の確認 | 対象の図、画面の幅、書体、昼・夜、重なりや切れの有無 |
 | 書き出し | PDF・HTML など、実際に行ったものだけ |

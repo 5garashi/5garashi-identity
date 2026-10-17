@@ -3,6 +3,39 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.17.0 — 2026-10-17
+
+Markdown 文書での図(チャート)の使い方と、GitHub の表示と mdEditor の互換性を共通の基準にした。
+Chart use in Markdown documents and compatibility between GitHub and mdEditor become shared rules.
+
+### 本文 / Content
+- 第8条 8-9 (2):README などの Markdown 文書では、関係・流れ・手順・状態を図にすると分かりやすくなる場合、図(チャート)を活用する。図を増やすこと自体を目的にせず、文章や表のほうが分かりやすい場合はそちらを選ぶ(以前の「読めることを優先する」をこの項にまとめた)。
+  8-9 (2): use charts where they help; absorbs the former "readability first".
+- 8-9 (4):図だけに情報を持たせず、要点を本文や表にも書く。
+  8-9 (4): key points in text or tables too.
+- 8-9 (5):GitHub で読む Markdown は、GitHub の表示と mdEditor の両方で図の描画と文字の収まりを確かめ、一方の成功だけで互換性を確認済みとしない。
+  8-9 (5): check Markdown read on GitHub in both GitHub and mdEditor.
+- 8-9 (7) を新設:両方で描画できる範囲の Mermaid だけを使い、一方の新しい版だけが対応する書き方は使わない。Graphviz(DOT)など共通に直接描けない記法は Markdown の中の図にしない(必要なら画像と代替テキスト)。拡張機能や特定の環境の設定を読む前提にしない。
+  New 8-9 (7): Mermaid both can render only; no Graphviz (DOT) or other notation both cannot draw; no extensions or environment-specific settings as prerequisites.
+- 8-9 (6):mdEditor の同梱エンジンの版と検証結果は mdEditor のリポジトリで管理すると明記。7-7 (k) に GitHub と mdEditor の両方での確認を追記。
+  8-9 (6) names mdEditor's engine version and results as mdEditor-side; 7-7 (k) mentions both environments.
+- 依頼からの補足:mdEditor は Graphviz を同梱して DOT を描けるが GitHub は描けないため、(7) で Markdown の中の図から除いた。両者の Mermaid の版が同じとは限らないため、一方の新しい版だけの書き方を避けることを加えた。GitHub で読まない文書(PDF・HTML だけで配るものなど)は、これまでどおり (5) の「配る環境で確かめる」による。
+  Notes: mdEditor bundles Graphviz but GitHub cannot render DOT; Mermaid versions may differ; documents not read on GitHub keep following (5).
+
+### チェックリスト / Checklist
+- `docs/MARKDOWN-CHECKLIST.md`(版 4.17.0):5 節「GitHub と mdEditor の互換性」を新設(Mermaid のコードブロック、両方での描画と目視、GitHub のライト・ダークと mdEditor の昼・夜、一方の新しい版だけの書き方を避ける、DOT・PlantUML など共通に描けない記法を使わない、拡張機能を前提にしない、accTitle・accDescr)。2 節に図の活用の方針をまとめ、重なっていた項目を整理。4 節の要点を本文にも書く項目を改めた。記録のひな形に「表示環境」の欄を追加。以前の 5・6 節は 6・7 節に繰り下げた。
+  Checklist 4.17.0: new section 5 on compatibility; section 2 states the chart policy; record template gains a display-environment field; former sections 5–6 become 6–7.
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_17_0.html`。
+  Single-file edition: `5garashi_identity_v4_17_0.html`.
+
+### 未確認 / Not verified
+- GitHub 上での実際の Mermaid 図の表示(描画・文字の収まり・ライト/ダーク)は、本版では確かめていない。確かめたのは、GitHub の Markdown 変換 API によるチェックリストの構造(見出し・表・チェックボックス・コード)だけである。
+  Actual rendering of Mermaid diagrams on GitHub (drawing, text fit, light/dark) was not checked in this version; only the checklist's Markdown structure was checked through GitHub's Markdown rendering API.
+- GitHub 側の Mermaid の版は確かめていない(mdEditor の同梱版は 11.17.2)。各製品が、チェックリスト 5 節に沿って実際の表示で確かめ、結果をその製品のリポジトリに記録する(8-9 (6))。
+  GitHub's Mermaid version was not checked (mdEditor bundles 11.17.2). Each product checks the actual display per checklist section 5 and records the result in its own repository (8-9 (6)).
+
 ## 4.16.0 — 2026-10-17
 
 mdEditor(5garashi/mdEditor)の「Markdown・Mermaid の書き方チェックリスト」のうち、製品に共通する内容を本書の管理に移した。きっかけは、Mermaid の横型 timeline で長い日本語のラベルが枠からはみ出し、隣の列と重なったこと(構文と SVG の生成は成功していた)。
