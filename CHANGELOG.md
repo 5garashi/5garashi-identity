@@ -3,6 +3,31 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.18.0 — 2026-10-17
+
+mdEditor 1.0.12 の作業で確かめたいとされた3点(絵文字の範囲、動きと自動再生、文書の中の事務所の色)に答え、定めを加えた。
+Answers three questions from mdEditor 1.0.12 work: the scope of the emoji rule, motion and autoplay, and office colors inside documents.
+
+### 本文 / Content
+- 8-4:絵文字は原則として使わない。(1) 対象の技術文書に、コミットとプルリクエストの説明、AI ツールが付ける署名の行を含める。(2) 状態を表す絵文字(✅・❌)は「対応」「非対応」などの言葉にし、文字として扱う記号(©・✓・✕・→ など)は意味を言葉でも示せば使ってよい。(3) 例外として、製品の機能を説明するために必要な場合は、その製品の文書(README・サンプル・ヘルプなど)に絵文字を書いてよい(例:GitHub の Markdown 表示に合わせた mdEditor の絵文字表示を説明するため、mdEditor の Markdown 文書に絵文字の例を書く)。その場合も必要な数にとどめ、:smile: のような書き方や言葉の説明を並べる。(4) 使う人が書いた絵文字を製品が表示すること自体は対象外。
+  8-4: no emoji as a rule, covering commits, pull requests, and AI signature lines; status emoji become words; text symbols such as © stay allowed; exception: a product's own documents may include emoji when needed to explain a product feature (such as mdEditor's emoji display), kept minimal and paired with codes or descriptions; displaying emoji users wrote is out of scope.
+- 7-5:動画とアニメーションの自動再生は、音を消したものに限り、5秒を超えて動くものに一時停止または停止の手段を付け(WCAG 2.2.2)、1秒に3回を超えて点滅させない(2.3.1)。動きを控える設定(prefers-reduced-motion)のときは、初期設定では自動再生せず最初の画面と再生ボタンを示す。使う人が製品の設定で自動再生を明示的に選んだ場合は、その選択を優先してよい(7-3 (4))。
+  7-5: autoplay rules; under reduced motion no autoplay by default unless the user explicitly chooses it.
+- 4-4「使う人の文書の中の色」を新設:(1) 文書の内容の色は使う人の指定を優先、(2) 既定の色と製品の飾りには事務所の色を使ってよいが文書面では少量に、(3) 文書面の volt(エラーの左罫・読み上げ中の枠)と紛らわしくしない、(4) 既定の色も地の上で見分けられる(図形は非テキスト 3:1 が目安。cream は白い地に 1.10:1)、(5) 文字の色は 7-1 補2 から選ぶ。
+  New 4-4 "Colors inside the user's documents".
+- 4-3・7-1 補2・9-4:`--document-muted`(項目名・補助の文字。昼 `#59636E` 6.11:1、夜 `#8B949E` 6.05:1、いずれも AA)を追加。`tools/check_contrast.py` にも追加。
+  `--document-muted` added (day 6.11:1, night 6.05:1, AA).
+
+### 判断の記録 / Notes on the decisions
+- 動きを控える設定のときにも自動再生する mdEditor 1.0.12 の動作は、これまでの 7-5(「動きを止める」)と異なっていた。1-4 (2) により、アクセシビリティの規定は外さずに本書を改める扱いとし、初期設定では自動再生せず、使う人が製品の設定で選んだ場合だけ自動再生してよい、という形で両立させた。
+  mdEditor 1.0.12 autoplayed under reduced motion, unlike 7-5. Per 1-4 (2) the rule was revised rather than set aside: no autoplay by default, autoplay only by the user's explicit choice in the product.
+- 依頼にあった項目名の灰色のコントラスト(6.2:1・6.6:1)は、本書の計算方法では 6.11:1・6.05:1 だった(どちらも AA)。
+  The requested label-gray ratios measure 6.11:1 and 6.05:1 with this document's method (both AA).
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_18_0.html`。
+  Single-file edition: `5garashi_identity_v4_18_0.html`.
+
 ## 4.17.0 — 2026-10-17
 
 Markdown 文書での図(チャート)の使い方と、GitHub の表示と mdEditor の互換性を共通の基準にした。

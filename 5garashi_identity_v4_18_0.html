@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: 5garashi_identity_v4_17_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
+  ファイル名 / File: 5garashi_identity_v4_18_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
   最終更新 / Last updated: 2026-10-17
-  版 / Version: 4.17.0
+  版 / Version: 4.18.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -452,7 +452,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.17.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.17.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.18.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.18.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -494,12 +494,14 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
   <details>
     <summary><span class="ja" lang="ja">本版(2026-10-17)の変更点</span><span class="en" lang="en">What's new in this version (2026-10-17)</span></summary>
     <ul class="ja" lang="ja">
-      <li>8-9 に、README などの Markdown 文書で、分かりやすくなる場合は図(チャート)を活用すること(2)、GitHub で読む Markdown は GitHub の表示と mdEditor の両方で描画と文字の収まりを確かめること(5)、両方で描画できる範囲の Mermaid だけを使い、Graphviz(DOT)など共通に描けない記法や、拡張機能・特定の環境の設定を前提にしないこと(7)を追加。要点を本文や表にも書くこと(4)を明確にした。</li>
-      <li>共通のチェックリスト <a href="https://github.com/5garashi/5garashi-identity/blob/main/docs/MARKDOWN-CHECKLIST.md">docs/MARKDOWN-CHECKLIST.md</a> に「GitHub と mdEditor の互換性」の節を追加し、記録のひな形に表示環境の欄を加えた。7-7 (k) に、両方での確認を追記。</li>
+      <li>8-4:絵文字は原則として使わない(コミット・プルリクエストの説明と AI ツールの署名の行を含む)。状態を表す絵文字(✅・❌)は言葉にし、文字として扱う記号(© など)は使ってよい。例外として、製品の機能を説明するために必要な場合は、その製品の文書に絵文字を書いてよい(例:mdEditor の絵文字表示の説明)。使う人の文書の絵文字を製品が表示することは対象外。</li>
+      <li>7-5:動画とアニメーションの自動再生の決まり(音を消す、一時停止の手段、点滅、動きを控える設定では初期設定で自動再生しない。使う人が設定で選べばその選択を優先)を追加。</li>
+      <li>4-4「使う人の文書の中の色」を新設。4-3 に <span class="mono">--document-muted</span>(昼 <span class="mono">#59636E</span>/夜 <span class="mono">#8B949E</span>)を加え、7-1 補2 と 9-4 に反映。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>8-9 now encourages charts in Markdown documents such as READMEs where they help (2), requires checking Markdown read on GitHub in both GitHub and mdEditor (5), and limits diagrams to Mermaid both can render — no Graphviz (DOT) or other notation they cannot both draw, and no extensions or environment-specific settings as prerequisites (7). (4) now asks for key points in text too.</li>
-      <li>The shared checklist <a href="https://github.com/5garashi/5garashi-identity/blob/main/docs/MARKDOWN-CHECKLIST.md">docs/MARKDOWN-CHECKLIST.md</a> gains a "GitHub and mdEditor compatibility" section and a display-environment field in the record template; 7-7 (k) mentions checking both.</li>
+      <li>8-4: no emoji as a rule (including commit messages, pull request descriptions, and AI tool signature lines); status emoji (✅, ❌) become words and text symbols such as © remain allowed. As an exception, a product's own documents may include emoji when needed to explain a product feature (such as mdEditor's emoji display). Displaying emoji users wrote is out of scope.</li>
+      <li>7-5: rules for autoplaying video and animation (muted only, a way to pause, no flashing, no autoplay by default under reduced motion unless the user chooses it in the product's settings).</li>
+      <li>New 4-4 "Colors inside the user's documents"; 4-3 adds <span class="mono">--document-muted</span> (day <span class="mono">#59636E</span>, night <span class="mono">#8B949E</span>), reflected in 7-1 (cont. 2) and 9-4.</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -854,12 +856,28 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <tr><td class="mono">--document-selection</td><td><span class="pair"><span class="dot" style="background:#C7D0C1"></span><span class="mono">#C7D0C1</span></span></td><td><span class="pair"><span class="dot" style="background:#494740"></span><span class="mono">#494740</span></span></td><td><span class="ja" lang="ja">選んだ範囲の地</span><span class="en" lang="en">Selection background</span></td></tr>
         <tr><td class="mono">--document-current-line</td><td><span class="pair"><span class="dot" style="background:#F0F0F0"></span><span class="mono">#F0F0F0</span></span></td><td><span class="pair"><span class="dot" style="background:#202122"></span><span class="mono">#202122</span></span></td><td><span class="ja" lang="ja">いまの行の強調(選択式の補助、7-3 (4))</span><span class="en" lang="en">Current-line highlight (optional aid, 7-3 (4))</span></td></tr>
         <tr><td class="mono">--document-reading</td><td><span class="pair"><span class="dot" style="background:#B92613"></span><span class="mono">#B92613</span></span></td><td><span class="pair"><span class="dot" style="background:#F07B5F"></span><span class="mono">#F07B5F</span></span></td><td><span class="ja" lang="ja">読み上げ中の段落の枠(3px、7-4)</span><span class="en" lang="en">Frame around the paragraph being read aloud (3px, 7-4)</span></td></tr>
+        <tr><td class="mono">--document-muted</td><td><span class="pair"><span class="dot" style="background:#59636E"></span><span class="mono">#59636E</span></span></td><td><span class="pair"><span class="dot" style="background:#8B949E"></span><span class="mono">#8B949E</span></span></td><td><span class="ja" lang="ja">項目名・補助の文字</span><span class="en" lang="en">Field names and secondary text</span></td></tr>
       </tbody>
     </table>
     </div>
     <p>
       <span class="ja" lang="ja"><b>(1)</b> 文書面の地の上で使う文字色と線の色は、7-1 補2 の表にある組み合わせだけとする。<b>(2)</b> <span class="mono">--document-rule</span> は装飾専用で、文字のコントラスト基準の対象外とする。そのため、見出しは下線がなくても文字の大きさ・太さで見分けられるようにし、意味のある境界線には使わない。<b>(3)</b> 印刷・PDFは常に昼の値とする。<b>(4)</b> 文書面の本文の太さは W4(400)とする(第6条の本文 W6(600)の例外)。長文では細めのほうが字の形がつぶれず読みやすいためである。見出しは本文より大きく、W7(700)以上にして、(2) のとおり下線がなくても見分けられるようにする。<b>(5)</b> 印刷とPDFは、余白を含めて白(<span class="mono">#FFFFFF</span>)にする。表示部品(WebView2 など)の既定の背景色が余白に出ないよう、ページと印刷の背景色を明示する。<b>(6)</b> 選んだ範囲・いまの行の地の上でも、文字は 7-1 補2 の比を保つ。</span>
       <span class="en" lang="en"><b>(1)</b> On the document ground, use only the text and line colors paired in table 7-1 (cont. 2). <b>(2)</b> <span class="mono">--document-rule</span> is decorative only and outside the text-contrast requirements; headings must therefore be identifiable by size and weight without the underline, and the rule is never used for a meaningful boundary. <b>(3)</b> Print and PDF always use the day values. <b>(4)</b> Body text on the document surface is W4 (400), an exception to the W6 (600) body weight of Art. 6, because lighter strokes keep letterforms open and easier to read over long passages. Headings are larger than body text and W7 (700) or heavier, so that, per (2), they are identifiable without the underline. <b>(5)</b> Print and PDF are white (<span class="mono">#FFFFFF</span>) including the margins; set the page and print background explicitly so a display component's default background (such as WebView2's) never shows in the margins. <b>(6)</b> Text keeps the 7-1 (cont. 2) ratios on selection and current-line backgrounds too.</span>
+    </p>
+    <h3><span class="ja" lang="ja">4-4. 使う人の文書の中の色</span><span class="en" lang="en">4-4. Colors inside the user's documents</span></h3>
+    <p>
+      <span class="ja" lang="ja">エディタやビューアーなど、使う人の文書を表示する製品では、事務所の色を次の範囲で使う。<br>
+      <b>(1) 使う人の指定を優先する:</b>文書の内容(本文・画像・図・3D モデルなど)に指定された色は、使う人の指定のまま表示し、事務所の色で上書きしない。<br>
+      <b>(2) 既定の色と飾りには使ってよい:</b>色の指定がない部品に製品が付ける既定の色や、製品が付ける枠・見出しなどの飾りには、事務所の色を使ってよい。ただし文書面(4-3)では少量のアクセントにとどめ(4-1 の配分)、本文の文字は 4-3 の機能色とする。<br>
+      <b>(3) 意味のある表示と紛らわしくしない:</b>文書面の volt は、エラー表示の左罫と読み上げ中の枠に使っている(7-1 補2)。ほかの飾りに volt を使うときは、形・位置・文言でこれらと見分けられるようにする。<br>
+      <b>(4) 地の上で見分けられる:</b>既定の色も、置かれる地(昼と夜の文書面)の上で見分けられるようにする。図形の面や輪郭は、地に対して非テキストの基準 3:1 以上を目安とする。たとえば cream <span class="mono">#FFF3D6</span> は、昼の白い地(<span class="mono">#FFFFFF</span>)に対して 1.10:1 しかなく、それだけでは形が見えない。<br>
+      <b>(5) 文字の色は表から選ぶ:</b>文書面で文字に使う色は、7-1 補2 の組から選ぶ。新しい色は、表に加えてから使う。</span>
+      <span class="en" lang="en">Products that display the user's documents — editors, viewers, and so on — use the office colors within these limits.<br>
+      <b>(1) The user's colors come first:</b> colors specified in the content (text, images, diagrams, 3D models, and so on) are shown as specified and never overridden by office colors.<br>
+      <b>(2) Defaults and decoration may use them:</b> office colors may be used for defaults the product applies to parts with no specified color, and for frames, headings, and other decoration the product adds. On the document surface (4-3) keep them to small accents (the ratio of 4-1); body text uses the 4-3 functional colors.<br>
+      <b>(3) Never be confused with meaningful signals:</b> on the document surface, volt marks the error left rule and the read-aloud frame (7-1 cont. 2). Other decoration in volt must be distinguishable from these by shape, position, or wording.<br>
+      <b>(4) Visible on the ground:</b> default colors must be distinguishable on the ground they sit on (day and night document surfaces); shapes and outlines aim for at least 3:1 non-text contrast. For example, cream <span class="mono">#FFF3D6</span> reaches only 1.10:1 on the white day ground (<span class="mono">#FFFFFF</span>), so the shape alone cannot be seen.<br>
+      <b>(5) Text colors come from the table:</b> text on the document surface uses pairs from 7-1 (cont. 2); add a new color to the table before using it.</span>
     </p>
   </div>
 </section>
@@ -1061,6 +1079,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <tr><td><span class="pair"><span class="dot" style="background:#494740;color:#BFBFBF;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>foreground × selection</span></td><td><span class="ja" lang="ja">選んだ範囲の文字</span><span class="en" lang="en">Selected text</span></td><td class="num">5.06:1</td><td><span class="aa">AA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#202122;color:#BFBFBF;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>foreground × current-line</span></td><td><span class="ja" lang="ja">いまの行の文字</span><span class="en" lang="en">Current-line text</span></td><td class="num">8.77:1</td><td><span class="aaa">AAA</span></td></tr>
         <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#F07B5F;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>reading × background</span></td><td><span class="ja" lang="ja">読み上げ中の枠(非テキスト3:1以上)</span><span class="en" lang="en">Read-aloud frame (non-text, 3:1 or better)</span></td><td class="num">6.82:1</td><td><span class="aa">AA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#FFFFFF;color:#59636E;border-color:#4C5C3B">A</span><span class="ja" lang="ja">昼:</span><span class="en" lang="en">Day: </span>muted × background</span></td><td><span class="ja" lang="ja">項目名・補助の文字</span><span class="en" lang="en">Field names and secondary text</span></td><td class="num">6.11:1</td><td><span class="aa">AA</span></td></tr>
+        <tr><td><span class="pair"><span class="dot" style="background:#121314;color:#8B949E;border-color:#4C5C3B">A</span><span class="ja" lang="ja">夜:</span><span class="en" lang="en">Night: </span>muted × background</span></td><td><span class="ja" lang="ja">項目名・補助の文字</span><span class="en" lang="en">Field names and secondary text</span></td><td class="num">6.05:1</td><td><span class="aa">AA</span></td></tr>
       </tbody>
     </table>
     </div>
@@ -1092,8 +1112,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">7-5. 動きへの配慮</span><span class="en" lang="en">7-5. Motion care</span></h3>
     <p>
-      <span class="ja" lang="ja">アニメーションは0.3秒以内の状態変化のみとし、点滅・自動スクロールは使わない。<span class="mono">prefers-reduced-motion</span> が指定された環境では動きを止める(本書自体も対応済み)。止めるときは <span class="mono">transition: none</span> と <span class="mono">animation: none</span> にする(9-4)。<span class="mono">transition-duration: 0.01ms</span> のようにごく短くする書き方は使わない。すべてのプロパティに短いトランジションが残り、図の大きさの計測などが狂うためである。アニメーションの終了を待つ処理がある場合に限り、<span class="mono">animation-duration: 0.01ms</span> と <span class="mono">animation-iteration-count: 1</span> を使ってよい。</span>
-      <span class="en" lang="en">Animation is limited to state changes of 0.3s or less; no blinking, no auto-scroll. When <span class="mono">prefers-reduced-motion</span> is set, motion stops (this document complies). Stop it with <span class="mono">transition: none</span> and <span class="mono">animation: none</span> (9-4). Do not shorten durations instead (such as <span class="mono">transition-duration: 0.01ms</span>): every property keeps a tiny transition, which breaks measurements such as diagram sizing. Only where code waits for an animation to end may <span class="mono">animation-duration: 0.01ms</span> with <span class="mono">animation-iteration-count: 1</span> be used.</span>
+      <span class="ja" lang="ja">アニメーションは0.3秒以内の状態変化のみとし、点滅・自動スクロールは使わない。<span class="mono">prefers-reduced-motion</span> が指定された環境では動きを止める(本書自体も対応済み)。止めるときは <span class="mono">transition: none</span> と <span class="mono">animation: none</span> にする(9-4)。<span class="mono">transition-duration: 0.01ms</span> のようにごく短くする書き方は使わない。すべてのプロパティに短いトランジションが残り、図の大きさの計測などが狂うためである。アニメーションの終了を待つ処理がある場合に限り、<span class="mono">animation-duration: 0.01ms</span> と <span class="mono">animation-iteration-count: 1</span> を使ってよい。<b>動画とアニメーションの自動再生:</b>(1) 自動で再生するのは、音を消したものに限る(音のある自動再生はしない。11-4)。(2) 5秒を超えて動くものには、一時停止または停止の手段を付ける(WCAG 2.2 達成基準 2.2.2)。(3) 1秒に3回を超えて点滅させない(達成基準 2.3.1)。(4) 動きを控える設定(<span class="mono">prefers-reduced-motion</span>)のときは、初期設定では自動で再生せず、最初の画面と再生ボタンを示す。ただし、使う人が製品の設定で自動再生を明示的に選んだ場合は、その選択を優先してよい(7-3 (4))。</span>
+      <span class="en" lang="en">Animation is limited to state changes of 0.3s or less; no blinking, no auto-scroll. When <span class="mono">prefers-reduced-motion</span> is set, motion stops (this document complies). Stop it with <span class="mono">transition: none</span> and <span class="mono">animation: none</span> (9-4). Do not shorten durations instead (such as <span class="mono">transition-duration: 0.01ms</span>): every property keeps a tiny transition, which breaks measurements such as diagram sizing. Only where code waits for an animation to end may <span class="mono">animation-duration: 0.01ms</span> with <span class="mono">animation-iteration-count: 1</span> be used. <b>Autoplay of video and animation:</b> (1) only muted media may play automatically (never autoplay sound; 11-4); (2) anything that moves for more than five seconds has a way to pause or stop it (WCAG 2.2 SC 2.2.2); (3) nothing flashes more than three times a second (SC 2.3.1); (4) when <span class="mono">prefers-reduced-motion</span> is set, media does not autoplay by default — show the first frame and a play button — but if the user explicitly turns autoplay on in the product's settings, that choice may take precedence (7-3 (4)).</span>
     </p>
 
     <h3><span class="ja" lang="ja">7-6. 文章のわかりやすさ</span><span class="en" lang="en">7-6. Plain writing</span></h3>
@@ -1170,8 +1190,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">8-4. 絵文字と装飾</span><span class="en" lang="en">8-4. Emoji and decoration</span></h3>
     <p>
-      <span class="ja" lang="ja">README、仕様書、設計書、試験報告書、手順書その他の技術文書では、<b>ユーザーから明示的な依頼がない限り、絵文字を使わない。</b>状態や注意は、見出し、文章、記号、ラベル(例: OK、注意、エラー)で表す。明示的な依頼により絵文字を使う場合も、絵文字だけに意味を持たせず、読み上げと文字化けを考慮して最小限にする。</span>
-      <span class="en" lang="en">In READMEs, specifications, design documents, test reports, procedures, and other technical documents, <b>do not use emoji unless the user explicitly requests them.</b> Express status and cautions with headings, words, symbols, and labels (for example, OK, Caution, Error). Even when explicitly requested, keep emoji to a minimum, never make them the sole carrier of meaning, and consider screen readers and character compatibility.</span>
+      <span class="ja" lang="ja">README、仕様書、設計書、試験報告書、手順書その他の技術文書では、<b>ユーザーから明示的な依頼がない限り、絵文字を使わない。</b>状態や注意は、見出し、文章、記号、ラベル(例: OK、注意、エラー)で表す。明示的な依頼により絵文字を使う場合も、絵文字だけに意味を持たせず、読み上げと文字化けを考慮して最小限にする。<b>(1)</b> 技術文書には、コミットとプルリクエストの説明、AI ツールが付ける署名の行も含む(例:「🤖 Generated with …」は「Generated with …」とする)。<b>(2)</b> 状態を表す絵文字(✅・❌ など)は使わず、「対応」「非対応」などの言葉にする。文字として扱う記号(©、✓、✕、→ など)は、意味を言葉でも示せば使ってよい(7-2)。<b>(3)</b> 例外として、製品の機能を説明するために必要な場合は、その製品の文書(README、サンプル、ヘルプなど)に絵文字を書いてよい。たとえば、GitHub の Markdown 表示に合わせて絵文字を表示する mdEditor の機能を説明するため、mdEditor の Markdown 文書に絵文字の例を書くことができる。その場合も、例は必要な数にとどめ、絵文字だけに意味を持たせない(<span class="mono">:smile:</span> のような書き方や、言葉の説明を並べて書く)。<b>(4)</b> 使う人が自分の文書に書いた絵文字を、製品が表示すること自体は、この項の対象外である。</span>
+      <span class="en" lang="en">In READMEs, specifications, design documents, test reports, procedures, and other technical documents, <b>do not use emoji unless the user explicitly requests them.</b> Express status and cautions with headings, words, symbols, and labels (for example, OK, Caution, Error). Even when explicitly requested, keep emoji to a minimum, never make them the sole carrier of meaning, and consider screen readers and character compatibility. <b>(1)</b> Technical documents include commit messages, pull request descriptions, and signature lines added by AI tools (for example, "🤖 Generated with …" becomes "Generated with …"). <b>(2)</b> Do not use emoji for status (✅, ❌, and so on); use words such as "Supported" and "Not supported". Symbols treated as text (©, ✓, ✕, →, and so on) may be used when their meaning is also given in words (7-2). <b>(3)</b> As an exception, emoji may be written in a product's own documents (README, samples, help, and so on) when needed to explain a product feature. For example, mdEditor's Markdown documents may include emoji examples to explain its emoji display, which follows GitHub's Markdown rendering. Even then, keep examples to what is needed and never let an emoji carry meaning alone (write the <span class="mono">:smile:</span>-style code or a description alongside). <b>(4)</b> A product displaying emoji that users wrote in their own documents is out of scope.</span>
     </p>
 
     <h3><span class="ja" lang="ja">8-5. ファイル名・タイトル・説明文</span><span class="en" lang="en">8-5. Filenames, titles, and descriptions</span></h3>
@@ -1339,6 +1359,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
   --document-selection:#C7D0C1;
   --document-current-line:#F0F0F0;
   --document-reading:#B92613;
+  --document-muted:#59636E;
 }
 <span class="cm">/* 夜の配色(4-2)。印刷には適用しない / night palette (4-2), not for print */</span>
 @media screen and (prefers-color-scheme: dark){
@@ -1355,6 +1376,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     --document-selection:#494740;
     --document-current-line:#202122;
     --document-reading:#F07B5F;
+    --document-muted:#8B949E;
   }
 }
 <span class="cm">/* ユニバーサルデザイン標準装備 / universal design as standard */</span>

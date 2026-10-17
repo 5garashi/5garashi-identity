@@ -49,6 +49,7 @@ DOCUMENT_DAY = {
     "selection": "#C7D0C1",
     "current-line": "#F0F0F0",
     "reading": PALETTE["volt"],
+    "muted": "#59636E",
     "volt-deep": PALETTE["volt-deep"],
     "volt": PALETTE["volt"],
 }
@@ -59,6 +60,7 @@ DOCUMENT_NIGHT = {
     "selection": "#494740",
     "current-line": "#202122",
     "reading": "#F07B5F",
+    "muted": "#8B949E",
     "volt-deep": "#F7A58E",
     "volt": "#F07B5F",
 }
@@ -70,6 +72,7 @@ DOCUMENT_APPROVED = [
     ("volt-deep", "background", False),
     ("foreground", "selection", False),
     ("foreground", "current-line", False),
+    ("muted", "background", False),
 ]
 DOCUMENT_NON_TEXT = [
     ("volt", "background"),
