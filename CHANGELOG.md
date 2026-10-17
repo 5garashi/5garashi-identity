@@ -3,6 +3,31 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.16.0 — 2026-10-17
+
+mdEditor(5garashi/mdEditor)の「Markdown・Mermaid の書き方チェックリスト」のうち、製品に共通する内容を本書の管理に移した。きっかけは、Mermaid の横型 timeline で長い日本語のラベルが枠からはみ出し、隣の列と重なったこと(構文と SVG の生成は成功していた)。
+The product-independent parts of mdEditor's Markdown and Mermaid checklist move into this document, prompted by a Mermaid timeline whose long Japanese labels overflowed into the next column although parsing and SVG generation had succeeded.
+
+### 本文 / Content
+- 第8条 8-9「Markdown と図(Mermaid)」を新設。(1) 構文・表示・内容を別々に確かめ、構文の検証や描画の成功だけで表示の品質やアクセシビリティを確認済みとしない、(2) 読めることを優先し、表が合えば表、(3) 文字を枠に収め、収まらなければ文字を縮めず向き・分割・図の種類を見直す、(4) 図だけに頼らない、(5) 配る環境と同じ描画エンジン・版・書体で目視し、自動と目視の確認を分けて記録する、(6) 共通の項目は本書、製品固有の版・記法・不具合の記録は各製品に置く。
+  New Art. 8-9 "Markdown and diagrams (Mermaid)" with six principles.
+- 第6条「図(ライブラリが描く図)」の行から 8-9 を参照。7-7 に (k) 図の文字の目視確認を、9-5 の記録のひな形に (k) の行を追加。
+  Art. 6 diagrams row points to 8-9; 7-7 adds check (k); 9-5 template gains a (k) row.
+- 12-1 (2):`docs/` のチェックリストも MIT。12-3 の一覧に `docs/MARKDOWN-CHECKLIST.md` を追加。
+  12-1 (2): the `docs/` checklist is MIT; 12-3 lists it.
+
+### チェックリスト / Checklist
+- `docs/MARKDOWN-CHECKLIST.md` を追加(全製品共通の正本)。mdEditor の原稿(promotion/MARKDOWN-CHECKLIST.md、版 1.5.3、コミット ac1bcb2)の「文章と Markdown の基本」「図の選び方」「重なりを防ぐ書き方」「描画と表示の確認」「内容とリンクの確認」「確認記録のひな形」を、製品に依存しない形に書き直して移した。
+  Added `docs/MARKDOWN-CHECKLIST.md`, rewritten from mdEditor's draft (version 1.5.3, commit ac1bcb2) in product-independent form.
+- 本書の既存の条文と重なる項目は、内容を繰り返さず参照にした(ヘッダー 9-3、署名 9-5、版と CHANGELOG 12-7、代替テキスト 7-4、色だけに頼らない 7-2、確かさの語 8-8、夜の配色 4-2)。
+  Items already covered by this document refer to it instead of repeating it.
+- 「mdEditor 同梱の Mermaid で描画」は「配る製品・環境と同じ描画エンジンと版で描画」とした。mdEditor の版の数(1.0.10 の PDF 保存など)、2026-10-17 の timeline の不具合の記録は mdEditor 側に残す。
+  "Render with mdEditor's bundled Mermaid" became "render with the engine and version the product ships"; mdEditor-specific versions and the 2026-10-17 incident record stay in mdEditor.
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_16_0.html`。
+  Single-file edition: `5garashi_identity_v4_16_0.html`.
+
 ## 4.15.0 — 2026-10-16
 
 「ルールは壁ではなく、手すりである。そして、進化させ続けるものである」(1-3)の考え方を、本書の位置づけとして明文化した。

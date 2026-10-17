@@ -4,8 +4,8 @@
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  最終更新 / Last updated: 2026-10-16
-  版 / Version: 4.15.0
+  最終更新 / Last updated: 2026-10-17
+  版 / Version: 4.16.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -452,7 +452,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.15.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.15.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.16.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.16.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -467,7 +467,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <span class="ja" lang="ja">「5(ご)+がらし」=唐辛子。回路から画面、そして暮らしの支えまで——「設計のプロフェッショナル × デジタル便利屋」。本書は、ロゴ・色・モチーフ・音・和の意匠・アクセシビリティ・言葉づかいを通じて、5garashi.comのすべての創作物が醸成するオフィスアイデンティティを定める。</span>
     <span class="en" lang="en">"5 (go) + garashi" = togarashi, the chili pepper. From circuits to screens to a helping hand in daily life — "design professionals × digital handymen". Through logo, color, motif, sound, Japanese aesthetics, accessibility, and voice, this document defines the office identity that every 5garashi.com creation cultivates.</span>
   </p>
-  <div class="date">2026.10.16 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
+  <div class="date">2026.10.17 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
 </header>
 
 <!-- ═══════════ 目次 / Contents ═══════════ -->
@@ -492,12 +492,14 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">本版(2026-10-16)の変更点</span><span class="en" lang="en">What's new in this version (2026-10-16)</span></summary>
+    <summary><span class="ja" lang="ja">本版(2026-10-17)の変更点</span><span class="en" lang="en">What's new in this version (2026-10-17)</span></summary>
     <ul class="ja" lang="ja">
-      <li>第1条に 1-4「手すりとしての運用仕様」を新設。本書は守ること自体を目的とする規則集ではなく、製品の性質と時代の流れとともに変わり続ける手引きであると明記。合わない規定は理由を記録して合わせて使ってよいが、第7条・第12条・第13条のように使う人や第三者を守る規定は、外さずに先に本書を改める。担当者(人とAIを含む)は本書を改善してよく、改善する責任も負う。</li>
+      <li>第8条に 8-9「Markdown と図(Mermaid)」を新設。構文が通る・表示が読める・内容が正しいを別々に確かめ、構文の検証や描画の成功だけで表示の品質やアクセシビリティを確認済みとしないことを明記。</li>
+      <li>全製品共通のチェックリスト <a href="https://github.com/5garashi/5garashi-identity/blob/main/docs/MARKDOWN-CHECKLIST.md">docs/MARKDOWN-CHECKLIST.md</a> を追加(mdEditor の原稿から、製品に共通する内容を移した)。7-7 に (k) 図の文字の目視確認、9-5 の記録のひな形に (k) の行を追加。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>New Art. 1-4 "Operating rules as handrails": this document is a guideline that keeps changing with products and the times, not a rulebook for its own sake. Rules that do not fit may be adapted with a recorded reason, but safeguards for users and third parties (Arts. 7, 12, 13) are revised in this document first rather than set aside. Those responsible for it, people and AI alike, may improve it and are responsible for doing so.</li>
+      <li>New Art. 8-9 "Markdown and diagrams (Mermaid)": check syntax, readable display, and correct content separately; a passing syntax check or successful render never counts as confirming display quality or accessibility.</li>
+      <li>Shared checklist <a href="https://github.com/5garashi/5garashi-identity/blob/main/docs/MARKDOWN-CHECKLIST.md">docs/MARKDOWN-CHECKLIST.md</a> added (the product-independent parts of mdEditor's draft). 7-7 adds check (k); the 9-5 record template gains a (k) row.</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -937,7 +939,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       </div>
       <div class="type-row">
         <span class="role"><span class="ja" lang="ja">図(ライブラリが描く図)</span><span class="en" lang="en">DIAGRAMS (LIBRARY-DRAWN)</span></span>
-        <div class="sample" style="font-weight:600;font-size:13px"><span class="ja" lang="ja">Mermaid などのライブラリが描く図の文字は、表示言語の本文・UIの書体に従う(英語表示は「欧文」の行)。色は夜の配色(4-2)に合わせ、印刷とPDFでは昼の配色にする。コントラストテーマでは 7-8 (3) による。「数値・答え」の行は数値の表示の規定で、図には当てはめない。</span><span class="en" lang="en">Text in diagrams drawn by libraries such as Mermaid follows the body/UI typeface of the display language (English: see the Latin row). Colors follow the night palette (4-2); print and PDF use the day palette. In contrast themes, 7-8 (3) applies. The "Numbers / answers" row governs numeric values, not diagrams.</span></div>
+        <div class="sample" style="font-weight:600;font-size:13px"><span class="ja" lang="ja">Mermaid などのライブラリが描く図の文字は、表示言語の本文・UIの書体に従う(英語表示は「欧文」の行)。色は夜の配色(4-2)に合わせ、印刷とPDFでは昼の配色にする。コントラストテーマでは 7-8 (3) による。「数値・答え」の行は数値の表示の規定で、図には当てはめない。図の文字の収め方と確かめ方は 8-9 による。</span><span class="en" lang="en">Text in diagrams drawn by libraries such as Mermaid follows the body/UI typeface of the display language (English: see the Latin row). Colors follow the night palette (4-2); print and PDF use the day palette. In contrast themes, 7-8 (3) applies. The "Numbers / answers" row governs numeric values, not diagrams. How diagram text fits and is checked: 8-9.</span></div>
       </div>
       <div class="type-row">
         <span class="role"><span class="ja" lang="ja">注記・ラベル</span><span class="en" lang="en">CAPTIONS</span></span>
@@ -1102,8 +1104,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">7-7. 出荷前チェック</span><span class="en" lang="en">7-7. Pre-release check</span></h3>
     <p>
-      <span class="ja" lang="ja">新しい道具を公開する前に、次の点を確認する。(a) 拡大200%で横スクロールが出ない。(b) マウスなしで全操作できる。(c) グレースケール表示でも意味が取れる。(d) 画面幅320px(CSSピクセル)で、情報や機能を欠かさず縦スクロールだけで読める(WCAG 2.2 達成基準 1.4.10 リフロー。表・コード・地図など2方向のスクロールが必要な部分は除く)。(e) ダークモードに対応する場合は、夜の配色(4-2)でも (a)〜(d) を確認する。(f) Windows のコントラスト テーマ(強制カラー、7-8)で、ボタンの枠・区切り・フォーカスの印・本文が読める。(g) 画面読み上げソフト(Windows ナレーター、NVDA など)で、すべての操作部品の名前と役割が読める。読み上げソフトをオンにした状態で、長い文書(数百行)の編集・選択・スクロールが止まらない。(h) ブラウザーやOSの文字の大きさの設定だけを200%にしても、文字が欠けたり重なったりしない(WCAG 2.2 達成基準 1.4.4)。製品に文字の大きさの設定がある場合は、その最大値でも確かめる。(i) 自動バックアップと復元の機能がある場合は、異常終了から実際に復元できる(7-9)。(j) 外部のファイルを読み込む製品では、同意する前は何も読み込まず、同意すると読み込み、「読み込まない」の設定では読み込まない(13-3)。</span>
-      <span class="en" lang="en">Before release, confirm: (a) no horizontal scroll at 200% zoom; (b) full operation without a mouse; (c) meaning survives in grayscale; (d) at a 320 CSS-pixel viewport, all content and functions remain available with vertical scrolling only (WCAG 2.2 SC 1.4.10 Reflow; tables, code, maps, and other content that needs two-dimensional scrolling are exempt); (e) if the product supports dark mode, repeat (a) to (d) in the night palette (4-2); (f) in a Windows contrast theme (forced colors, 7-8), button borders, dividers, focus indicators, and body text remain readable; (g) a screen reader (Windows Narrator, NVDA, etc.) reads the name and role of every control, and with it running, editing, selecting, and scrolling a long document (hundreds of lines) never stall; (h) with only the browser or OS text-size setting at 200%, no text is cut off or overlaps (WCAG 2.2 SC 1.4.4); if the product has its own text-size setting, check its maximum too; (i) if the product has automatic backup and recovery, recovery from an abnormal exit actually works (7-9); (j) for products that load external files, nothing loads before consent, files load after consent, and nothing loads with "Never load" (13-3).</span>
+      <span class="ja" lang="ja">新しい道具を公開する前に、次の点を確認する。(a) 拡大200%で横スクロールが出ない。(b) マウスなしで全操作できる。(c) グレースケール表示でも意味が取れる。(d) 画面幅320px(CSSピクセル)で、情報や機能を欠かさず縦スクロールだけで読める(WCAG 2.2 達成基準 1.4.10 リフロー。表・コード・地図など2方向のスクロールが必要な部分は除く)。(e) ダークモードに対応する場合は、夜の配色(4-2)でも (a)〜(d) を確認する。(f) Windows のコントラスト テーマ(強制カラー、7-8)で、ボタンの枠・区切り・フォーカスの印・本文が読める。(g) 画面読み上げソフト(Windows ナレーター、NVDA など)で、すべての操作部品の名前と役割が読める。読み上げソフトをオンにした状態で、長い文書(数百行)の編集・選択・スクロールが止まらない。(h) ブラウザーやOSの文字の大きさの設定だけを200%にしても、文字が欠けたり重なったりしない(WCAG 2.2 達成基準 1.4.4)。製品に文字の大きさの設定がある場合は、その最大値でも確かめる。(i) 自動バックアップと復元の機能がある場合は、異常終了から実際に復元できる(7-9)。(j) 外部のファイルを読み込む製品では、同意する前は何も読み込まず、同意すると読み込み、「読み込まない」の設定では読み込まない(13-3)。(k) 図を含む文書・画面では、描画の成功とは別に、文字が枠に収まり重ならず読めることを、配る環境で目で確かめる(8-9)。</span>
+      <span class="en" lang="en">Before release, confirm: (a) no horizontal scroll at 200% zoom; (b) full operation without a mouse; (c) meaning survives in grayscale; (d) at a 320 CSS-pixel viewport, all content and functions remain available with vertical scrolling only (WCAG 2.2 SC 1.4.10 Reflow; tables, code, maps, and other content that needs two-dimensional scrolling are exempt); (e) if the product supports dark mode, repeat (a) to (d) in the night palette (4-2); (f) in a Windows contrast theme (forced colors, 7-8), button borders, dividers, focus indicators, and body text remain readable; (g) a screen reader (Windows Narrator, NVDA, etc.) reads the name and role of every control, and with it running, editing, selecting, and scrolling a long document (hundreds of lines) never stall; (h) with only the browser or OS text-size setting at 200%, no text is cut off or overlaps (WCAG 2.2 SC 1.4.4); if the product has its own text-size setting, check its maximum too; (i) if the product has automatic backup and recovery, recovery from an abnormal exit actually works (7-9); (j) for products that load external files, nothing loads before consent, files load after consent, and nothing loads with "Never load" (13-3); (k) for documents and screens with diagrams, confirm by eye in the shipping environment — separately from a successful render — that text fits inside its boxes, does not overlap, and is readable (8-9).</span>
     </p>
     <div class="note"><b><span class="ja" lang="ja">確認の記録:</span><span class="en" lang="en">Record the check:</span></b>
       <span class="ja" lang="ja"> 確認した日付、使ったブラウザやツール、結果(OK/要修正)を、READMEまたは試験報告書に残す。コントラスト比を測った場合は、7-1と同じく確認日と計算方法を書く。書式は 9-5 のひな形による。</span>
@@ -1233,6 +1235,26 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       <dt><span class="ja" lang="ja">未確認</span><span class="en" lang="en">Unverified</span></dt>
       <dd><span class="ja" lang="ja">まだ確かめていないこと。誰が、いつ確かめるかを添える。</span><span class="en" lang="en">Something not yet checked. State who will check it and when.</span></dd>
     </dl>
+
+    <h3><span class="ja" lang="ja">8-9. Markdown と図(Mermaid)</span><span class="en" lang="en">8-9. Markdown and diagrams (Mermaid)</span></h3>
+    <p>
+      <span class="ja" lang="ja">Markdown で書く文書と、その中に描く図(Mermaid など)は、次の原則による。具体的な確認項目は、全製品共通の正本 <a href="https://github.com/5garashi/5garashi-identity/blob/main/docs/MARKDOWN-CHECKLIST.md">docs/MARKDOWN-CHECKLIST.md</a> にある。</span>
+      <span class="en" lang="en">Documents written in Markdown, and the diagrams drawn in them (Mermaid and the like), follow these principles. The detailed checks are in the shared master, <a href="https://github.com/5garashi/5garashi-identity/blob/main/docs/MARKDOWN-CHECKLIST.md">docs/MARKDOWN-CHECKLIST.md</a>.</span>
+    </p>
+    <p>
+      <span class="ja" lang="ja"><b>(1) 3つを分けて確かめる:</b>構文が通ること、表示が読めること、内容が正しいことは、別々に確かめる。<b>構文の検証や描画の成功(SVG ができた、エラーが出ない)だけで、表示の品質やアクセシビリティを確認済みとしない。</b>描画に成功しても、文字が枠からはみ出したり、隣と重なったりすることがあるためである。<br>
+      <b>(2) 読めることを優先する:</b>図は、読む人の判断を助けるときだけ使う。同じ情報に表のほうが合うときは表にする。<br>
+      <b>(3) 文字を収める:</b>図の文字は短い句にし、枠の中に収め、隣のラベルや矢印と重ならないようにする。収まらないときは、文字を小さくして詰めるのではなく、向き・分割・図の種類を見直す。<br>
+      <b>(4) 図だけに頼らない:</b>図と同じ情報を本文や表でもたどれるようにし、色だけで区別しない(7-2、7-4)。<br>
+      <b>(5) 配る環境で確かめる:</b>配る製品・環境と同じ描画エンジンと版、書体で、想定する画面の幅、昼と夜、書き出し(PDF・HTML)を目で確かめる。自動の確認と目視の確認を分けて記録し、確かめていない条件を確認済みとしない(7-7、8-8)。<br>
+      <b>(6) 置き場所を分ける:</b>全製品に共通する書き方と確認項目は本書のチェックリストに置く。製品ごとの描画エンジンの版・対応する記法・確かめ方・不具合と検証の記録は、その製品のリポジトリに置き、本書のチェックリストを参照する。</span>
+      <span class="en" lang="en"><b>(1) Check three things separately:</b> that the syntax parses, that the display is readable, and that the content is correct. <b>A passing syntax check or a successful render (an SVG was produced, no errors) never counts as confirming display quality or accessibility,</b> because a diagram can render and still have labels that spill out of their boxes or overlap their neighbors.<br>
+      <b>(2) Readability first:</b> use a diagram only when it helps the reader decide; when a table serves the same information better, use a table.<br>
+      <b>(3) Keep text inside:</b> diagram labels are short phrases that stay inside their boxes and clear of neighboring labels and arrows. If they do not fit, change the direction, split the diagram, or choose another type — never just shrink the text.<br>
+      <b>(4) Never rely on the diagram alone:</b> the same information can be followed in the text or a table, and color is never the only distinction (7-2, 7-4).<br>
+      <b>(5) Check where it ships:</b> look with your own eyes using the same rendering engine, version, and fonts the product ships, at the intended widths, in day and night palettes, and in exported PDF/HTML. Record automated and visual checks separately, and never mark an unchecked condition as checked (7-7, 8-8).<br>
+      <b>(6) Keep things in their place:</b> writing rules and checks shared by all products live in this document's checklist. Each product's engine version, supported syntax, how to check, and defect and verification records live in that product's repository, which refers to this checklist.</span>
+    </p>
   </div>
 </section>
 
@@ -1381,7 +1403,8 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
 | (g) 画面読み上げソフト | | |
 | (h) 文字の大きさの設定200% | | |
 | (i) 自動バックアップからの復元 | | |
-| (j) 外部のファイルの読み込み(同意前・同意後・読み込まない) | | |</pre>
+| (j) 外部のファイルの読み込み(同意前・同意後・読み込まない) | | |
+| (k) 図の文字の収まり・重なり(描画の成功とは別に目視) | | |</pre>
   </div>
 </section>
 
@@ -1614,8 +1637,8 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
     </p>
     <h3><span class="ja" lang="ja">12-1. 特記(例外)</span><span class="en" lang="en">12-1. Exceptions</span></h3>
     <p>
-      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) <span class="mono">templates/</span> のひな形(PRIVACY.md、GitHub Actions のワークフローなど)も <b>MIT License</b> で提供する。(3) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。(4) <b>音楽</b>:第11条の2曲(「五辛子のテーマ」と「Light Steps」)は <b>CC BY 4.0</b> で提供する。対象は、音源(WAV・MP3)、MIDI、楽譜データ(<span class="mono">5garashi_light_steps_score.json</span>)。クレジットを付ければ、動画への同期、抜粋、フェード、ループ、編曲、商用での利用ができる。変更した場合は、その旨を示す。クレジットの例:「Light Steps — 5garashi.com設計事務所(作曲・音源生成:Codex)— CC BY 4.0」「五辛子のテーマ — 5garashi.com設計事務所 — CC BY 4.0」。Light Steps の生成コード(<span class="mono">compose_music.py</span>、mdEditor リポジトリ)は MIT のままとする。(5) AI が生成した作品に著作権などの権利がどこまで及ぶかは、国や地域によって扱いが異なり、定まっていないことがある。本書は、その権利の有無やライセンスの法的な効力を保証するものではなく、利用の条件として CC BY 4.0 を示す。</span>
-      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) The templates in <span class="mono">templates/</span> (PRIVACY.md, GitHub Actions workflows, and others) are also provided under the <b>MIT License</b>. (3) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document. (4) <b>Music:</b> both pieces in Art. 11 ("Gogarashi no Theme" and "Light Steps") are provided under <b>CC BY 4.0</b>, covering the audio (WAV, MP3), MIDI, and score data (<span class="mono">5garashi_light_steps_score.json</span>). With credit, they may be synchronized with video, excerpted, faded, looped, arranged, and used commercially; indicate any changes. Credit examples: "Light Steps — 5garashi.com Design Office (composed and generated by Codex) — CC BY 4.0"; "Gogarashi no Theme — 5garashi.com Design Office — CC BY 4.0". The Light Steps generator (<span class="mono">compose_music.py</span>, mdEditor repository) stays under MIT. (5) How far copyright and related rights extend to AI-generated works differs between countries and regions and may be unsettled. This document does not guarantee whether such rights exist or the legal effect of the license; it states CC BY 4.0 as the terms of use.</span>
+      <span class="ja" lang="ja">(1) 第9条のコピー用コード断片(CSSトークン・ファイルヘッダーの見本A・B・署名テンプレート)は<b>MIT License</b>で提供する。(2) <span class="mono">templates/</span> のひな形(PRIVACY.md、GitHub Actions のワークフローなど)と、<span class="mono">docs/</span> のチェックリスト(MARKDOWN-CHECKLIST.md)も <b>MIT License</b> で提供する。(3) 5garashi.comが公開する各プロダクトのソースコードのライセンスは、本書ではなく各ファイルのヘッダー表記(原則MIT)に従う。(4) <b>音楽</b>:第11条の2曲(「五辛子のテーマ」と「Light Steps」)は <b>CC BY 4.0</b> で提供する。対象は、音源(WAV・MP3)、MIDI、楽譜データ(<span class="mono">5garashi_light_steps_score.json</span>)。クレジットを付ければ、動画への同期、抜粋、フェード、ループ、編曲、商用での利用ができる。変更した場合は、その旨を示す。クレジットの例:「Light Steps — 5garashi.com設計事務所(作曲・音源生成:Codex)— CC BY 4.0」「五辛子のテーマ — 5garashi.com設計事務所 — CC BY 4.0」。Light Steps の生成コード(<span class="mono">compose_music.py</span>、mdEditor リポジトリ)は MIT のままとする。(5) AI が生成した作品に著作権などの権利がどこまで及ぶかは、国や地域によって扱いが異なり、定まっていないことがある。本書は、その権利の有無やライセンスの法的な効力を保証するものではなく、利用の条件として CC BY 4.0 を示す。</span>
+      <span class="en" lang="en">(1) The copy-ready code snippets in Art. 9 (CSS tokens, file-header samples A and B, signature template) are provided under the <b>MIT License</b>. (2) The templates in <span class="mono">templates/</span> (PRIVACY.md, GitHub Actions workflows, and others) and the checklist in <span class="mono">docs/</span> (MARKDOWN-CHECKLIST.md) are also provided under the <b>MIT License</b>. (3) Source code of individual 5garashi.com products is governed by each file's own header (MIT as a rule), not by this document. (4) <b>Music:</b> both pieces in Art. 11 ("Gogarashi no Theme" and "Light Steps") are provided under <b>CC BY 4.0</b>, covering the audio (WAV, MP3), MIDI, and score data (<span class="mono">5garashi_light_steps_score.json</span>). With credit, they may be synchronized with video, excerpted, faded, looped, arranged, and used commercially; indicate any changes. Credit examples: "Light Steps — 5garashi.com Design Office (composed and generated by Codex) — CC BY 4.0"; "Gogarashi no Theme — 5garashi.com Design Office — CC BY 4.0". The Light Steps generator (<span class="mono">compose_music.py</span>, mdEditor repository) stays under MIT. (5) How far copyright and related rights extend to AI-generated works differs between countries and regions and may be unsettled. This document does not guarantee whether such rights exist or the legal effect of the license; it states CC BY 4.0 as the terms of use.</span>
     </p>
     <h3><span class="ja" lang="ja">12-2. 誤認の防止</span><span class="en" lang="en">12-2. No implied endorsement</span></h3>
     <p>
@@ -1631,6 +1654,8 @@ Identity 第7条 7-7 の出荷前チェックの記録です。
 5garashi_identity_vX_Y_Z.html            <span class="cm"># 単一ファイル版(生成物。番号は VERSION)/ single-file edition (generated)</span>
 VERSION                                 <span class="cm"># 版の番号(12-7)/ version number</span>
 CHANGELOG.md                            <span class="cm"># 改版履歴 / revision history</span>
+docs/
+  MARKDOWN-CHECKLIST.md                 <span class="cm"># Markdown・図のチェックリスト(8-9)/ Markdown and diagram checklist</span>
 templates/
   PRIVACY.md                            <span class="cm"># PRIVACY.md のひな形(第13条)/ privacy policy template (Art. 13)</span>
   .github/workflows/version-check.yml   <span class="cm"># 版の確認(12-7 (7))/ version check on pull requests</span>
@@ -1808,8 +1833,8 @@ assets/
 
 <footer>
   <span style="font-weight:800;color:var(--ink)"><span style="font-family:Georgia,serif;font-style:italic">5</span>garashi.com設計事務所 / 5garashi.com Design Office</span> — <a class="mono" href="https://www.5garashi.com">https://www.5garashi.com</a><br>
-  <span class="ja" lang="ja">Design Office Identity — 2026.10.16 — © 2026 CC BY-ND 4.0</span>
-  <span class="en" lang="en">Design Office Identity — 2026.10.16 — © 2026 CC BY-ND 4.0</span><br>
+  <span class="ja" lang="ja">Design Office Identity — 2026.10.17 — © 2026 CC BY-ND 4.0</span>
+  <span class="en" lang="en">Design Office Identity — 2026.10.17 — © 2026 CC BY-ND 4.0</span><br>
   <span class="ja" lang="ja">回路にも、画面にも、暮らしにも——五本の唐辛子。だれの手にも、ピリッと効く。</span>
   <span class="en" lang="en">Five chilis — on the board, on the screen, in daily life. A kick designed to work in as many hands as possible.</span>
 </footer>
