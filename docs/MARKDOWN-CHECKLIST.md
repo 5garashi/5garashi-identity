@@ -3,7 +3,7 @@
   概要 / Description: Markdown と図(Mermaid)の書き方・確認のチェックリスト。全製品共通の正本(Identity 第8条 8-9) / Markdown and diagram (Mermaid) authoring and review checklist, shared by all products (Identity Art. 8-9)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-17
-  版 / Version: 4.19.0
+  版 / Version: 4.20.0
   ライセンス / License: MIT
   SPDX-License-Identifier: MIT
 -->
@@ -88,6 +88,8 @@ English: render with the same engine and version the product ships; check after 
 
 GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の両方で同じように読めることを求めます(Identity 8-9 (5)(7))。mdEditor が対応する記法・同梱する Mermaid の版・検証の結果は、mdEditor のリポジトリで確かめます。
 
+製品の機能を説明・確認するための文書(機能の説明、サンプル、試験用の文書など。Identity 8-9 (8))と、文書ごとに表示先や記法の指定がある文書(8-9 (9))は、この節の互換の確認を省いてよい。その場合も、その製品での表示は 4 節のとおり確かめ、文書の冒頭に表示先の前提を書き、当てはめない文書と理由を製品の README に書く。
+
 - [ ] 図は Mermaid のコードブロック(` ```mermaid `)で書いた。
 - [ ] GitHub の表示と mdEditor の両方で描画し、文字の収まりと重なりを目で確かめた。一方で描画できたことだけで、互換性を確認済みとしなかった。
 - [ ] GitHub のライト・ダークの両方の表示と、mdEditor の昼・夜の両方で、文字と線が読めることを確かめた。
@@ -96,7 +98,7 @@ GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の�
 - [ ] ブラウザーの拡張機能、エディターのプラグイン、特定の環境だけの設定がなくても読める。
 - [ ] 使える場合は、Mermaid の `accTitle`・`accDescr` で図の題と説明を付けた。付けたときは、両方の環境で描画が崩れないことを確かめた。
 
-English: write diagrams as Mermaid code blocks; render and inspect them in both GitHub and mdEditor (success in one is not compatibility), in GitHub's light and dark display and mdEditor's day and night palettes; avoid syntax only one side's newer Mermaid supports; never use notation both cannot draw directly (Graphviz DOT, PlantUML, and so on) — use an image with alt text instead; require no extensions, plugins, or environment-specific settings; add `accTitle`/`accDescr` where supported, after checking both environments. mdEditor's supported syntax, bundled Mermaid version, and results live in the mdEditor repository.
+English: documents that explain or check product features (8-9 (8)) and documents with their own display-target instructions (8-9 (9)) may skip this section, but are still checked in the product per section 4, state their display assumption at the top, and are listed with the reason in the product's README. Otherwise: write diagrams as Mermaid code blocks; render and inspect them in both GitHub and mdEditor (success in one is not compatibility), in GitHub's light and dark display and mdEditor's day and night palettes; avoid syntax only one side's newer Mermaid supports; never use notation both cannot draw directly (Graphviz DOT, PlantUML, and so on) — use an image with alt text instead; require no extensions, plugins, or environment-specific settings; add `accTitle`/`accDescr` where supported, after checking both environments. mdEditor's supported syntax, bundled Mermaid version, and results live in the mdEditor repository.
 
 ## 6. 内容とリンクを確かめる / Checking content and links
 

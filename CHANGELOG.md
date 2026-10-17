@@ -3,6 +3,35 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.20.0 — 2026-10-17
+
+製品の機能を説明・確認する文書を、GitHub との互換の決まり(8-9 (7))の例外とし、文書ごとの指定を優先できるようにした。
+Documents that explain or check product features are exempt from the GitHub compatibility rule (8-9 (7)), and per-document instructions can take precedence.
+
+### 本文 / Content
+- 8-9 (8) を新設:製品の機能を説明・確認するための文書(機能の説明、サンプル、試験用の文書など)は、GitHub での表示にかかわらず、その製品での実際の動きのとおりに書いてよい。(5) のうち GitHub での確認と (7) は当てはめない。その製品での表示は (5) と 7-7 (k) のとおり確かめ、(4) も守る。文書の冒頭に表示先の前提を書き、当てはめない文書と理由を製品の README に書く(1-4 (1))。
+  New 8-9 (8): feature-explaining and test documents follow the product's actual behavior; GitHub checks in (5) and (7) do not apply, but product-side checks and (4) remain.
+- 8-9 (9) を新設:文書ごとに表示先や記法の指定がある場合は、その指定を (5) の表示先の部分・(7)・(8) より優先する。指定は文書の冒頭か製品の README に書く。確認の正直な記録((1)(5))、(4)、第7条のアクセシビリティの基準は、指定でも変えられない(1-4 (2))。
+  New 8-9 (9): per-document instructions take precedence for display target and notation only.
+- 8-4 (3) の言い回しを 8-9 (8) にそろえた(「説明・確認」「機能の説明・試験用の文書」)。7-7 (k) に、(8) の文書はその製品での表示で確かめることを追記。
+  8-4 (3) aligned with 8-9 (8); 7-7 (k) notes product-side checks for (8) documents.
+
+### チェックリスト / Checklist
+- `docs/MARKDOWN-CHECKLIST.md`(版 4.20.0):5 節に、8-9 (8)(9) の文書は互換の確認を省いてよいこと(製品での確認・冒頭の前提・README への記載は行う)を追加。
+  Checklist 4.20.0: section 5 notes the exemption and what still applies.
+
+### 判断の記録 / Notes on the decisions
+- きっかけ:appAutoTester が mdEditor 1.0.12 を評価した際、`samples/diagram-test.md`(英語版も)に GitHub では描けない Graphviz(DOT)と PlantUML の図があり、8-9 (7) を文字どおり当てはめると決まりに合わないことが分かった。このサンプルの目的は、mdEditor が描ける図と描けない図をありのまま示して確かめることで、決まりに合わせると役目がなくなる。
+  Trigger: mdEditor's `samples/diagram-test.md` contains DOT and PlantUML diagrams that GitHub cannot draw, by design.
+- 5garashi.com の判断(2026-10-17):製品の機能に関する部分(機能の説明・サンプル・試験用の文書)は、その製品での実際の動きのとおりに書く。それ以外の Markdown は GitHub との互換を保つ。特に指定があれば、その指定を優先する。
+  5garashi.com's decision (2026-10-17): feature documents follow the product; other Markdown stays GitHub-compatible; explicit instructions take precedence.
+- 依頼からの調整:(8) で外すのは GitHub との互換の部分だけとし、製品での表示確認(7-7 (k))と (4) は残した。(9) の指定で変えられるのは表示先と記法だけとし、確認の記録とアクセシビリティは変えられないとした。GitHub で開いた人の取り違えを防ぐため、(8) の文書の冒頭に表示先の前提を書くことを加えた。依頼は版を 4.19.0 としていたが、4.19.0 はピラミッド構造の明文化で使ったため、4.20.0 とした。
+  Adjustments: only the GitHub-compatibility parts are exempted; instructions change display target and notation only; a display-assumption note at the top is required; version is 4.20.0 because 4.19.0 was already used.
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_20_0.html`。
+  Single-file edition: `5garashi_identity_v4_20_0.html`.
+
 ## 4.19.0 — 2026-10-17
 
 文章をピラミッド構造(結論→理由・説明→詳細)で書くことを明文化した。
