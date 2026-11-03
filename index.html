@@ -4,8 +4,8 @@
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  最終更新 / Last updated: 2026-10-17
-  版 / Version: 4.20.0
+  最終更新 / Last updated: 2026-11-03
+  版 / Version: 4.21.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -452,7 +452,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.20.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.20.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.21.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.21.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -467,7 +467,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <span class="ja" lang="ja">「5(ご)+がらし」=唐辛子。回路から画面、そして暮らしの支えまで——「設計のプロフェッショナル × デジタル便利屋」。本書は、ロゴ・色・モチーフ・音・和の意匠・アクセシビリティ・言葉づかいを通じて、5garashi.comのすべての創作物が醸成するオフィスアイデンティティを定める。</span>
     <span class="en" lang="en">"5 (go) + garashi" = togarashi, the chili pepper. From circuits to screens to a helping hand in daily life — "design professionals × digital handymen". Through logo, color, motif, sound, Japanese aesthetics, accessibility, and voice, this document defines the office identity that every 5garashi.com creation cultivates.</span>
   </p>
-  <div class="date">2026.10.17 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
+  <div class="date">2026.11.03 — © 2026 5garashi.com設計事務所 — CC BY-ND 4.0</div>
 </header>
 
 <!-- ═══════════ 目次 / Contents ═══════════ -->
@@ -492,12 +492,16 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">本版(2026-10-17)の変更点</span><span class="en" lang="en">What's new in this version (2026-10-17)</span></summary>
+    <summary><span class="ja" lang="ja">本版(2026-11-03)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-03)</span></summary>
     <ul class="ja" lang="ja">
-      <li>8-9 に (8) 製品の機能を説明・確認する文書(サンプル・試験用の文書など)は、その製品での実際の動きのとおりに書いてよく、GitHub との互換の決まりを当てはめない、(9) 文書ごとの表示先や記法の指定を優先する(確認の記録・アクセシビリティは変えられない)、を追加。8-4 (3) と 7-7 (k) の言い回しをそろえ、共通チェックリストにも反映。</li>
+      <li>1-4 (3):見直しは製品を作る・直す・出すたびに、品質と効率の両方を基準に行い、規定を足すだけでなく減らすことも必ず検討する。(2) の規定は効率だけを理由に減らさない。</li>
+      <li>1-4 (5) を新設:満たしていることの作り方と確かめ方は、公開した品質確認規定が定める(リンク付き)。</li>
+      <li>12-7 に (14) 準拠する版を README に書き、出した製品の参照は次の改版のときに直す、(15) 条を移す・消すときは CHANGELOG に旧と新の対応を書く、(16) 公開ページと 5garashi.com からのリンクは常に最新版に向け、旧版はタグで読む、を追加。</li>
     </ul>
     <ul class="en" lang="en">
-      <li>8-9 adds (8) documents that explain or check product features (samples, test documents, and so on) follow how the product actually behaves and are exempt from the GitHub compatibility rules, and (9) per-document display-target or notation instructions take precedence (records of checks and accessibility cannot be changed). 8-4 (3) and 7-7 (k) are aligned, and the shared checklist is updated.</li>
+      <li>1-4 (3): review the rules each time a product is made, fixed, or released, by both quality and efficiency, and always consider reducing rules as well as adding them; the rules in (2) are never reduced for efficiency alone.</li>
+      <li>New 1-4 (5): how to build in and confirm conformance is set by the now-published Quality Rules (linked).</li>
+      <li>12-7 adds (14) state the conformance version in the README and update references at the product's next revision, (15) map old to new articles in the CHANGELOG when they move, and (16) the public page and links from 5garashi.com always point to the latest version, while old versions are read from their tags.</li>
     </ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
@@ -545,12 +549,14 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <p>
       <span class="ja" lang="ja"><b>(1) 合わせて使う:</b>製品の性質や目的に合わない規定は、理由をその製品の README や設計書に書いたうえで、合う形に変えて当てはめてよい。<br>
       <b>(2) 守りを外さない:</b>ただし、使う人や第三者を守る規定——第7条のアクセシビリティの基準、第12条のライセンス、第13条のプライバシー——は、その場の判断で外さない。合わなくなったときは、先に本書を改める。<br>
-      <b>(3) 改善は許され、求められる:</b>担当者(人とAIを含む)は、製品の性質と時代の潮流に合わせて、本書を改善してよい。同時に、改善する責任を負う。規定が製品や時代に合わなくなっていることに気づいたら、そのままにせず、改善の案を出すか、本書を改める。<br>
-      <b>(4) 記録を残す:</b>本書を改めるときは、12-7 に従って版を上げ、CHANGELOG に理由を書く。(1) で合わせて使った例も、次の改版の材料にする。</span>
+      <b>(3) 改善は許され、求められる:</b>担当者(人とAIを含む)は、製品の性質と時代の潮流に合わせて、本書を改善してよい。同時に、改善する責任を負う。規定が製品や時代に合わなくなっていることに気づいたら、そのままにせず、改善の案を出すか、本書を改める。見直しは製品を作る・直す・出すたびに行い、品質を高めることと効率を上げることの両方を基準にする。規定を足すことだけでなく、減らすこと(削る・まとめる・軽くする・当てはめる範囲を絞る)も必ず検討する。減らすときは、その規定が防いでいたことと、代わりに防ぐ方法(代わりを置かないときは、その判断と理由)を CHANGELOG に書く。(2) の規定は、効率だけを理由に減らさない。<br>
+      <b>(4) 記録を残す:</b>本書を改めるときは、12-7 に従って版を上げ、CHANGELOG に理由を書く。(1) で合わせて使った例も、次の改版の材料にする。<br>
+      <b>(5) 品質確認規定との関係:</b>本書は、作るものが「満たすべき姿」を定める。満たしていることの作り方と確かめ方(作りこみ、試験、記録、レビュー)は、<a href="https://5garashi.github.io/5garashi-quality/">品質確認規定</a>が定める。両者が食い違うときは本書に従い、品質確認規定を直す。</span>
       <span class="en" lang="en"><b>(1) Adapt to fit:</b> a rule that does not suit a product's nature or purpose may be adapted to fit, with the reason written in that product's README or design document.<br>
       <b>(2) Keep the safeguards:</b> rules that protect users and third parties — the accessibility standards of Art. 7, the licenses of Art. 12, and the privacy rules of Art. 13 — are never set aside on the spot. If one no longer fits, revise this document first.<br>
-      <b>(3) Improving is allowed — and expected:</b> anyone responsible for this document, people and AI alike, may improve it to fit the nature of products and the currents of the times, and is also responsible for doing so. When a rule no longer fits a product or the times, do not leave it as it is: propose an improvement or revise this document.<br>
-      <b>(4) Keep a record:</b> each revision raises the version per 12-7 and states its reason in the CHANGELOG. Adaptations made under (1) feed the next revision.</span>
+      <b>(3) Improving is allowed — and expected:</b> anyone responsible for this document, people and AI alike, may improve it to fit the nature of products and the currents of the times, and is also responsible for doing so. When a rule no longer fits a product or the times, do not leave it as it is: propose an improvement or revise this document. Review the rules each time a product is made, fixed, or released, judging by both higher quality and greater efficiency. Always consider reducing rules (removing, merging, lightening, or narrowing where they apply), not only adding them. When reducing, record in the CHANGELOG what the rule prevented and what prevents it now (or, if nothing replaces it, that decision and why). The rules in (2) are never reduced for efficiency alone.<br>
+      <b>(4) Keep a record:</b> each revision raises the version per 12-7 and states its reason in the CHANGELOG. Adaptations made under (1) feed the next revision.<br>
+      <b>(5) Relation to the Quality Rules:</b> this document sets what the work must be. How to build it in and confirm it (built-in quality, testing, records, and review) is set by the <a href="https://5garashi.github.io/5garashi-quality/">Quality Rules</a> (Japanese). Where the two disagree, this document prevails and the Quality Rules are corrected.</span>
     </p>
   </div>
 </section>
@@ -1784,7 +1790,10 @@ assets/
       <b>(10) 版の上げ方:</b><span class="mono">VERSION</span>・<span class="mono">CHANGELOG.md</span>・(ソフトウェアでは)README の版の行を、同じ変更(プルリクエストまたはコミット)で変える。<br>
       <b>(11) タグと Release:</b>main で <span class="mono">VERSION</span> が変わったら、そのコミットに <span class="mono">vX.Y.Z</span> のタグを付け、GitHub の Release を作る(本文は CHANGELOG の該当の節)。GitHub で管理するフォルダーでは GitHub Actions で自動化する。プルリクエストを使うリポジトリでは、(1)(8)(9) がそろっていることと、既にあるタグを使い回していないことも確かめる。ひな形は <a href="https://github.com/5garashi/5garashi-identity/tree/main/templates/.github/workflows">templates/.github/workflows/</a>。<br>
       <b>(12) 1つのファイルのツール:</b>HTML やスクリプト1つでできたツールで、単独のフォルダーで管理しないものは、9-3 (6) のヘッダーの「版 / Version」を正とする。<br>
-      <b>(13) タグと公開日:</b>タグはその版のソースを示す。ストアなどでの公開日とは一致しないことがある(審査や手動の公開があるため)。</span>
+      <b>(13) タグと公開日:</b>タグはその版のソースを示す。ストアなどでの公開日とは一致しないことがある(審査や手動の公開があるため)。<br>
+      <b>(14) 準拠する版:</b>製品は、従う本書の版を、README の版の行の近くに書く(例:「準拠 / Conforms to: Design Office Identity 4.21.0」)。品質確認規定など、ほかの社内の規定に従うときも、同じ行に版を書く。製品の文書に書いた本書の条番号は、この版のものとして読む。出した製品の参照と準拠の版は、本書を改めるたびには直さず、次にその製品を改版するときに、準拠の版から今の版までの CHANGELOG を読んで直す。準拠の版が書かれていない製品は、次に改版するときに書く。<br>
+      <b>(15) 条を移す・消すとき:</b>改版で条や項を移す・消す・番号を変えるときは、CHANGELOG に、旧版の条と新しい版の条の対応を書く。<br>
+      <b>(16) 最新版と旧版:</b>公開ページ <a href="https://5garashi.github.io/5garashi-identity/">https://5garashi.github.io/5garashi-identity/</a> は常に最新版を示し、5garashi.com のページからのリンクは、常にこの URL に向ける。旧版は、その版のタグ(<span class="mono">vX.Y.Z</span>)のソースで読める。旧版のために別の置き場所は作らない。</span>
       <span class="en" lang="en"><b>(1) VERSION:</b> the version is set only by a <span class="mono">VERSION</span> file at the top of the folder: one line of three numbers such as <span class="mono">1.0.3</span> (major.minor.patch; semantic versioning).<br>
       <b>(2) Whether to raise it:</b> a person or an AI decides, using these guidelines. Any change of content — rules, values, what is displayed — always raises it. Typo and formatting fixes need not. Raise the first number for incompatible changes, the second for added or changed rules or features, the third for small fixes (lower numbers reset to 0).<br>
       <b>(3) Reading and writing:</b> anything that can read the number (app settings, builds, distributions — <span class="mono">.csproj</span>, <span class="mono">package.json</span>, <span class="mono">pyproject.toml</span>, and so on) reads it from <span class="mono">VERSION</span>; never copy it by hand. Strip surrounding whitespace and line breaks (line endings can become CRLF on Windows). Where four numbers are required (such as Microsoft Store MSIX), append <span class="mono">.0</span>. Anything that cannot read it (documents, static HTML) has the <span class="mono">VERSION</span> value written in when it is created or revised.<br>
@@ -1797,7 +1806,10 @@ assets/
       <b>(10) Raising the version:</b> change <span class="mono">VERSION</span>, <span class="mono">CHANGELOG.md</span>, and (for software) the README version line in the same change (pull request or commit).<br>
       <b>(11) Tags and Releases:</b> when <span class="mono">VERSION</span> changes on main, tag that commit <span class="mono">vX.Y.Z</span> and create a GitHub Release (notes: the matching CHANGELOG section). Folders on GitHub automate this with GitHub Actions. Repositories that use pull requests also check that (1), (8), and (9) agree and that no existing tag is reused. Templates: <a href="https://github.com/5garashi/5garashi-identity/tree/main/templates/.github/workflows">templates/.github/workflows/</a>.<br>
       <b>(12) Single-file tools:</b> tools made of one HTML file or script and not kept in their own folder take their version from the "版 / Version" header line of 9-3 (6).<br>
-      <b>(13) Tags and release dates:</b> a tag marks the source of that version and may not match the date it appears in a store (reviews and manual publishing intervene).</span>
+      <b>(13) Tags and release dates:</b> a tag marks the source of that version and may not match the date it appears in a store (reviews and manual publishing intervene).<br>
+      <b>(14) Conformance version:</b> each product states the version of this document it follows, next to its README version line (for example, "準拠 / Conforms to: Design Office Identity 4.21.0"). Other in-house rules it follows, such as the Quality Rules, go on the same line with their versions. Article numbers of this document cited in the product's documents are read as those of that version. Released products do not update their references and conformance version every time this document changes; at the product's next revision, read the CHANGELOG from its conformance version to the current one and update them. A product without a conformance line adds one at its next revision.<br>
+      <b>(15) Moving or removing articles:</b> when a revision moves, removes, or renumbers an article or item, the CHANGELOG maps the old articles to the new ones.<br>
+      <b>(16) Latest and old versions:</b> the public page <a href="https://5garashi.github.io/5garashi-identity/">https://5garashi.github.io/5garashi-identity/</a> always shows the latest version, and links from 5garashi.com pages always point to that URL. An old version can be read from the source at its tag (<span class="mono">vX.Y.Z</span>); no separate place is kept for old versions.</span>
     </p>
   </div>
 </section>
@@ -1851,8 +1863,8 @@ assets/
 
 <footer>
   <span style="font-weight:800;color:var(--ink)"><span style="font-family:Georgia,serif;font-style:italic">5</span>garashi.com設計事務所 / 5garashi.com Design Office</span> — <a class="mono" href="https://www.5garashi.com">https://www.5garashi.com</a><br>
-  <span class="ja" lang="ja">Design Office Identity — 2026.10.17 — © 2026 CC BY-ND 4.0</span>
-  <span class="en" lang="en">Design Office Identity — 2026.10.17 — © 2026 CC BY-ND 4.0</span><br>
+  <span class="ja" lang="ja">Design Office Identity — 2026.11.03 — © 2026 CC BY-ND 4.0</span>
+  <span class="en" lang="en">Design Office Identity — 2026.11.03 — © 2026 CC BY-ND 4.0</span><br>
   <span class="ja" lang="ja">回路にも、画面にも、暮らしにも——五本の唐辛子。だれの手にも、ピリッと効く。</span>
   <span class="en" lang="en">Five chilis — on the board, on the screen, in daily life. A kick designed to work in as many hands as possible.</span>
 </footer>

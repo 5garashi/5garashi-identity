@@ -3,6 +3,35 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.21.0 — 2026-11-03
+
+規定を見直すときの基準(品質と効率、減らすことも検討する)、品質確認規定との関係、製品が従う版の書き方を定めた。旧版の扱いは最小限にした。
+Set the criteria for reviewing the rules (quality and efficiency, including reducing them) and how products state the version they follow; old versions get minimal handling.
+
+### 本文 / Content
+- 1-4 (3):見直しは製品を作る・直す・出すたびに行い、品質を高めることと効率を上げることの両方を基準にする。規定を足すことだけでなく、減らすこと(削る・まとめる・軽くする・当てはめる範囲を絞る)も必ず検討する。減らすときは、防いでいたことと代わりを CHANGELOG に書く。(2) の規定は効率だけを理由に減らさない。
+  1-4 (3): review at every development by both quality and efficiency; always consider reducing rules as well as adding them; record what a reduced rule prevented and its replacement; never reduce the rules in (2) for efficiency alone.
+- 1-4 (5) を新設:本書は「満たすべき姿」を定め、満たしていることの作り方と確かめ方(作りこみ、試験、記録、レビュー)は品質確認規定(https://5garashi.github.io/5garashi-quality/)が定める。食い違うときは本書に従い、品質確認規定を直す。品質確認規定の公開(2026-11-03)に合わせて参照を入れた。確かめ方の条(7-7 など)を品質確認規定へ移すことは、品質確認規定の次の版で行う。
+  New 1-4 (5): the Quality Rules, published on 2026-11-03, set how to build in and confirm conformance; this document prevails where they disagree. Moving verification articles (such as 7-7) is planned for the next Quality Rules version.
+- 12-7 (14) を新設:製品は、従う本書の版(と品質確認規定などの版)を README の版の行の近くに書き、製品の文書の条番号はその版のものとして読む。出した製品の参照と準拠の版は、本書を改めるたびには直さず、次にその製品を改版するときに直す。書かれていない製品は、次に改版するときに書く。
+  New 12-7 (14): products state their conformance version and update references at their next revision; products without one add it then.
+- 12-7 (15) を新設:条や項を移す・消す・番号を変えるときは、CHANGELOG に旧と新の対応を書く。
+  New 12-7 (15): the CHANGELOG maps old to new articles when they move or are removed.
+- 12-7 (16) を新設:公開ページは常に最新版を示し、5garashi.com のページからのリンクは常に公開ページに向ける。旧版はその版のタグのソースで読み、別の置き場所は作らない。
+  New 12-7 (16): the public page and links from 5garashi.com always point to the latest version; old versions are read from their tags, with no separate archive.
+
+### 判断の記録 / Notes on the decisions
+- きっかけ:品質確認規定(5garashi-quality)へ確かめ方の条を移すことを検討した際、本書の条番号を参照している製品の文書をどう扱うかが問題になった。5garashi.com の判断(2026-11-03):製品の参照は改版のときに直す。5garashi.com のページからのリンクは常に最新版に行くようにする。旧版のケアは最小限でよい。
+  Trigger: moving verification articles to the Quality Rules raised how products citing article numbers should be handled. 5garashi.com's decision (2026-11-03): products update references at their next revision; links from 5garashi.com always go to the latest; old versions need only minimal care.
+- 準拠の版の書き方は、規格の版を指定した引用(ISO・JIS)と、適合する版の宣言(WCAG)にならった。
+  Stating the conformance version follows dated references (ISO, JIS) and versioned conformance claims (WCAG).
+- 別の AI によるレビュー(2026-11-03)を受けて、次の案を採らなかった(1-4 (3) の「減らす」の当てはめ):準拠の版が書かれていない製品をタグの日付で決める案(日時の基準や同じ日の改版で一意に決まらないため)、移した条の元の位置に案内を残す案(CHANGELOG の対応で足りるため)、旧版の単一ファイル版を Release に添付する案(タグから取り出せるため。添付のワークフローと、その確認も要らなくなった)。
+  After an independent AI review (2026-11-03), these drafts were dropped as reductions under 1-4 (3): deciding a missing conformance version by tag date (not unique), leaving notes at the old places of moved articles (the CHANGELOG mapping suffices), and attaching single-file editions to Releases (tags already hold them, so no workflow or check is needed).
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_21_0.html`。
+  Single-file edition: `5garashi_identity_v4_21_0.html`.
+
 ## 4.20.0 — 2026-10-17
 
 製品の機能を説明・確認する文書を、GitHub との互換の決まり(8-9 (7))の例外とし、文書ごとの指定を優先できるようにした。
