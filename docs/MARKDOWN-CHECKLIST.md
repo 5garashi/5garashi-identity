@@ -3,17 +3,17 @@
   概要 / Description: Markdown と図(Mermaid)の書き方・確認のチェックリスト。全製品共通の正本(Identity 第8条 8-9) / Markdown and diagram (Mermaid) authoring and review checklist, shared by all products (Identity Art. 8-9)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-17
-  版 / Version: 4.20.0
+  版 / Version: 4.22.0
   ライセンス / License: MIT
   SPDX-License-Identifier: MIT
 -->
 # Markdown・図(Mermaid)の書き方チェックリスト / Markdown and Diagram Checklist
 
-5garashi.com の文書を Markdown で作成・修正するときに使う、全製品共通のチェックリストです。原則は [Design Office Identity](https://5garashi.github.io/5garashi-identity/) 第8条 8-9 にあり、このファイルはその具体的な確認項目です。製品ごとの描画エンジンの版・対応する記法・不具合と検証の記録は、各製品のリポジトリに置きます。
+5garashi.com の文書を Markdown で作成・修正するときに使う、全製品共通のチェックリストです。原則は [Design Office Identity](https://5garashi.github.io/5garashi-identity/) 第8条 8-9 にあり、このファイルはその具体的な確認項目です。描画と表示の確かめ方と、確認記録のひな形は、[品質確認規定](https://5garashi.github.io/5garashi-quality/) 6-4 と 10-4 にあります。製品ごとの描画エンジンの版・対応する記法・不具合と検証の記録は、各製品のリポジトリに置きます。
 
 **構文が通ること、表示が読めること、内容が正しいことを、別々に確かめます。** 構文の検証や描画の成功(SVG ができた、エラーが出ない)だけで、表示の品質やアクセシビリティを確認済みとしません。
 
-English: Check syntax, visible layout, and factual accuracy separately. A successful parse or SVG render does not prove that labels are readable, free of overlaps, or accessible. The principles are in Identity Art. 8-9; product-specific engine versions, supported syntax, and defect records live in each product's repository.
+English: Check syntax, visible layout, and factual accuracy separately. A successful parse or SVG render does not prove that labels are readable, free of overlaps, or accessible. The principles are in Identity Art. 8-9; how to check rendering and display, and the record template, are in the Quality Rules 6-4 and 10-4; product-specific engine versions, supported syntax, and defect records live in each product's repository.
 
 ## 1. 文章と Markdown の基本 / Writing and Markdown basics
 
@@ -73,22 +73,15 @@ English: short ASCII node IDs with quoted labels; one task or state per node; sh
 
 ## 4. 描画と表示を確かめる / Checking rendering and display
 
-- [ ] 配る製品・環境と同じ描画エンジンと版で描画した。別のサイトや新しい版で描けたことだけで、成功としなかった(製品ごとの版と確かめ方は、その製品のリポジトリに書く。GitHub で読む Markdown は 5 節のとおり両方で確かめる)。
-- [ ] 書体の読み込みが終わってから確かめた。書体・太さ・文字の大きさが変わると、幅の測り方も変わる。
-- [ ] すべての図を、画像か実際のプレビューで見て、文字の重なり・切れ・枠からのはみ出しを確かめた。
-- [ ] ふつうの画面の幅と、狭いプレビューの幅で確かめた。縮めると文字が極端に小さくなる図は分けた。
-- [ ] 昼と夜(Identity 4-2)の両方で、文字と線が読めることを確かめた。色だけで状態を区別しなかった(7-2)。
-- [ ] 図だけに情報を持たせず、要点を本文や表にも書いた(7-4)。
-- [ ] PDF や HTML で配るときは、実際に書き出して確かめた。PDF は改ページ、図の途中での切れ、余白、リンクを見た。
-- [ ] 自動の確認と目視の確認を分けて記録した。確かめていない表示の条件や読み上げを「確認済み」にしなかった(7-7、8-8)。
+Identity 4.22.0 で、[品質確認規定](https://5garashi.github.io/5garashi-quality/) 6-4 (3) へ移しました。
 
-English: render with the same engine and version the product ships; check after fonts load; inspect every diagram for overlaps, clipping, and overflow at normal and narrow widths, in day and night palettes; never rely on color alone; keep a text equivalent; export PDF/HTML when distributing; record automated and visual checks separately and never mark unchecked conditions as checked.
+English: moved to Quality Rules 6-4 (3) in Identity 4.22.0.
 
 ## 5. GitHub と mdEditor の互換性 / GitHub and mdEditor compatibility
 
 GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の両方で同じように読めることを求めます(Identity 8-9 (5)(7))。mdEditor が対応する記法・同梱する Mermaid の版・検証の結果は、mdEditor のリポジトリで確かめます。
 
-製品の機能を説明・確認するための文書(機能の説明、サンプル、試験用の文書など。Identity 8-9 (8))と、文書ごとに表示先や記法の指定がある文書(8-9 (9))は、この節の互換の確認を省いてよい。その場合も、その製品での表示は 4 節のとおり確かめ、文書の冒頭に表示先の前提を書き、当てはめない文書と理由を製品の README に書く。
+製品の機能を説明・確認するための文書(機能の説明、サンプル、試験用の文書など。Identity 8-9 (8))と、文書ごとに表示先や記法の指定がある文書(8-9 (9))は、この節の互換の確認を省いてよい。その場合も、その製品での表示は品質確認規定 6-4 のとおり確かめ、文書の冒頭に表示先の前提を書き、当てはめない文書と理由を製品の README に書く。
 
 - [ ] 図は Mermaid のコードブロック(` ```mermaid `)で書いた。
 - [ ] GitHub の表示と mdEditor の両方で描画し、文字の収まりと重なりを目で確かめた。一方で描画できたことだけで、互換性を確認済みとしなかった。
@@ -98,7 +91,7 @@ GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の�
 - [ ] ブラウザーの拡張機能、エディターのプラグイン、特定の環境だけの設定がなくても読める。
 - [ ] 使える場合は、Mermaid の `accTitle`・`accDescr` で図の題と説明を付けた。付けたときは、両方の環境で描画が崩れないことを確かめた。
 
-English: documents that explain or check product features (8-9 (8)) and documents with their own display-target instructions (8-9 (9)) may skip this section, but are still checked in the product per section 4, state their display assumption at the top, and are listed with the reason in the product's README. Otherwise: write diagrams as Mermaid code blocks; render and inspect them in both GitHub and mdEditor (success in one is not compatibility), in GitHub's light and dark display and mdEditor's day and night palettes; avoid syntax only one side's newer Mermaid supports; never use notation both cannot draw directly (Graphviz DOT, PlantUML, and so on) — use an image with alt text instead; require no extensions, plugins, or environment-specific settings; add `accTitle`/`accDescr` where supported, after checking both environments. mdEditor's supported syntax, bundled Mermaid version, and results live in the mdEditor repository.
+English: documents that explain or check product features (8-9 (8)) and documents with their own display-target instructions (8-9 (9)) may skip this section, but are still checked in the product per Quality Rules 6-4, state their display assumption at the top, and are listed with the reason in the product's README. Otherwise: write diagrams as Mermaid code blocks; render and inspect them in both GitHub and mdEditor (success in one is not compatibility), in GitHub's light and dark display and mdEditor's day and night palettes; avoid syntax only one side's newer Mermaid supports; never use notation both cannot draw directly (Graphviz DOT, PlantUML, and so on) — use an image with alt text instead; require no extensions, plugins, or environment-specific settings; add `accTitle`/`accDescr` where supported, after checking both environments. mdEditor's supported syntax, bundled Mermaid version, and results live in the mdEditor repository.
 
 ## 6. 内容とリンクを確かめる / Checking content and links
 
@@ -113,20 +106,11 @@ English: keep source, distribution, and document versions distinct; match operat
 
 ## 7. 確認記録のひな形 / Check record template
 
-| 項目 | 書くこと |
-| --- | --- |
-| 対象の文書・版 | ファイル名、文書の版、製品(ソース)の版 |
-| 確認日・担当 | 日付と担当(人・AI) |
-| 描画エンジン | 実際に使ったものと、その版 |
-| 表示環境 | GitHub(ライト・ダーク)、mdEditor(版と昼・夜)など、実際に見たもの |
-| 自動の確認 | 図の数、構文、相対リンクなど |
-| 目視の確認 | 対象の図、画面の幅、書体、昼・夜、重なりや切れの有無 |
-| 書き出し | PDF・HTML など、実際に行ったものだけ |
-| 確かめていないこと・残る問題 | 表示の条件、読み上げ、改ページなど |
+Identity 4.22.0 で、[品質確認規定](https://5garashi.github.io/5garashi-quality/) 10-4 (2) へ移しました。ソフトウェアの出荷前のアクセシビリティの確認記録は、同じく 10-4 (1) にあります。
 
-ソフトウェアの出荷前チェック全体の記録は、Identity 9-5 のひな形を使います。
+English: moved to Quality Rules 10-4 (2) in Identity 4.22.0; the accessibility check record for software is in 10-4 (1).
 
 ---
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
-**最終更新 / Last updated**: 2026-10-17 JST
+**最終更新 / Last updated**: 2026-11-03 JST
