@@ -3,6 +3,49 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.22.0 — 2026-11-03
+
+確かめ方と記録の条を、品質確認規定(https://5garashi.github.io/5garashi-quality/ 0.9.0)へ移した(1-4 (5))。本書には満たすべき条件を残した。
+Verification and record-keeping moved to the Quality Rules (0.9.0) under 1-4 (5); this document keeps the requirements.
+
+### 本文 / Content
+- 7-7:「公開する前に次の点を確認する」を「公開する道具は、次を満たす」とし、確かめ方と確認の記録は品質確認規定 6-5 によるとした。(a)〜(k) の条件は残し、(e)(h)(k) の「確かめる」を「満たす」に直した。
+  7-7 now states conditions; how to confirm and record them is in Quality Rules 6-5.
+- 9-5:アクセシビリティの確認記録のひな形を品質確認規定 10-4 へ移した。
+  9-5: the accessibility record template moved to Quality Rules 10-4.
+- 8-9 (1)(5)(6):確かめ方・記録・置き場所の詳しい決まりを品質確認規定 6-4 へ移し、要点と移り先を残した。項の番号は変えていないため、(8)(9) からの (1)(5) の参照はそのまま使える。
+  8-9 (1)(5)(6) keep the gist and point to Quality Rules 6-4; numbering is unchanged.
+- 12-7 (6):確かめ方を品質確認規定 14-1 (1) へ移した(`check_version.py` を写して使ってよいことは残した)。12-7 (11):タグと Release を作る決まりは残し、Actions による自動化とプルリクエストでの確認を 14-1 (2)(3) へ移した。12-3 の `version-check.yml` の参照(12-7 (7) と誤っていた)を 14-1 (3) に直した。
+  12-7 (6) and the automation in (11) moved to Quality Rules 14-1; the wrong reference in 12-3 is fixed.
+
+### チェックリスト / Checklist
+- `docs/MARKDOWN-CHECKLIST.md`(版 4.22.0):4 節(描画と表示を確かめる)を品質確認規定 6-4 (3) へ、7 節(確認記録のひな形)を 10-4 (2) へ移し、節の番号は残した。5 節の「4 節のとおり」を「品質確認規定 6-4 のとおり」にした。
+  Checklist 4.22.0: sections 4 and 7 moved to Quality Rules 6-4 (3) and 10-4 (2); section numbers kept.
+
+### 移した条の対応(12-7 (15)) / Mapping of moved articles
+
+| Identity 4.21.0 | 移り先 |
+| :--- | :--- |
+| 7-7 の「公開する前に確認する」ことと、確認の記録 | 品質確認規定 6-5。(a)〜(k) の条件は 7-7 に残した |
+| 9-5 のアクセシビリティの確認記録のひな形 | 品質確認規定 10-4 (1) |
+| 8-9 (1) の確かめ方、(5) 配る環境での確かめ方と記録、(6) 置き場所 | 品質確認規定 6-4 (1)〜(5)。8-9 (1)(5)(6) には要点と移り先を残した |
+| MARKDOWN-CHECKLIST 4 節(描画と表示を確かめる) | 品質確認規定 6-4 (3) |
+| MARKDOWN-CHECKLIST 7 節(確認記録のひな形) | 品質確認規定 10-4 (2) |
+| 12-7 (6) 版の確かめ方 | 品質確認規定 14-1 (1) |
+| 12-7 (11) のうち、Actions による自動化とプルリクエストでの確認 | 品質確認規定 14-1 (2)(3) |
+
+### 判断の記録 / Notes on the decisions
+- 4.21.0 で、品質確認規定を公開するときに移すと決めていた。品質確認規定の公開(2026-11-03)を受けて行った。
+  Planned in 4.21.0 for when the Quality Rules were published.
+- 項の番号を変えなかったのは、本書の番号を引いている製品の文書が別の項を指さないようにするためである(12-7 (14))。
+  Item numbers were kept so product documents citing them do not point to other items.
+- 製品の README にある「アクセシビリティの確認記録」は、12-7 (14) のとおり、各製品を次に改版するときに品質確認規定 10-4 (1) のひな形に合わせる。
+  Product READMEs adopt the 10-4 (1) template at their next revision.
+
+### ページ / Page
+- 単一ファイル版のファイル名は `5garashi_identity_v4_22_0.html`。
+  Single-file edition: `5garashi_identity_v4_22_0.html`.
+
 ## 4.21.0 — 2026-11-03
 
 規定を見直すときの基準(品質と効率、減らすことも検討する)、品質確認規定との関係、製品が従う版の書き方を定めた。旧版の扱いは最小限にした。
