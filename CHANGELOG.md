@@ -3,6 +3,14 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.23.0 — 2026-11-05
+
+- 8-2 (6)「例外・限界と論旨」を日英で追加した。必要な否定・限界・適用範囲を明示したうえで、その概念の使い方と説明・検討の方向を示す。保険的な留保の積み重ねと説明の重複を避け、詳細は必要に応じて注記・付録へ分ける。
+  Added 8-2 (6), “Exceptions, limits, and the main argument,” in Japanese and English. State necessary limits and scope, then explain the concept’s role; avoid excessive caveats and repetition, and move supporting details to notes or appendices where appropriate.
+- 必要な条件を残す責任を維持しつつ、限界の説明で主張が見えなくなることを防ぐ。既存の項番号は変更しない。単一ファイル版を4.23.0として再生成した。
+  Preserves necessary conditions while keeping the main argument clear. Existing item numbers are unchanged; the single-file edition is regenerated as 4.23.0.
+- TESTING.mdを新設し、このリポジトリの確認方法と実施範囲を記録する。
+
 ## 4.22.0 — 2026-11-03
 
 確かめ方と記録の条を、品質確認規定(https://5garashi.github.io/5garashi-quality/ 0.9.0)へ移した(1-4 (5))。本書には満たすべき条件を残した。
