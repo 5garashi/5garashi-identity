@@ -3,7 +3,7 @@
   概要 / Description: Markdown と図(Mermaid)の書き方・確認のチェックリスト。全製品共通の正本(Identity 第8条 8-9) / Markdown and diagram (Mermaid) authoring and review checklist, shared by all products (Identity Art. 8-9)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-10-17
-  版 / Version: 4.22.0
+  版 / Version: 4.25.0
   ライセンス / License: MIT
   SPDX-License-Identifier: MIT
 -->
@@ -81,7 +81,7 @@ English: moved to Quality Rules 6-4 (3) in Identity 4.22.0.
 
 GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の両方で同じように読めることを求めます(Identity 8-9 (5)(7))。mdEditor が対応する記法・同梱する Mermaid の版・検証の結果は、mdEditor のリポジトリで確かめます。
 
-製品の機能を説明・確認するための文書(機能の説明、サンプル、試験用の文書など。Identity 8-9 (8))と、文書ごとに表示先や記法の指定がある文書(8-9 (9))は、この節の互換の確認を省いてよい。その場合も、その製品での表示は品質確認規定 6-4 のとおり確かめ、文書の冒頭に表示先の前提を書き、当てはめない文書と理由を製品の README に書く。
+製品の機能を説明・確認するための文書(機能の説明、サンプル、試験用の文書など。Identity 8-9 (8))と、文書ごとに表示先や記法の指定がある文書(8-9 (9))は、この節の互換の確認を省いてよい。ただし、別の変換器でも公開する文書についての最後の項目(8-9 (10))は省かない。その場合も、その製品での表示は品質確認規定 6-4 のとおり確かめ、文書の冒頭に表示先の前提を書き、当てはめない文書と理由を製品の README に書く。
 
 - [ ] 図は Mermaid のコードブロック(` ```mermaid `)で書いた。
 - [ ] GitHub の表示と mdEditor の両方で描画し、文字の収まりと重なりを目で確かめた。一方で描画できたことだけで、互換性を確認済みとしなかった。
@@ -90,8 +90,10 @@ GitHub で読む Markdown(README など)は、GitHub の表示と mdEditor の�
 - [ ] Graphviz(DOT)や PlantUML など、両方で共通して直接描画できない記法を、Markdown の中の図にしなかった。必要なときは画像にして、代替テキストと本文の説明を付けた。
 - [ ] ブラウザーの拡張機能、エディターのプラグイン、特定の環境だけの設定がなくても読める。
 - [ ] 使える場合は、Mermaid の `accTitle`・`accDescr` で図の題と説明を付けた。付けたときは、両方の環境で描画が崩れないことを確かめた。
+- [ ] 図以外の書き方も、GitHub が対応する記法(GitHub Flavored Markdown と、GitHub が独自に対応する数式・Mermaid)の範囲で書いた(8-9 (10))。
+- [ ] GitHub Pages(Jekyll(kramdown)など)のように別の変換器でも公開する文書は、その変換器でも正しく表示されることを確かめた。kramdown は `$…$` の中を数式として扱わないため、文中数式に、縦棒(`\vert` を使う)、一つの段落に二つ以上の、単語の途中でない `_`(`g_{ab}^{-}` のように、`_` を文字の直後に置く)、kramdown がエスケープとして扱うバックスラッシュの後の記号(`\!`・`\{` など)、`](` を書かなかった。これらを公開の前に見つける自動の検査をリポジトリに置き、見つけた不具合の例を検査の例集(試験の例)に足した(例:zeroPhase の `tools/check_math.py`)。
 
-English: documents that explain or check product features (8-9 (8)) and documents with their own display-target instructions (8-9 (9)) may skip this section, but are still checked in the product per Quality Rules 6-4, state their display assumption at the top, and are listed with the reason in the product's README. Otherwise: write diagrams as Mermaid code blocks; render and inspect them in both GitHub and mdEditor (success in one is not compatibility), in GitHub's light and dark display and mdEditor's day and night palettes; avoid syntax only one side's newer Mermaid supports; never use notation both cannot draw directly (Graphviz DOT, PlantUML, and so on) — use an image with alt text instead; require no extensions, plugins, or environment-specific settings; add `accTitle`/`accDescr` where supported, after checking both environments. mdEditor's supported syntax, bundled Mermaid version, and results live in the mdEditor repository.
+English: documents that explain or check product features (8-9 (8)) and documents with their own display-target instructions (8-9 (9)) may skip this section except the last item on documents also published through another converter (8-9 (10)), but are still checked in the product per Quality Rules 6-4, state their display assumption at the top, and are listed with the reason in the product's README. Otherwise: write diagrams as Mermaid code blocks; render and inspect them in both GitHub and mdEditor (success in one is not compatibility), in GitHub's light and dark display and mdEditor's day and night palettes; avoid syntax only one side's newer Mermaid supports; never use notation both cannot draw directly (Graphviz DOT, PlantUML, and so on) — use an image with alt text instead; require no extensions, plugins, or environment-specific settings; add `accTitle`/`accDescr` where supported, after checking both environments. Write non-diagram syntax within what GitHub supports, too (GitHub Flavored Markdown, plus GitHub's own math and Mermaid support; 8-9 (10)). For documents also published through another converter such as GitHub Pages (Jekyll (kramdown)), confirm that they display correctly there as well. Because kramdown does not treat `$…$` as math, confirm that inline math contains no vertical bars (use `\vert`), no two or more `_` that are not inside a word in one paragraph (place `_` immediately after a letter, as in `g_{ab}^{-}`), no symbols after a backslash that kramdown treats as escapes (`\!`, `\{`, and the like), and no `](`. Keep automated checks in the repository that find these before publication, and add examples of defects found to their test examples (for instance, zeroPhase's `tools/check_math.py`). mdEditor's supported syntax, bundled Mermaid version, and results live in the mdEditor repository.
 
 ## 6. 内容とリンクを確かめる / Checking content and links
 
@@ -113,4 +115,4 @@ English: moved to Quality Rules 10-4 (2) in Identity 4.22.0; the accessibility c
 ---
 
 **作成者 / Author**: 5garashi.com設計事務所 / 5garashi.com Design Office
-**最終更新 / Last updated**: 2026-11-03 JST
+**最終更新 / Last updated**: 2026-11-07 JST
