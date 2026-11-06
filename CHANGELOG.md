@@ -3,6 +3,30 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.25.0 — 2026-11-07
+
+- 8-9 (10)「GitHub が対応する記法で書く」を日英で追加した。GitHub で管理する Markdown は、GitHub が対応する記法(GitHub Flavored Markdown と、GitHub が独自に対応する数式・Mermaid)の範囲で書く。GitHub Pages(Jekyll(kramdown)など)のように別の変換器でも公開する文書は、文書ごとの指定の有無にかかわらず、その変換器でも正しく表示される書き方にし、扱いの違いを公開の前に見つける自動の検査をリポジトリに置いて、見つけた不具合の例を検査の例集に足す。
+  Added 8-9 (10), “Write in notation GitHub supports,” in Japanese and English. Markdown managed on GitHub is written within GitHub Flavored Markdown plus GitHub's own math and Mermaid support. Documents also published through another converter, such as GitHub Pages (Jekyll (kramdown)), are written to display correctly there as well, whether or not a per-document specification exists; the repository keeps automated checks that detect the differences before publication, and examples of defects found are added to the checks' test examples.
+- 8-9 (9) の文書ごとの指定が優先する対象に、(10) の記法の部分を加えた。
+  8-9 (9) per-document instructions now also take precedence over the notation part of (10).
+- docs/MARKDOWN-CHECKLIST.md の第5節に、(10) の確認項目を足した。この項目は、(8)(9) の文書でも省かない。
+  Added the checks for (10) to section 5 of docs/MARKDOWN-CHECKLIST.md; documents under (8) and (9) do not skip them.
+- 経緯:2026-11-07、zeroPhase を GitHub Pages で公開したとき、kramdown が `$…$` の中を数式として扱わず、文中数式の縦棒・`_`・`\!`・`](` を Markdown として処理して、5か所の表示が崩れた。
+  Background: on 2026-11-07, when zeroPhase was published on GitHub Pages, kramdown did not treat `$…$` as math and processed bars, `_`, `\!`, and `](` in inline math as Markdown, breaking five expressions.
+- 4.24.0 は公開せず、内容を 4.25.0 に含めて公開した。単一ファイル版を 4.25.0 として生成し、4.24.0 の単一ファイル版を消した(12-7 (16))。
+  4.24.0 was not published on its own; its content is published as part of 4.25.0. The single-file edition is generated as 4.25.0, and the 4.24.0 single-file edition is removed (12-7 (16)).
+
+## 4.24.0 — 2026-11-06（未公開 / not published）
+
+- 9-3 (1)(2) で、ファイルヘッダーの見本A・Bの分け方を定めた。これまでは、コメントを英語だけで書き、文字列やデータに日本語を含むプログラムが、(1)「日本語を含む」と (2)「説明やコメントを英語だけで書く」の両方に当たっていた。プログラム(ソースコード・スクリプト・設定・テスト)は、文字列やデータに日本語を含めば見本Aとする。利用者が読む文書(README・サンプルなど)を言語ごとに分けるときは、日本語版を見本A、英語版・中国語版などほかの言語の版を見本Bとする。日本語を含まないファイルは見本Bとする。
+  9-3 (1) and (2) now set which file headers use sample A and which sample B. A program with English-only comments and Japanese in its strings or data used to fall under both. Programs (source code, scripts, configuration, and tests) use sample A when their strings or data contain Japanese. When a document for users (a README, samples, and so on) is split by language, the Japanese edition uses sample A, and editions in other languages, such as English and Chinese, use sample B. Files that contain no Japanese use sample B.
+- 9-3 (7) を足した。4.23.0 までに作ったファイルは、ヘッダー(作成者の欄を含む)が (1)(2) に合わなくても、改版するときも直さなくてよい。
+  Added 9-3 (7): files created up to 4.23.0 need not be changed if their headers (including the author field) do not follow (1) and (2), even when the files are revised.
+- 9-3 の冒頭、見本Bの見出し、(6) の版の行の項目名、8-6 の作成者の英語表記の条件を、(1)(2) に合わせた。単一ファイル版を 4.24.0 として生成した。
+  The opening of 9-3, the caption of sample B, the version label in (6), and the condition for the English author name in 8-6 now follow (1) and (2). The single-file edition is generated as 4.24.0.
+- 4.23.0 のときに消し忘れていた 4.22.0 の単一ファイル版を消し、単一ファイル版を最新の 1 つだけにした(12-7 (16)。旧版はタグ v4.22.0 で読める)。
+  Removed the 4.22.0 single-file edition left over from 4.23.0, so only the latest single-file edition remains (12-7 (16); the old version is available from tag v4.22.0).
+
 ## 4.23.0 — 2026-11-05
 
 - 8-2 (6)「例外・限界と論旨」を日英で追加した。必要な否定・限界・適用範囲を明示したうえで、その概念の使い方と説明・検討の方向を示す。保険的な留保の積み重ねと説明の重複を避け、詳細は必要に応じて注記・付録へ分ける。
