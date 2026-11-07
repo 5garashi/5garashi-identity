@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: 5garashi_identity_v4_25_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
+  ファイル名 / File: 5garashi_identity_v4_26_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  最終更新 / Last updated: 2026-11-07
-  版 / Version: 4.25.0
+  最終更新 / Last updated: 2026-11-08
+  版 / Version: 4.26.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -452,7 +452,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.25.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.25.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.26.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.26.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -492,9 +492,9 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">本版(2026-11-07)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-07)</span></summary>
-    <ul class="ja" lang="ja"><li>8-9 (10) を追加。GitHub で管理する Markdown は、GitHub が対応する記法の範囲で書く。GitHub Pages など別の変換器でも公開する文書は、その変換器でも正しく表示される書き方にし、扱いの違いを公開の前に自動の検査で見つける。</li><li>(4.24.0)9-3 ファイルヘッダーの見本A・Bの分け方を定めた。プログラムは、文字列やデータに日本語を含めば見本A。利用者が読む文書は、日本語版を見本A、ほかの言語の版を見本Bとする。4.23.0 までに作ったファイルは直さなくてよい(9-3 (7))。</li></ul>
-    <ul class="en" lang="en"><li>Added 8-9 (10). Markdown managed on GitHub is written within the notation GitHub supports. Documents also published through another converter, such as GitHub Pages, are written to display correctly there too, and automated checks find the differences before publication.</li><li>(4.24.0) 9-3 now sets which file headers use sample A and which sample B. Programs use sample A when their strings or data contain Japanese. In documents for users, the Japanese edition uses sample A, and editions in other languages use sample B. Files created up to 4.23.0 need not be changed (9-3 (7)).</li></ul>
+    <summary><span class="ja" lang="ja">本版(2026-11-08)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-08)</span></summary>
+    <ul class="ja" lang="ja"><li>13-1 (2) を改め、「初期設定をオフ」の要件を、使う人の同意を得ることに置き換えた。外部のサービスに送る機能は、(a) 送る内容と送り先を示して確認し、使う人が送ることを選んだときだけ送る(初回の同意をその後も使ってよい)か、(b) 設定でオンにしたときだけ送る。どちらの場合も同意をやめる方法を設け、送る内容か送り先が変わったら改めて同意を得る。</li></ul>
+    <ul class="en" lang="en"><li>Revised 13-1 (2): the "off by default" requirement was replaced by a consent requirement. A feature that sends data to an outside service either (a) states what is sent and where and sends only if the user chooses to send (consent given the first time may cover later sends), or (b) sends only after the user turns it on in settings. Either way, the feature provides a way to withdraw consent and asks again when what is sent or where it goes changes.</li></ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
 </aside>
@@ -1798,8 +1798,8 @@ assets/
     </p>
     <h3><span class="ja" lang="ja">13-1. 原則</span><span class="en" lang="en">13-1. Principles</span></h3>
     <p>
-      <span class="ja" lang="ja"><b>(1)</b> 利用状況の計測(テレメトリ)や広告のための通信をしない。<b>(2)</b> 文書や入力の処理(表示・保存・PDFの書き出し・読み上げなど)は、使う人のPCの中で行う。外部のサービスに送る機能を設ける場合は、初期設定をオフにし、使う前に送る内容と送り先を示す。外部のファイルを読み込むこと(受け取ること)は、この項ではなく 13-3 による。<b>(3)</b> 保存するデータ(設定・作業の控え・ログなど)と、その場所を一覧で公開する。<b>(4)</b> 機能に伴って通信が起きる場合(文書の中の外部の画像を表示するときなど)は、その場合と、相手に伝わる情報を書く。</span>
-      <span class="en" lang="en"><b>(1)</b> No connections for usage tracking (telemetry) or advertising. <b>(2)</b> Documents and input are processed on the user's PC (display, saving, PDF export, read-aloud, and so on). Any feature that sends data to an outside service is off by default and states what is sent and where before use. Loading (receiving) external files is governed by 13-3, not by this item. <b>(3)</b> Publish a list of the data stored (settings, work backups, logs, and so on) and where. <b>(4)</b> Where connections happen as a side effect (for example, showing external images in a document), state when and what the other party receives.</span>
+      <span class="ja" lang="ja"><b>(1)</b> 利用状況の計測(テレメトリ)や広告のための通信をしない。<b>(2)</b> 文書や入力の処理(表示・保存・PDFの書き出し・読み上げなど)は、使う人のPCの中で行う。外部のサービスに送る機能を設ける場合は、次の (a) か (b) のどちらかで使う人の同意を得て、同意を得たときだけ送る。(a) 送る前に、送る内容と送り先を示し、使う人が送ることを選んだときだけ送る。初回に得た同意は、その後の送信にも有効としてよい。(b) 設定でオンにしたときだけ送る。設定の画面に、送る内容と送り先を書く。どちらの場合も、同意をやめる方法を設ける。送るたびに確認する場合は、確認で送らないことを選べればよい。初回の同意をその後も使う場合と (b) では、設定でオフにできるようにする。送る内容か送り先が変わったときは、改めて同意を得る。外部のファイルを読み込むこと(受け取ること)は、この項ではなく 13-3 による。<b>(3)</b> 保存するデータ(設定・作業の控え・ログなど)と、その場所を一覧で公開する。<b>(4)</b> 機能に伴って通信が起きる場合(文書の中の外部の画像を表示するときなど)は、その場合と、相手に伝わる情報を書く。</span>
+      <span class="en" lang="en"><b>(1)</b> No connections for usage tracking (telemetry) or advertising. <b>(2)</b> Documents and input are processed on the user's PC (display, saving, PDF export, read-aloud, and so on). Any feature that sends data to an outside service obtains the user's consent in one of the following two ways and sends only with that consent: (a) before sending, the feature states what is sent and where, and sends only when the user chooses to send; consent given the first time may cover later sends; (b) the feature sends only after the user turns it on in settings, and the settings screen states what is sent and where. Either way, the feature provides a way to withdraw consent: when it asks before every send, being able to choose not to send is enough; when first-time consent covers later sends, and under (b), the user can turn the feature off in settings. When what is sent or where it goes changes, the feature asks for consent again. Loading (receiving) external files is governed by 13-3, not by this item. <b>(3)</b> Publish a list of the data stored (settings, work backups, logs, and so on) and where. <b>(4)</b> Where connections happen as a side effect (for example, showing external images in a document), state when and what the other party receives.</span>
     </p>
     <h3><span class="ja" lang="ja">13-2. PRIVACY.md</span><span class="en" lang="en">13-2. PRIVACY.md</span></h3>
     <p>
