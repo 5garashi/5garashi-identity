@@ -3,6 +3,15 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.26.0 — 2026-11-08
+
+- 13-1 (2) を改め、外部のサービスに送る機能の「初期設定をオフにし、使う前に送る内容と送り先を示す」という要件を、使う人の同意を得ることに置き換えた。機能は、(a) 送る前に送る内容と送り先を示し、使う人が送ることを選んだときだけ送る(初回に得た同意は、その後の送信にも有効としてよい)か、(b) 設定でオンにしたときだけ送り、設定の画面に送る内容と送り先を書く。どちらの場合も同意をやめる方法を設ける(送るたびに確認するなら、確認で送らないことを選べればよい。初回の同意をその後も使う場合と (b) では、設定でオフにできるようにする)。送る内容か送り先が変わったときは、改めて同意を得る。
+  Revised 13-1 (2): for features that send data to an outside service, the requirement "off by default, and states what is sent and where before use" was replaced by a consent requirement. The feature either (a) states what is sent and where before sending and sends only when the user chooses to send (consent given the first time may cover later sends), or (b) sends only after the user turns it on in settings, with the settings screen stating what is sent and where. Either way, the feature provides a way to withdraw consent (when it asks before every send, being able to choose not to send is enough; when first-time consent covers later sends, and under (b), the user can turn the feature off in settings). When what is sent or where it goes changes, the feature asks for consent again.
+- 経緯:mdEditor に、ボタンを押したときだけ文書を GitHub の API に送り、GitHub での表示を確かめる機能を検討した。この機能は、押すたびに送る内容と送り先を示して確認し、使う人が送ることを選ばない限り送らない。これは、初期設定をオフにしておくのと同じ守りになる。初回だけ確認する場合も、初回に同意を得ていて、設定で同意をやめられれば、同じ守りになる。そこで「初期設定をオフ」を、同意を得る 2 通りの方法((a) 確認、(b) 設定)に置き換えた。
+  Background: for mdEditor, a feature was considered that sends the document to the GitHub API only when a button is pressed, to check how GitHub shows it. The feature asks every time, stating what is sent and where, and sends nothing unless the user chooses to send. This protects the user as well as a setting that is off by default. Asking only the first time protects the user equally, provided consent was given then and can be withdrawn in settings. The "off by default" requirement was therefore replaced by two ways to obtain consent: (a) asking and (b) a setting.
+- 単一ファイル版を 4.26.0 として生成し、4.25.0 の単一ファイル版を消した(12-7 (16))。
+  The single-file edition is generated as 4.26.0, and the 4.25.0 single-file edition is removed (12-7 (16)).
+
 ## 4.25.0 — 2026-11-07
 
 - 8-9 (10)「GitHub が対応する記法で書く」を日英で追加した。GitHub で管理する Markdown は、GitHub が対応する記法(GitHub Flavored Markdown と、GitHub が独自に対応する数式・Mermaid)の範囲で書く。GitHub Pages(Jekyll(kramdown)など)のように別の変換器でも公開する文書は、文書ごとの指定の有無にかかわらず、その変換器でも正しく表示される書き方にし、扱いの違いを公開の前に見つける自動の検査をリポジトリに置いて、見つけた不具合の例を検査の例集に足す。
