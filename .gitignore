@@ -1,11 +1,8 @@
-# 過去ファイル保管ディレクトリ
-/old/
+# 手元にだけ残すもの(過去のファイル・案の段階の資料。公開しない)/ Local-only files (old versions, drafts), not published
+/local/
 
 # ZIPアーカイブ
 *.zip
-
-# 案の段階の資料(公開しない)/ Draft materials, not published
-/backupDoc/
 
 # Pythonのキャッシュ / Python cache
 __pycache__/

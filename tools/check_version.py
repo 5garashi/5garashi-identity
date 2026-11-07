@@ -29,7 +29,7 @@ VERSION_RE = re.compile(r"^\d+\.\d+\.\d+$")
 HEADER_RE = re.compile(r"^(\s*(?:版 / Version|Version):\s*)(\d+\.\d+(?:\.\d+)?)", re.M)
 DATA_VERSION_RE = re.compile(r"(<[^<>]*\bdata-version\b[^<>]*>)(\d+\.\d+\.\d+)(</)")
 HEADER_LINES = 30
-SKIP_PREFIXES = ("old/", "backupDoc/", ".git/")
+SKIP_PREFIXES = ("local/", ".git/")
 
 
 def read_version() -> str:
