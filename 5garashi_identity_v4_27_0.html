@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: 5garashi_identity_v4_26_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
+  ファイル名 / File: 5garashi_identity_v4_27_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  最終更新 / Last updated: 2026-11-08
-  版 / Version: 4.26.0
+  最終更新 / Last updated: 2026-11-13
+  版 / Version: 4.27.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -40,7 +40,7 @@
 <meta id="ogLocale" property="og:locale" content="ja_JP">
 <meta id="ogLocaleAlt" property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 450"><g fill="%23B92613"><path transform="translate(165,235) rotate(8)" d="M0,-190 C22,-126 22,126 0,190 C-22,126 -22,-126 0,-190 Z"/><path transform="translate(245,235) rotate(8)" d="M0,-190 C22,-126 22,126 0,190 C-22,126 -22,-126 0,-190 Z"/><path transform="translate(325,235) rotate(8)" d="M0,-190 C22,-126 22,126 0,190 C-22,126 -22,-126 0,-190 Z"/><path transform="translate(405,235) rotate(8)" d="M0,-190 C22,-126 22,126 0,190 C-22,126 -22,-126 0,-190 Z"/><path transform="translate(280,180) rotate(-4)" d="M-248,0 C-160,-27 160,-27 248,0 C160,27 -160,27 -248,0 Z"/></g></svg>'>
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10.6 91.8,41 75.9,90.2 24.1,90.2 8.2,41" fill="%23FFE699" stroke="%23385723" stroke-width="7.8"/><path fill="%23385723" d="M45.6,37.1h8.8v35h-8.8z"/></svg>'>
 <style>
 /*
  * 作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
@@ -313,6 +313,8 @@ table.ud td.num{font-family:ui-monospace,Menlo,monospace;font-weight:800}
 .app-header-demo .hd .t b{font-size:13px}
 .app-header-demo .hd .t small{font-size:12px;color:var(--steel);font-weight:700}
 .app-header-demo .bd{padding:16px;display:flex;flex-direction:column;gap:10px}
+.favicon-demo{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}
+.favicon-demo svg{flex:none}
 .demo-btn{
   align-self:flex-start;background:var(--ink);color:var(--head);border:none;border-radius:999px;
   font-weight:800;font-size:14px;padding:11px 24px;min-height:44px;cursor:default;font-family:inherit;
@@ -452,7 +454,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.26.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.26.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.27.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.27.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -492,9 +494,9 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">本版(2026-11-08)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-08)</span></summary>
-    <ul class="ja" lang="ja"><li>13-1 (2) を改め、「初期設定をオフ」の要件を、使う人の同意を得ることに置き換えた。外部のサービスに送る機能は、(a) 送る内容と送り先を示して確認し、使う人が送ることを選んだときだけ送る(初回の同意をその後も使ってよい)か、(b) 設定でオンにしたときだけ送る。どちらの場合も同意をやめる方法を設け、送る内容か送り先が変わったら改めて同意を得る。</li></ul>
-    <ul class="en" lang="en"><li>Revised 13-1 (2): the "off by default" requirement was replaced by a consent requirement. A feature that sends data to an outside service either (a) states what is sent and where and sends only if the user chooses to send (consent given the first time may cover later sends), or (b) sends only after the user turns it on in settings. Either way, the feature provides a way to withdraw consent and asks again when what is sent or where it goes changes.</li></ul>
+    <summary><span class="ja" lang="ja">本版(2026-11-13)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-13)</span></summary>
+    <ul class="ja" lang="ja"><li>9-1 で、ヘッダーの帯の左端にロゴタイプ、右端にシンプル版マークを置き、幅が足りないときは「両方 → ロゴタイプだけ → マークだけ → どちらも置かない」の順に、入る最初の形にすることを定めた。</li><li>9-2 のファビコン・アプリアイコンを、シンボルマークから、head の地に ink の枠の正五角形と、アプリを表す1文字(英字・数字・かな・漢字)に改めた。既にある Web サイトとアプリは次の改版で直し、Microsoft Store のアイコンは次に新しく出すアプリから使い、既に配布しているアプリのストアのアイコンは変えない。本書のファビコンは、本版から正五角形と「I」にした。</li></ul>
+    <ul class="en" lang="en"><li>9-1 now places the logotype at the left end of the header band and the simple mark at the right end; when the width is short, use the first that fits of "both → logotype only → mark only → neither".</li><li>9-2 replaces the symbol mark in favicons and app icons with a regular pentagon, head fill and ink outline, holding one character that stands for the app (a Latin letter, digit, kana, or kanji). Existing websites and apps change at their next revision; Microsoft Store icons use it from the next new app onward, and Store icons of apps already distributed stay unchanged. As of this version, this document's favicon is a regular pentagon with the character "I".</li></ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
 </aside>
@@ -582,8 +584,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
         <svg role="img" aria-label="シンプル版シンボルマーク(基本) / Simple symbol mark (primary): single-color chili tally" style="height:150px"><use href="#tally5"/></svg>
         <span class="nm"><span class="ja" lang="ja">単色ピクトグラム — </span><span class="en" lang="en">Single-color pictogram — </span><span class="mono">volt #B92613</span><span class="ja" lang="ja"> 固定</span><span class="en" lang="en"> fixed</span></span>
         <span class="cap">
-          <span class="ja" lang="ja"><b>すべての用途の基本形(第一選択)。</b>表紙・ヘッダー・ファビコン・アプリアイコン・小サイズ・単色印刷・透かしに使う。<br>最小表示:高さ<b>16px</b>まで可。<br>色は volt <span class="mono">#B92613</span> のみ(白黒文書ではスミ1色を認める:3-6)。SVG原本を正とする。</span>
-          <span class="en" lang="en"><b>The primary mark — first choice for all uses.</b> Covers, headers, favicons, app icons, small sizes, one-color print, watermarks.<br>Minimum height: <b>16px</b>.<br>Color is volt <span class="mono">#B92613</span> only (single black allowed in monochrome documents: 3-6). The SVG master is authoritative.</span>
+          <span class="ja" lang="ja"><b>すべての用途の基本形(第一選択)。</b>表紙・ヘッダー・小サイズ・単色印刷・透かしに使う(ファビコン・アプリアイコンは 9-2)。<br>最小表示:高さ<b>16px</b>まで可。<br>色は volt <span class="mono">#B92613</span> のみ(白黒文書ではスミ1色を認める:3-6)。SVG原本を正とする。</span>
+          <span class="en" lang="en"><b>The primary mark — first choice for all uses.</b> Covers, headers, small sizes, one-color print, watermarks (favicons and app icons: 9-2).<br>Minimum height: <b>16px</b>.<br>Color is volt <span class="mono">#B92613</span> only (single black allowed in monochrome documents: 3-6). The SVG master is authoritative.</span>
         </span>
       </div>
       <div class="mark-cell">
@@ -645,8 +647,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">3-2. シンボルマークとの組み合わせ(ロックアップ)</span><span class="en" lang="en">3-2. Mark + logotype lockup</span></h3>
     <p>
-      <span class="ja" lang="ja">マークとロゴタイプを並べる場合、マークはシンプル版を左に置き、間隔はマーク幅の1/2以上とる。下図は公式SVG同士を配置した寸法説明例であり、文字をCSSで再構成したものではない。</span>
-      <span class="en" lang="en">When pairing the mark with the logotype, place the simple mark on the left with a gap of at least half the mark's width. The diagram below places the official SVG assets together; the lettering is not reconstructed with CSS.</span>
+      <span class="ja" lang="ja">マークとロゴタイプを並べて組む場合、マークはシンプル版を左に置き、間隔はマーク幅の1/2以上とる(アプリのヘッダーでは 9-1 による)。下図は公式SVG同士を配置した寸法説明例であり、文字をCSSで再構成したものではない。</span>
+      <span class="en" lang="en">When pairing the mark with the logotype, place the simple mark on the left with a gap of at least half the mark's width (app headers follow 9-1). The diagram below places the official SVG assets together; the lettering is not reconstructed with CSS.</span>
     </p>
     <div class="logo-lockup-demo">
       <svg class="lockup-mark" aria-hidden="true" width="80" height="64"><use href="#tally5"/></svg>
@@ -738,7 +740,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       <tbody>
         <tr><td><span class="ja" lang="ja">ヘッダー・表紙・画面の中のシンプル版マーク</span><span class="en" lang="en">Simple mark in headers, covers, and screens</span></td><td>volt</td><td><span class="ja" lang="ja">volt または灰色抜き(どちらでもよい)</span><span class="en" lang="en">Volt or gray reversal (either)</span></td></tr>
         <tr><td><span class="ja" lang="ja">ロゴタイプ</span><span class="en" lang="en">Logotype</span></td><td><span class="ja" lang="ja">カラー版(3-1)</span><span class="en" lang="en">Color version (3-1)</span></td><td><span class="ja" lang="ja">灰色抜き(3-7)</span><span class="en" lang="en">Gray reversal (3-7)</span></td></tr>
-        <tr><td><span class="ja" lang="ja">ファビコン・アプリアイコン・タイトルバー・タスクバー</span><span class="en" lang="en">Favicons, app icons, title bars, taskbars</span></td><td>volt</td><td><span class="ja" lang="ja">volt(9-2)</span><span class="en" lang="en">Volt (9-2)</span></td></tr>
+        <tr><td><span class="ja" lang="ja">ファビコン・アプリアイコン・タイトルバー・タスクバー</span><span class="en" lang="en">Favicons, app icons, title bars, taskbars</span></td><td><span class="ja" lang="ja">正五角形と1文字(9-2)</span><span class="en" lang="en">Pentagon with one character (9-2)</span></td><td><span class="ja" lang="ja">正五角形と1文字(9-2)</span><span class="en" lang="en">Pentagon with one character (9-2)</span></td></tr>
         <tr><td><span class="ja" lang="ja">マークだけのボタン・リンク</span><span class="en" lang="en">Mark-only buttons and links</span></td><td>volt</td><td><span class="ja" lang="ja">灰色抜き(非テキスト 3:1)</span><span class="en" lang="en">Gray reversal (3:1 non-text)</span></td></tr>
         <tr><td><span class="ja" lang="ja">モチーフ(第5条)</span><span class="en" lang="en">Motifs (Art. 5)</span></td><td>volt / line</td><td><span class="ja" lang="ja">灰色抜き / line</span><span class="en" lang="en">Gray reversal / line</span></td></tr>
         <tr><td><span class="ja" lang="ja">昼の ink の地(緑の帯など)</span><span class="en" lang="en">Day ink grounds (green bands, etc.)</span></td><td><span class="ja" lang="ja">paper 白抜き(2-2)</span><span class="en" lang="en">Paper reversal (2-2)</span></td><td>—</td></tr>
@@ -1285,8 +1287,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
     <h3><span class="ja" lang="ja">9-1. アプリのヘッダー</span><span class="en" lang="en">9-1. App header</span></h3>
     <p>
-      <span class="ja" lang="ja">ヘッダーは head色の帯+下辺に ink 3pxの太罫。左にロゴ最小形、右にシンプル版マークを置く。</span>
-      <span class="en" lang="en">Headers are a head-colored band with a 3px ink rule beneath; minimum logotype at left, simple mark at right.</span>
+      <span class="ja" lang="ja">ヘッダーは head色の帯+下辺に ink 3pxの太罫。<b>(1)</b> ヘッダーの帯の左端にロゴタイプ(最小形)、右端にシンプル版マーク(以下、9-1 と 9-2 では「マーク」)を置く。マークを左に置く 3-2 のロックアップとは並びが異なるが、ヘッダーではこの (1) による。<b>(2)</b> 帯の幅が足りないときは、①両方 → ②ロゴタイプだけ → ③マークだけ → ④どちらも置かない、の順に見て、入る最初の形にする。<b>(3)</b> 「入る」とは、ロゴタイプを高さ32px以上(3-3)、マークを高さ16px以上(2-1)で表示でき、それぞれの四方にクリアスペース(3-5)を取れることをいう。アプリの名前など、画面に要る表示を削ってまでは入れない。<b>(4)</b> ④のときは、「このアプリについて」などの画面があれば、そこにロゴタイプを置く。<b>(5)</b> ヘッダーの帯を持たないもの(通知領域だけで動くアプリ、コマンドラインのツールなど)は、(1)〜(4) の対象外とする。</span>
+      <span class="en" lang="en">Headers are a head-colored band with a 3px ink rule beneath. <b>(1)</b> Place the logotype (minimum form) at the left end of the header band and the simple mark (the "mark" in 9-1 and 9-2) at the right end. This order differs from the 3-2 lockup, which puts the mark on the left; in headers, (1) applies. <b>(2)</b> When the band is too narrow, use the first option in this order that fits: ① both → ② the logotype only → ③ the mark only → ④ neither. <b>(3)</b> "Fits" means the logotype can be shown at least 32px tall (3-3) and the mark at least 16px tall (2-1), each with its own clear space on all sides (3-5). Do not remove content the screen needs, such as the app name, to make room. <b>(4)</b> Under ④, if the app has another screen such as "About this app", place the logotype there. <b>(5)</b> Products with no header band (apps that run only in the notification area, command-line tools, and so on) are outside (1)–(4).</span>
     </p>
     <div class="app-header-demo">
       <div class="hd">
@@ -1308,9 +1310,15 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
     <h3><span class="ja" lang="ja">9-2. ファビコン・アプリアイコン</span><span class="en" lang="en">9-2. Favicon / app icon</span></h3>
     <p>
-      <span class="ja" lang="ja">シンプル版SVGをそのままファビコンにする(本書のタブアイコンが実例)。角丸背景を敷く場合は head色とする。ファビコンとアプリアイコンは、表示モードによらず volt のシンプル版とする。OSが描くタイトルバー・タスクバー・タブは表示モードに合わせて描き分けられないことが多く、名称も並んで表示されるため(3-7 (5))。</span>
-      <span class="en" lang="en">The simple SVG serves directly as the favicon (this document's tab icon is a live example). If a rounded background is needed, use the head color. Favicons and app icons stay the volt simple mark in every display mode: OS-drawn title bars, taskbars, and tabs often cannot switch per mode, and the name appears alongside (3-7 (5)).</span>
+      <span class="ja" lang="ja"><b>(1)</b> ファビコンとアプリアイコンは、head <span class="mono">#FFE699</span> の地に ink <span class="mono">#385723</span> の枠を付けた<b>正五角形</b>(頂点を上にし、角は丸めない)とし、その中にアプリを表す<b>1文字</b>を ink で置く(ink × head のコントラスト比は 6.66:1、7-1)。<b>(2)</b> 文字は英字・数字・かな・漢字のどれでもよく、頭文字でなくてよい。ほかの製品と同じ文字になってもよい(多くの場面で、名称がアイコンと並んで表示されるため)。<b>(3)</b> 枠の太さは画像の幅のおよそ1/13とし、32pxでは約2.5pxとし、16pxでは見えにくくならないよう約1.5pxとする。文字の大きさ(フォントサイズ)は画像の幅のおよそ半分とし、文字の字面の中心を五角形の中心(外接円の中心)に合わせる。書体は第6条の見出しによるが、太さは見出しの W8(800)より細い 700(Bold)とする(枠と文字が太いと、小さいアイコンで字の中がつぶれるため)。SVG の原本では文字をパスにして、書体のない環境でも形が変わらないようにする。ICO・PNG は、この原本から書き出す。ICO には 16・32・48・256px を入れる。<b>(4)</b> 表示モードによらず、この色とする。OSが描くタイトルバー・タスクバー・タブは表示モードに合わせて描き分けられないことが多い。head の地と ink の枠があれば、明るい地でも暗い地でも形が見える。<b>(5)</b> この形を定める前(4.26.0 まで)に作った Web サイトとアプリは、次に改版するときに直す。Microsoft Store のアイコンは、次に新しく出すアプリから使い、既に配布しているアプリのストアのアイコンは変えない。<b>(6)</b> マーク(シンプル版)は、9-1 のとおり画面の中に置く。<b>(7)</b> 本書のファビコンが実例である(文字は「I」)。</span>
+      <span class="en" lang="en"><b>(1)</b> Favicons and app icons are a <b>regular pentagon</b> (point up, corners not rounded) filled with head <span class="mono">#FFE699</span> and outlined in ink <span class="mono">#385723</span>, with <b>one character</b> that stands for the app set in ink inside it (ink on head has a contrast ratio of 6.66:1, 7-1). <b>(2)</b> The character may be a Latin letter, a digit, kana, or a kanji, and need not be the initial. It may be the same as another product's (in most contexts the name appears alongside the icon). <b>(3)</b> The outline is about 1/13 of the image width: about 2.5px at 32px, and about 1.5px at 16px so that it stays visible. The character's font size is about half the image width, and the center of the glyph is placed on the pentagon's center (the center of its circumscribed circle). The typeface follows the headings in Art. 6, but the weight is 700 (Bold), lighter than the W8 (800) used for headings, because at small icon sizes a heavy outline and heavy strokes close up the inner spaces of the character. In the SVG master, convert the character to paths so its shape does not change where the typeface is missing. Export ICO and PNG files from this master. ICO files include 16, 32, 48, and 256px. <b>(4)</b> These colors apply in every display mode. OS-drawn title bars, taskbars, and tabs often cannot switch per mode. The head fill and ink outline keep the shape visible on both light and dark backgrounds. <b>(5)</b> Websites and apps made before this form was set (up to 4.26.0) are changed at their next revision. Microsoft Store icons use this form from the next new app onward; the Store icons of apps already distributed stay unchanged. <b>(6)</b> The mark (simple version) is placed inside the screen, as in 9-1. <b>(7)</b> This document's favicon is an example (the character is "I").</span>
     </p>
+    <div class="favicon-demo" role="img" aria-label="ファビコンの見本:正五角形に「C」と「辛」、32px と 16px の「C」 / Favicon samples: pentagons with C and 辛, and C at 32px and 16px">
+      <svg viewBox="0 0 100 100" width="72" height="72" aria-hidden="true"><polygon points="50,10.6 91.8,41 75.9,90.2 24.1,90.2 8.2,41" fill="#FFE699" stroke="#385723" stroke-width="7.8"/><text x="50" y="54.6" text-anchor="middle" dominant-baseline="central" font-size="50" font-weight="700" fill="#385723" font-family="'Segoe UI','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif">C</text></svg>
+      <svg viewBox="0 0 100 100" width="72" height="72" aria-hidden="true"><polygon points="50,10.6 91.8,41 75.9,90.2 24.1,90.2 8.2,41" fill="#FFE699" stroke="#385723" stroke-width="7.8"/><text x="50" y="54.6" text-anchor="middle" dominant-baseline="central" font-size="46" font-weight="700" fill="#385723" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif">辛</text></svg>
+      <svg viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><polygon points="50,10.6 91.8,41 75.9,90.2 24.1,90.2 8.2,41" fill="#FFE699" stroke="#385723" stroke-width="7.8"/><text x="50" y="54.6" text-anchor="middle" dominant-baseline="central" font-size="50" font-weight="700" fill="#385723" font-family="'Segoe UI','Noto Sans JP',sans-serif">C</text></svg>
+      <svg viewBox="0 0 100 100" width="16" height="16" aria-hidden="true"><polygon points="50,10.6 91.8,41 75.9,90.2 24.1,90.2 8.2,41" fill="#FFE699" stroke="#385723" stroke-width="9.4"/><text x="50" y="54.6" text-anchor="middle" dominant-baseline="central" font-size="56" font-weight="700" fill="#385723" font-family="'Segoe UI','Noto Sans JP',sans-serif">C</text></svg>
+    </div>
 
     <h3><span class="ja" lang="ja">9-3. ファイルヘッダー(コード署名)</span><span class="en" lang="en">9-3. File header (code signature)</span></h3>
     <p>
