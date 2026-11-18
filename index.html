@@ -4,8 +4,8 @@
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
-  最終更新 / Last updated: 2026-11-13
-  版 / Version: 4.28.0
+  最終更新 / Last updated: 2026-11-19
+  版 / Version: 4.29.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -307,11 +307,12 @@ table.ud td.num{font-family:ui-monospace,Menlo,monospace;font-weight:800}
 
 .app-header-demo{border:1.5px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
 .app-header-demo .hd{padding:10px 14px;border-bottom:3px solid var(--ink);background:var(--head);display:flex;align-items:center;gap:12px}
-.app-header-demo .hd .app-mini-logo{width:132px;max-width:28vw;height:auto;flex:none}
-@media(max-width:560px){.app-header-demo .hd .app-mini-logo{width:96px;max-width:25vw}}
+.app-header-demo .hd .app-mini-logo{height:48px;width:auto;flex:none}
 .app-header-demo .hd .t{display:flex;flex-direction:column;flex:1;min-width:0}
-.app-header-demo .hd .t b{font-size:13px}
-.app-header-demo .hd .t small{font-size:12px;color:var(--steel);font-weight:700}
+.app-header-demo .hd .t b{font-size:20px;font-weight:800;letter-spacing:.03em}
+.app-header-demo .hd .t small{font-size:13px;color:var(--steel);font-weight:700}
+.app-header-demo .hd .demo-mark{height:32px;flex:none}
+@media(max-width:479px){.app-header-demo .hd .app-mini-logo{height:32px}.app-header-demo .hd .demo-mark{height:16px}}
 .app-header-demo .bd{padding:16px;display:flex;flex-direction:column;gap:10px}
 .favicon-demo{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}
 .favicon-demo svg{flex:none}
@@ -454,7 +455,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.28.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.28.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.29.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.29.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -494,9 +495,9 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <!-- ═══════════ 本版の変更点 / What's new ═══════════ -->
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
-    <summary><span class="ja" lang="ja">本版(2026-11-13)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-13)</span></summary>
-    <ul class="ja" lang="ja"><li>7-5 に (5) を足し、新しい通知やメッセージが届いたときに限り、点滅を使ってよいことにした。ウィンドウが非アクティブのときだけ、1秒に1回以下で、始めてから5秒以内に止め、続けて届いても合わせて5秒を超えない。タスクバーは OS 標準の点滅を使い、止めた後は点灯したままでよい。製品が描くアイコンは、止めた後に件数のバッジなどを残す。設定でやめられ、動きを控える設定では点滅させず、点滅だけで知らせない。</li></ul>
-    <ul class="en" lang="en"><li>Added 7-5 (5): flashing is allowed only when a new notification or message arrives. It flashes only while the window is inactive, at most once a second, stops within five seconds of starting, and never totals more than five seconds even when more arrive. Taskbar buttons use the OS standard and may then stay lit; icons the product draws then keep a count badge or similar. It can be turned off, nothing flashes under reduced motion, and flashing is never the only signal.</li></ul>
+    <summary><span class="ja" lang="ja">本版(2026-11-19)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-19)</span></summary>
+    <ul class="ja" lang="ja"><li>9-1 に (6)〜(10) を足した。ヘッダーのロゴタイプは高さ48px、マークは32pxを標準とする。帯の中の文字は、アプリの名前を1行(20px・W8)とし、型A(名前だけ)・型B(名前と説明)・型C(名前と作業の状態)から1つを選ぶ。ボタンはどの型でも置ける。版はヘッダーに書かず、「このアプリについて」に置く。幅が足りないときは、ロゴタイプとマークを最小まで下げ、外し、状態、説明の順に省く。アプリの名前は省略しない。本書 4.28.0 までに作ったアプリは、次の改版で直す。</li></ul>
+    <ul class="en" lang="en"><li>Added 9-1 (6)–(10). In headers, the standard logotype is 48px tall and the mark 32px. The app name is one line (20px, W8), and the band is one of Type A (name only), Type B (name and description), or Type C (name and the state of the work); buttons may be used with any type. The version goes on "About this app", not in the header. When the band is narrow, the logotype and the mark first shrink to their minimums and are then dropped, then the state and then the description are dropped; the app name is never cut. Apps made up to version 4.28.0 of this document change at their next revision.</li></ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
 </aside>
@@ -663,7 +664,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
       <div class="logo-col">
         <svg class="official-logo logo-ja logo-size-md" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
                   <svg class="official-logo logo-en logo-size-md" width="555" height="215" role="img" aria-label="5garashi.com Design Office"><use href="#logotype-en-color"/></svg>
-        <span class="cap"><span class="ja" lang="ja">中(アプリヘッダー用)</span><span class="en" lang="en">Medium (app headers)</span></span>
+        <span class="cap"><span class="ja" lang="ja">中(アプリのヘッダーは 9-1 (6))</span><span class="en" lang="en">Medium (app headers: 9-1 (6))</span></span>
       </div>
       <div class="logo-col">
         <svg class="official-logo logo-ja logo-size-sm" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -1287,8 +1288,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     </p>
     <h3><span class="ja" lang="ja">9-1. アプリのヘッダー</span><span class="en" lang="en">9-1. App header</span></h3>
     <p>
-      <span class="ja" lang="ja">ヘッダーは head色の帯+下辺に ink 3pxの太罫。<b>(1)</b> ヘッダーの帯の左端にロゴタイプ(最小形)、右端にシンプル版マーク(以下、9-1 と 9-2 では「マーク」)を置く。マークを左に置く 3-2 のロックアップとは並びが異なるが、ヘッダーではこの (1) による。<b>(2)</b> 帯の幅が足りないときは、①両方 → ②ロゴタイプだけ → ③マークだけ → ④どちらも置かない、の順に見て、入る最初の形にする。<b>(3)</b> 「入る」とは、ロゴタイプを高さ32px以上(3-3)、マークを高さ16px以上(2-1)で表示でき、それぞれの四方にクリアスペース(3-5)を取れることをいう。アプリの名前など、画面に要る表示を削ってまでは入れない。<b>(4)</b> ④のときは、「このアプリについて」などの画面があれば、そこにロゴタイプを置く。<b>(5)</b> ヘッダーの帯を持たないもの(通知領域だけで動くアプリ、コマンドラインのツールなど)は、(1)〜(4) の対象外とする。</span>
-      <span class="en" lang="en">Headers are a head-colored band with a 3px ink rule beneath. <b>(1)</b> Place the logotype (minimum form) at the left end of the header band and the simple mark (the "mark" in 9-1 and 9-2) at the right end. This order differs from the 3-2 lockup, which puts the mark on the left; in headers, (1) applies. <b>(2)</b> When the band is too narrow, use the first option in this order that fits: ① both → ② the logotype only → ③ the mark only → ④ neither. <b>(3)</b> "Fits" means the logotype can be shown at least 32px tall (3-3) and the mark at least 16px tall (2-1), each with its own clear space on all sides (3-5). Do not remove content the screen needs, such as the app name, to make room. <b>(4)</b> Under ④, if the app has another screen such as "About this app", place the logotype there. <b>(5)</b> Products with no header band (apps that run only in the notification area, command-line tools, and so on) are outside (1)–(4).</span>
+      <span class="ja" lang="ja">ヘッダーは head色の帯+下辺に ink 3pxの太罫。<b>(1)</b> ヘッダーの帯の左端にロゴタイプ、右端にシンプル版マーク(以下、9-1 と 9-2 では「マーク」)を置く。マークを左に置く 3-2 のロックアップとは並びが異なるが、ヘッダーではこの (1) による。<b>(2)</b> 帯の幅が足りないときは、①両方 → ②ロゴタイプだけ → ③マークだけ → ④どちらも置かない、の順に見て、入る最初の形にする。<b>(3)</b> 「入る」とは、ロゴタイプを高さ32px以上(3-3)、マークを高さ16px以上(2-1)で表示でき、それぞれの四方にクリアスペース(3-5)を取れることをいう。アプリの名前とボタンなど、画面に要る表示を置いた残りの幅で判断し、それらを削ってまでは入れない。<b>(4)</b> ④のときは、「このアプリについて」などの画面があれば、そこにロゴタイプを置く。<b>(5)</b> ヘッダーの帯を持たないもの(通知領域だけで動くアプリ、コマンドラインのツールなど)は、(1)〜(4)・(6)〜(10) の対象外とする。これらでも、版の確かめ方は 12-7 による。<b>(6)</b> 大きさの標準は、ロゴタイプを高さ48px、マークを高さ32px(ロゴタイプの2/3)とする。<b>(7)</b> ロゴタイプの右に、アプリの名前を1行で置く(20px、W8、ink。字間は第6条)。帯の中身は、次の型から1つを選ぶ。<b>型A</b> 名前だけ。<b>型B</b> 名前と説明:名前の下に、アプリが何をするかを1行で置く(13px、W7、steel。7-1 の補助のテキスト)。2行の高さは、ロゴタイプの高さ以内とする。<b>型C</b> 名前と作業の状態:名前の右に、いま扱っているもの(ファイル名など)と、その状態(保存済みなど)を置く(14px以上、W6以上。状態は steel でもよい)。帯に置くボタン(メニューなど)は、どの型でも置いてよく、マークの左(型Cでは状態の右)に置き、7-3 の大きさとする。使う人が選んだ文字の大きさは、第6条のとおり優先する。<b>(8)</b> 版はヘッダーの帯に書かず、「このアプリについて」の画面(または欄)に置く。12-7 の「使う人が版を確かめられるようにする」は、そこで満たす。<b>(9)</b> 帯の幅が足りないときは、次の順に1つずつ進め、入った所で止める。①ロゴタイプとマークを (3) の最小(32px・16px)まで下げる。②(2) の順でロゴタイプとマークを外す。③型Cの状態を省く。④型Bの説明を省く。アプリの名前は省略記号(…)で切らず、折り返す。ボタンは省かず、メニューにまとめてよい。<b>(10)</b> 帯の高さは、中身の最も高いもの(ロゴタイプ、ボタン、2行の文字)に、上下それぞれロゴタイプとマークのクリアスペース(3-5)以上の余白を足した高さとし、同じ製品の画面の間でそろえる。名前が折り返したときは、帯が高くなってよい。(6)〜(10) を定める前(本書 4.28.0 まで)に作ったアプリは、次に改版するときに直す。</span>
+      <span class="en" lang="en">Headers are a head-colored band with a 3px ink rule beneath. <b>(1)</b> Place the logotype at the left end of the header band and the simple mark (the "mark" in 9-1 and 9-2) at the right end. This order differs from the 3-2 lockup, which puts the mark on the left; in headers, (1) applies. <b>(2)</b> When the band is too narrow, use the first option in this order that fits: ① both → ② the logotype only → ③ the mark only → ④ neither. <b>(3)</b> "Fits" means the logotype can be shown at least 32px tall (3-3) and the mark at least 16px tall (2-1), each with its own clear space on all sides (3-5). Judge it on the width left after the content the screen needs, such as the app name and buttons, and never remove that content to make room. <b>(4)</b> Under ④, if the app has another screen such as "About this app", place the logotype there. <b>(5)</b> Products with no header band (apps that run only in the notification area, command-line tools, and so on) are outside (1)–(4) and (6)–(10). For them too, how users check the version follows 12-7. <b>(6)</b> The standard sizes are a logotype 48px tall and a mark 32px tall (2/3 of the logotype). <b>(7)</b> To the right of the logotype, put the app name on one line (20px, W8, ink; letter spacing as in Art. 6). Choose one of these types for the band. <b>Type A</b>: the name only. <b>Type B</b>: the name and a description: one line under the name saying what the app does (13px, W7, steel; auxiliary text in 7-1); the two lines are no taller than the logotype. <b>Type C</b>: the name and the state of the work: to the right of the name, what the user is working on (such as a file name) and its state (such as "saved") (14px or larger, W6 or heavier; the state may be steel). Buttons in the band (such as a menu) may be used with any type; they go to the left of the mark (in Type C, to the right of the state) and are sized as in 7-3. A text size the user chooses takes priority, as in Art. 6. <b>(8)</b> Do not write the version in the header band. Put it on the "About this app" screen (or section); the 12-7 requirement that users can check the version is met there. <b>(9)</b> When the band is too narrow, take these steps one at a time and stop as soon as everything fits: ① reduce the logotype and the mark to the minimums in (3) (32px, 16px); ② drop the logotype and the mark in the order of (2); ③ drop the Type C state; ④ drop the Type B description. Never cut the app name with an ellipsis (…); let it wrap. Do not drop buttons; they may be gathered into a menu. <b>(10)</b> The band is as tall as its tallest content (the logotype, a button, or two lines of text) plus padding above and below of at least the clear space (3-5) of the logotype and the mark, and is the same height across the screens of a product. It may grow taller when the app name wraps. Apps made before (6)–(10) were set (up to version 4.28.0 of this document) are changed at their next revision.</span>
     </p>
     <div class="app-header-demo">
       <div class="hd">
@@ -1298,7 +1299,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
           <b><span class="ja" lang="ja">聞き流し暗記プレーヤー</span><span class="en" lang="en">Listen-and-Learn Player</span></b>
           <small><span class="ja" lang="ja">電験三種 法規+電力 14セット内蔵</span><span class="en" lang="en">14 built-in sets for the Electrical Engineer exam</span></small>
         </div>
-        <svg aria-hidden="true" style="height:34px;flex:none"><use href="#tally5"/></svg>
+        <svg class="demo-mark" viewBox="0 0 560 450" aria-hidden="true"><use href="#tally5"/></svg>
       </div>
       <div class="bd">
         <span class="demo-badge"><span class="ja" lang="ja">問12</span><span class="en" lang="en">Q12</span></span>
