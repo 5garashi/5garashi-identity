@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
-  ファイル名 / File: 5garashi_identity_v4_30_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
+  ファイル名 / File: 5garashi_identity_v4_31_0.html(単一ファイル版。index.html から tools/build_standalone.py で生成。直接編集しない)
   概要 / Description: 5garashi.com設計事務所 Design Office Identity(日英バイリンガル・サウンドアイデンティティ「五辛子(ごがらし)のテーマ」付き)
   作成者 / Author: 5garashi.com設計事務所 / 5garashi.com Design Office
   作成日 / Created: 2026-07-11
   最終更新 / Last updated: 2026-11-19
-  版 / Version: 4.30.0
+  版 / Version: 4.31.0
   ライセンス / License: CC BY-ND 4.0(本文・構成・図版・シンボルマーク・ロゴタイプ)。音楽(音源・MIDI・楽譜データ)は CC BY 4.0。特記=第12条を参照
   Copyright © 2026 5garashi.com設計事務所 / 5garashi.com Design Office
   SPDX-License-Identifier: CC-BY-ND-4.0
@@ -455,7 +455,7 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 
 <!-- ═══════════ 表紙 / Cover ═══════════ -->
 <header class="cover">
-  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.30.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.30.0</span></span></div>
+  <div class="doc-no"><span class="ja" lang="ja">IDENTITY GUIDELINE — 第<span data-version>4.31.0</span>版</span><span class="en" lang="en">IDENTITY GUIDELINE — v<span data-version>4.31.0</span></span></div>
   <svg class="hero" role="img" aria-label="シンボルマーク(シンプル版):4本の縦の唐辛子を1本の横の唐辛子が貫く赤いタリーマーク / Symbol mark (simple): four upright chilis crossed by a fifth, a red tally of five"><use href="#tally5"/></svg>
   <h1 class="cover-logo">
     <svg class="official-logo logo-ja" width="555" height="215" role="img" aria-label="5garashi.com設計事務所"><use href="#logotype-ja-color"/></svg>
@@ -496,8 +496,8 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
 <aside class="whatsnew" aria-label="本版の変更点 / What's new in this version">
   <details>
     <summary><span class="ja" lang="ja">本版(2026-11-19)の変更点</span><span class="en" lang="en">What's new in this version (2026-11-19)</span></summary>
-    <ul class="ja" lang="ja"><li>9-1 のヘッダーの大きさを、スタートアップ管理の比率にそろえ、ロゴタイプの高さHに対する比で決めた。Hは標準48px・最小32px、マークの絵は0.7H、ロゴタイプと名前の間はH/2、帯の上下の余白はH/8(標準で帯60px)。アプリの名前はHによらず17px。標準の大きさで入るうちはHを小さくしない。3-5 の例外として、帯の中のクリアスペースを上下H/8以上・左右14px以上とした。本書 4.29.0 までの値で作ったアプリは、次の改版で直す。9-1 の見本を合わせた。</li></ul>
-    <ul class="en" lang="en"><li>Set the 9-1 header to the Startup Manager proportions, as ratios of the logotype height H: H is 48px as the standard and 32px at the smallest; the mark drawing is 0.7H, the gap to the app name H/2, and the band padding H/8 above and below (a 60px band at the standard). The app name stays 17px whatever H is. H is not reduced while the standard sizes fit. As an exception to 3-5, the clear space inside the band is at least H/8 above and below and 14px at the sides. Apps made with the values up to version 4.29.0 change at their next revision. Updated the 9-1 sample.</li></ul>
+    <ul class="ja" lang="ja"><li>7-6 に、数式・図・表で量や対象を表す記号の意味を初出箇所に添える規定と、その例を足した。</li></ul>
+    <ul class="en" lang="en"><li>Added a rule to 7-6 explaining when and where to define symbols for quantities or other entities in equations, figures, and tables, with examples.</li></ul>
     <p class="hist"><span class="ja" lang="ja">第1版からの改版履歴:</span><span class="en" lang="en">Full revision history since v1: </span><a href="https://github.com/5garashi/5garashi-identity/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
   </details>
 </aside>
@@ -1117,6 +1117,15 @@ if (/[?&]lang=en(&|$)/.test(location.search)) { document.body.className += " lan
     <p>
       <span class="ja" lang="ja">1文1義・番号つき・単位明記(第8条)。専門用語には初出時に読みか短い説明を添える。エラーやお知らせは、何が起きたかと、次に何をすればよいかを書く(8-7 の文例 (2))。例:「保存していない文書では、ほかのファイルへのリンクを開けません。先に文書を保存してください。」</span>
       <span class="en" lang="en">One meaning per sentence, numbered rules, units always stated (Art. 8). Technical terms get a reading or a short gloss at first use. Errors and notices say what happened and what to do next (8-7, example (2)). Example: "Links to other files cannot be opened from an unsaved document. Save the document first."</span>
+    </p>
+
+    <p>
+      <span class="ja" lang="ja">数式・図・表で量や対象を表す記号には、資料内で初めて使う箇所に意味を添える。説明は、式の直後や図の凡例など、記号と見比べられる場所に置く。記号一覧を設ける場合も、初出箇所に短い説明を添える。同じ記号を別の意味で使うときは、その意味で最初に使う箇所に説明を添える。単位がある量は、第8条に従って単位を明記する。必要に応じて、記号の意味とともに単位を示す。</span>
+      <span class="en" lang="en">Explain what each symbol for a quantity or other entity in an equation, figure, or table means at its first use in the material. Put the explanation where readers can see it together with the symbol, such as immediately after the equation or in the figure legend. Even if you include a list of symbols, give a short explanation at first use. If you reuse a symbol with a different meaning, explain the new meaning at its first use. State the units for quantities as required by Art. 8. Where needed, give the unit with the explanation of the symbol.</span>
+    </p>
+    <p>
+      <span class="ja" lang="ja">例<br><code>H(X)</code>：X の情報エントロピー（bit）<br><code>dA</code>：外向きの微小面積ベクトル</span>
+      <span class="en" lang="en">Examples<br><code>H(X)</code>: information entropy of X (bit)<br><code>dA</code>: infinitesimal area vector pointing outward</span>
     </p>
 
     <h3><span class="ja" lang="ja">7-7. 出荷前チェック</span><span class="en" lang="en">7-7. Pre-release check</span></h3>
