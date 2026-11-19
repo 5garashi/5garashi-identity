@@ -3,6 +3,13 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.31.0 — 2026-11-19
+
+- 7-6 に、数式・図・表で量や対象を表す記号の意味を初出箇所に添える規定と、その例を足した。 記号一覧があっても初出箇所で説明し、同じ記号を別の意味で使うときはその意味での初出時に説明する。単位の明記は第8条に従い、必要に応じて記号の意味とともに示す。
+  Added a rule to 7-6 explaining when and where to define symbols for quantities or other entities in equations, figures, and tables, with examples. Give a short explanation at first use even when there is a list of symbols. Explain each new meaning at its first use. State units as required by Art. 8 and give the unit with the explanation of the symbol where needed.
+- 単一ファイル版を 4.31.0 として生成し、4.30.0 の単一ファイル版を削除した（12-7 (16)）。
+  Generated the 4.31.0 single-file edition and removed the 4.30.0 single-file edition (12-7 (16)).
+
 ## 4.30.0 — 2026-11-19
 
 - 9-1 のヘッダーの大きさを、スタートアップ管理(startupManager)の画面の比率にそろえ、ロゴタイプの高さHに対する比で決めた。(6) Hの標準は48px、最小は (3) の32px。マークの絵の高さは0.7H(標準で約34px、Hが32pxで約22px)。4.29.0 の「マーク32px(2/3)」と「480px未満で最小(32px・16px)まで下げてよい」は、この比に置き換えた。(7) ロゴタイプと名前の間はH/2(標準で24px)。アプリの名前は20pxから17pxにし、Hによらず17pxとした。(9) 標準の大きさで入るうちはHを小さくしない。①を「Hを最小の32pxにする(マーク・余白・間も比で小さくなる)」に、②を「(2) の形に順に移す(まずマーク、次にロゴタイプを外す)。ロゴタイプを外した後も、余白などはHを32pxとして決める」に改めた。型Bの「2行はロゴタイプの高さ以内」は標準の大きさのときとした。(10) 帯の上下の余白を「クリアスペース以上」からH/8(標準で6px、ロゴタイプが最も高いとき帯は1.25H=60px)に改めた。3-5 の例外として、帯の中のロゴタイプとマークのクリアスペースを、上下はH/8以上(ロゴタイプが最も高いときはH/8)、左右は帯の端との間を14px以上とし、マークは絵の縁から測るとした。(3) と 3-5 に、帯の中は 9-1 (10) によることを足した。経過措置を「本書 4.29.0 までの値で作ったアプリは次の改版で直す」に改めた。9-1 の見本のヘッダーを、同じ比で描くようにした。
