@@ -3,6 +3,15 @@
 アイデンティティ運用仕様の改版履歴。第8条 8-5 に従い、版番号・更新日・変更内容で管理する。新しい版を上に書く。
 Revision history of the Identity Operating Rules, managed by version, date, and changes (Art. 8-5). Newest first.
 
+## 4.32.0 — 2026-11-23
+
+- 9-2 で、ファビコンとアプリアイコンに置く文字を「1文字」から「1〜4文字」に広げた。(1) 1〜4文字を ink で置く。(2) 文字は混ぜてもよく、同じ機器に入る製品どうしを見分けやすくするため、2〜4文字で名称の一部や役割を表してもよい。(3) 文字の大きさは画像の幅に対して、1文字は約1/2(従来どおり)、2文字は1段で約3/10、3文字と4文字は2段(上の段に2文字、下の段に残りを中央にそろえる)で約2/9とし、2段の段の中心の間は文字の大きさとほぼ同じにする。1文字は字面の中心を、2文字以上は文字の並び全体(2段のときは2段全体)の字面の中心を、五角形の中心に合わせる。文字は枠の線の内側に収め、収まらないときは大きさを下げる。小さい画像で読めなくなるとき(2文字以上を 16px に置くときなど)は1文字だけを置いてよく、どの1文字にするかは製品ごとに決めて変えない。9-2 の見本に、2文字(体動)と2段(セン/サー)の例を足した。1文字のアイコンはこの規定にも合うため、経過措置は設けない。
+  In 9-2, favicons and app icons may now hold "one to four characters" instead of "one character". (1) One to four characters are set in ink. (2) The characters may be mixed, and to tell apart products installed on the same device, two to four characters may show part of the name or its role. (3) The font size, relative to the image width, is about 1/2 for one character (as before), about 3/10 for two characters in one row, and about 2/9 for three or four characters in two rows (two in the top row, the rest centered below), with the row centers about one font size apart. For one character the center of its glyph, and for two or more the center of the glyphs of the whole group (both rows, when there are two), is placed on the pentagon's center. Characters stay inside the outline; if they do not fit, the size is reduced. Where the characters become hard to read in a small image (such as two or more at 16px), only one may be shown, and each product decides which one and keeps it. Samples with two characters (体動) and two rows (セン / サー) were added to 9-2. One-character icons still meet this rule, so no transition is set.
+- 経緯:hellowatch の時計とスマホのアプリ4つが、どれも本書の見本と同じ「I」のアイコンで、見分けがつかなかった。ユーザーが、最大4文字でアプリを表すことと、そのために本書を改めることを 2026-11-23 に決めた。文字の大きさと並べ方は、Noto Sans JP の 700 を 100 の枠に置いて決め(2文字は30、2段は22、段の中心は外接円の中心から上下に11.5)、48px で描いて読めることを目で確かめた。16px では2段の文字がつぶれるため、1文字だけを置いてよいとした。hellowatch(睡眠の体動・睡眠の記録・センサー動作確認・センサーの記録)で先に当てはめた。
+  Background: the four watch and phone apps of hellowatch all used the same "I" icon as this document's sample and could not be told apart. On 2026-11-23 the user decided to represent each app with up to four characters and to revise this document for it. The sizes and layout were set by placing Noto Sans JP at weight 700 in a 100-unit frame (30 for two characters, 22 for two rows, row centers 11.5 above and below the circumcenter), and drawn at 48px to check by eye that they can be read. At 16px two rows close up, so one character may be used there. Applied first in hellowatch (four apps).
+- 単一ファイル版を 4.32.0 として生成し、4.31.0 の単一ファイル版を削除した(12-7 (16))。
+  Generated the 4.32.0 single-file edition and removed the 4.31.0 single-file edition (12-7 (16)).
+
 ## 4.31.0 — 2026-11-19
 
 - 7-6 に、数式・図・表で量や対象を表す記号の意味を初出箇所に添える規定と、その例を足した。 記号一覧があっても初出箇所で説明し、同じ記号を別の意味で使うときはその意味での初出時に説明する。単位の明記は第8条に従い、必要に応じて記号の意味とともに示す。
